@@ -1,0 +1,9 @@
+			"xi_legionnaire_helmet_Moxly",
+			"xi_legionnaire_helmet_Mac",
+			"xi_legionnaire_helmet_Wotsit",
+			"xi_legionnaire_helmet_Joker",
+			"xi_legionnaire_helmet_Shiro",
+			"xi_armatus_Legionnaire_Winchester",
+			"xi_armatus_Legionnaire_DFC",
+			"xi_armatus_Legionnaire_Kyrent",
+			"xi_armatus_Legionnaire_Rogue"

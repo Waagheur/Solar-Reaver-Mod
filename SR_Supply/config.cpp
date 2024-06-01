@@ -177,26 +177,26 @@ class CfgPatches
 //			};
 //		};
 
-class ACEX_Fortify_Presets
-{
-	class SR_Fortify_Objects 
-	{
-		displayName = "Solar Reavers";
-		objects[] = {
-			{"TIOW_Dragons_Teeth",3},
-			{"WH40k_Barricade_dow2",5},
-			{"Land_Sandbag_Straight",5},
-			{"Land_Sandbag_Straight",5},
-			{"Land_Sandbag_Static",5},
-			{"Land_TIOW_adl_single",5},
-			{"Land_TIOW_adl_double",10},
-			{"Land_Plank_01_4m_F",10},
-			{"Land_Razorwire_F",10},
-			{"Land_Barrier",10},
-			{"RF_Bunker",50},
-		};
-	};
-};
+// class ACEX_Fortify_Presets
+// {
+	// class SR_Fortify_Objects 
+	// {
+		// displayName = "Solar Reavers";
+		// objects[] = {
+			// {"TIOW_Dragons_Teeth",3},
+			// {"WH40k_Barricade_dow2",5},
+			// {"Land_Sandbag_Straight",5},
+			// {"Land_Sandbag_Straight",5},
+			// {"Land_Sandbag_Static",5},
+			// {"Land_TIOW_adl_single",5},
+			// {"Land_TIOW_adl_double",10},
+			// {"Land_Plank_01_4m_F",10},
+			// {"Land_Razorwire_F",10},
+			// {"Land_Barrier",10},
+			// {"RF_Bunker",50},
+		// };
+	// };
+// };
 
 
 class CfgFunctions {
