@@ -58,11 +58,11 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		displayname="[XI] Vox Helm";
-		model="XI_voxHelm\XI_VoxHelm.p3d";
+		model="\SR_XI\XI_voxHelm\XI_VoxHelm.p3d";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel="XI_voxHelm\XI_VoxHelm.p3d";
-			modelOff="XI_voxHelm\XI_VoxHelm.p3d";
+			uniformModel="\SR_XI\XI_voxHelm\XI_VoxHelm.p3d";
+			modelOff="\SR_XI\XI_voxHelm\XI_VoxHelm.p3d";
 		};
 	};
 };
@@ -73,7 +73,7 @@ class cfgGlasses
 	{
 		author="Rogue771";
 		displayname="[XI] Vox Helm";
-		model="XI_voxHelm\XI_VoxHelm.p3d";
+		model="\SR_XI\XI_voxHelm\XI_VoxHelm.p3d";
 		hiddenSelections[]=
 		{
 			"camo"

@@ -513,11 +513,11 @@ class Extended_PostInit_EventHandlers
 {
 	class XI_WeaponCheck
 	{
-		clientInit="call compileScript ['\xi\scripts\XEH_clientinit.sqf']";
+		clientInit="call compileScript ['\SR_XI\xi\scripts\XEH_clientinit.sqf']";
 	};
 	class XI_JumpScript
 	{
-		init="execVM '\xi\scripts\init.sqf';";
+		init="execVM '\SR_XI\xi\scripts\init.sqf';";
 	};
 };
 class Extended_Init_EventHandlers
@@ -782,8 +782,8 @@ class cfgWeapons
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\GSB Stuff\gsb_armor.paa",
-			"\XI\Data\GSB Stuff\gsb_shoulder.paa"
+			"\SR_XI\XI\Data\GSB Stuff\gsb_armor.paa",
+			"\SR_XI\XI\Data\GSB Stuff\gsb_shoulder.paa"
 		};
 	};
 	class dm_CadianArmour;
@@ -793,7 +793,7 @@ class cfgWeapons
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\GSB Stuff\gsb_armor.paa"
+			"\SR_XI\XI\Data\GSB Stuff\gsb_armor.paa"
 		};
 	};
 	class dm_CadianArmour3;
@@ -803,8 +803,8 @@ class cfgWeapons
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\GSB Stuff\gsb_armor.paa",
-			"\XI\Data\GSB Stuff\gsb_shoulder.paa"
+			"\SR_XI\XI\Data\GSB Stuff\gsb_armor.paa",
+			"\SR_XI\XI\Data\GSB Stuff\gsb_shoulder.paa"
 		};
 	};
 	class dm_CadianArmour4;
@@ -814,7 +814,7 @@ class cfgWeapons
 		scope=2;
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\GSB Stuff\gsb_armor.paa"
+			"\SR_XI\XI\Data\GSB Stuff\gsb_armor.paa"
 		};
 	};
 	class ic_AquilaHelm;
@@ -825,7 +825,7 @@ class cfgWeapons
 		displayName="[GSB] Aquila Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\GSB Stuff\gsb_aquila.paa"
+			"\SR_XI\XI\Data\GSB Stuff\gsb_aquila.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -854,7 +854,7 @@ class cfgWeapons
 		displayName="[GSB] Agripinaa Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\GSB Stuff\gsb_helmet2.paa"
+			"\SR_XI\XI\Data\GSB Stuff\gsb_helmet2.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -883,7 +883,7 @@ class cfgWeapons
 		displayName="[GSB] Cad Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\GSB Stuff\gsb_helmet1.paa"
+			"\SR_XI\XI\Data\GSB Stuff\gsb_helmet1.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -912,7 +912,7 @@ class cfgWeapons
 		displayName="[GSB] Cad Heavy Helmet";
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\GSB Stuff\gsb_helmet_heavy.paa"
+			"\SR_XI\XI\Data\GSB Stuff\gsb_helmet_heavy.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1062,8 +1062,8 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\XI Vests\XI_Guardsmen_Vest.paa",
-			"\XI\Data\XI Vests\XI_Guardsmen_Vest.paa"
+			"\SR_XI\XI\Data\XI Vests\XI_Guardsmen_Vest.paa",
+			"\SR_XI\XI\Data\XI Vests\XI_Guardsmen_Vest.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1132,8 +1132,8 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\XI Vests\XI_Guardsmen_Vest.paa",
-			"\XI\Data\XI Vests\XI_Guardsmen_Vest.paa"
+			"\SR_XI\XI\Data\XI Vests\XI_Guardsmen_Vest.paa",
+			"\SR_XI\XI\Data\XI Vests\XI_Guardsmen_Vest.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1152,9 +1152,9 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\XI Vests\XI_Guardsmen_Vest.paa",
-			"\XI\Data\XI Vests\XI_Guardsmen_Vest.paa",
-			"\XI\Data\XI Vests\XI_Bandolier_Med.paa"
+			"\SR_XI\XI\Data\XI Vests\XI_Guardsmen_Vest.paa",
+			"\SR_XI\XI\Data\XI Vests\XI_Guardsmen_Vest.paa",
+			"\SR_XI\XI\Data\XI Vests\XI_Bandolier_Med.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -1171,11 +1171,11 @@ class cfgWeapons
 		scope=0;
 		author="Rogue771";
 		displayname="'[XI] (LP) Face Mask V2";
-		model="xi\XIMaskV2Arma.p3d";
+		model="\SR_XI\xi\XIMaskV2Arma.p3d";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel="xi\XIMaskV2Arma.p3d";
-			modelOff="xi\XIMaskV2Arma.p3d";
+			uniformModel="\SR_XI\xi\XIMaskV2Arma.p3d";
+			modelOff="\SR_XI\xi\XIMaskV2Arma.p3d";
 		};
 	};
 	class XI_LPMaskV2Rogue: NVGoggles
@@ -1183,11 +1183,11 @@ class cfgWeapons
 		scope=0;
 		author="Rogue771";
 		displayname="'[XI] (LP) Face Mask V2 Rogue";
-		model="xi\XIMaskV2ArmaRogue.p3d";
+		model="\SR_XI\xi\XIMaskV2ArmaRogue.p3d";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel="xi\XIMaskV2ArmaRogue.p3d";
-			modelOff="xi\XIMaskV2ArmaRogue.p3d";
+			uniformModel="\SR_XI\xi\XIMaskV2ArmaRogue.p3d";
+			modelOff="\SR_XI\xi\XIMaskV2ArmaRogue.p3d";
 		};
 	};
 	class WBK_Narth_3;
@@ -1277,10 +1277,10 @@ class CfgVehicles
 		ace_cargo_space=22;
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\XI Vehicles\APC_Tracked_01_body_XI_CO.paa",
-			"\XI\Data\XI Vehicles\MBT_01_body_XI_CO.paa",
-			"\XI\Data\XI Vehicles\turret_co.paa",
-			"\XI\Data\XI Vehicles\APC_Tracked_01_XI_CO.paa"
+			"\SR_XI\XI\Data\XI Vehicles\APC_Tracked_01_body_XI_CO.paa",
+			"\SR_XI\XI\Data\XI Vehicles\MBT_01_body_XI_CO.paa",
+			"\SR_XI\XI\Data\XI Vehicles\turret_co.paa",
+			"\SR_XI\XI\Data\XI Vehicles\APC_Tracked_01_XI_CO.paa"
 		};
 		animationList[]=
 		{
@@ -1375,8 +1375,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\XI Uniform\XI_Trooper_Top.paa",
-			"\XI\Data\XI Uniform\XI_Trooper_Bottom.paa"
+			"\SR_XI\XI\Data\XI Uniform\XI_Trooper_Top.paa",
+			"\SR_XI\XI\Data\XI Uniform\XI_Trooper_Bottom.paa"
 		};
 		class EventHandlers
 		{
@@ -1583,8 +1583,8 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI\Data\XI Uniform\XI_Medicae_Top.paa",
-			"\XI\Data\XI Uniform\XI_Trooper_Bottom.paa"
+			"\SR_XI\XI\Data\XI Uniform\XI_Medicae_Top.paa",
+			"\SR_XI\XI\Data\XI Uniform\XI_Trooper_Bottom.paa"
 		};
 	};
 	class ic_VoxBackpack;

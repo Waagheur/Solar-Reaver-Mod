@@ -633,7 +633,7 @@ class cfgWeapons
 	{
 		drySound[]=
 		{
-			"\xi_vehicles\Sounds\siren.wav",
+			"\SR_XI\xi_vehicles\Sounds\siren.wav",
 			50,
 			1,
 			200
@@ -1035,7 +1035,7 @@ class CfgVehicles
 		scopeCurator=2;
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_vehicles\Data\XI Vehicles\pxi_taurosbody_black.paa"
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\pxi_taurosbody_black.paa"
 		};
 		armorStructural=6000;
 		class HitPoints: HitPoints
@@ -1108,7 +1108,7 @@ class CfgVehicles
 		scopeCurator=2;
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_vehicles\Data\XI Vehicles\pxi_taurosbody_black.paa"
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\pxi_taurosbody_black.paa"
 		};
 		armorStructural=6000;
 		class HitPoints: HitPoints
@@ -1181,10 +1181,10 @@ class CfgVehicles
 		scopeCurator=2;
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_vehicles\Data\XI Vehicles\pxi_taurosbody_black.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\pxi_taurosbody_black.paa",
 			"\IC_Tauros\data\dashboard_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\pxi_taurosturret_black.paa",
-			"\xi_vehicles\Data\XI Vehicles\pxi_venatorplates_black.paa"
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\pxi_taurosturret_black.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\pxi_venatorplates_black.paa"
 		};
 		armorStructural=6000;
 		class HitPoints: HitPoints
@@ -1386,9 +1386,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 		};
 		class textureSources
 		{
@@ -1406,9 +1406,9 @@ class CfgVehicles
 				};
 				textures[]=
 				{
-					"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 				};
 			};
 		};
@@ -1494,9 +1494,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 		};
 		class textureSources
 		{
@@ -1507,9 +1507,9 @@ class CfgVehicles
 				factions[]={};
 				textures[]=
 				{
-					"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 				};
 			};
 		};
@@ -1598,9 +1598,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_vehicles\Data\XI Vehicles\camo_med_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo_med_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 		};
 		class textureSources
 		{
@@ -1618,9 +1618,9 @@ class CfgVehicles
 				};
 				textures[]=
 				{
-					"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 				};
 			};
 		};
@@ -1714,9 +1714,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 		};
 		class textureSources
 		{
@@ -1727,9 +1727,9 @@ class CfgVehicles
 				factions[]={};
 				textures[]=
 				{
-					"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 				};
 			};
 		};
@@ -1827,9 +1827,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-			"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+			"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 		};
 		class textureSources
 		{
@@ -1840,9 +1840,9 @@ class CfgVehicles
 				factions[]={};
 				textures[]=
 				{
-					"\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
-					"\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo1_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo2_co.paa",
+					"\SR_XI\xi_vehicles\Data\XI Vehicles\camo3_co.paa"
 				};
 			};
 		};
@@ -1940,9 +1940,9 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_body.paa",
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_tracks.paa",
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_turret.paa"
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_body.paa",
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_tracks.paa",
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_turret.paa"
 		};
 		armorStructural=800;
 		armor=600;
@@ -2263,10 +2263,10 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_body.paa",
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_tracks.paa",
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_turret.paa",
-			"\XI_Vehicles\Data\XI Vehicles\pxi_leman_gun1.paa"
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_body.paa",
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_tracks.paa",
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_turret.paa",
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_leman_gun1.paa"
 		};
 		armorStructural=6;
 		armor=900;
@@ -2573,10 +2573,10 @@ class CfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_body.paa",
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_tracks.paa",
-			"\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_turret.paa",
-			"\XI_Vehicles\Data\XI Vehicles\pxi_leman_gun1.paa"
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_body.paa",
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_tracks.paa",
+			"\SR_XI\XI_vehicles\Data\XI Vehicles\pxi_u_chimera_turret.paa",
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_leman_gun1.paa"
 		};
 		armorStructural=6;
 		armor=900;
@@ -2883,14 +2883,29 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		maxFordingDepth=2;
+		maxSpeed=85;
+		enginePower=5500;
+		peakTorque=8550;
+		minOmega=100;
+		maxOmega=320;
+		clutchStrength=500;
+		torqueCurve[]=
+		{
+			{0.234615,0},
+			{0.384615,0.61302698},
+			{0.53846198,1},
+			{0.884615,0.72796899},
+			{1.26923,0}
+		};
+		engineMOI=8;
 		armorStructural=800;
 		armor=600;
 		hiddenSelectionsTextures[]=
 		{
-			"\XI_Vehicles\Data\XI Vehicles\pxi_leman_hull.paa",
-			"\XI_Vehicles\Data\XI Vehicles\pxi_Leman_Tracks.paa",
-			"\XI_Vehicles\Data\XI Vehicles\pxi_Leman_Turret.paa",
-			"\XI_Vehicles\Data\XI Vehicles\pxi_leman_gun1.paa"
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_leman_hull.paa",
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_Leman_Tracks.paa",
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_Leman_Turret.paa",
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_leman_gun1.paa"
 		};
 		animationList[]=
 		{
@@ -3055,29 +3070,29 @@ class CfgVehicles
 		scope=2;
 		scopeCurator=2;
 		maxFordingDepth=2;
-		// maxSpeed=85;
-		// enginePower=5500;
-		// peakTorque=8550;
-		// minOmega=100;
-		// maxOmega=320;
-		// clutchStrength=500;
-		// torqueCurve[]=
-		// {
-			// {0.234615,0},
-			// {0.384615,0.61302698},
-			// {0.53846198,1},
-			// {0.884615,0.72796899},
-			// {1.26923,0}
-		// };
-		// engineMOI=8;
+		maxSpeed=85;
+		enginePower=5500;
+		peakTorque=8550;
+		minOmega=100;
+		maxOmega=320;
+		clutchStrength=500;
+		torqueCurve[]=
+		{
+			{0.234615,0},
+			{0.384615,0.61302698},
+			{0.53846198,1},
+			{0.884615,0.72796899},
+			{1.26923,0}
+		};
+		engineMOI=8;
 		armorStructural=5;
 		armor=1000;
 		hiddenSelectionsTextures[]=
 		{
-			"\XI_Vehicles\Data\XI Vehicles\pxi_leman_hull.paa",
-			"\XI_Vehicles\Data\XI Vehicles\pxi_Leman_Tracks.paa",
-			"\XI_Vehicles\Data\XI Vehicles\pxi_Leman_Turret.paa",
-			"\XI_Vehicles\Data\XI Vehicles\pxi_leman_gun1.paa"
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_leman_hull.paa",
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_Leman_Tracks.paa",
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_Leman_Turret.paa",
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\pxi_leman_gun1.paa"
 		};
 		animationList[]=
 		{
@@ -3832,7 +3847,7 @@ class CfgVehicles
 		editorSubcategory="XI_subcat_fz";
 		hiddenSelectionsTextures[]=
 		{
-			"\XI_Vehicles\Data\XI Vehicles\fennec.paa"
+			"\SR_XI\XI_Vehicles\Data\XI Vehicles\fennec.paa"
 		};
 		armorStructural=4000;
 	};

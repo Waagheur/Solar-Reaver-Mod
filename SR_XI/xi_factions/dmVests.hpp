@@ -149,7 +149,7 @@
 		displayName="[LIGHT] Pirate Vest 1";
         hiddenSelectionsTextures[]=
         {
-            "\XI\Data\Custom Factions\dt_durkham_vest.paa",
+            "\SR_XI\XI\Data\Custom Factions\dt_durkham_vest.paa",
         };
 		class ItemInfo: ItemInfo
         {
@@ -166,7 +166,7 @@
 		displayName="[LIGHT] Pirate Vest 2";
         hiddenSelectionsTextures[]=
         {
-            "\XI\Data\Custom Factions\dt_durkham_vest.paa",
+            "\SR_XI\XI\Data\Custom Factions\dt_durkham_vest.paa",
         };
 		class ItemInfo: ItemInfo
         {
@@ -184,7 +184,7 @@
 		displayName="[LINE] Pirate Vest 1";
         hiddenSelectionsTextures[]=
         {
-            "\XI\Data\Custom Factions\dt_durkham_vest.paa",
+            "\SR_XI\XI\Data\Custom Factions\dt_durkham_vest.paa",
 			"\IC_Departmento_Munitorum\IC_Moebian\data\ic_moebianShoulders_co.paa"
         };
 		class ItemInfo: ItemInfo
@@ -202,7 +202,7 @@
 		displayName="[LINE] Pirate Vest 2";
         hiddenSelectionsTextures[]=
         {
-            "\XI\Data\Custom Factions\dt_durkham_vest.paa",
+            "\SR_XI\XI\Data\Custom Factions\dt_durkham_vest.paa",
 			"\IC_Departmento_Munitorum\IC_Moebian\data\ic_moebianShoulders_co.paa"
         };
 		class ItemInfo: ItemInfo

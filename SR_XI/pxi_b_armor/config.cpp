@@ -58,8 +58,8 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="'[P.XI] Helmet Base";
-		picture="\pxi_b_armor\ui\xi_helm.paa";
-		model="\pxi_b_armor\pxi_helm_base.p3d";
+		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
+		model="\SR_XI\pxi_b_armor\pxi_helm_base.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -68,14 +68,14 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_armor\data\xi_helm_co.paa",
-			"\pxi_b_armor\data\xi_shoulders_co.paa",
-			"\pxi_b_armor\data\xi_Shoulders_co.paa"
+			"\SR_XI\pxi_b_armor\data\xi_helm_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_shoulders_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_Shoulders_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=10;
-			uniformModel="\pxi_b_armor\pxi_helm_base.p3d";
+			uniformModel="\SR_XI\pxi_b_armor\pxi_helm_base.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -105,8 +105,8 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="'[P.XI] Helmet Base";
-		picture="\pxi_b_armor\ui\xi_helm.paa";
-		model="\pxi_b_armor\pxi_helm_evocatii.p3d";
+		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
+		model="\SR_XI\pxi_b_armor\pxi_helm_evocatii.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -115,14 +115,14 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_armor\data\xi_helm_co.paa",
-			"\pxi_b_armor\data\xi_shoulders_co.paa",
-			"\pxi_b_armor\data\xi_Shoulders_co.paa"
+			"\SR_XI\pxi_b_armor\data\xi_helm_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_shoulders_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_Shoulders_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=10;
-			uniformModel="\pxi_b_armor\pxi_helm_evocatii.p3d";
+			uniformModel="\SR_XI\pxi_b_armor\pxi_helm_evocatii.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -152,8 +152,8 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="'[P.XI] NCO Helmet Base";
-		picture="\pxi_b_armor\ui\xi_helm.paa";
-		model="\pxi_b_armor\pxi_nco_helm_base.p3d";
+		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
+		model="\SR_XI\pxi_b_armor\pxi_nco_helm_base.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -163,15 +163,15 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_armor\data\xi_helm_co.paa",
-			"\pxi_b_armor\data\xi_Shoulders_co.paa",
-			"\pxi_b_armor\data\xi_Shoulders_co.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_armor\data\xi_helm_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_Shoulders_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_Shoulders_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=10;
-			uniformModel="\pxi_b_armor\pxi_nco_helm_base.p3d";
+			uniformModel="\SR_XI\pxi_b_armor\pxi_nco_helm_base.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -200,8 +200,8 @@ class CfgWeapons
 	{
 		scope=0;
 		displayName="'[P.XI] NCO Helmet Base Doctores";
-		picture="\pxi_b_armor\ui\xi_helm.paa";
-		model="\pxi_b_armor\pxi_nco_helm_doctores.p3d";
+		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
+		model="\SR_XI\pxi_b_armor\pxi_nco_helm_doctores.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -211,15 +211,15 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_armor\data\xi_helm_co.paa",
-			"\pxi_b_armor\data\xi_Shoulders_co.paa",
-			"\pxi_b_armor\data\xi_Shoulders_co.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_armor\data\xi_helm_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_Shoulders_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_Shoulders_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=10;
-			uniformModel="\pxi_b_armor\pxi_nco_helm_doctores.p3d";
+			uniformModel="\SR_XI\pxi_b_armor\pxi_nco_helm_doctores.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -248,8 +248,8 @@ class CfgWeapons
 	{
 		scope=0;
 		displayName="'[P.XI] NCO Helmet Base Evocatii";
-		picture="\pxi_b_armor\ui\xi_helm.paa";
-		model="\pxi_b_armor\pxi_nco_helm_evocatii.p3d";
+		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
+		model="\SR_XI\pxi_b_armor\pxi_nco_helm_evocatii.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -259,15 +259,15 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_armor\data\xi_helm_co.paa",
-			"\pxi_b_armor\data\xi_Shoulders_co.paa",
-			"\pxi_b_armor\data\xi_Shoulders_co.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_armor\data\xi_helm_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_Shoulders_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_Shoulders_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=10;
-			uniformModel="\pxi_b_armor\pxi_nco_helm_evocatii.p3d";
+			uniformModel="\SR_XI\pxi_b_armor\pxi_nco_helm_evocatii.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -324,7 +324,7 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="'[P.XI] Legionnaire Armour - Base Model";
-		model="\pxi_b_armor\pxi_armour_upgraded_base.p3d";
+		model="\SR_XI\pxi_b_armor\pxi_armour_upgraded_base.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -333,12 +333,12 @@ class CfgWeapons
 		descriptionShort="Stormtrooper Armour";
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_armor\data\xi_armourRevampB_co.paa",
-			"\pxi_b_armor\data\xi_armourRevampT_co.paa"
+			"\SR_XI\pxi_b_armor\data\xi_armourRevampB_co.paa",
+			"\SR_XI\pxi_b_armor\data\xi_armourRevampT_co.paa"
 		};
 		class ItemInfo: VestItem
 		{
-			uniformModel="\pxi_b_armor\pxi_armour_upgraded_base.p3d";
+			uniformModel="\SR_XI\pxi_b_armor\pxi_armour_upgraded_base.p3d";
 			containerClass="Supply190";
 			mass=25;
 			hiddenSelections[]=
@@ -348,8 +348,8 @@ class CfgWeapons
 			};
 			hiddenSelectionsTextures[]=
 			{
-				"\pxi_b_armor\data\xi_armourRevampB_co.paa",
-				"\pxi_b_armor\data\xi_armourRevampT_co.paa"
+				"\SR_XI\pxi_b_armor\data\xi_armourRevampB_co.paa",
+				"\SR_XI\pxi_b_armor\data\xi_armourRevampT_co.paa"
 			};
 			class HitpointsProtectionInfo
 			{
@@ -408,7 +408,7 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="'[P.XI] Legionnaire Armour - Model";
-		model="\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
+		model="\SR_XI\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -417,12 +417,12 @@ class CfgWeapons
 		descriptionShort="Stormtrooper Armour";
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_armor\data\pxi_armour_padding_doctores.paa",
-			"\pxi_b_armor\data\pxi_armour_plates_doctores.paa"
+			"\SR_XI\pxi_b_armor\data\pxi_armour_padding_doctores.paa",
+			"\SR_XI\pxi_b_armor\data\pxi_armour_plates_doctores.paa"
 		};
 		class ItemInfo: VestItem
 		{
-			uniformModel="\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
+			uniformModel="\SR_XI\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
 			containerClass="Supply190";
 			mass=25;
 			hiddenSelections[]=
@@ -432,8 +432,8 @@ class CfgWeapons
 			};
 			hiddenSelectionsTextures[]=
 			{
-				"\pxi_b_armor\data\pxi_armour_padding_doctores.paa",
-				"\pxi_b_armor\data\pxi_armour_plates_doctores.paa"
+				"\SR_XI\pxi_b_armor\data\pxi_armour_padding_doctores.paa",
+				"\SR_XI\pxi_b_armor\data\pxi_armour_plates_doctores.paa"
 			};
 			class HitpointsProtectionInfo
 			{
@@ -495,7 +495,7 @@ class cfgGlasses
 	{
 		author="Rogue771";
 		displayname="'[PXI] Medicae Mask";
-		model="\pxi_b_armor\pxi_mask_medicae.p3d";
+		model="\SR_XI\pxi_b_armor\pxi_mask_medicae.p3d";
 		scope=2;
 		identityTypes[]={};
 		mass=4;

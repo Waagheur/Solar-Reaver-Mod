@@ -55,7 +55,7 @@ class CfgVehicles
 		editorSubcategory="pxi_sub_obj_flag";
 		class EventHandlers
 		{
-			init="(_this select 0) setFlagTexture '\pxi_flags\flags\flag_pxi_1st.paa'";
+			init="(_this select 0) setFlagTexture '\SR_XI\pxi_flags\flags\flag_pxi_1st.paa'";
 		};
 	};
 	class Flag_pxi_Main: Flag_pxi_1stC
@@ -68,7 +68,7 @@ class CfgVehicles
 		editorSubcategory="pxi_sub_obj_flag";
 		class EventHandlers
 		{
-			init="(_this select 0) setFlagTexture '\pxi_flags\flags\flag_pxi_main.paa'";
+			init="(_this select 0) setFlagTexture '\SR_XI\pxi_flags\flags\flag_pxi_main.paa'";
 		};
 	};
 	class Flag_pxi_2ndC: Flag_pxi_1stC
@@ -81,7 +81,7 @@ class CfgVehicles
 		editorSubcategory="pxi_sub_obj_flag";
 		class EventHandlers
 		{
-			init="(_this select 0) setFlagTexture '\pxi_flags\flags\flag_pxi_2nd.paa'";
+			init="(_this select 0) setFlagTexture '\SR_XI\pxi_flags\flags\flag_pxi_2nd.paa'";
 		};
 	};
 	class Flag_pxi_Aux: Flag_pxi_1stC
@@ -94,7 +94,7 @@ class CfgVehicles
 		editorSubcategory="pxi_sub_obj_flag";
 		class EventHandlers
 		{
-			init="(_this select 0) setFlagTexture '\pxi_flags\flags\flag_pxi_aux.paa'";
+			init="(_this select 0) setFlagTexture '\SR_XI\pxi_flags\flags\flag_pxi_aux.paa'";
 		};
 	};
 	class Banner_01_base_F;
@@ -117,7 +117,7 @@ class CfgVehicles
 		editorSubcategory="pxi_sub_obj_flag";
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_flags\flags\flag_pxi_1st.paa"
+			"\SR_XI\pxi_flags\flags\flag_pxi_1st.paa"
 		};
 	};
 	class Banner_pxi_Main: Banner_pxi_1stC
@@ -130,7 +130,7 @@ class CfgVehicles
 		editorSubcategory="pxi_sub_obj_flag";
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_flags\flags\flag_pxi_main.paa"
+			"\SR_XI\pxi_flags\flags\flag_pxi_main.paa"
 		};
 	};
 	class Banner_pxi_2ndC: Banner_pxi_1stC
@@ -143,7 +143,7 @@ class CfgVehicles
 		editorSubcategory="pxi_sub_obj_flag";
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_flags\flags\flag_pxi_2nd.paa"
+			"\SR_XI\pxi_flags\flags\flag_pxi_2nd.paa"
 		};
 	};
 	class Banner_pxi_Aux: Banner_pxi_1stC
@@ -156,7 +156,7 @@ class CfgVehicles
 		editorSubcategory="pxi_sub_obj_flag";
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_flags\flags\flag_pxi_aux.paa"
+			"\SR_XI\pxi_flags\flags\flag_pxi_aux.paa"
 		};
 	};
 };

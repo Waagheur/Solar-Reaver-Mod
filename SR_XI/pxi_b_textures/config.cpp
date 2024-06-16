@@ -66,8 +66,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates.paa"
 		};
 	};
 	class pxi_armor_droptrooper: pxi_armourVest_base
@@ -81,8 +81,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates.paa"
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
@@ -98,8 +98,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding_doctores.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates_doctores.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding_doctores.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates_doctores.paa"
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
@@ -115,8 +115,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates_t1.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates_t1.paa"
 		};
 	};
 	class pxi_armor_baseModel_t2: pxi_armourVest_base_t2
@@ -130,8 +130,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates_t2.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates_t2.paa"
 		};
 	};
 	class pxi_armor_baseModel_t3: pxi_armourVest_base_t3
@@ -145,8 +145,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates_t3.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates_t3.paa"
 		};
 	};
 	class pxi_armor_DT_t1: pxi_armourVest_base_t1
@@ -160,8 +160,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates_t1.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates_t1.paa"
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
@@ -177,8 +177,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates_t2.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates_t2.paa"
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
@@ -194,8 +194,8 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
-			"\pxi_b_textures\data\b_armor\pxi_armour_plates_t3.paa"
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates_t3.paa"
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
@@ -212,9 +212,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
 		};
 	};
 	class pxi_helmet_centuria_1: pxi_helmetbase_0
@@ -229,9 +229,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_1.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_1.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
 		};
 	};
 	class pxi_helmet_centuria_1_m: pxi_helmetbase_0
@@ -246,9 +246,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmet_medic.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_1.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmet_medic.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_1.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
 		};
 	};
 	class pxi_helmet_centuria_2: pxi_helmetbase_0
@@ -263,9 +263,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_2.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_2.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
 		};
 	};
 	class pxi_helmet_centuria_2_m: pxi_helmetbase_0
@@ -280,9 +280,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmet_medic.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_2.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmet_medic.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_2.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
 		};
 	};
 	class pxi_helmet_evocatii_1: pxi_helmet_evocatii_0
@@ -297,9 +297,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_evocatii_1.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_evocatii_1.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
 		};
 	};
 	class pxi_helmet_evocatii_2: pxi_helmet_evocatii_0
@@ -314,9 +314,9 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_evocatii_2.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmet_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_evocatii_2.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa"
 		};
 	};
 	class pxi_nco_helmet_standard: pxi_helmetbase_nco_0
@@ -332,10 +332,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 	};
 	class pxi_nco_helmet_centuria_1: pxi_helmetbase_nco_0
@@ -351,10 +351,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_1.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_1.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 	};
 	class pxi_nco_helmet_centuria_2: pxi_helmetbase_nco_0
@@ -370,10 +370,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_2.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_centuria_2.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 	};
 	class pxi_nco_helmet_fc: pxi_helmetbase_nco_0
@@ -389,10 +389,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_fc.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_fc.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 	};
 	class pxi_doc_helmet_standard: pxi_helmet_doctores_nco_0
@@ -407,10 +407,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmetNCO_doctores.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_doctores_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_doctores_base_2.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmetNCO_doctores.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_doctores_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_doctores_base_2.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 	};
 	class pxi_nco_helmet_evocatii_1: pxi_helmet_evocatii_nco_0
@@ -426,10 +426,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_evocatii_1.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_evocatii_1.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 	};
 	class pxi_nco_helmet_evocatii_2: pxi_helmet_evocatii_nco_0
@@ -445,10 +445,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_evocatii_2.paa",
-			"\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_evocatii_2.paa",
+			"\SR_XI\pxi_b_textures\data\b_shoulders\pxi_shoulders_base_2.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 	};
 	class pxi_nco_helmet_bones: pxi_helmetbase_nco_0
@@ -464,10 +464,10 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
-			"\pxi_b_textures\data\c_shoulders\pxi_bones.paa",
-			"\pxi_b_textures\data\c_shoulders\pxi_bones.paa",
-			"\pxi_b_armor\data\xi_crest_co.paa"
+			"\SR_XI\pxi_b_textures\data\b_helmet\pxi_helmetNCO_base.paa",
+			"\SR_XI\pxi_b_textures\data\c_shoulders\pxi_bones.paa",
+			"\SR_XI\pxi_b_textures\data\c_shoulders\pxi_bones.paa",
+			"\SR_XI\pxi_b_armor\data\xi_crest_co.paa"
 		};
 	};
 };

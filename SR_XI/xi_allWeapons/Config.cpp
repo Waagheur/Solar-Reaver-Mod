@@ -383,12 +383,12 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			}
 		};
@@ -401,17 +401,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			}
 		};
@@ -425,17 +425,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			}
 		};
@@ -455,17 +455,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 				1
 			}
 		};
@@ -485,12 +485,12 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			}
 		};
@@ -503,17 +503,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			}
 		};
@@ -527,17 +527,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			}
 		};
@@ -557,17 +557,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+				"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 				1
 			}
 		};
@@ -587,12 +587,12 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			}
 		};
@@ -605,17 +605,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			}
 		};
@@ -629,17 +629,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			}
 		};
@@ -659,17 +659,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+				"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 				1
 			}
 		};
@@ -689,12 +689,12 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			}
 		};
@@ -707,17 +707,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			}
 		};
@@ -731,17 +731,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			}
 		};
@@ -761,17 +761,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+				"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 				1
 			}
 		};
@@ -893,12 +893,12 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			}
 		};
@@ -911,17 +911,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			}
 		};
@@ -935,17 +935,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			}
 		};
@@ -965,17 +965,17 @@ class CfgSoundShaders
 		{
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			},
 			
 			{
-				"\xi_allWeapons\longlas\Sounds\boolets.ogg",
+				"\SR_XI\xi_allWeapons\longlas\Sounds\boolets.ogg",
 				1
 			}
 		};
@@ -1602,8 +1602,8 @@ class cfgWeapons
 		author="";
 		scope=0;
 		displayName="'[PXI] TESTING";
-		picture="\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
-		UiPicture="\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
+		picture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
+		UiPicture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
 		Magazines[]={};
 		magazineWell[]={};
 		caseless[]={};
@@ -1687,9 +1687,9 @@ class cfgWeapons
 		scope=0;
 		displayName="[XI] Mars Pattern lasgun";
 		descriptionShort="[XI] Mars Pattern lasgun";
-		picture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
-		UiPicture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
-		model="\xi_allWeapons\XI_Mars_lasgun.p3d";
+		picture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
+		UiPicture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
+		model="\SR_XI\xi_allWeapons\XI_Mars_lasgun.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -1697,8 +1697,8 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\marsLasgun\data\xi_MarsLasgunF_co.paa",
-			"\xi_allWeapons\marsLasgun\data\xi_MarsLasgunB_co.paa"
+			"\SR_XI\xi_allWeapons\marsLasgun\data\xi_MarsLasgunF_co.paa",
+			"\SR_XI\xi_allWeapons\marsLasgun\data\xi_MarsLasgunB_co.paa"
 		};
 		handAnim[]=
 		{
@@ -1815,7 +1815,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 					1,
 					1,
 					1800
@@ -1834,7 +1834,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 					1,
 					1,
 					1800
@@ -1874,7 +1874,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 					1,
 					1,
 					1800
@@ -2125,9 +2125,9 @@ class cfgWeapons
 		scope=2;
 		displayName="'[NCO] Mars-Pattern w/GL (PXI)";
 		descriptionShort="[XI] Mars Pattern lasgun";
-		picture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
-		UiPicture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
-		model="\xi_allWeapons\XI_Mars_lasgun.p3d";
+		picture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
+		UiPicture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
+		model="\SR_XI\xi_allWeapons\XI_Mars_lasgun.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -2135,8 +2135,8 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\marsLasgun\data\xi_MarsLasgunF_nco_co.paa",
-			"\xi_allWeapons\marsLasgun\data\xi_MarsLasgunB_co.paa"
+			"\SR_XI\xi_allWeapons\marsLasgun\data\xi_MarsLasgunF_nco_co.paa",
+			"\SR_XI\xi_allWeapons\marsLasgun\data\xi_MarsLasgunB_co.paa"
 		};
 		handAnim[]=
 		{
@@ -2264,7 +2264,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 					1,
 					1,
 					1800
@@ -2283,7 +2283,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 					1,
 					1,
 					1800
@@ -2323,7 +2323,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					"\SR_XI\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
 					1,
 					1,
 					1800
@@ -2392,11 +2392,11 @@ class cfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		picture="\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
-		UiPicture="\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
+		picture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
+		UiPicture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
 		displayName="'[PXI][A] Aquilifer Pattern Autogun Base";
 		escriptionShort="Bread is fat";
-		model="xi_allWeapons\XI_autogun.p3d";
+		model="\SR_XI\xi_allWeapons\XI_autogun.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -2404,8 +2404,8 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\autogun\data\xi_autogunB_co.paa",
-			"\xi_allWeapons\autogun\data\xi_autogunF_co.paa"
+			"\SR_XI\xi_allWeapons\autogun\data\xi_autogunB_co.paa",
+			"\SR_XI\xi_allWeapons\autogun\data\xi_autogunF_co.paa"
 		};
 		handAnim[]=
 		{
@@ -3000,11 +3000,11 @@ class cfgWeapons
 	{
 		author="Rogue771";
 		scope=2;
-		picture="\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
-		UiPicture="\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
+		picture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
+		UiPicture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
 		displayName="'[NCO] Aquilifer-Pattern w/GL (PXI)";
 		escriptionShort="Bread is fat";
-		model="xi_allWeapons\XI_autogun.p3d";
+		model="\SR_XI\xi_allWeapons\XI_autogun.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -3012,8 +3012,8 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\autogun\data\xi_autogunB_co.paa",
-			"\xi_allWeapons\autogun\data\xi_autogunF_nco_co.paa"
+			"\SR_XI\xi_allWeapons\autogun\data\xi_autogunB_co.paa",
+			"\SR_XI\xi_allWeapons\autogun\data\xi_autogunF_nco_co.paa"
 		};
 		handAnim[]=
 		{
@@ -3469,14 +3469,14 @@ class cfgWeapons
 		scope=2;
 		author="Rogue771";
 		displayName="'[XI] Carnifex-Pattern Boltgun";
-		model="\xi_AllWeapons\xi_boltpistol.p3d";
+		model="\SR_XI\xi_AllWeapons\xi_boltpistol.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\boltpistol\data\xi_boltpistol_co.paa"
+			"\SR_XI\xi_allWeapons\boltpistol\data\xi_boltpistol_co.paa"
 		};
 		picture="\IC_Departmento_Munitorum\IC_Departmento_Weapons\UI\BoltPistol.paa";
 		UiPicture="\IC_Departmento_Munitorum\IC_Departmento_Weapons\UI\BoltPistol.paa";
@@ -3487,14 +3487,14 @@ class cfgWeapons
 		scope=2;
 		author="Rogue771";
 		displayName="'[XI] Carnifex-Pattern Boltgun, Kyrent";
-		model="\xi_AllWeapons\xi_boltpistol.p3d";
+		model="\SR_XI\xi_AllWeapons\xi_boltpistol.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\data\customs\Kyrent_Boltgun_co.paa"
+			"\SR_XI\xi_allWeapons\data\customs\Kyrent_Boltgun_co.paa"
 		};
 		picture="\IC_Departmento_Munitorum\IC_Departmento_Weapons\UI\BoltPistol.paa";
 		UiPicture="\IC_Departmento_Munitorum\IC_Departmento_Weapons\UI\BoltPistol.paa";
@@ -3505,14 +3505,14 @@ class cfgWeapons
 		scope=2;
 		author="Rogue771";
 		displayName="'[XI] XI Bolt Pistol (War)";
-		model="\XI_allWeapons\XI_BoltPistolWar.p3d";
+		model="\SR_XI\XI_allWeapons\XI_BoltPistolWar.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\XI_allWeapons\boltPistol\data\XI_BoltPistolWar_co.paa"
+			"\SR_XI\XI_allWeapons\boltPistol\data\XI_BoltPistolWar_co.paa"
 		};
 		picture="\IC_Departmento_Munitorum\IC_Departmento_Weapons\UI\BoltPistol.paa";
 		UiPicture="\IC_Departmento_Munitorum\IC_Departmento_Weapons\UI\BoltPistol.paa";
@@ -3524,9 +3524,9 @@ class cfgWeapons
 		scope=2;
 		displayName="'[S] Taurus-Patern Light Stubber (PXI)";
 		descriptionShort="[XI] Bullpup LMG";
-		picture="\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
-		UiPicture="\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
-		model="\xi_allWeapons\xiBullpup.p3d";
+		picture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
+		UiPicture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
+		model="\SR_XI\xi_allWeapons\xiBullpup.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -3534,8 +3534,8 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\bullpupLMG\data\xi_bullpupLMG_F_co.paa",
-			"\xi_allWeapons\bullpupLMG\data\xi_bullpupLMG_B_co.paa"
+			"\SR_XI\xi_allWeapons\bullpupLMG\data\xi_bullpupLMG_F_co.paa",
+			"\SR_XI\xi_allWeapons\bullpupLMG\data\xi_bullpupLMG_B_co.paa"
 		};
 		handAnim[]=
 		{
@@ -3662,7 +3662,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+					"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 					7,
 					1,
 					600
@@ -3697,7 +3697,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
+					"\SR_XI\xi_allWeapons\bullpupLMG\Sounds\BullPup.wav",
 					3,
 					3,
 					600
@@ -3741,16 +3741,16 @@ class cfgWeapons
 		scope=2;
 		displayName="'[XI][A] Imperious Handcannon [B/II]";
 		descriptionShort="[XI] Revolver";
-		picture="\XI_lasgun\UI\MarsPattern.paa";
-		UiPicture="\XI_lasgun\UI\MarsPattern.paa";
-		model="\xi_allWeapons\xiRevolver.p3d";
+		picture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
+		UiPicture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
+		model="\SR_XI\xi_allWeapons\xiRevolver.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\Revolver\data\xiRevolver_co.paa"
+			"\SR_XI\xi_allWeapons\Revolver\data\xiRevolver_co.paa"
 		};
 		handAnim[]={};
 		selectionFireAnim="muzzleFlash";
@@ -3845,7 +3845,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
+					"\SR_XI\xi_allWeapons\Revolver\Sounds\xiRevolver.wav",
 					7,
 					1,
 					600
@@ -3908,7 +3908,7 @@ class cfgWeapons
 		UiPicture="\IC_weapons_base\Rifles\M36_Kantrael\data\ic_kantrael_ca.paa";
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\data\base\kantrael_xi_g_new.paa"
+			"\SR_XI\xi_allWeapons\data\base\kantrael_xi_g_new.paa"
 		};
 		magazines[]=
 		{
@@ -4274,9 +4274,9 @@ class cfgWeapons
 		scope=0;
 		displayName="[XI] Longlas Pattern lasgun";
 		descriptionShort="[XI] Longlas Pattern lasgun";
-		picture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
-		UiPicture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
-		model="\xi_allWeapons\XI_Mars_longlas.p3d";
+		picture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
+		UiPicture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
+		model="\SR_XI\xi_allWeapons\XI_Mars_longlas.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -4284,8 +4284,8 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\longlas\data\xi_longlasF_co.paa",
-			"\xi_allWeapons\longlas\data\xi_longlasB_co.paa"
+			"\SR_XI\xi_allWeapons\longlas\data\xi_longlasF_co.paa",
+			"\SR_XI\xi_allWeapons\longlas\data\xi_longlasB_co.paa"
 		};
 		handAnim[]=
 		{
@@ -4403,7 +4403,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+					"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 					1,
 					1,
 					1800
@@ -4422,7 +4422,7 @@ class cfgWeapons
 				};
 				begin1[]=
 				{
-					"\xi_allWeapons\longlas\Sounds\LongLas.ogg",
+					"\SR_XI\xi_allWeapons\longlas\Sounds\LongLas.ogg",
 					1,
 					1,
 					1800
@@ -4638,7 +4638,7 @@ class cfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\xi_allWeapons\data\customs\Kyrent_Autogun_co.paa"
+			"\SR_XI\xi_allWeapons\data\customs\Kyrent_Autogun_co.paa"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{

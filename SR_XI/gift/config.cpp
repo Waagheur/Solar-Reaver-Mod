@@ -52,8 +52,8 @@ class cfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\Gift\data\cad_uni_pants02_XI.paa",
-			"\Gift\data\cad_uni_top_XI.paa"
+			"\SR_XI\Gift\data\cad_uni_pants02_XI.paa",
+			"\SR_XI\Gift\data\cad_uni_top_XI.paa"
 		};
 		class HitPoints
 		{
@@ -262,8 +262,8 @@ class cfgVehicles
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\Gift\data\cad_uni_pants02_XI.paa",
-			"\Gift\data\cad_uni_top_XI.paa"
+			"\SR_XI\Gift\data\cad_uni_pants02_XI.paa",
+			"\SR_XI\Gift\data\cad_uni_top_XI.paa"
 		};
 		class HitPoints
 		{
@@ -507,19 +507,19 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="[XI] Helmet";
-		model="\Gift\XI_HelmGift.p3d";
+		model="\SR_XI\Gift\XI_HelmGift.p3d";
 		hiddenSelections[]=
 		{
 			"camo"
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\Gift\data\XIHelm_gift_co.paa"
+			"\SR_XI\Gift\data\XIHelm_gift_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=0.5;
-			uniformModel="\Gift\XI_HelmGift.p3d";
+			uniformModel="\SR_XI\Gift\XI_HelmGift.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -541,7 +541,7 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="[XI] Helmet (With Shoulders)";
-		model="\Gift\XI_HelmGiftShoudlers.p3d";
+		model="\SR_XI\Gift\XI_HelmGiftShoudlers.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -549,13 +549,13 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\Gift\data\XIHelm_gift_co.paa",
+			"\SR_XI\Gift\data\XIHelm_gift_co.paa",
 			"\Arma3 Mods\Harakoni\data\UltramarAuxiliaShouldersRed_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=0.5;
-			uniformModel="\Gift\XI_HelmGiftShoudlers.p3d";
+			uniformModel="\SR_XI\Gift\XI_HelmGiftShoudlers.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -578,7 +578,7 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="'[XI] Lux-Pattern Helmet (V2)";
-		model="\Gift\XI_HelmGiftV2.p3d";
+		model="\SR_XI\Gift\XI_HelmGiftV2.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -587,14 +587,14 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\Gift\data\XIHelm_gift_co.paa",
+			"\SR_XI\Gift\data\XIHelm_gift_co.paa",
 			"\Arma3 Mods\Harakoni\data\UltramarAuxiliaShouldersRed_co.paa",
-			"\Gift\data\XISkirt_co.paa"
+			"\SR_XI\Gift\data\XISkirt_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=0.5;
-			uniformModel="\Gift\XI_HelmGiftV2.p3d";
+			uniformModel="\SR_XI\Gift\XI_HelmGiftV2.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -618,7 +618,7 @@ class CfgWeapons
 		author="Rogue771";
 		scope=0;
 		displayName="'[XI] Lux-Pattern Helmet";
-		model="\Gift\XI_HelmGiftV3.p3d";
+		model="\SR_XI\Gift\XI_HelmGiftV3.p3d";
 		hiddenSelections[]=
 		{
 			"camo",
@@ -627,14 +627,14 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\Gift\data\XIHelm_gift_co.paa",
+			"\SR_XI\Gift\data\XIHelm_gift_co.paa",
 			"\Arma3 Mods\Harakoni\data\UltramarAuxiliaShouldersRed_co.paa",
-			"\Gift\data\XISkirt_co.paa"
+			"\SR_XI\Gift\data\XISkirt_co.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
 			mass=0.5;
-			uniformModel="\Gift\XI_HelmGiftV3.p3d";
+			uniformModel="\SR_XI\Gift\XI_HelmGiftV3.p3d";
 			modelSides[]={3,1};
 			hiddenSelections[]=
 			{
@@ -663,11 +663,11 @@ class CfgWeapons
 		scope=0;
 		author="Rogue771";
 		displayname="'[XI] Lux-Pattern Face Mask";
-		model="Gift\XI_MaskGift.p3d";
+		model="\SR_XI\Gift\XI_MaskGift.p3d";
 		class ItemInfo: ItemInfo
 		{
-			uniformModel="Gift\XI_MaskGift.p3d";
-			modelOff="Gift\XI_MaskGift.p3d";
+			uniformModel="\SR_XI\Gift\XI_MaskGift.p3d";
+			modelOff="\SR_XI\Gift\XI_MaskGift.p3d";
 		};
 	};
 };

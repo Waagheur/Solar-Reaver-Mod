@@ -1,8 +1,8 @@
 /*	This file defines all important variables, creates the necessary functions, sets keybinds etc.	*/
 
 //creating functions
-execVM "\xi\scripts\break_fall.sqf";
-execVM "\xi\scripts\preventfalldamage.sqf";
+execVM "\SR_XI\xi\scripts\break_fall.sqf";
+execVM "\SR_XI\xi\scripts\preventfalldamage.sqf";
 
 /* //just some debugging stuff, can safely remove this
 [] spawn {
