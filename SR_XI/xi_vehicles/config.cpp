@@ -31,7 +31,9 @@ class CfgPatches
 		};
 		weapons[]=
 		{
-			"XI_Hydra_AutoCannon_Rebalance"
+			"XI_Hydra_AutoCannon_Rebalance",
+			
+			"Throw"
 		};
 		requiredVersion=0.1;
 		requiredAddons[]=
@@ -51,15 +53,26 @@ class CfgPatches
 			"a40k_wepbase",
 			"A3_Armor_F_Decade_MBT_02"
 		};
-		magazines[]={};
+		magazines[]={
+			"SR_Mag_TVD_OPTRE_cart",
+			"SR_Mag_TVD_pxi_tauros_unarmed",
+			"SR_Mag_TVD_TIOW_Centaur_01_Cadian_667_Blu"
+		};
 		ammo[]=
 		{
 			"XI_Quad_Autocannon_weapon_Hydra_Flak_Rebalance",
 			"XI_30mm_MP_Shell_Repass",
-			"XI_120mm"
+			"XI_120mm",
+			
+			"SR_Ammo_TVD_OPTRE_cart",
+			"SR_Ammo_TVD_pxi_tauros_unarmed",
+			"SR_Ammo_TVD_TIOW_Centaur_01_Cadian_667_Blu"
 		};
 	};
 };
+
+
+
 class CfgFactionClasses
 {
 	class xi_legion_fac
@@ -848,6 +861,43 @@ class cfgWeapons
 			};
 		};
 	};
+
+
+
+	// TVD Grenades throwing
+	
+	class GrenadeLauncher;
+	class Throw: GrenadeLauncher
+	{
+		muzzles[]+=
+		{
+			"SR_TVD_OPTRE_cart_Muzzle",
+			"SR_TVD_pxi_tauros_unarmed_Muzzle",
+			"SR_TVD_TIOW_Centaur_01_Cadian_667_Blu_Muzzle"
+		};
+		class ThrowMuzzle;
+		class SR_TVD_OPTRE_cart_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"SR_Mag_TVD_OPTRE_cart"
+			};
+		};
+		class SR_TVD_pxi_tauros_unarmed_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"SR_Mag_TVD_pxi_tauros_unarmed"
+			};
+		};
+		class SR_TVD_TIOW_Centaur_01_Cadian_667_Blu_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"SR_Mag_TVD_TIOW_Centaur_01_Cadian_667_Blu"
+			};
+		};
+	};
 };
 class CfgAmmo
 {
@@ -895,6 +945,24 @@ class CfgAmmo
 		typicalSpeed=1550;
 		caliber=45;
 	};
+	
+	
+	
+	// TVD Grenades
+	class SmokeShellOrange;
+	class SR_Ammo_TVD_OPTRE_cart: SmokeShellOrange
+	{
+		model="TIOW_IG_Explosives\TIOW_ig_frag_grenade\sm_frag_grenade_throw.p3d";
+	};
+	class SR_Ammo_TVD_pxi_tauros_unarmed: SmokeShellOrange
+	{
+		model="TIOW_IG_Explosives\TIOW_ig_frag_grenade\sm_frag_grenade_throw.p3d";
+	};
+	class SR_Ammo_TVD_TIOW_Centaur_01_Cadian_667_Blu: SmokeShellOrange
+	{
+		model="TIOW_IG_Explosives\TIOW_ig_frag_grenade\sm_frag_grenade_throw.p3d";
+	};
+	
 };
 class CfgMagazineWells
 {
@@ -967,6 +1035,57 @@ class CfgMagazines
 	{
 		tracersEvery=1;
 	};
+	
+	
+	
+	// TVD Grenades
+	class SmokeShellOrange;
+	class SR_Mag_TVD_OPTRE_cart: SmokeShellOrange
+	{
+		author = "Waagheur";
+		scope = 2;        
+		scopeArsenal = 2;       
+		displayName = "[SR] TVD - Tow Cart";
+		displayNameShort = "[SR] TVD - Tow Cart";
+		value = 0.1;
+		ammo = "SR_Ammo_TVD_OPTRE_cart";
+		model="TIOW_IG_Explosives\TIOW_ig_frag_grenade\sm_frag_grenade_mag.p3d";
+		picture="\TIOW_IG_Explosives\TIOW_ig_frag_grenade\data\frag_icon.paa";
+		UIpicture="\TIOW_IG_Explosives\TIOW_ig_frag_grenade\data\frag_icon.paa";
+		initSpeed=25;
+		mass=8;
+	};
+	class SR_Mag_TVD_pxi_tauros_unarmed: SmokeShellOrange
+	{
+		author = "Waagheur";
+		scope = 2;        
+		scopeArsenal = 2;        
+		displayName = "[SR] TVD - Tauros";
+		displayNameShort = "[SR] TVD - Tauros";
+		value = 0.1;
+		ammo = "SR_Ammo_TVD_pxi_tauros_unarmed";
+		model="TIOW_IG_Explosives\TIOW_ig_frag_grenade\sm_frag_grenade_mag.p3d";
+		picture="\TIOW_IG_Explosives\TIOW_ig_frag_grenade\data\frag_icon.paa";
+		UIpicture="\TIOW_IG_Explosives\TIOW_ig_frag_grenade\data\frag_icon.paa";
+		initSpeed=25;
+		mass=12;
+	};
+	class SR_Mag_TVD_TIOW_Centaur_01_Cadian_667_Blu: SmokeShellOrange
+	{
+		author = "Waagheur";
+		scope = 2;        
+		scopeArsenal = 2;        
+		displayName = "[SR] TVD - Centaur";
+		displayNameShort = "[SR] TVD - Centaur";
+		value = 0.1;
+		ammo = "SR_Ammo_TVD_TIOW_Centaur_01_Cadian_667_Blu";
+		model="TIOW_IG_Explosives\TIOW_ig_frag_grenade\sm_frag_grenade_mag.p3d";
+		picture="\TIOW_IG_Explosives\TIOW_ig_frag_grenade\data\frag_icon.paa";
+		UIpicture="\TIOW_IG_Explosives\TIOW_ig_frag_grenade\data\frag_icon.paa";
+		initSpeed=25;
+		mass=12;
+	};
+	
 };
 class Turrets;
 class MainTurret;
