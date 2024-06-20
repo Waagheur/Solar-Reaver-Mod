@@ -652,6 +652,10 @@ class CfgFunctions
 				postInit    = 1;
 				//file = "SR_Arsenal\functions\fn_wbk_injector.sqf";
 			};
+			class wbk_injector_no_kill {
+				postInit	= 1;
+				//file = "SR_Arsenal\functions\fn_wbk_injector_no_kill.sqf"
+			}
 			class no_grenade_stack {
 				postInit 	= 1;
 				//file = "SR_Arsenal\functions\fn_no_grenade_stack.sqf";
@@ -659,6 +663,15 @@ class CfgFunctions
 		};
 	};
 };
+
+class Extended_PreInit_EventHandlers {
+	class SR_Arsenal_PreInit
+	{
+		init="call compile preprocessFileLineNumbers 'SR_Arsenal\functions\XEH_preInit.sqf'";
+	};
+};
+
+
 
 #include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
