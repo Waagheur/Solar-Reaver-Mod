@@ -60,3 +60,4 @@ SR_FirstBorn:
 
 SR_XI:
 	$(MAKE) -C SR_XI
+	$(MAKE) -C XI_Props

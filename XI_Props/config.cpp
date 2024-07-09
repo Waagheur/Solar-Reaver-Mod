@@ -56,7 +56,7 @@ class CfgVehicles
 	};
 	class land_dmDonation_dragnteethLine: House_F
 	{
-		model="\SR_XI\xi_Props\base.p3d";
+		model="\xi_Props\base.p3d";
 		armor=4000;
 		scope=2;
 		scopeArsenal=2;
@@ -69,7 +69,7 @@ class CfgVehicles
 	};
 	class land_pxi_wall_straight_pipes: House_F
 	{
-		model="\SR_XI\xi_Props\pxi_wall_straight_pipes.p3d";
+		model="\xi_Props\pxi_wall_straight_pipes.p3d";
 		armor=96000;
 		scope=2;
 		scopeArsenal=2;
@@ -82,7 +82,7 @@ class CfgVehicles
 	};
 	class land_pxi_wall_straight_gateway: House_F
 	{
-		model="\SR_XI\xi_Props\pxi_wall_straight_gateway.p3d";
+		model="\xi_Props\pxi_wall_straight_gateway.p3d";
 		armor=96000;
 		scope=2;
 		scopeArsenal=2;
@@ -95,7 +95,7 @@ class CfgVehicles
 	};
 	class land_pxi_wall_straight_noPipes: House_F
 	{
-		model="\SR_XI\xi_Props\pxi_wall_straight_NoPipes.p3d";
+		model="\xi_Props\pxi_wall_straight_NoPipes.p3d";
 		armor=96000;
 		scope=2;
 		scopeArsenal=2;
@@ -108,7 +108,7 @@ class CfgVehicles
 	};
 	class land_pxi_wall_straight_90E: House_F
 	{
-		model="\SR_XI\xi_Props\pxi_wall_straight_90E.p3d";
+		model="\xi_Props\pxi_wall_straight_90E.p3d";
 		armor=96000;
 		scope=2;
 		scopeArsenal=2;
@@ -121,7 +121,7 @@ class CfgVehicles
 	};
 	class land_pxi_wall_straight_90i: House_F
 	{
-		model="\SR_XI\xi_Props\pxi_wall_straight_90i.p3d";
+		model="\xi_Props\pxi_wall_straight_90i.p3d";
 		armor=96000;
 		scope=2;
 		scopeArsenal=2;
@@ -134,7 +134,7 @@ class CfgVehicles
 	};
 	class land_pxi_wall_straight_45e: House_F
 	{
-		model="\SR_XI\xi_Props\pxi_wall_straight_45e.p3d";
+		model="\xi_Props\pxi_wall_straight_45e.p3d";
 		armor=96000;
 		scope=2;
 		scopeArsenal=2;
@@ -147,7 +147,7 @@ class CfgVehicles
 	};
 	class land_pxi_wall_straight_45i: House_F
 	{
-		model="\SR_XI\xi_Props\pxi_wall_straight_45i.p3d";
+		model="\xi_Props\pxi_wall_straight_45i.p3d";
 		armor=96000;
 		scope=2;
 		scopeArsenal=2;
@@ -160,7 +160,7 @@ class CfgVehicles
 	};
 	class land_pxi_wall_straight_wipTrenchTop1: House_F
 	{
-		model="\SR_XI\xi_Props\straight_TrenchTop_1.p3d";
+		model="\xi_Props\straight_TrenchTop_1.p3d";
 		armor=96000;
 		scope=2;
 		scopeArsenal=2;
