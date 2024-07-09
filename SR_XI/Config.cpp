@@ -19,12 +19,12 @@ class CfgFunctions
 		class xi_vehicles
 		{
 			file = "SR_XI\xi_vehicles\functions";
-			class grenades_main {
-				//file = "SR_XI\xi_vehicles\functions\fn_grenades_main.sqf";
+			class tvd_grenades_main {
+				//file = "SR_XI\xi_vehicles\functions\fn_tvd_grenades_main.sqf";
 			};
-			class grenades_init {
+			class tvd_grenades_init {
 				postInit 	= 1;
-				//file = "SR_XI\xi_vehicles\functions\fn_grenades_init.sqf";
+				//file = "SR_XI\xi_vehicles\functions\fn_tvd_grenades_init.sqf";
 			};
 		};
 	};

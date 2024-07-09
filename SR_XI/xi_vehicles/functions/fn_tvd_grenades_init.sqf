@@ -4,7 +4,7 @@
 	Description:
 		Adds a Take event handler and an ace arsenal close event handler to client
 		The event handlers adds a FiredMan event handler upon picking up a TVD grenade
-		(used function : fn_grenades_main.sqf)
+		(used function : fn_tvd_grenades_main.sqf)
 
 	Parameter(s):
 		None
@@ -31,12 +31,12 @@ if (not(isDedicated)) then {
 		missionNamespace setVariable [format ["%1_handler",_x], -1];
 	} forEach _grenades;
 	
-    execVM "SR_XI\xi_vehicles\functions\fn_grenades_main.sqf";
+    execVM "SR_XI\xi_vehicles\functions\fn_tvd_grenades_main.sqf";
 	player addEventHandler ["Take", {
 		// params ["_unit", "_container", "_item"];
 		
-		execVM "SR_XI\xi_vehicles\functions\fn_grenades_main.sqf";
+		execVM "SR_XI\xi_vehicles\functions\fn_tvd_grenades_main.sqf";
 	}];
-	["ace_arsenal_displayClosed", {execVM "SR_XI\xi_vehicles\functions\fn_grenades_main.sqf";}] call CBA_fnc_addEventHandler;
+	["ace_arsenal_displayClosed", {execVM "SR_XI\xi_vehicles\functions\fn_tvd_grenades_main.sqf";}] call CBA_fnc_addEventHandler;
 	
 };
