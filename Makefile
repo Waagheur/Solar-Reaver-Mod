@@ -50,3 +50,13 @@ all: $(SUBDIRS)
 # Launch make in SUBDIR, generated for every element of SUBDIRS
 $(SUBDIRS):
 		$(MAKE) -C $@
+	
+.PHONY: SR_FirstBorn
+
+SR_FirstBorn:
+	$(MAKE) -C SR_FirstBorn
+	
+.PHONY: SR_XI
+
+SR_XI:
+	$(MAKE) -C SR_XI

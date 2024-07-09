@@ -17,6 +17,7 @@ main:
 # Extract partial addon and copy models
 	$(pbov) unpackFolder -p="$(pbo_build_dir)/$(addon_name).pbo"
 	del "$(pbo_build_dir)\$(addon_name).pbo"
+	del "$(pbo_build_dir)\$(addon_name)\$$PREFIX$$"
 	XCOPY /I /E /Y "$(CURDIR)/models" "$(pbo_build_dir)/$(addon_name)/models"
 	
 # Build full addon

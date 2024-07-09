@@ -11,7 +11,9 @@ all: $(SUBDIRS)
 	
 # Build full addon (without binarise)
 	if exist "$(mod_build_dir)/$(addon_name).pbo" del "$(mod_build_dir)\$(addon_name).pbo"
-	$(make_pbo) -dst "$(mod_build_dir)" "$(pbo_build_dir)\$(addon_name)"
+	$(addon_builder) "$(pbo_build_dir)\$(addon_name)" "$(mod_build_dir)" -packonly -clear -include=$(include_file) -exclude=$(exclude_file)
+# This one doesn't work properly here, I suppose there is some sort of binding needed that the addon_builder does
+#	$(make_pbo) -dst "$(mod_build_dir)" "$(pbo_build_dir)\$(addon_name)"
 
 .PHONY: $(SUBDIRS)
 # Launch make in SUBDIR, generated for every element of SUBDIRS

@@ -17,8 +17,17 @@ main:
 # Extract partial addon and copy models
 	$(pbov) unpackFolder -p="$(pbo_build_dir)/$(addon_name).pbo"
 	del "$(pbo_build_dir)\$(addon_name).pbo"
+	del "$(pbo_build_dir)\$(addon_name)\$$PREFIX$$"
 	XCOPY /I /E /Y "$(CURDIR)/Data" "$(pbo_build_dir)/$(addon_name)/Data"
+	
+# Restore config.cpp, we need it for the addon_builder to pack the whole thing
+	del "$(pbo_build_dir)\$(addon_name)\config.bin"
+	copy /Y CfgVehicles.hpp "$(pbo_build_dir)\$(addon_name)"
+	copy /Y CfgWeapons.hpp "$(pbo_build_dir)\$(addon_name)"
+	copy /Y Config.cpp "$(pbo_build_dir)\$(addon_name)"
 	
 # Build full addon
 	if exist "$(mod_build_dir)/$(addon_name).pbo" del "$(mod_build_dir)\$(addon_name).pbo"
-	$(make_pbo) -dst "$(mod_build_dir)" "$(pbo_build_dir)\$(addon_name)"
+	$(addon_builder) "$(pbo_build_dir)\$(addon_name)" "$(mod_build_dir)" -packonly -clear -include=$(include_file) -exclude=$(exclude_file)
+# This one doesn't work properly here, I suppose there is some sort of binding needed that the addon_builder does
+#	$(make_pbo) -dst "$(mod_build_dir)" "$(pbo_build_dir)\$(addon_name)"

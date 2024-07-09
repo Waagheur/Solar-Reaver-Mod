@@ -10,3 +10,4 @@ main:
 	if exist "$(pbo_build_dir)\SR_XI\$(addon_name)" rmdir /S /Q  "$(pbo_build_dir)\SR_XI\$(addon_name)"
 	$(pbov) unpackFolder -p="$(pbo_build_dir)/SR_XI/$(addon_name).pbo"
 	del "$(pbo_build_dir)\SR_XI\$(addon_name).pbo"
+	del "$(pbo_build_dir)\SR_XI\$(addon_name)\$$PREFIX$$"
