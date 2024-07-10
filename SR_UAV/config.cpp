@@ -3,8 +3,7 @@ class CfgPatches {
 		requiredaddons[] = {
 			"A3_Drones_F_Air_F_Gamma_UAV_01",
 			"ace_common",
-			"ace_mk6mortar",
-			"AmbientLife" // Skull Probe Addon
+			"ace_mk6mortar"
 		};
 		requiredversion = 1.0;
 		units[] = {

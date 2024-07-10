@@ -97,7 +97,7 @@ class CfgVehicles {
                     turretInfoType = "ITC_Land_RscOptics_UAV_gunner";
             };
         };
-		model="\WHambientlife\model\servoskull.p3d";
+		model="Dos_Cosmetics\Models\Servo_UAV_1.p3d";
     };
 	class SR_B_UAV_AR2i: SR_UAV_AR2i_base {
 		author = "Toadball";
