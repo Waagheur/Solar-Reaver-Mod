@@ -1247,13 +1247,13 @@ class CfgMagazines
 	class XI_IG_GL_Smoke_White_Mag: TIOW_IG_GL_Smoke_mag
 	{
 		scope=2;
-		displayName="[XI] White Smoke Mag";
+		displayName="[TSR] [PXI] White Smoke Mag";
 		ammo="XI_IG_GL_Smoke_White";
 	};
 	class XI_IG_UBGL_Smoke_White_Mag_3rnd: TIOW_IG_GL_Smoke_mag
 	{
 		scope=2;
-		displayName="[XI] 3rnd White Smoke Mag";
+		displayName="[TSR] [PXI] 3rnd White Smoke Mag";
 		ammo="XI_IG_GL_Smoke_White";
 		count="3";
 		mass=1;
@@ -1261,33 +1261,33 @@ class CfgMagazines
 	class XI_IG_UBGL_Smoke_Red_Mag_3rnd: XI_IG_UBGL_Smoke_White_Mag_3rnd
 	{
 		scope=2;
-		displayName="[XI] 3rnd Red Smoke Mag";
+		displayName="[TSR] [PXI] 3rnd Red Smoke Mag";
 		ammo="XI_IG_GL_Smoke_Red";
 		count="3";
 	};
 	class XI_IG_UBGL_Smoke_Orange_Mag_3rnd: XI_IG_UBGL_Smoke_White_Mag_3rnd
 	{
-		displayName="[XI] 3rnd Orange Smoke Mag";
+		displayName="[TSR] [PXI] 3rnd Orange Smoke Mag";
 		ammo="XI_IG_GL_Smoke_Orange";
 	};
 	class XI_IG_UBGL_Smoke_Blue_Mag_3rnd: XI_IG_UBGL_Smoke_White_Mag_3rnd
 	{
-		displayName="[XI] 3rnd Blue Smoke Mag";
+		displayName="[TSR] [PXI] 3rnd Blue Smoke Mag";
 		ammo="XI_IG_GL_Smoke_Blue";
 	};
 	class XI_IG_UBGL_Smoke_Yellow_Mag_3rnd: XI_IG_UBGL_Smoke_White_Mag_3rnd
 	{
-		displayName="[XI] 3rnd Yellow Smoke Mag";
+		displayName="[TSR] [PXI] 3rnd Yellow Smoke Mag";
 		ammo="XI_IG_GL_Smoke_Yellow";
 	};
 	class XI_IG_UBGL_Smoke_Green_Mag_3rnd: XI_IG_UBGL_Smoke_White_Mag_3rnd
 	{
-		displayName="[XI] 3rnd Green Smoke Mag";
+		displayName="[TSR] [PXI] 3rnd Green Smoke Mag";
 		ammo="XI_IG_GL_Smoke_Green";
 	};
 	class XI_IG_UBGL_Smoke_Purple_Mag_3rnd: XI_IG_UBGL_Smoke_White_Mag_3rnd
 	{
-		displayName="[XI] 3rnd Purple Smoke Mag";
+		displayName="[TSR] [PXI] 3rnd Purple Smoke Mag";
 		ammo="XI_IG_GL_Smoke_Purple";
 	};
 	class ic_bolt_large_mag;
@@ -1507,7 +1507,7 @@ class CfgMagazines
 	{
 		scope=2;
 		author="author";
-		displayName="[XI] Gravitas-Pattern Demo Charge";
+		displayName="[TSR] [PXI] Gravitas-Pattern Demo Charge";
 		descriptionShort="High-yield explosive";
 		ammo="MTI_SatchelCharge_Ammo";
 		ace_explosives_setupObject="MTI_SatchelCharge_Place";
@@ -1524,13 +1524,13 @@ class CfgVehicles
 		_generalMacro="MTI_SatchelCharge";
 		ammo="MTI_SatchelCharge_Ammo";
 		model="ic_weapons_base\Grenades\charge.p3d";
-		displayName="[XI] Gravitas-Pattern Explosive Device";
+		displayName="[TSR] [PXI] Gravitas-Pattern Explosive Device";
 	};
 	class ACE_Explosives_Place_SatchelCharge;
 	class MTI_SatchelCharge_Place: ACE_Explosives_Place_SatchelCharge
 	{
 		author="Mokka";
-		displayName="[XI] Gravitas-Pattern Explosive Device";
+		displayName="[TSR] [PXI] Gravitas-Pattern Explosive Device";
 		model="ic_weapons_base\Grenades\charge.p3d";
 	};
 };
@@ -1601,7 +1601,7 @@ class cfgWeapons
 	{
 		author="";
 		scope=0;
-		displayName="'[PXI] TESTING";
+		displayName="[TSR] [PXI] TESTING";
 		picture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
 		UiPicture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
 		Magazines[]={};
@@ -1685,8 +1685,8 @@ class cfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="[XI] Mars Pattern lasgun";
-		descriptionShort="[XI] Mars Pattern lasgun";
+		displayName="[TSR] [PXI] Mars Pattern lasgun";
+		descriptionShort="[TSR] [PXI] Mars Pattern lasgun";
 		picture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		UiPicture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		model="\SR_XI\xi_allWeapons\XI_Mars_lasgun.p3d";
@@ -1902,8 +1902,8 @@ class cfgWeapons
 	// {
 		// author="Bones";
 		// scope=0;
-		// displayName="'[XI] Testing Shield/Mars";
-		// descriptionShort="[XI] Mars Pattern lasgun";
+		// displayName="'[TSR] [PXI] Testing Shield/Mars";
+		// descriptionShort="[TSR] [PXI] Mars Pattern lasgun";
 		// picture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		// UiPicture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		// model="\xi_allWeapons\riotshield_mars.p3d";
@@ -2123,8 +2123,8 @@ class cfgWeapons
 	{
 		author="Rogue771";
 		scope=2;
-		displayName="'[NCO] Mars-Pattern w/GL (PXI)";
-		descriptionShort="[XI] Mars Pattern lasgun";
+		displayName="[TSR] [PXI] Mars-Pattern w/GL (NCO)";
+		descriptionShort="[TSR] [PXI] Mars Pattern lasgun";
 		picture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		UiPicture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		model="\SR_XI\xi_allWeapons\XI_Mars_lasgun.p3d";
@@ -2394,7 +2394,7 @@ class cfgWeapons
 		scope=0;
 		picture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
 		UiPicture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
-		displayName="'[PXI][A] Aquilifer Pattern Autogun Base";
+		displayName="'[PXI] [A] Aquilifer Pattern Autogun Base";
 		escriptionShort="Bread is fat";
 		model="\SR_XI\xi_allWeapons\XI_autogun.p3d";
 		hiddenSelections[]=
@@ -2794,7 +2794,7 @@ class cfgWeapons
 	// {
 		// author="Rogue771";
 		// scope=0;
-		// displayName="'[XI][A] Aquilifer-Pattern Autogun/War ";
+		// displayName="[TSR] [PXI] [A] Aquilifer-Pattern Autogun/War ";
 		// escriptionShort="Bread is fat";
 		// model="\XI_allWeapons\XI_AutogunWar.p3d";
 		// hiddenSelections[]=
@@ -3468,7 +3468,7 @@ class cfgWeapons
 	{
 		scope=2;
 		author="Rogue771";
-		displayName="'[XI] Carnifex-Pattern Boltgun";
+		displayName="[TSR] [PXI] Carnifex-Pattern Boltgun";
 		model="\SR_XI\xi_AllWeapons\xi_boltpistol.p3d";
 		hiddenSelections[]=
 		{
@@ -3486,7 +3486,7 @@ class cfgWeapons
 	{
 		scope=2;
 		author="Rogue771";
-		displayName="'[XI] Carnifex-Pattern Boltgun, Kyrent";
+		displayName="[TSR] [PXI] Carnifex-Pattern Boltgun, Kyrent";
 		model="\SR_XI\xi_AllWeapons\xi_boltpistol.p3d";
 		hiddenSelections[]=
 		{
@@ -3504,7 +3504,7 @@ class cfgWeapons
 	{
 		scope=2;
 		author="Rogue771";
-		displayName="'[XI] XI Bolt Pistol (War)";
+		displayName="[TSR] [PXI] XI Bolt Pistol (War)";
 		model="\SR_XI\XI_allWeapons\XI_BoltPistolWar.p3d";
 		hiddenSelections[]=
 		{
@@ -3522,8 +3522,8 @@ class cfgWeapons
 	{
 		author="Bones";
 		scope=2;
-		displayName="'[S] Taurus-Patern Light Stubber (PXI)";
-		descriptionShort="[XI] Bullpup LMG";
+		displayName="[TSR] [PXI] Taurus-Patern Light Stubber (S)";
+		descriptionShort="[TSR] [PXI] Bullpup LMG";
 		picture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
 		UiPicture="\SR_XI\xi_AllWeapons\marsLasgun\UI\MarsPattern.paa";
 		model="\SR_XI\xi_allWeapons\xiBullpup.p3d";
@@ -3739,8 +3739,8 @@ class cfgWeapons
 	{
 		author="Bones";
 		scope=2;
-		displayName="'[XI][A] Imperious Handcannon [B/II]";
-		descriptionShort="[XI] Revolver";
+		displayName="[TSR] [PXI] [A] Imperious Handcannon [B/II]";
+		descriptionShort="[TSR] [PXI] Revolver";
 		picture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		UiPicture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		model="\SR_XI\xi_allWeapons\xiRevolver.p3d";
@@ -3903,7 +3903,7 @@ class cfgWeapons
 		scope=0;
 		scopeCurator=0;
 		scopeArsenal=0;
-		displayName="'[XI][L] Rubicon Variant Kantrael";
+		displayName="[TSR] [PXI] [L] Rubicon Variant Kantrael";
 		picture="\IC_weapons_base\Rifles\M36_Kantrael\data\ic_kantrael_ca.paa";
 		UiPicture="\IC_weapons_base\Rifles\M36_Kantrael\data\ic_kantrael_ca.paa";
 		hiddenSelectionsTextures[]=
@@ -3924,7 +3924,7 @@ class cfgWeapons
 		scopeCurator=0;
 		scopeArsenal=0;
 		baseWeapon="";
-		displayName="'[PXI][A] Onager Autogun";
+		displayName="'[PXI] [A] Onager Autogun";
 		Magazines[]=
 		{
 			"xi_825_standard_mag_BI",
@@ -3954,7 +3954,7 @@ class cfgWeapons
 		scopeCurator=0;
 		scopeArsenal=0;
 		baseWeapon="";
-		displayName="'[PXI][A] Pugio Autogun";
+		displayName="'[PXI] [A] Pugio Autogun";
 		Magazines[]=
 		{
 			"xi_825_standard_mag_BI",
@@ -3983,7 +3983,7 @@ class cfgWeapons
 		scope=0;
 		scopeCurator=0;
 		scopeArsenal=0;
-		displayName="'[PXI][A] Malleus Autogun";
+		displayName="'[PXI] [A] Malleus Autogun";
 		Magazines[]=
 		{
 			"xi_825_standard_mag_BI",
@@ -4016,7 +4016,7 @@ class cfgWeapons
 		scope=0;
 		scopeCurator=0;
 		scopeArsenal=0;
-		displayName="'[PXI][A] Cultro Autogun";
+		displayName="'[PXI] [A] Cultro Autogun";
 		Magazines[]=
 		{
 			"xi_825_standard_mag_BI",
@@ -4164,7 +4164,7 @@ class cfgWeapons
 		scope=0;
 		scopeCurator=0;
 		scopeArsenal=0;
-		displayName="'[PXI][A] M36 Lasgun";
+		displayName="'[PXI] [A] M36 Lasgun";
 		magazines[]=
 		{
 			"xi_laspack_standard_BI",
@@ -4193,7 +4193,7 @@ class cfgWeapons
 		scope=0;
 		scopeCurator=0;
 		scopeArsenal=0;
-		displayName="'[PXI][A] M36 Carbine";
+		displayName="'[PXI] [A] M36 Carbine";
 		magazines[]=
 		{
 			"xi_laspack_standard_BI",
@@ -4222,7 +4222,7 @@ class cfgWeapons
 		scope=0;
 		scopeCurator=0;
 		scopeArsenal=0;
-		displayName="'[PXI][A] M36 Galaxy";
+		displayName="'[PXI] [A] M36 Galaxy";
 		magazines[]=
 		{
 			"xi_laspack_standard_BI",
@@ -4272,8 +4272,8 @@ class cfgWeapons
 	{
 		author="Bones";
 		scope=0;
-		displayName="[XI] Longlas Pattern lasgun";
-		descriptionShort="[XI] Longlas Pattern lasgun";
+		displayName="[TSR] [PXI] Longlas Pattern lasgun";
+		descriptionShort="[TSR] [PXI] Longlas Pattern lasgun";
 		picture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		UiPicture="\SR_XI\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		model="\SR_XI\xi_allWeapons\XI_Mars_longlas.p3d";
@@ -4448,12 +4448,12 @@ class cfgWeapons
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[S] Pilum-Variant, Mars-Pattern LongLas (PXI)";
+		displayName="[TSR] [PXI] Pilum-Variant, Mars-Pattern LongLas (S)";
 	};
 	class ic_cad_melta;
 	class XI_Melta_Rebalance: ic_cad_melta
 	{
-		displayName="'[AT] Ignis-Variant Meltagun (PXI)";
+		displayName="[TSR] [PXI] Ignis-Variant Meltagun (AT)";
 		magazines[]=
 		{
 			"XI_Melta_Mag_Normal_BII"
@@ -4463,7 +4463,7 @@ class cfgWeapons
 	class TIOW_Shotgun;
 	class XI_Shotgun: TIOW_Shotgun
 	{
-		displayName="'[AP] Combat Shotgun (PXI)";
+		displayName="[TSR] [PXI] Combat Shotgun (AP)";
 		magazines[]=
 		{
 			"Lucius22c_Solid",
@@ -4475,7 +4475,7 @@ class cfgWeapons
 	class ic_cad_bolter;
 	class XI_Augustus_P: ic_cad_bolter
 	{
-		displayName="'[NCO] Augustus-Pattern Personal Bolter (NCO)";
+		displayName="[TSR] [PXI] Augustus-Pattern Personal Bolter (NCO)";
 		magazines[]=
 		{
 			"ic_bolt_small_mag"
@@ -4493,7 +4493,7 @@ class cfgWeapons
 		};
 		class XI_Gravitas_Muzzle: PutMuzzle
 		{
-			displayName="[XI] Gravitas-Pattern Demo Charge";
+			displayName="[TSR] [PXI] Gravitas-Pattern Demo Charge";
 			magazines[]=
 			{
 				"MTI_SatchelCharge_Mag"
@@ -4525,54 +4525,54 @@ class cfgWeapons
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T1] Rubicon Lasgun (PXI)";
+		displayName="[TSR] [PXI] Rubicon Lasgun";
 	};
 	class pxi_PugioAutogun_T1: pxi_wrsAUG_pugioBase
 	{
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T1] Pugio Autogun (PXI)";
+		displayName="[TSR] [PXI] Pugio Autogun";
 	};
 	class pxi_m36Lasgun_T1: pxi_m36DM_base
 	{
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T1] M36 Lasgun (PXI)";
+		displayName="[TSR] [PXI] M36 Lasgun";
 	};
 	class pxi_m36Carbine_T1: pxi_m36DMCarbine_base
 	{
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T1] M36 Lasgun (Carbine) (PXI)";
+		displayName="[TSR] [PXI] M36 Lasgun (Carbine)";
 	};
 	class pxi_m36Galaxy_T1: pxi_m36DMGalaxy_base
 	{
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T1] M36 Lasgun (Galaxy) (PXI)";
+		displayName="[TSR] [PXI] M36 Lasgun (Galaxy)";
 	};
 	class pxi_onagerAutogun_T2: pxi_wrsAR_onagerBase
 	{
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T2] Onager Autogun (PXI)";
+		displayName="[TSR] [PXI] Onager Autogun";
 	};
 	class pxi_ArcusAutogun_T2: XI_icpAgripinaa_base
 	{
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T2] Arcus Autogun (PXI)";
+		displayName="[TSR] [PXI] Arcus Autogun";
 	};
 	class pxi_marsLasgun_T3: XI_Mars_lasgun_base
 	{
 		scope=2;
-		displayName="'[T3] Mars Lasrifle (PXI)";
+		displayName="[TSR] [PXI] Mars Lasrifle";
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class CowsSlot: CowsSlot
@@ -4594,7 +4594,7 @@ class cfgWeapons
 	class pxi_aquiliferAutogun_T3: XI_autogun
 	{
 		scope=2;
-		displayName="'[T3] Aquilifer Autogun (PXI)";
+		displayName="[TSR] [PXI] Aquilifer Autogun";
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class CowsSlot: CowsSlot
@@ -4618,20 +4618,20 @@ class cfgWeapons
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T3] Malleus Autogun (PXI)";
+		displayName="[TSR] [PXI] Malleus Autogun";
 	};
 	class pxi_cultroAutogun_T3: pxi_JMSFALL_cultroBase
 	{
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		displayName="'[T3] Cultro Autogun (PXI)";
+		displayName="[TSR] [PXI] Cultro Autogun";
 	};
 	class xi_Autogun_Kyrent: XI_autogun
 	{
 		scope=2;
 		author="Rogue771";
-		displayName="'[C] Aquilifer Pattern Autogun, Kyrent (PXI)";
+		displayName="[TSR] [PXI] Aquilifer Pattern Autogun, Kyrent (C)";
 		hiddenSelections[]=
 		{
 			"camo1"

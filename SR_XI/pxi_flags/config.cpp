@@ -25,14 +25,14 @@ class CfgVehicleClasses
 {
 	class pxi_d_props
 	{
-		displayName="[P.XI] props";
+		displayName="[TSR] [PXI] props";
 	};
 };
 class CfgEditorCategories
 {
 	class pxi_obj_flag
 	{
-		displayName="[P.XI] Objects";
+		displayName="[TSR] [PXI] Objects";
 	};
 };
 class CfgEditorSubcategories

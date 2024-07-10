@@ -467,7 +467,7 @@ class CfgWeapons
 		{
 			"BACKPACK_SLOT"
 		};
-		displayName="'[XI] Tunica-Variant Uniform (No Thigh Guards)";
+		displayName="[TSR] [PXI] Tunica-Variant Uniform (No Thigh Guards)";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_soldier";
 		class ItemInfo: UniformItem
 		{
@@ -486,7 +486,7 @@ class CfgWeapons
 		{
 			"BACKPACK_SLOT"
 		};
-		displayName="'[XI] Tunica-Variant Uniform (Thigh Guards)";
+		displayName="[TSR] [PXI] Tunica-Variant Uniform (Thigh Guards)";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_soldier";
 		class ItemInfo: UniformItem
 		{
@@ -498,7 +498,7 @@ class CfgWeapons
 	};
 	class XI_Triarii_Variant: XI_CAD_U_B
 	{
-		displayName="'[XI] Triarii-Variant Uniform";
+		displayName="[TSR] [PXI] Triarii-Variant Uniform";
 		author="Rogue771";
 		scope=2;
 	};
@@ -506,7 +506,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="[XI] Helmet";
+		displayName="[TSR] [PXI] Helmet";
 		model="\SR_XI\Gift\XI_HelmGift.p3d";
 		hiddenSelections[]=
 		{
@@ -540,7 +540,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="[XI] Helmet (With Shoulders)";
+		displayName="[TSR] [PXI] Helmet (With Shoulders)";
 		model="\SR_XI\Gift\XI_HelmGiftShoudlers.p3d";
 		hiddenSelections[]=
 		{
@@ -577,7 +577,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="'[XI] Lux-Pattern Helmet (V2)";
+		displayName="[TSR] [PXI] Lux-Pattern Helmet (V2)";
 		model="\SR_XI\Gift\XI_HelmGiftV2.p3d";
 		hiddenSelections[]=
 		{
@@ -617,7 +617,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="'[XI] Lux-Pattern Helmet";
+		displayName="[TSR] [PXI] Lux-Pattern Helmet";
 		model="\SR_XI\Gift\XI_HelmGiftV3.p3d";
 		hiddenSelections[]=
 		{
@@ -662,7 +662,7 @@ class CfgWeapons
 	{
 		scope=0;
 		author="Rogue771";
-		displayname="'[XI] Lux-Pattern Face Mask";
+		displayname="[TSR] [PXI] Lux-Pattern Face Mask";
 		model="\SR_XI\Gift\XI_MaskGift.p3d";
 		class ItemInfo: ItemInfo
 		{

@@ -57,7 +57,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="'[P.XI] Helmet Base";
+		displayName="[TSR] [PXI] Helmet Base";
 		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
 		model="\SR_XI\pxi_b_armor\pxi_helm_base.p3d";
 		hiddenSelections[]=
@@ -87,15 +87,15 @@ class CfgWeapons
 			{
 				class Head
 				{
-					hitpointName="HitHead";
-					armor=20;
-					passThrough=0.5;
+					hitpointName = "HitHead";
+					armor = 30;
+					passThrough = 0.1;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=20;
-					passThrough=0.5;
+					armor = 25;
+					passThrough=0.1;
 				};
 			};
 		};
@@ -104,7 +104,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="'[P.XI] Helmet Base";
+		displayName="[TSR] [PXI] Helmet Base";
 		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
 		model="\SR_XI\pxi_b_armor\pxi_helm_evocatii.p3d";
 		hiddenSelections[]=
@@ -134,15 +134,15 @@ class CfgWeapons
 			{
 				class Head
 				{
-					hitpointName="HitHead";
-					armor=20;
-					passThrough=0.5;
+					hitpointName = "HitHead";
+					armor = 30;
+					passThrough = 0.1;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=20;
-					passThrough=0.5;
+					armor = 25;
+					passThrough=0.1;
 				};
 			};
 		};
@@ -151,7 +151,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="'[P.XI] NCO Helmet Base";
+		displayName="[TSR] [PXI] NCO Helmet Base";
 		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
 		model="\SR_XI\pxi_b_armor\pxi_nco_helm_base.p3d";
 		hiddenSelections[]=
@@ -183,15 +183,15 @@ class CfgWeapons
 			{
 				class Head
 				{
-					hitpointName="HitHead";
-					armor=30;
-					passThrough=0.5;
+					hitpointName = "HitHead";
+					armor = 30;
+					passThrough = 0.1;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=20;
-					passThrough=0.5;
+					armor = 25;
+					passThrough=0.1;
 				};
 			};
 		};
@@ -199,7 +199,7 @@ class CfgWeapons
 	class pxi_helmet_doctores_nco_0: pxi_helmetbase_nco_0
 	{
 		scope=0;
-		displayName="'[P.XI] NCO Helmet Base Doctores";
+		displayName="[TSR] [PXI] NCO Helmet Base Doctores";
 		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
 		model="\SR_XI\pxi_b_armor\pxi_nco_helm_doctores.p3d";
 		hiddenSelections[]=
@@ -231,15 +231,15 @@ class CfgWeapons
 			{
 				class Head
 				{
-					hitpointName="HitHead";
-					armor=30;
-					passThrough=0.5;
+					hitpointName = "HitHead";
+					armor = 30;
+					passThrough = 0.1;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=20;
-					passThrough=0.5;
+					armor = 25;
+					passThrough=0.1;
 				};
 			};
 		};
@@ -247,7 +247,7 @@ class CfgWeapons
 	class pxi_helmet_evocatii_nco_0: pxi_helmetbase_nco_0
 	{
 		scope=0;
-		displayName="'[P.XI] NCO Helmet Base Evocatii";
+		displayName="[TSR] [PXI] NCO Helmet Base Evocatii";
 		picture="\SR_XI\pxi_b_armor\ui\xi_helm.paa";
 		model="\SR_XI\pxi_b_armor\pxi_nco_helm_evocatii.p3d";
 		hiddenSelections[]=
@@ -279,15 +279,15 @@ class CfgWeapons
 			{
 				class Head
 				{
-					hitpointName="HitHead";
-					armor=30;
-					passThrough=0.5;
+					hitpointName = "HitHead";
+					armor = 30;
+					passThrough = 0.1;
 				};
 				class Face
 				{
 					hitpointName="HitFace";
-					armor=20;
-					passThrough=0.5;
+					armor = 25;
+					passThrough=0.1;
 				};
 			};
 		};
@@ -323,7 +323,7 @@ class CfgWeapons
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="'[P.XI] Legionnaire Armour - Base Model";
+		displayName="[TSR] [PXI] Legionnaire Armour - Base Model";
 		model="\SR_XI\pxi_b_armor\pxi_armour_upgraded_base.p3d";
 		hiddenSelections[]=
 		{
@@ -355,59 +355,86 @@ class CfgWeapons
 			{
 				class Neck
 				{
-					hitpointName="HitNeck";
-					armor=25;
-					passThrough=0.5;
+					hitpointName = "HitNeck";
+					armor = 35;
+					passThrough = 0.1;
 				};
 				class Arms
 				{
-					hitpointName="HitArms";
-					armor=30;
-					passThrough=0.5;
+					hitpointName = "HitArms";
+					armor = 35;
+					passThrough = 0.1;
 				};
 				class Chest
 				{
-					hitpointName="HitChest";
-					armor=50;
-					passThrough=0.60000002;
+					hitpointName = "HitChest";
+					armor = 90;
+					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
-					hitpointName="HitDiaphragm";
-					armor=20;
-					passThrough=0.60000002;
+					hitpointName = "HitDiaphragm";
+					armor = 90;
+					passThrough = 0.1;
 				};
 				class Abdomen
 				{
-					hitpointName="HitAbdomen";
-					armor=20;
-					passThrough=0.30000001;
+					hitpointName = "HitAbdomen";
+					armor = 60;
+					passThrough = 0.1;
 				};
 				class Pelvis
 				{
-					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					hitpointName = "HitPelvis";
+					armor = 60;
+					passThrough = 0.1;
 				};
 				class Body
 				{
-					hitpointName="HitBody";
-					passThrough=0.60000002;
+					hitpointName = "HitBody";
+					armor = 35;
+					passThrough = 0.1;
 				};
 				class Legs
 				{
-					hitpointName="HitLegs";
-					armor=30;
-					passThrough=0.30000001;
+					hitpointName = "HitLegs";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				// class Hands {
+					// hitpointName = "HitHands";
+					// armor = 35;
+					// passThrough = 0.1;
+				// };
+				class LeftArm {
+					hitpointName = "HitLeftArm";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class RightArm {
+					hitpointName = "HitRightArm";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class LeftLeg {
+					hitpointName = "HitLeftLeg";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class RightLeg {
+					hitpointName = "HitRightLeg";
+					armor = 10;
+					passThrough = 0.1;
 				};
 			};
+
 		};
 	};
 	class pxi_armourVest_base_doctores_0: Vest_Camo_Base
 	{
 		author="Rogue771";
 		scope=0;
-		displayName="'[P.XI] Legionnaire Armour - Model";
+		displayName="[TSR] [PXI] Legionnaire Armour - Model";
 		model="\SR_XI\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
 		hiddenSelections[]=
 		{
@@ -439,52 +466,79 @@ class CfgWeapons
 			{
 				class Neck
 				{
-					hitpointName="HitNeck";
-					armor=25;
-					passThrough=0.5;
+					hitpointName = "HitNeck";
+					armor = 35;
+					passThrough = 0.1;
 				};
 				class Arms
 				{
-					hitpointName="HitArms";
-					armor=30;
-					passThrough=0.5;
+					hitpointName = "HitArms";
+					armor = 35;
+					passThrough = 0.1;
 				};
 				class Chest
 				{
-					hitpointName="HitChest";
-					armor=50;
-					passThrough=0.60000002;
+					hitpointName = "HitChest";
+					armor = 90;
+					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
-					hitpointName="HitDiaphragm";
-					armor=20;
-					passThrough=0.60000002;
+					hitpointName = "HitDiaphragm";
+					armor = 90;
+					passThrough = 0.1;
 				};
 				class Abdomen
 				{
-					hitpointName="HitAbdomen";
-					armor=20;
-					passThrough=0.30000001;
+					hitpointName = "HitAbdomen";
+					armor = 60;
+					passThrough = 0.1;
 				};
 				class Pelvis
 				{
-					hitpointName="HitPelvis";
-					armor=10;
-					passThrough=0.30000001;
+					hitpointName = "HitPelvis";
+					armor = 60;
+					passThrough = 0.1;
 				};
 				class Body
 				{
-					hitpointName="HitBody";
-					passThrough=0.60000002;
+					hitpointName = "HitBody";
+					armor = 35;
+					passThrough = 0.1;
 				};
 				class Legs
 				{
-					hitpointName="HitLegs";
-					armor=30;
-					passThrough=0.30000001;
+					hitpointName = "HitLegs";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				// class Hands {
+					// hitpointName = "HitHands";
+					// armor = 35;
+					// passThrough = 0.1;
+				// };
+				class LeftArm {
+					hitpointName = "HitLeftArm";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class RightArm {
+					hitpointName = "HitRightArm";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class LeftLeg {
+					hitpointName = "HitLeftLeg";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class RightLeg {
+					hitpointName = "HitRightLeg";
+					armor = 10;
+					passThrough = 0.1;
 				};
 			};
+
 		};
 	};
 };
@@ -494,7 +548,7 @@ class cfgGlasses
 	class XI_Mask_Medicae: none
 	{
 		author="Rogue771";
-		displayname="'[PXI] Medicae Mask";
+		displayname="[TSR] [PXI] Medicae Mask";
 		model="\SR_XI\pxi_b_armor\pxi_mask_medicae.p3d";
 		scope=2;
 		identityTypes[]={};

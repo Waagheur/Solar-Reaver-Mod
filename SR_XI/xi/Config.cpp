@@ -72,14 +72,14 @@ class CfgFactionClasses
 {
 	class xi_legion_fac
 	{
-		displayName="[XI] XI Legion";
+		displayName="[TSR] [PXI] XI Legion";
 		priority=1;
 		side=1;
 		icon="";
 	};
 	class xi_legion_fac_opfor
 	{
-		displayName="[XI] XI Legion OpFor Items";
+		displayName="[TSR] [PXI] XI Legion OpFor Items";
 		priority=1;
 		side=2;
 		icon="";
@@ -89,11 +89,11 @@ class CfgEditorCategories
 {
 	class xi_categ_editor
 	{
-		displayname="[XI] XI Legion";
+		displayname="[TSR] [PXI] XI Legion";
 	};
 	class xi_categ_editor_opFor
 	{
-		displayname="[XI] XI Legion OpFor Items";
+		displayname="[TSR] [PXI] XI Legion OpFor Items";
 	};
 };
 class CfgEditorSubcategories
@@ -703,7 +703,7 @@ class cfgWeapons
 		{
 			"BACKPACK_SLOT"
 		};
-		displayName="'[XI] Touge-Variant Uniform";
+		displayName="[TSR] [PXI] Touge-Variant Uniform";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
@@ -721,7 +721,7 @@ class cfgWeapons
 		{
 			"BACKPACK_SLOT"
 		};
-		displayName="'[XI] Medicae";
+		displayName="[TSR] [PXI] Medicae";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
@@ -740,7 +740,7 @@ class cfgWeapons
 		{
 			"BACKPACK_SLOT"
 		};
-		displayName="'[XI] Sergeant";
+		displayName="[TSR] [PXI] Sergeant";
 		model="\A3\Characters_F\Common\Suitpacks\suitpack_blufor_diver";
 		class ItemInfo: UniformItem
 		{
@@ -994,7 +994,7 @@ class cfgWeapons
 	};
 	class XI_Heavy_Lorica_Triarii: XI_Heavy_Lorica
 	{
-		displayName="'[XI] Triarii Lorica-Variant";
+		displayName="[TSR] [PXI] Triarii Lorica-Variant";
 		scope=0;
 		class ItemInfo: ItemInfo
 		{
@@ -1170,7 +1170,7 @@ class cfgWeapons
 	{
 		scope=0;
 		author="Rogue771";
-		displayname="'[XI] (LP) Face Mask V2";
+		displayname="[TSR] [PXI] (LP) Face Mask V2";
 		model="\SR_XI\xi\XIMaskV2Arma.p3d";
 		class ItemInfo: ItemInfo
 		{
@@ -1182,7 +1182,7 @@ class cfgWeapons
 	{
 		scope=0;
 		author="Rogue771";
-		displayname="'[XI] (LP) Face Mask V2 Rogue";
+		displayname="[TSR] [PXI] (LP) Face Mask V2 Rogue";
 		model="\SR_XI\xi\XIMaskV2ArmaRogue.p3d";
 		class ItemInfo: ItemInfo
 		{
@@ -1193,7 +1193,7 @@ class cfgWeapons
 	class WBK_Narth_3;
 	class xi_WBK_Narth_3: WBK_Narth_3
 	{
-		displayName="'[XI] Narthecium Class-I, Pattern-II";
+		displayName="[TSR] [PXI] Narthecium Class-I, Pattern-II";
 		visionMode[]=
 		{
 			"Normal",
@@ -1221,7 +1221,7 @@ class cfgWeapons
 	// class XI_Drone_A_packed: XI_drone_packed_base
 	// {
 		// scope=2;
-		// displayName="[XI] Drone A (Packed)";
+		// displayName="[TSR] [PXI] Drone A (Packed)";
 		// descriptionShort="Drone (Packed)";
 		// model="\A3\Drones_F\Air_F_Gamma\UAV_01\UAV_01_F.p3d";
 		// picture="\A3\Drones_F\Air_F_Gamma\UAV_01\Data\UI\UAV_01_CA.paa";
@@ -1234,7 +1234,7 @@ class cfgWeapons
 	// class XI_Turret_A_packed: XI_Turret_packed_base
 	// {
 		// scope=2;
-		// displayName="[XI] Turret A (Packed)";
+		// displayName="[TSR] [PXI] Turret A (Packed)";
 		// descriptionShort="Turret (Packed)";
 		// XI_unpacksTo="XI_Turret_A";
 		// model="turretspatch\objects\TarantulaSentry.p3d";
@@ -1259,7 +1259,7 @@ class CfgVehicles
 	class AnimationSources;
 	class PXI_Castellan_ARV: B_APC_Tracked_01_CRV_F
 	{
-		displayName="[P.XI] Castellan-Pattern Armored Recovery Vehicle";
+		displayName="[TSR] [PXI] Castellan-Pattern Armored Recovery Vehicle";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="XI_subcat_fz";
 		weapons[]=
@@ -1592,7 +1592,7 @@ class CfgVehicles
 	class XI_TeamLead: ic_VoxBackpack
 	{
 		scopecurator=2;
-		displayName="'[XI] LR SL/TL";
+		displayName="[TSR] [PXI] LR SL/TL";
 		maximumLoad=525;
 		tf_range=90000;
 	};
@@ -1600,7 +1600,7 @@ class CfgVehicles
 	class XI_TKEFORK_VoxSlim: TKE_RadioPackUCN
 	{
 		scopecurator=2;
-		displayName="'[XI] LR SL/TL (SLIM)";
+		displayName="[TSR] [PXI] LR SL/TL (SLIM)";
 		maximumLoad=525;
 		tf_range=90000;
 	};
@@ -1612,7 +1612,7 @@ class CfgVehicles
 	{
 		scopecurator=2;
 		author="Bones";
-		displayName="'[XI] Trooper Sarcina-Variant";
+		displayName="[TSR] [PXI] Trooper Sarcina-Variant";
 		maximumLoad=450;
 		class XtdGearInfo
 		{
@@ -1626,7 +1626,7 @@ class CfgVehicles
 	{
 		scopecurator=2;
 		author="Bones";
-		displayName="'[XI] Medicae/CLS Sarcina-Variant";
+		displayName="[TSR] [PXI] Medicae/CLS Sarcina-Variant";
 		maximumLoad=580;
 		class XtdGearInfo
 		{
@@ -1641,7 +1641,7 @@ class CfgVehicles
 	{
 		scopecurator=2;
 		author="Bones";
-		displayName="'[XI] AT Sarcina-Variant";
+		displayName="[TSR] [PXI] AT Sarcina-Variant";
 		maximumLoad=600;
 		class XtdGearInfo
 		{
@@ -1655,7 +1655,7 @@ class CfgVehicles
 	{
 		scopecurator=2;
 		author="Bones";
-		displayName="'[XI] Assault Pioneer Sarcina-Variant";
+		displayName="[TSR] [PXI] Assault Pioneer Sarcina-Variant";
 		maximumLoad=600;
 		class XtdGearInfo
 		{
@@ -1667,7 +1667,7 @@ class CfgVehicles
 	};
 	class pxi_mortarman_backpack: IC_CadianBackpackV8
 	{
-		displayName="'[P.XI] Mortarman Backpack";
+		displayName="[TSR] [PXI] Mortarman Backpack";
 		mti_fortify_canFortify=1;
 		mti_fortify_availablePresets[]=
 		{
@@ -1685,7 +1685,7 @@ class CfgVehicles
 	};
 	class pxi_logiteam_backpack: IC_CadianBackpackV8
 	{
-		displayName="'[P.XI] Logistics Team Backpack";
+		displayName="[TSR] [PXI] Logistics Team Backpack";
 		mti_fortify_canFortify=1;
 		mti_fortify_availablePresets[]=
 		{
@@ -1789,7 +1789,7 @@ class CfgVehicles
 	class box_NATO_Equip_F;
 	class xi_resupply_base: box_NATO_Equip_F
 	{
-		displayName="[XI] Supply Box Baseclass";
+		displayName="[TSR] [PXI] Supply Box Baseclass";
 		maximumLoad=5000;
 		ACE_maxWeightCarry=5000;
 		ACE_maxWeightDrag=5000;
@@ -1810,7 +1810,7 @@ class CfgVehicles
 	};
 	class xi_general_ammo: xi_resupply_base
 	{
-		displayName="[XI] General Ammunition";
+		displayName="[TSR] [PXI] General Ammunition";
 		scope=2;
 		class TransportBackpacks
 		{
@@ -1892,7 +1892,7 @@ class CfgVehicles
 		hiddenSelectionsTextures="[""\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa"",""\A3\Supplies_F_Exp\Ammoboxes\Data\equipment_box_blufor_ca.paa""]";
 		icon="\WHobjects\scenery\Containers_Combined\Icons\simple_tiow_icon.paa";
 		picture="\WHobjects\scenery\Containers_Combined\Icons\simple_tiow_icon.paa";
-		displayName="[XI] Specalist Ammunition";
+		displayName="[TSR] [PXI] Specalist Ammunition";
 		scope=2;
 		class TransportBackpacks
 		{
@@ -1964,7 +1964,7 @@ class CfgVehicles
 	};
 	class xi_general_equipment: xi_resupply_base
 	{
-		displayName="[XI] General Equipment";
+		displayName="[TSR] [PXI] General Equipment";
 		scope=2;
 		class TransportBackpacks
 		{
@@ -2029,7 +2029,7 @@ class CfgVehicles
 		model="\WHobjects\scenery\Containers_Combined\Model\mini_muni_204.p3d";
 		icon="\WHobjects\scenery\Containers_Combined\Icons\simple_tiow_icon.paa";
 		picture="\WHobjects\scenery\Containers_Combined\Icons\simple_tiow_icon.paa";
-		displayName="[XI] General Medical";
+		displayName="[TSR] [PXI] General Medical";
 		scope=2;
 		class TransportBackpacks
 		{
@@ -2138,14 +2138,14 @@ class CfgVehicles
 					// icon="";
 					// class XI_Drone_A
 					// {
-						// displayName="[XI] Drone A";
+						// displayName="[TSR] [PXI] Drone A";
 						// condition="""XI_Drone_A_packed"" in (items _player)";
 						// statement="[_player,""XI_Drone_A_packed""] call XI_fnc_drones_unpack";
 						// icon="";
 					// };
 					// class XI_Turret_A
 					// {
-						// displayName="[XI] Turret A";
+						// displayName="[TSR] [PXI] Turret A";
 						// condition="""XI_Turret_A_packed"" in (items _player)";
 						// statement="[_player,""XI_Drone_A_packed""] call XI_fnc_drones_unpack";
 						// icon="";

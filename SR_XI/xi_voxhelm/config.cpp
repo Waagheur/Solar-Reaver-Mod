@@ -57,7 +57,7 @@ class CfgWeapons
 	class XI_VoxHelm_NVG: NVGoggles
 	{
 		author="Rogue771";
-		displayname="[XI] Vox Helm";
+		displayname="[TSR] [PXI] Vox Helm";
 		model="\SR_XI\XI_voxHelm\XI_VoxHelm.p3d";
 		class ItemInfo: ItemInfo
 		{
@@ -72,7 +72,7 @@ class cfgGlasses
 	class xi_VoxHelm: None
 	{
 		author="Rogue771";
-		displayname="[XI] Vox Helm";
+		displayname="[TSR] [PXI] Vox Helm";
 		model="\SR_XI\XI_voxHelm\XI_VoxHelm.p3d";
 		hiddenSelections[]=
 		{

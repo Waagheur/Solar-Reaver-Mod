@@ -27,7 +27,7 @@ class CfgEditorCategories
 {
 	class XI_Props
 	{
-		displayName="[XI] Fortifications";
+		displayName="[TSR] [PXI] Fortifications";
 		priority=1;
 		side=1;
 	};
@@ -61,7 +61,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="Dragonteeth Line";
+		displayName="[TSR] [PXI] Dragonteeth Line";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";
@@ -74,7 +74,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[PXI] Wall Straight - Pipes";
+		displayName="[TSR] [PXI] Wall Straight - Pipes";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";
@@ -87,7 +87,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[PXI] Wall Straight - Gateway";
+		displayName="[TSR] [PXI] Wall Straight - Gateway";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";
@@ -100,7 +100,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[PXI] Wall Straight - No Pipes";
+		displayName="[TSR] [PXI] Wall Straight - No Pipes";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";
@@ -113,7 +113,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[PXI] Wall 90 - Exterior";
+		displayName="[TSR] [PXI] Wall 90 - Exterior";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";
@@ -126,7 +126,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[PXI] Wall 90 - Interior";
+		displayName="[TSR] [PXI] Wall 90 - Interior";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";
@@ -139,7 +139,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[PXI] Wall 45 - Exterior";
+		displayName="[TSR] [PXI] Wall 45 - Exterior";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";
@@ -152,7 +152,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[PXI] Wall 45 - Interior";
+		displayName="[TSR] [PXI] Wall 45 - Interior";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";
@@ -165,7 +165,7 @@ class CfgVehicles
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[PXI] WIP Trench Top";
+		displayName="[TSR] [PXI] WIP Trench Top";
 		faction="Empty";
 		vehicleClass="Objects";
 		editorCategory="XI_Props";

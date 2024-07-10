@@ -77,14 +77,14 @@ class CfgFactionClasses
 {
 	class xi_legion_fac
 	{
-		displayName="[XI] XI Legion";
+		displayName="[TSR] [PXI] XI Legion";
 		priority=1;
 		side=1;
 		icon="";
 	};
 	class xi_legion_fac_opfor
 	{
-		displayName="[XI] XI Legion OpFor Items";
+		displayName="[TSR] [PXI] XI Legion OpFor Items";
 		priority=1;
 		side=2;
 		icon="";
@@ -94,11 +94,11 @@ class CfgEditorCategories
 {
 	class xi_categ_editor
 	{
-		displayname="[XI] XI Legion";
+		displayname="[TSR] [PXI] XI Legion";
 	};
 	class xi_categ_editor_opFor
 	{
-		displayname="[XI] XI Legion OpFor Items";
+		displayname="[TSR] [PXI] XI Legion OpFor Items";
 	};
 };
 class CfgEditorSubcategories
@@ -1146,7 +1146,7 @@ class CfgVehicles
 	class pxi_tauros_hmg: IC_Tauros_HMG_desert_F
 	{
 		author="Bones";
-		displayName="[PXI] Tauros HMG";
+		displayName="[TSR] [PXI] Tauros HMG";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="xi_subcat_transports";
 		crew="B_G_Soldier_A_F";
@@ -1219,7 +1219,7 @@ class CfgVehicles
 	class pxi_tauros_unarmed: IC_Tauros_unarmed_desert_F
 	{
 		author="Bones";
-		displayName="[PXI] Tauros unarmed";
+		displayName="[TSR] [PXI] Tauros unarmed";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="xi_subcat_transports";
 		crew="B_G_Soldier_A_F";
@@ -1292,7 +1292,7 @@ class CfgVehicles
 	class pxi_tauros_venator: IC_Tauros_venator_desert_F
 	{
 		author="Bones";
-		displayName="[PXI] Tauros Venator";
+		displayName="[TSR] [PXI] Tauros Venator";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="xi_subcat_transports";
 		crew="B_G_Soldier_A_F";
@@ -1489,7 +1489,7 @@ class CfgVehicles
 	class xi_transport_vic_unarmed: bma3_bushmaster_unarmed_F
 	{
 		author="Kyrent";
-		displayName="[XI] Carnivore, Transport-Pattern Unclaimed";
+		displayName="[TSR] [PXI] Carnivore, Transport-Pattern Unclaimed";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="xi_subcat_transports";
 		crew="B_G_Soldier_A_F";
@@ -1597,7 +1597,7 @@ class CfgVehicles
 	class xi_transport_vic_armed: bma3_bushmaster_pws127mm_F
 	{
 		author="Kyrent";
-		displayName="[XI] Carnivore, Legate-Pattern";
+		displayName="[TSR] [PXI] Carnivore, Legate-Pattern";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="xi_subcat_transports";
 		crew="B_G_Soldier_A_F";
@@ -1697,7 +1697,7 @@ class CfgVehicles
 	class xi_transport_vic_unarmed_medical: bma3_bushmaster_unarmed_F
 	{
 		author="Kyrent";
-		displayName="[XI] Carnivore, Medivac-Pattern";
+		displayName="[TSR] [PXI] Carnivore, Medivac-Pattern";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="xi_subcat_transports";
 		crew="B_G_Soldier_A_F";
@@ -1808,7 +1808,7 @@ class CfgVehicles
 	class xi_transport_vic_unarmed_logi: bma3_bushmaster_unarmed_F
 	{
 		author="Kyrent";
-		displayName="[XI] Carnivore, Logisticus-Pattern/Cargo";
+		displayName="[TSR] [PXI] Carnivore, Logisticus-Pattern/Cargo";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="xi_subcat_transports";
 		crew="B_G_Soldier_A_F";
@@ -1917,7 +1917,7 @@ class CfgVehicles
 	class xi_transport_vic_unarmed_service: bma3_bushmaster_unarmed_F
 	{
 		author="Kyrent";
-		displayName="[XI] Carnivore, Logisticus-Pattern/Service";
+		displayName="[TSR] [PXI] Carnivore, Logisticus-Pattern/Service";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="xi_subcat_transports";
 		crew="B_G_Soldier_A_F";
@@ -2031,7 +2031,7 @@ class CfgVehicles
 	class XI_Chimera: IC_Chimera_01_desert
 	{
 		author="";
-		displayName="[PXI] Equites-Class Chimera";
+		displayName="[TSR] [PXI] Equites-Class Chimera";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="XI_subcat_fz";
 		crew="B_G_Soldier_A_F";
@@ -2358,7 +2358,7 @@ class CfgVehicles
 	class XI_Chimedon: IC_Chimedon_01_desert
 	{
 		author="";
-		displayName="[PXI] Equites-Class Chimedon";
+		displayName="[TSR] [PXI] Equites-Class Chimedon";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="XI_subcat_fz";
 		crew="B_G_Soldier_A_F";
@@ -2668,7 +2668,7 @@ class CfgVehicles
 	class XI_Chimerro: IC_Chimerro_01_desert
 	{
 		author="";
-		displayName="[PXI] Equites-Class Chimerro";
+		displayName="[TSR] [PXI] Equites-Class Chimerro";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="XI_subcat_fz";
 		crew="B_G_Soldier_A_F";
@@ -2995,7 +2995,7 @@ class CfgVehicles
 				rotation=-90;
 			};
 		};
-		displayName="[PXI] Invictus-Variant Leman Russ";
+		displayName="[TSR] [PXI] Invictus-Variant Leman Russ";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="XI_subcat_fz";
 		crew="B_G_Soldier_A_F";
@@ -3182,7 +3182,7 @@ class CfgVehicles
 	class XI_Leman_BC: IC_Leman_Russ_02_8th
 	{
 		author="";
-		displayName="[PXI] Invictus-Variant Leman Russ";
+		displayName="[TSR] [PXI] Invictus-Variant Leman Russ";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="XI_subcat_fz";
 		crew="B_G_Soldier_A_F";
@@ -3373,7 +3373,7 @@ class CfgVehicles
 	class cannon_railgun;
 	class pxi_leman_vc_carnivore: XI_Leman
 	{
-		displayName="[PXI] Leman - CARNIFEX";
+		displayName="[TSR] [PXI] Leman - CARNIFEX";
 		class Turrets: Turrets
 		{
 			class XI_Hull_turret: Hull_turret
@@ -3491,7 +3491,7 @@ class CfgVehicles
 	class XI_HighDispersion_Flak_Platform_chaos: ML700_Hydra_Platform_BLOOD
 	{
 		author="";
-		displayName="[PXI] High Dispersion Flak Emplacement";
+		displayName="[TSR] [PXI] High Dispersion Flak Emplacement";
 		faction="xi_opf_faction";
 		editorcategory="xi_opfor_Generic";
 		editorsubcategory="xi_opf_statics";
@@ -3522,7 +3522,7 @@ class CfgVehicles
 	class XI_HighDispersion_Flak_Platform_guard: ML700_Hydra_Platform
 	{
 		author="";
-		displayName="[PXI] High Dispersion Flak Emplacement (GUARD)";
+		displayName="[TSR] [PXI] High Dispersion Flak Emplacement (GUARD)";
 		faction="xi_opf_faction";
 		editorcategory="xi_opfor_Generic";
 		editorsubcategory="xi_opf_statics";
@@ -3552,7 +3552,7 @@ class CfgVehicles
 	class XI_HighDispersion_Flak_Platform_guardHIGH: ML700_Hydra_Platform
 	{
 		author="";
-		displayName="[PXI] High Dispersion Flak Emplacement (GUARD HIGH)";
+		displayName="[TSR] [PXI] High Dispersion Flak Emplacement (GUARD HIGH)";
 		faction="xi_opf_faction";
 		editorcategory="xi_opfor_Generic";
 		editorsubcategory="xi_opf_statics";
@@ -3582,7 +3582,7 @@ class CfgVehicles
 	class TIOW_ValhallanHydra_White;
 	class XI_Hydra_Rebalance_Blufor: TIOW_ValhallanHydra_White
 	{
-		displayName="[XI] Hydra";
+		displayName="[TSR] [PXI] Hydra";
 		editorCategory="XI_categ_editor";
 		editorSubcategory="XI_subcat_fz";
 		side=1;
@@ -3921,7 +3921,7 @@ class CfgVehicles
 				};
 			};
 		};
-		displayName="[PXI] SAM Site";
+		displayName="[TSR] [PXI] SAM Site";
 		armor=9000;
 		armorStructural=2;
 		faction="xi_opf_faction";
@@ -3934,7 +3934,7 @@ class CfgVehicles
 	class B_T_APC_Tracked_01_AA_F;
 	class XI_OPfor_AA_1: B_T_APC_Tracked_01_AA_F
 	{
-		displayName="[XI] (Pirate) Bardelas";
+		displayName="[TSR] [PXI] (Pirate) Bardelas";
 		armor=2500;
 		armorStructural=2;
 		faction="xi_opf_faction";
@@ -3958,7 +3958,7 @@ class CfgVehicles
 	class I_MRAP_03_F;
 	class PXI_MRAP_1: I_MRAP_03_F
 	{
-		displayname="[PXI] HQ-Staff MRAP";
+		displayname="[TSR] [PXI] HQ-Staff MRAP";
 		side=1;
 		scope=2;
 		scopeCurator=2;
@@ -3972,7 +3972,7 @@ class CfgVehicles
 	};
 	class DRA_CRAM_01: B_AAA_System_01_F
 	{
-		displayName="[PXI] Praetorian 1D C-RAM/FORKED";
+		displayName="[TSR] [PXI] Praetorian 1D C-RAM/FORKED";
 		faction="xi_opf_faction";
 		editorcategory="xi_opfor_Generic";
 		editorsubcategory="xi_opf_statics";
@@ -3995,7 +3995,7 @@ class CfgVehicles
 	class B_T_UAV_03_dynamicLoadout_F;
 	class pxi_falconDrone_O: B_T_UAV_03_dynamicLoadout_F
 	{
-		displayName="[PXI] Falcon-Spotter Drone";
+		displayName="[TSR] [PXI] Falcon-Spotter Drone";
 		side=0;
 		scope=2;
 		faction="xi_opf_faction";
@@ -4005,7 +4005,7 @@ class CfgVehicles
 	class B_UAV_05_F;
 	class pxi_UCAVDrone_O: B_UAV_05_F
 	{
-		displayName="[PXI] UCAV Sentinel";
+		displayName="[TSR] [PXI] UCAV Sentinel";
 		side=0;
 		scope=2;
 		faction="xi_opf_faction";
@@ -4015,7 +4015,7 @@ class CfgVehicles
 	class B_Ship_MRLS_01_F;
 	class pxi_vlsLauncher_O: B_Ship_MRLS_01_F
 	{
-		displayName="[PXI] Cruise-Missile Site";
+		displayName="[TSR] [PXI] Cruise-Missile Site";
 		side=0;
 		scope=2;
 		faction="xi_opf_faction";
