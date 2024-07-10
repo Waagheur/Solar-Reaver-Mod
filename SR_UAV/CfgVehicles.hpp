@@ -98,6 +98,14 @@ class CfgVehicles {
             };
         };
 		model="Dos_Cosmetics\Models\Servo_UAV_1.p3d";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"Dos_Cosmetics\Textures\Servo_UAV_1_CO.paa"
+		};
     };
 	class SR_B_UAV_AR2i: SR_UAV_AR2i_base {
 		author = "Toadball";

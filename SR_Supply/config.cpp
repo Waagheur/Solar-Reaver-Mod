@@ -399,9 +399,9 @@ class CfgVehicles{
 				magazine = "Steve_Trig_Exitus_BoltgunMag";
 				count = 70;
 			};
-            class xx_SR_PrimarisHeavyBoltRifleMag
+            class xx_SR_PrimarisStalkerBolterMag // Stalker BoltRifle
             {
-                magazine = "SR_PrimarisHeavyBoltRifleMag";
+                magazine = "SR_PrimarisStalkerBolterMag";
                 count = 70;
             };
 			class xx_Steve_Phob_Atrox_BoltgunMag
