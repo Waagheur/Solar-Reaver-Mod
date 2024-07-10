@@ -399,22 +399,27 @@ class CfgVehicles{
 				magazine = "Steve_Trig_Exitus_BoltgunMag";
 				count = 70;
 			};
-            class xx_Primaris_Dos_S_Bolt_RifleMag
+            class xx_SR_PrimarisHeavyBoltRifleMag
             {
-                magazine = "Primaris_Dos_S_Bolt_RifleMag";
+                magazine = "SR_PrimarisHeavyBoltRifleMag";
                 count = 70;
-            }
+            };
 			class xx_Steve_Phob_Atrox_BoltgunMag
 			{
 				magazine = "Steve_Phob_Atrox_BoltgunMag";
 				count = 30;
 			};
-			class xx_Steve_30k_combi_seek_Mag
+			class xx_Steve_Phob_CombiBoltgunMag // Tigrus Seeker Ammo.
+			{
+				magazine = "Steve_Phob_CombiBoltgunMag";
+				count = 30;
+			};
+			class xx_Steve_30k_combi_seek_Mag // Tigrus Seeker Ammo.
 			{
 				magazine = "Steve_30k_combi_seek_Mag";
 				count = 30;
 			};
-			class xx_Steve_30k_Tig_Combi_Mag
+			class xx_Steve_30k_Tig_Combi_Mag // Tigrus Combi Boltgun
 			{
 				magazine = "Steve_30k_Tig_Combi_Mag";
 				count = 30;
@@ -434,14 +439,43 @@ class CfgVehicles{
 				magazine = "TIOW_SM_Rocket_Krak_Mag";
 				count = 10;
 			};
-
+			class xx_SR_Light_Frag_Missile
+			{
+				magazine = "SR_Light_Frag_Missile";
+				count = 30;
+			};
+			class xx_TIOW_30rnd_GodwynBoltgunMag
+			{
+				magazine = "TIOW_30rnd_GodwynBoltgunMag";
+				count = 50;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 16;
+			};
 		};
 		class TransportWeapons
 		{
-
+			class xx_SR_TIOW_GodwynBoltgun_1
+			{
+				weapon = "SR_TIOW_GodwynBoltgun_1";
+				count = 4;
+			};
 		};
 		class TransportItems
 		{
+			class xx_ACE_UAVBattery {
+				name = "ACE_UAVBattery";
+				count = 16;
+			};
+			class xx_SR_B_AR2i_Packed {
+				name = "SR_B_AR2i_Packed";
+				count = 4;
+			};
+			class xx_ITC_Land_B_AR2i_Packed {
+				name = "ITC_Land_B_AR2i_Packed";
+				count = 4;
+			};
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
 				count = 8;
@@ -492,6 +526,10 @@ class CfgVehicles{
 			};
 			class xx_SR_TraumaClearer{
 				name = "SR_Item_TraumaClearer";
+				count = 4;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
 				count = 16;
 			};
 		};
@@ -509,9 +547,9 @@ class CfgVehicles{
 				magazine = "SR_Lascutter_Mag";
 				count = 70;
 			};
-			class xx_Primaris_Dos_H_Bolt_RifleMag
+			class xx_SR_PrimarisHeavyBoltRifleMag
 			{
-				magazine = "Primaris_Dos_H_Bolt_RifleMag";
+				magazine = "SR_PrimarisHeavyBoltRifleMag";
 				count = 20;
 			};
 			class xx_Steve_Rotor_Cannon_Mag
@@ -534,10 +572,20 @@ class CfgVehicles{
 				magazine = "Steve_Trig_BoltgunMag";
 				count = 60;
 			};
-			class xx_Steve_30k_Tig_Combi_Mag
+			class xx_Steve_Phob_CombiBoltgunMag // Tigrus Seeker Ammo.
+			{
+				magazine = "Steve_Phob_CombiBoltgunMag";
+				count = 50;
+			};
+			class xx_Steve_30k_combi_seek_Mag // Tigrus Seeker Ammo.
+			{
+				magazine = "Steve_30k_combi_seek_Mag";
+				count = 50;
+			};
+			class xx_Steve_30k_Tig_Combi_Mag // Tigrus Combi Boltgun
 			{
 				magazine = "Steve_30k_Tig_Combi_Mag";
-				count = 40;
+				count = 50;
 			};
 			class xx_Steve_30k_CombiMelta_Mag
 			{
@@ -559,11 +607,28 @@ class CfgVehicles{
 				magazine = "TIOW_SM_Rocket_Krak_Mag";
 				count = 10;
 			};
-
+			class xx_SR_Light_Frag_Missile
+			{
+				magazine = "SR_Light_Frag_Missile";
+				count = 30;
+			};
+			class xx_TIOW_30rnd_GodwynBoltgunMag
+			{
+				magazine = "TIOW_30rnd_GodwynBoltgunMag";
+				count = 50;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 16;
+			};
 		};
 		class TransportWeapons
 		{
-
+			class xx_SR_TIOW_GodwynBoltgun_1
+			{
+				weapon = "SR_TIOW_GodwynBoltgun_1";
+				count = 4;
+			};
 		};
 		class TransportItems
 		{
@@ -617,6 +682,10 @@ class CfgVehicles{
 			};
 			class xx_SR_TraumaClearer{
 				name = "SR_Item_TraumaClearer";
+				count = 4;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
 				count = 16;
 			};
 		};
@@ -644,6 +713,11 @@ class CfgVehicles{
 			{
 				magazine = "Steve_Trig_BoltgunMag";
 				count = 70;
+			};
+			class xx_Steve_Phob_CombiBoltgunMag // Tigrus Seeker Ammo.
+			{
+				magazine = "Steve_Phob_CombiBoltgunMag";
+				count = 30;
 			};
 			class xx_Steve_30k_combi_seek_Mag // Tigrus Seeker Ammo.
 			{
@@ -715,6 +789,11 @@ class CfgVehicles{
 				magazine = "TIOW_SM_Rocket_Krak_Mag";
 				count = 10;
 			};
+			class xx_SR_Light_Frag_Missile
+			{
+				magazine = "SR_Light_Frag_Missile";
+				count = 30;
+			};
 			class xx_Steve_30k_Meltagun_Mag // Primus Meltagun
 			{
 				magazine = "Steve_30k_Meltagun_Mag";
@@ -730,26 +809,26 @@ class CfgVehicles{
 				magazine = "TIOW_SM_Storm_Clip_Mag";
 				count = 20;
 			};
-			class xx_Primaris_Dos_Bolt_RifleMag // BoltRifle
+			class xx_SR_PrimarisBoltRifleMag // BoltRifle
 			{
-				magazine = "Primaris_Dos_Bolt_RifleMag";
+				magazine = "SR_PrimarisBoltRifleMag";
 				count = 100;
 			};
-			class xx_Primaris_Dos_H_Bolt_RifleMag // Auto BoltRifle
+			class xx_SR_PrimarisHeavyBoltRifleMag // Auto BoltRifle
 			{
-				magazine = "Primaris_Dos_H_Bolt_RifleMag";
+				magazine = "SR_PrimarisHeavyBoltRifleMag";
 				count = 100;
 			};
-			class xx_Primaris_Dos_C_Bolt_RifleMag // Carbine BoltRifle
+			class xx_SR_PrimarisBoltCarbineMag // Carbine BoltRifle
 			{
-				magazine = "Primaris_Dos_C_Bolt_RifleMag";
+				magazine = "SR_PrimarisBoltCarbineMag";
 				count = 100;
 			};
-            class xx_Primaris_Dos_S_Bolt_RifleMag // Stalker BoltRifle
+            class xx_SR_PrimarisStalkerBolterMag // Stalker BoltRifle
             {
-                magazine = "Primaris_Dos_S_Bolt_RifleMag";
+                magazine = "SR_PrimarisStalkerBolterMag";
                 count = 70;
-            }
+            };
 			class xx_Steve_Phob_BoltPistolMag // Phobos Pistol
 			{
 				magazine = "Steve_Phob_BoltPistolMag";
@@ -765,10 +844,18 @@ class CfgVehicles{
 				magazine = "Steve_SM_PlasmaPistol_Mag";
 				count = 20;
 			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 16;
+			};
 		};
 		class TransportWeapons
 		{
-
+			class xx_SR_TIOW_GodwynBoltgun_1
+			{
+				weapon = "SR_TIOW_GodwynBoltgun_1";
+				count = 4;
+			};
 		};
 		class TransportItems
 		{
@@ -822,6 +909,10 @@ class CfgVehicles{
 			};
 			class xx_SR_TraumaClearer{
 				name = "SR_Item_TraumaClearer";
+				count = 4;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
 				count = 16;
 			};
 		};
@@ -869,11 +960,28 @@ class CfgVehicles{
 				magazine = "Steve_30k_Rocket_Frag_Mag";
 				count = 70;
 			};
-
+			class xx_SR_Light_Frag_Missile
+			{
+				magazine = "SR_Light_Frag_Missile";
+				count = 120;
+			};
+			class xx_TIOW_30rnd_GodwynBoltgunMag
+			{
+				magazine = "TIOW_30rnd_GodwynBoltgunMag";
+				count = 50;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 16;
+			};
 		};
 		class TransportWeapons
 		{
-
+			class xx_SR_TIOW_GodwynBoltgun_1
+			{
+				weapon = "SR_TIOW_GodwynBoltgun_1";
+				count = 4;
+			};
 		};
 		class TransportItems
 		{
@@ -927,6 +1035,10 @@ class CfgVehicles{
 			};
 			class xx_SR_TraumaClearer{
 				name = "SR_Item_TraumaClearer";
+				count = 4;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
 				count = 16;
 			};
 		};
@@ -965,10 +1077,23 @@ class CfgVehicles{
 				magazine = "Steve_Sm_Solid";
 				count = 40;
 			};
+			class xx_TIOW_30rnd_GodwynBoltgunMag
+			{
+				magazine = "TIOW_30rnd_GodwynBoltgunMag";
+				count = 50;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 16;
+			};
 		};
 		class TransportWeapons
 		{
-
+			class xx_SR_TIOW_GodwynBoltgun_1
+			{
+				weapon = "SR_TIOW_GodwynBoltgun_1";
+				count = 4;
+			};
 		};
 		class TransportItems
 		{
@@ -1022,6 +1147,10 @@ class CfgVehicles{
 			};
 			class xx_SR_TraumaClearer{
 				name = "SR_Item_TraumaClearer";
+				count = 4;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
 				count = 16;
 			};
 		};
@@ -1049,9 +1178,24 @@ class CfgVehicles{
 				magazine = "Steve_SM_PlasmaPistol_Mag";
 				count = 20;
 			};
+			class xx_TIOW_30rnd_GodwynBoltgunMag
+			{
+				magazine = "TIOW_30rnd_GodwynBoltgunMag";
+				count = 30;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 16;
+			};
 		};
 		class TransportWeapons
-		{};
+		{
+			class xx_SR_TIOW_GodwynBoltgun_1
+			{
+				weapon = "SR_TIOW_GodwynBoltgun_1";
+				count = 4;
+			};
+		};
 		class TransportItems
 		{
 			class xx_AOD_L_GravFuel{
@@ -1112,6 +1256,10 @@ class CfgVehicles{
 			};
 			class xx_SR_TraumaClearer{
 				name = "SR_Item_TraumaClearer";
+				count = 4;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
 				count = 16;
 			};
 		};
@@ -1128,13 +1276,17 @@ class CfgVehicles{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 50;
 			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 32;
+			};
 		};
 		class TransportWeapons
 		{
-			class xx_TIOW_GodwynBoltgun_6
+			class xx_SR_TIOW_GodwynBoltgun_1
 			{
-				weapon = "TIOW_GodwynBoltgun_6";
-				count = 5;
+				weapon = "SR_TIOW_GodwynBoltgun_1";
+				count = 4;
 			};
 		};
 		class TransportItems
@@ -1197,7 +1349,11 @@ class CfgVehicles{
 			};
 			class xx_SR_TraumaClearer{
 				name = "SR_Item_TraumaClearer";
-				count = 40;
+				count = 8;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 32;
 			};
 		};
 	};
