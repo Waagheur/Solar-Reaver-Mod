@@ -19,6 +19,33 @@
 		
 */
 
+SR_Dragonfire_Func = {
+	
+	_p = _this;
+
+
+
+	[_p] spawn {
+		private _posATL = (_this select 0) modelToWorld [0,0,0]; 
+	 
+		// Fire 
+		private _ps1 = "#particlesource" createVehicleLocal _posATL; 
+		_ps1 setParticleParams [ 
+		 ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard", 
+		 1, 1, [0, 0, 0], [0, 0, 0.5], 0, 2, 1, 3, [0.5, 8], 
+		 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
+		 [0.25,1], 1, 1, "", "", _ps1]; 
+		_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
+		_ps1 setDropInterval 0.05;
+		_ps1 setParticleFire [40, 2.5, 0.1];
+		
+		sleep 2;
+		
+		deleteVehicle _ps1;
+	};
+
+};
+
 params [];
 
 if (not(isDedicated)) then {
@@ -46,24 +73,7 @@ if (not(isDedicated)) then {
 					_projectile addEventHandler ["Explode", {
 						// params ["_projectile"];
 						
-						[_this select 0] spawn {
-							private _posATL = (_this select 0) modelToWorld [0,0,0]; 
-						 
-							// Fire 
-							private _ps1 = "#particlesource" createVehicleLocal _posATL; 
-							_ps1 setParticleParams [ 
-							 ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard", 
-							 1, 1, [0, 0, 0], [0, 0, 0.5], 0, 2, 1, 3, [0.5, 8], 
-							 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
-							 [0.25,1], 1, 1, "", "", _ps1]; 
-							_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
-							_ps1 setDropInterval 0.05;
-							_ps1 setParticleFire [40, 2.5, 0.1];
-							
-							sleep 2;
-							
-							deleteVehicle _ps1;
-						};
+						(_this select 0) remoteExec["SR_Dragonfire_Func", 0];
 						
 					}];
 					
@@ -92,24 +102,7 @@ if (not(isDedicated)) then {
 					_projectile addEventHandler ["Explode", {
 						// params ["_projectile"];
 						
-						[_this select 0] spawn {
-							private _posATL = (_this select 0) modelToWorld [0,0,0]; 
-						 
-							// Fire 
-							private _ps1 = "#particlesource" createVehicleLocal _posATL; 
-							_ps1 setParticleParams [ 
-							 ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard", 
-							 1, 1, [0, 0, 0], [0, 0, 0.5], 0, 2, 1, 3, [0.5, 8], 
-							 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
-							 [0.25,1], 1, 1, "", "", _ps1]; 
-							_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
-							_ps1 setDropInterval 0.05;
-							_ps1 setParticleFire [40, 2.5, 0.1];
-							
-							sleep 2;
-							
-							deleteVehicle _ps1;
-						};
+						(_this select 0) remoteExec["SR_Dragonfire_Func", 0];
 						
 					}];
 					
@@ -138,24 +131,7 @@ if (not(isDedicated)) then {
 					_projectile addEventHandler ["Explode", {
 						// params ["_projectile"];
 						
-						[_this select 0] spawn {
-							private _posATL = (_this select 0) modelToWorld [0,0,0]; 
-						 
-							// Fire 
-							private _ps1 = "#particlesource" createVehicleLocal _posATL; 
-							_ps1 setParticleParams [ 
-							 ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard", 
-							 1, 1, [0, 0, 0], [0, 0, 0.5], 0, 2, 1, 3, [0.5, 8], 
-							 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
-							 [0.25,1], 1, 1, "", "", _ps1]; 
-							_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
-							_ps1 setDropInterval 0.05;
-							_ps1 setParticleFire [40, 2.5, 0.1];
-							
-							sleep 2;
-							
-							deleteVehicle _ps1;
-						};
+						(_this select 0) remoteExec["SR_Dragonfire_Func", 0];
 						
 					}];
 					
@@ -184,24 +160,7 @@ if (not(isDedicated)) then {
 					_projectile addEventHandler ["Explode", {
 						// params ["_projectile"];
 						
-						[_this select 0] spawn {
-							private _posATL = (_this select 0) modelToWorld [0,0,0]; 
-						 
-							// Fire 
-							private _ps1 = "#particlesource" createVehicleLocal _posATL; 
-							_ps1 setParticleParams [ 
-							 ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard", 
-							 1, 1, [0, 0, 0], [0, 0, 0.5], 0, 2, 1, 3, [0.5, 8], 
-							 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
-							 [0.25,1], 1, 1, "", "", _ps1]; 
-							_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
-							_ps1 setDropInterval 0.05;
-							_ps1 setParticleFire [40, 2.5, 0.1];
-							
-							sleep 2;
-							
-							deleteVehicle _ps1;
-						};
+						(_this select 0) remoteExec["SR_Dragonfire_Func", 0];
 						
 					}];
 					
@@ -230,24 +189,7 @@ if (not(isDedicated)) then {
 					_projectile addEventHandler ["Explode", {
 						// params ["_projectile"];
 						
-						[_this select 0] spawn {
-							private _posATL = (_this select 0) modelToWorld [0,0,0]; 
-						 
-							// Fire 
-							private _ps1 = "#particlesource" createVehicleLocal _posATL; 
-							_ps1 setParticleParams [ 
-							 ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard", 
-							 1, 1, [0, 0, 0], [0, 0, 0.5], 0, 2, 1, 3, [0.5, 8], 
-							 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
-							 [0.25,1], 1, 1, "", "", _ps1]; 
-							_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
-							_ps1 setDropInterval 0.05;
-							_ps1 setParticleFire [40, 2.5, 0.1];
-							
-							sleep 2;
-							
-							deleteVehicle _ps1;
-						};
+						(_this select 0) remoteExec["SR_Dragonfire_Func", 0];
 						
 					}];
 					
@@ -276,24 +218,7 @@ if (not(isDedicated)) then {
 					_projectile addEventHandler ["Explode", {
 						// params ["_projectile"];
 						
-						[_this select 0] spawn {
-							private _posATL = (_this select 0) modelToWorld [0,0,0]; 
-						 
-							// Fire 
-							private _ps1 = "#particlesource" createVehicleLocal _posATL; 
-							_ps1 setParticleParams [ 
-							 ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard", 
-							 1, 1, [0, 0, 0], [0, 0, 0.5], 0, 2, 1, 3, [0.5, 8], 
-							 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
-							 [0.25,1], 1, 1, "", "", _ps1]; 
-							_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
-							_ps1 setDropInterval 0.05;
-							_ps1 setParticleFire [40, 2.5, 0.1];
-							
-							sleep 2;
-							
-							deleteVehicle _ps1;
-						};
+						(_this select 0) remoteExec["SR_Dragonfire_Func", 0];
 						
 					}];
 					
@@ -322,24 +247,7 @@ if (not(isDedicated)) then {
 					_projectile addEventHandler ["Explode", {
 						// params ["_projectile"];
 						
-						[_this select 0] spawn {
-							private _posATL = (_this select 0) modelToWorld [0,0,0]; 
-						 
-							// Fire 
-							private _ps1 = "#particlesource" createVehicleLocal _posATL; 
-							_ps1 setParticleParams [ 
-							 ["\A3\Data_F\ParticleEffects\Universal\Universal", 16, 10, 32], "", "Billboard", 
-							 1, 1, [0, 0, 0], [0, 0, 0.5], 0, 2, 1, 3, [0.5, 8], 
-							 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
-							 [0.25,1], 1, 1, "", "", _ps1]; 
-							_ps1 setParticleRandom [0.2, [0.5, 0.5, 0.25], [0.125, 0.125, 0.125], 0.2, 0.2, [0, 0, 0, 0], 0, 0]; 
-							_ps1 setDropInterval 0.05;
-							_ps1 setParticleFire [40, 2.5, 0.1];
-							
-							sleep 2;
-							
-							deleteVehicle _ps1;
-						};
+						(_this select 0) remoteExec["SR_Dragonfire_Func", 0];
 						
 					}];
 					
