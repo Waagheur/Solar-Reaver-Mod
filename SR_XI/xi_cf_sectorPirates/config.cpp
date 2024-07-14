@@ -95,7 +95,6 @@ class cfgPatches
 			"IC_Weapons_Launchers",
 			"IC_Departmento_Weapons",
 			"IC_Chaos",
-			"winchester",
 			"A3_Characters_F_Exp",
 			"A3_Characters_F_Enoch",
 			"IC_weapons_Acc",
@@ -202,14 +201,6 @@ class cfgVehicles
 	class C_makoAA_alWood_F;
 	class I_M080apc1_merc_F;
 	class C_M080apc2_service_al_F;
-	class MEOP_B_veh_LandVan_F;
-	class MEOP_B_veh_LandPickupA_gang_F;
-	class MEOP_veh_kodiak3_allianceWood;
-	class MEOP_SX3fighter_veh_mercBlue_F;
-	class MEOP_veh_ta62_facinus;
-	class MEOP_veh_turKod_BS;
-	class MEOP_SX4fighter_veh_cerbRed_F;
-	class MEOP_veh_a61_batar;
 	class C_hammer1_cerbRed_F;
 	class C_mako_m32_ERCS_F;
 	class O_MBT_04_command_F;
@@ -3439,11 +3430,6 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate APC";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\mako\data\bodywood_m35_co.paa",
-			"meop_vehicles\mako\data\gunwood_co.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate";
 		typicalCargo[]=
 		{
@@ -3455,11 +3441,6 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate APC 2";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\mako\data\bodywood_m35_co.paa",
-			"meop_vehicles\mako\data\gunwood_co.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate";
 		typicalCargo[]=
 		{
@@ -3471,11 +3452,6 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate APC 3";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\apc\data\m080_body_old_co.paa",
-			"meop_vehicles\apc\data\m080_cargo_old_co.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate";
 		typicalCargo[]=
 		{
@@ -3487,138 +3463,10 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate Supply Vehicle";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\apc\data\body_al_co.paa",
-			"meop_vehicles\apc\data\cargo_al_co.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate";
 		typicalCargo[]=
 		{
 			"XI_Light_Crewman_1_Pirate"
-		};
-	};
-	class XI_Pirate_Transport_car: MEOP_B_veh_LandVan_F
-	{
-		faction="XI_Sector_Pirates";
-		side=0;
-		displayName="Pirate Transport car";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\van\data\hull_black.paa",
-			"meop_vehicles\van\data\eng_black.paa"
-		};
-		crew="XI_Light_Crewman_1_Pirate";
-		typicalCargo[]=
-		{
-			"XI_Light_Crewman_1_Pirate"
-		};
-	};
-	class XI_Pirate_Technical: MEOP_B_veh_LandPickupA_gang_F
-	{
-		faction="XI_Sector_Pirates";
-		side=0;
-		displayName="Pirate Technical";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\van\data\hullpu_green_co.paa"
-		};
-		crew="XI_Light_Crewman_1_Pirate";
-		typicalCargo[]=
-		{
-			"XI_Light_Crewman_1_Pirate"
-		};
-	};
-	class XI_Pirate_Dropship_1: MEOP_veh_kodiak3_allianceWood
-	{
-		faction="XI_Sector_Pirates";
-		side=0;
-		displayName="Pirate Dropship 1";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\kodiak\data\kod_back_green_co.paa",
-			"meop_vehicles\kodiak\data\kod_front_green_co.paa",
-			"meop_vehicles\kodiak\data\kod_det_green_co.paa"
-		};
-		crew="XI_Light_Crewman_1_Pirate_2";
-		typicalCargo[]=
-		{
-			"XI_Light_Crewman_1_Pirate_2"
-		};
-	};
-	class XI_Pirate_Interceptor_1: MEOP_SX3fighter_veh_mercBlue_F
-	{
-		faction="XI_Sector_Pirates";
-		side=0;
-		displayName="Pirate Interceptor 1";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\sx3\al\data\cerfighter_clear_co.paa"
-		};
-		crew="XI_Light_Crewman_1_Pirate_3";
-		typicalCargo[]=
-		{
-			"XI_Light_Crewman_1_Pirate_3"
-		};
-	};
-	class XI_Pirate_Dropship_Helicopter_1: MEOP_veh_ta62_facinus
-	{
-		faction="XI_Sector_Pirates";
-		side=0;
-		displayName="Pirate Dropship Helicopter 1";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\a61\data\hullfac_co.paa"
-		};
-		crew="XI_Light_Crewman_1_Pirate_2";
-		typicalCargo[]=
-		{
-			"XI_Light_Crewman_1_Pirate_2"
-		};
-	};
-	class XI_Pirate_Dropship_2: MEOP_veh_turKod_BS
-	{
-		faction="XI_Sector_Pirates";
-		side=0;
-		displayName="Pirate Dropship 2";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\turkodiak\data\hullclear_co.paa"
-		};
-		crew="XI_Light_Crewman_1_Pirate_2";
-		typicalCargo[]=
-		{
-			"XI_Light_Crewman_1_Pirate_2"
-		};
-	};
-	class XI_Pirate_Interceptor_2: MEOP_SX4fighter_veh_cerbRed_F
-	{
-		faction="XI_Sector_Pirates";
-		side=0;
-		displayName="Pirate Interceptor 2";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\sx3\al\data\cerfighter_co.paa"
-		};
-		crew="XI_Light_Crewman_1_Pirate_3";
-		typicalCargo[]=
-		{
-			"XI_Light_Crewman_1_Pirate_3"
-		};
-	};
-	class XI_Pirate_Dropship_Helicopter_2: MEOP_veh_a61_batar
-	{
-		faction="XI_Sector_Pirates";
-		side=0;
-		displayName="Pirate Dropship Helicopter 2";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\a61\data\a61_batar.paa"
-		};
-		crew="XI_Light_Crewman_1_Pirate_2";
-		typicalCargo[]=
-		{
-			"XI_Light_Crewman_1_Pirate_2"
 		};
 	};
 	class XI_Pirate_Adavnced_APC: C_hammer1_cerbRed_F
@@ -3626,10 +3474,6 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate Adavnced APC";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\mako\hammer\data\hammer_cerb_co.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate";
 		typicalCargo[]=
 		{
@@ -3641,10 +3485,6 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate Light transport";
-		hiddenSelectionsTextures[]=
-		{
-			"meop_vehicles\mako\data\bodyercs_m32_co.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate";
 		typicalCargo[]=
 		{
@@ -3691,11 +3531,6 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate Heavy Tank Plasma";
-		hiddenSelectionsTextures[]=
-		{
-			"apcs\data\textures\chimerainsignia1489th_ca.paa",
-			"whtracked\lrmiv\data\lr_krieg1489th_co.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate_1";
 		typicalCargo[]=
 		{
@@ -3707,11 +3542,6 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate Heavy Tank Battle";
-		hiddenSelectionsTextures[]=
-		{
-			"apcs\data\textures\chimerainsignia1489th_ca.paa",
-			"whtracked\lrmiv\data\lr_krieg1489th_co.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate_1";
 		typicalCargo[]=
 		{
@@ -3799,11 +3629,6 @@ class cfgVehicles
 		faction="XI_Sector_Pirates";
 		side=0;
 		displayName="Pirate Valkyrie 1";
-		hiddenSelectionsTextures[]=
-		{
-			"whair\val\data\valkyrie_dkok_1490th_ca.paa",
-			"whair\val\data\valkyrie_dkok_1490th_low_res_ca.paa"
-		};
 		crew="XI_Light_Crewman_1_Pirate_3";
 		typicalCargo[]=
 		{
