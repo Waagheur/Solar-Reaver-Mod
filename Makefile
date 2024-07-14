@@ -18,6 +18,7 @@ make_pbo := "E:\Steam\steamapps\common\Arma 3 Tools\FileBank\FileBank.exe"
 # Allows us to dodge the default order of the addon builder and avoid some build errors
 # Like prebinarised config
 # "E:\Steam\steamapps\common\Arma 3 Tools\FileBank\FileBank.exe" -dst . Con_neph
+# Almost always bug out models and textures
 
 
 
