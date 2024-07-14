@@ -167,6 +167,11 @@ class ACEX_Fortify_Presets
 			{
 				"Land_Barrier",
 				10
+			},
+			
+			{
+				"RF_Bunker",
+				50
 			}
 		};
 	};
@@ -1240,18 +1245,18 @@ class cfgWeapons
 		// model="turretspatch\objects\TarantulaSentry.p3d";
 		// picture="\A3\Drones_F\Air_F_Gamma\UAV_01\Data\UI\UAV_01_CA.paa";
 	// };
-	class detectorCore;
-	class MineDetector: detectorCore
-	{
-		scope=0;
-	};
-	class ace_marker_flags_white: ACE_ItemCore
-	{
-		class ItemInfo: CBA_MiscItem_ItemInfo
-		{
-			mass=0;
-		};
-	};
+	// class detectorCore;
+	// class MineDetector: detectorCore
+	// {
+		// scope=0;
+	// };
+	// class ace_marker_flags_white: ACE_ItemCore
+	// {
+		// class ItemInfo: CBA_MiscItem_ItemInfo
+		// {
+			// mass=0;
+		// };
+	// };
 };
 class CfgVehicles
 {
