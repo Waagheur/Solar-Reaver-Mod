@@ -56,7 +56,7 @@ SR_Flamer_Func = {
 					[_x, 0.5, _bodyPart, "burn"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
 				};
 			} forEach _units;
-			sleep 0.5;
+			sleep 0.2;
 		};
 		
 		deleteVehicle _ps1;
