@@ -6,14 +6,23 @@ class CfgPatches
 		weapons[]=
 		{
 			"xi_Equites",
+			"xi_Equites_dt",
 			"xi_legionnaire1Conscript",
+			"xi_legionnaire1Conscript_dt",
 			"xi_legionnaire1Rogue",
+			"xi_legionnaire1Rogue_dt",
 			"xi_legionnaire1",
+			"xi_legionnaire1_dt",
 			"xi_legionnaire2",
+			"xi_legionnaire2_dt",
 			"xi_legionnaire3",
+			"xi_legionnaire3_dt",
 			"xi_legionnaire1L",
+			"xi_legionnaire1L_dt",
 			"xi_legionnaireHero",
+			"xi_legionnaireHero_dt",
 			"xi_legionnaireTri",
+			"xi_legionnaireTri_dt",
 			"xi_LegionhelmetU_BASE",
 			"xi_LegionhelmetUCrest_BASE",
 			"xi_LegionhelmetU_Conscript",
@@ -99,6 +108,47 @@ class CfgWeapons
 			};
 		};
 	};
+	class xi_legionnaire1_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Legionnaire Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour (DT)";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2V3_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2V3_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
+	};
 	class xi_legionnaire1Conscript: pxi_armourVest_base
 	{
 		author="Rogue771";
@@ -137,6 +187,47 @@ class CfgWeapons
 				"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
 			};
 		};
+	};
+	class xi_legionnaire1Conscript_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Conscript Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
 	};
 	class xi_Equites: pxi_armourVest_base
 	{
@@ -177,6 +268,47 @@ class CfgWeapons
 			};
 		};
 	};
+	class xi_Equites_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Equites Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_Equites.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_Shoulders_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_Equites.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_Shoulders_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
+	};
 	class xi_legionnaireHero: pxi_armourVest_base
 	{
 		author="Rogue771";
@@ -215,6 +347,47 @@ class CfgWeapons
 				"\SR_XI\xi_allArmour\data\xi_armour2L_co.paa"
 			};
 		};
+	};
+	class xi_legionnaireHero_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Severan Shield Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1Hero_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2Hero_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2L_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1Hero_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2Hero_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2L_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
 	};
 	class xi_legionnaire1L: pxi_armourVest_base
 	{
@@ -255,6 +428,47 @@ class CfgWeapons
 			};
 		};
 	};
+	class xi_legionnaire1L_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Legio Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1L_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2LV2_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2L_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1L_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2LV2_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2L_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
+	};
 	class xi_legionnaire1Rogue: pxi_armourVest_base
 	{
 		author="Rogue771";
@@ -293,6 +507,47 @@ class CfgWeapons
 				"\SR_XI\xi_allArmour\data\xi_armour2L_co.paa"
 			};
 		};
+	};
+	class xi_legionnaire1Rogue_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Rogue Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1L_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2Rogue_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2L_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_legionnaire1.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1L_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2Rogue_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2L_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
 	};
 	class xi_legionnaire2: pxi_armourVest_base
 	{
@@ -333,6 +588,47 @@ class CfgWeapons
 			};
 		};
 	};
+	class xi_legionnaire2_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Veteran Legionnaire Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_legionnaire2.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2V3_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_legionnaire2.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2V3_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
+	};
 	class xi_legionnaireTri: pxi_armourVest_base
 	{
 		author="Rogue771";
@@ -372,6 +668,47 @@ class CfgWeapons
 			};
 		};
 	};
+	class xi_legionnaireTri_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Triarii Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_legionnaire2.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1Tri_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2Tri_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2Tri_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_legionnaire2.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1Tri_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2Tri_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2Tri_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
+	};
 	class xi_legionnaire3: pxi_armourVest_base
 	{
 		author="Rogue771";
@@ -410,6 +747,47 @@ class CfgWeapons
 				"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
 			};
 		};
+	};
+	class xi_legionnaire3_dt: pxi_armourVest_base
+	{
+		author="Rogue771";
+		scope=2;
+		displayName="[TSR] [PXI] Legionnaire Medicae Armour (DT)";
+		picture="\SR_XI\xi_allArmour\ui\xi_armour.paa";
+		model="\SR_XI\xi_allArmour\xi_legionnaire3.p3d";
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1",
+			"camo2"
+		};
+		descriptionShort="Stormtrooper Armour";
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2Med_co.paa",
+			"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
+		};
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\xi_allArmour\xi_legionnaire3.p3d";
+			containerClass="Supply0";
+			mass=10;
+			hiddenSelections[]=
+			{
+				"camo",
+				"camo1",
+				"camo2"
+			};
+			hiddenSelectionsTextures[]=
+			{
+				"\SR_XI\xi_allArmour\data\xi_armour1_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2Med_co.paa",
+				"\SR_XI\xi_allArmour\data\xi_armour2_co.paa"
+			};
+		};
+		XI_isgravpack=1;
+		XI_gravslowrate=1.25;
 	};
 	class pxi_helmetbase_0;
 	class xi_LegionhelmetU_BASE: pxi_helmetbase_0

@@ -8,6 +8,7 @@ class CfgPatches
 			"pxi_armor_standard",
 			"pxi_armor_droptrooper",
 			"pxi_armor_doctores_b",
+			"pxi_armor_doctores_b_dt",
 			"pxi_armor_baseModel_t1",
 			"pxi_armor_baseModel_t2",
 			"pxi_armor_baseModel_t3",
@@ -47,6 +48,7 @@ class pxi_helmet_evocatii_nco_0;
 class pxi_armourVest_base_doctores_0;
 class pxi_armourVest_base;
 class ItemCore;
+class ItemInfo;
 class UniformItem;
 class WeaponSlotsInfo;
 class VestItem;
@@ -69,7 +71,7 @@ class CfgWeapons
 	};
 	class pxi_armor_droptrooper: pxi_armourVest_base
 	{
-		displayName="[TSR] [PXI] Legionnaire Armour - Base Grey - Droptrooper";
+		displayName="[TSR] [PXI] Legionnaire Armour - Base Grey (DT)";
 		scope=2;
 		hiddenSelections[]=
 		{
@@ -83,10 +85,30 @@ class CfgWeapons
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
+			containerClass="Supply0";
+		};
 	};
 	class pxi_armor_doctores_b: pxi_armourVest_base_doctores_0
 	{
-		displayName="[TSR] [PXI] Doctores Armor - DT";
+		displayName="[TSR] [PXI] Doctores Armor";
+		scope=2;
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo1"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_padding_doctores.paa",
+			"\SR_XI\pxi_b_textures\data\b_armor\pxi_armour_plates_doctores.paa"
+		};
+	};
+	class pxi_armor_doctores_b_dt: pxi_armourVest_base_doctores_0
+	{
+		displayName="[TSR] [PXI] Doctores Armor (DT)";
 		scope=2;
 		hiddenSelections[]=
 		{
@@ -100,6 +122,11 @@ class CfgWeapons
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
+			containerClass="Supply0";
+		};
 	};
 	class pxi_armor_baseModel_t1: pxi_armourVest_base
 	{
@@ -162,6 +189,11 @@ class CfgWeapons
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
+			containerClass="Supply0";
+		};
 	};
 	class pxi_armor_DT_t2: pxi_armourVest_base
 	{
@@ -179,6 +211,11 @@ class CfgWeapons
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
+			containerClass="Supply0";
+		};
 	};
 	class pxi_armor_DT_t3: pxi_armourVest_base
 	{
@@ -196,6 +233,11 @@ class CfgWeapons
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
+		class ItemInfo: ItemInfo
+		{
+			uniformModel="\SR_XI\pxi_b_armor\pxi_armour_upgraded_doctores.p3d";
+			containerClass="Supply0";
+		};
 	};
 	class pxi_helmet_standard: pxi_helmetbase_0
 	{
