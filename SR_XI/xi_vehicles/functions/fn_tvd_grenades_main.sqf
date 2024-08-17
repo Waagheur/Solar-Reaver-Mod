@@ -61,8 +61,8 @@ if (not(isDedicated)) then {
 									while {((getPos (_this select 0)) select 2) > 80} do {};
 									_chute = "B_Parachute_02_F" createVehicle ((getPos (_this select 0)) VectorAdd [0,0,10]);
 									_temp = ((getPos (_this select 0)) VectorAdd [0,0,10]);
-									(_this select 0) attachTo [_chute,[0,0,5]];
-									_chute setPos _temp;
+									[(_this select 0), [_chute,[0,0,5]]] remoteExec ["attachTo", 0];
+									[_chute, _temp] remoteExec ["setPos", 0];
 								};
 							};
 							
@@ -101,8 +101,8 @@ if (not(isDedicated)) then {
 									while {((getPos (_this select 0)) select 2) > 80} do {};
 									_chute = "B_Parachute_02_F" createVehicle ((getPos (_this select 0)) VectorAdd [0,0,10]);
 									_temp = ((getPos (_this select 0)) VectorAdd [0,0,10]);
-									(_this select 0) attachTo [_chute,[0,0,5]];
-									_chute setPos _temp;
+									[(_this select 0), [_chute,[0,0,5]]] remoteExec ["attachTo", 0];
+									[_chute, _temp] remoteExec ["setPos", 0];
 								};
 							};
 							
@@ -141,8 +141,8 @@ if (not(isDedicated)) then {
 									while {((getPos (_this select 0)) select 2) > 80} do {};
 									_chute = "B_Parachute_02_F" createVehicle ((getPos (_this select 0)) VectorAdd [0,0,10]);
 									_temp = ((getPos (_this select 0)) VectorAdd [0,0,10]);
-									(_this select 0) attachTo [_chute,[0,0,0]];
-									_chute setPos _temp;
+									[(_this select 0), [_chute,[0,0,0]]] remoteExec ["attachTo", 0];
+									[_chute, _temp] remoteExec ["setPos", 0];
 								};
 							};
 							
@@ -187,8 +187,8 @@ if (not(isDedicated)) then {
 									while {((getPos (_this select 0)) select 2) > 80} do {};
 									_chute = "B_Parachute_02_F" createVehicle ((getPos (_this select 0)) VectorAdd [0,0,10]);
 									_temp = ((getPos (_this select 0)) VectorAdd [0,0,10]);
-									(_this select 0) attachTo [_chute,[0,0,5]];
-									_chute setPos _temp;
+									[(_this select 0), [_chute,[0,0,5]]] remoteExec ["attachTo", 0];
+									[_chute, _temp] remoteExec ["setPos", 0];
 								};
 							};
 							
@@ -227,8 +227,8 @@ if (not(isDedicated)) then {
 									while {((getPos (_this select 0)) select 2) > 80} do {};
 									_chute = "B_Parachute_02_F" createVehicle ((getPos (_this select 0)) VectorAdd [0,0,10]);
 									_temp = ((getPos (_this select 0)) VectorAdd [0,0,10]);
-									(_this select 0) attachTo [_chute,[0,0,5]];
-									_chute setPos _temp;
+									[(_this select 0), [_chute,[0,0,5]]] remoteExec ["attachTo", 0];
+									[_chute, _temp] remoteExec ["setPos", 0];
 								};
 							};
 							
@@ -267,8 +267,8 @@ if (not(isDedicated)) then {
 									while {((getPos (_this select 0)) select 2) > 80} do {};
 									_chute = "B_Parachute_02_F" createVehicle ((getPos (_this select 0)) VectorAdd [0,0,10]);
 									_temp = ((getPos (_this select 0)) VectorAdd [0,0,10]);
-									(_this select 0) attachTo [_chute,[0,0,0]];
-									_chute setPos _temp;
+									[(_this select 0), [_chute,[0,0,0]]] remoteExec ["attachTo", 0];
+									[_chute, _temp] remoteExec ["setPos", 0];
 								};
 							};
 							
