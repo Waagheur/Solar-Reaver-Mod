@@ -62,3 +62,9 @@ SR_FirstBorn:
 SR_XI:
 	$(MAKE) -C SR_XI
 	$(MAKE) -C XI_Props
+	$(MAKE) -C xi_allWeapons
+	
+.PHONY: xi_allWeapons
+	
+xi_allWeapons:
+	$(MAKE) -C xi_allWeapons
