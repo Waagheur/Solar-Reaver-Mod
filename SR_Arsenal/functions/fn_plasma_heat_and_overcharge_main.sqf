@@ -150,7 +150,7 @@ if (not(isDedicated)) then {
 								"[TSR] [Master Crafted] Ragefire Plasmagun" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Master_Crafted_Ragefire_PlasmaGun_1"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -248,7 +248,7 @@ if (not(isDedicated)) then {
 								"[TSR] Ragefire Plasma Gun" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Ragefire_Plasma_Gun"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -352,7 +352,7 @@ if (not(isDedicated)) then {
 								"[TSR] Relic Plasmagun (Purple)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Relic_Plasma_Gun_1"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -450,7 +450,7 @@ if (not(isDedicated)) then {
 								"[TSR] Relic Plasmagun (Orange)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Relic_Plasma_Gun_2"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -548,7 +548,7 @@ if (not(isDedicated)) then {
 								"[TSR] Relic Plasmagun (Blue)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Relic_Plasma_Gun_3"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -646,7 +646,7 @@ if (not(isDedicated)) then {
 								"[TSR] Relic Plasmagun (Green)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Relic_Plasma_Gun_4"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -744,7 +744,7 @@ if (not(isDedicated)) then {
 								"[TSR] Relic Plasmagun (Red)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Relic_Plasma_Gun_5"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -850,7 +850,7 @@ if (not(isDedicated)) then {
 								"[TSR] Relic Plasmagun (Red)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_AV_RagefirePlasmaGun"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -948,7 +948,7 @@ if (not(isDedicated)) then {
 								"[TSR] Relic Plasmagun (Red)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_AV_RagefirePlasmaGun_Relic"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1050,7 +1050,7 @@ if (not(isDedicated)) then {
 								"[TSR] Ryza Thunderbolt Plasmagun (Black)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Ryza_Plasma_Gun_01"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1148,7 +1148,7 @@ if (not(isDedicated)) then {
 								"[TSR] Ryza Thunderbolt Plasmagun (Red)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Ryza_Plasma_Gun_02"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1246,7 +1246,7 @@ if (not(isDedicated)) then {
 								"[TSR] Ryza Thunderbolt Plasmagun (White)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Ryza_Plasma_Gun_03"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1344,7 +1344,7 @@ if (not(isDedicated)) then {
 								"[TSR] Ryza Thunderbolt Plasmagun (Stripes)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Ryza_Plasma_Gun_04"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1442,7 +1442,7 @@ if (not(isDedicated)) then {
 								"[TSR] Bolter Combi-Plasma (Black)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Combi_Bolter_1"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1540,7 +1540,7 @@ if (not(isDedicated)) then {
 								"[TSR] Bolter Combi-Plasma (Red)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Combi_Bolter_2"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1638,7 +1638,7 @@ if (not(isDedicated)) then {
 								"[TSR] Bolter Combi-Plasma (White)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Combi_Bolter_3"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1736,7 +1736,7 @@ if (not(isDedicated)) then {
 								"[TSR] Tigrus Pattern Combi-Plasma" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Tig_Combi_Bolter"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1835,7 +1835,7 @@ if (not(isDedicated)) then {
 								"[TSR] Ryza Plasma Pistol (Shield)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Ryza_Plasma_Pistol"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1934,7 +1934,7 @@ if (not(isDedicated)) then {
 								"[TSR] Ryza Plasma Pistol (Banner)" 
 								+ "<br/>"
 								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_Ryza_Plasma_Pistol_Banner"],0]);
-							10 cutText [
+							24 cutText [
 								format["<t align='right'>%1</t>",_text], 
 							"PLAIN", 0, false, true];
 						};
@@ -1948,6 +1948,510 @@ if (not(isDedicated)) then {
 		if ((missionNamespace getVariable [format ["%1_handler","SR_Ryza_Plasma_Pistol_Banner"], -1]) != -1) then {
 			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_Ryza_Plasma_Pistol_Banner"], -1])];
 			missionNamespace setVariable [format ["%1_handler","SR_Ryza_Plasma_Pistol_Banner"], -1];
+		};
+	};
+	
+	
+	
+	
+	
+	// ----- SR-XI-ICP-DM -----
+	
+	if ("SR_XI_ic_PlasmaGun" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGun"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGun"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				if (_weapon == "SR_XI_ic_PlasmaGun") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]) 
+								+ ([30, 50] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]) 
+								+ ([2, 5] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]) 
+							+ ([2, 5] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_XI_ic_PlasmaGun' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGun"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_Relic_Plasma_Gun_1" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_XI_ic_PlasmaGun" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_XI_ic_PlasmaGun" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]) > 0) then {
+							_text =
+								"[TSR] [PXI] Plasma Gun" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGun"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGun"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGun"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGun"], -1];
+		};
+	};
+	
+	
+	
+	if ("SR_XI_ic_PlasmaGunPurple" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunPurple"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunPurple"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				if (_weapon == "SR_XI_ic_PlasmaGunPurple") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]) 
+								+ ([30, 50] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]) 
+								+ ([2, 5] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]) 
+							+ ([2, 5] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_XI_ic_PlasmaGunPurple' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunPurple"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_Relic_Plasma_Gun_1" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_XI_ic_PlasmaGunPurple" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_XI_ic_PlasmaGunPurple" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]) > 0) then {
+							_text =
+								"[TSR] [PXI] Plasma Gun (Purple)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunPurple"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunPurple"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunPurple"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunPurple"], -1];
+		};
+	};
+	
+	
+	
+	if ("SR_XI_ic_PlasmaGunRed" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunRed"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunRed"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				if (_weapon == "SR_XI_ic_PlasmaGunRed") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]) 
+								+ ([30, 50] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]) 
+								+ ([2, 5] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]) 
+							+ ([2, 5] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_XI_ic_PlasmaGunRed' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunRed"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_Relic_Plasma_Gun_1" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_XI_ic_PlasmaGunRed" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_XI_ic_PlasmaGunRed" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]) > 0) then {
+							_text =
+								"[TSR] [PXI] Plasma Gun (Red)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunRed"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunRed"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunRed"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunRed"], -1];
+		};
+	};
+	
+	
+	
+	if ("SR_XI_ic_PlasmaGunYellow" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunYellow"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunYellow"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				if (_weapon == "SR_XI_ic_PlasmaGunYellow") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]) 
+								+ ([30, 50] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]) 
+								+ ([2, 5] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]) 
+							+ ([2, 5] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_XI_ic_PlasmaGunYellow' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunYellow"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_Relic_Plasma_Gun_1" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_XI_ic_PlasmaGunYellow" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_XI_ic_PlasmaGunYellow" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]) > 0) then {
+							_text =
+								"[TSR] [PXI] Plasma Gun (Yellow)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunYellow"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunYellow"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunYellow"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunYellow"], -1];
+		};
+	};
+	
+	
+	
+	if ("SR_XI_ic_PlasmaGunWhite" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				if (_weapon == "SR_XI_ic_PlasmaGunWhite") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]) 
+								+ ([30, 50] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]) 
+								+ ([2, 5] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]) 
+							+ ([2, 5] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_XI_ic_PlasmaGunWhite' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_Relic_Plasma_Gun_1" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_XI_ic_PlasmaGunWhite" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_XI_ic_PlasmaGunWhite" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]) > 0) then {
+							_text =
+								"[TSR] [PXI] Plasma Gun (White)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_XI_ic_PlasmaGunWhite"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], -1];
 		};
 	};
 	
@@ -2042,7 +2546,7 @@ if (not(isDedicated)) then {
 									_x 
 									+ "<br/>"
 									+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat",_x],0]);
-								10 cutText [
+								24 cutText [
 									format["<t align='right'>%1</t>",_text], 
 								"PLAIN", 0, false, true];
 							};
@@ -2144,7 +2648,7 @@ if (not(isDedicated)) then {
 									_x 
 									+ "<br/>"
 									+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat",_x],0]);
-								10 cutText [
+								24 cutText [
 									format["<t align='right'>%1</t>",_text], 
 								"PLAIN", 0, false, true];
 							};

@@ -32,7 +32,12 @@ if (not(isDedicated)) then {
 		"TIOW_SM_Combi_Bolter_1", 
 		"TIOW_SM_Combi_Bolter_2", 
 		"TIOW_SM_Combi_Bolter_3",
-		"STEVE_TigComb_Plasma_1"
+		"STEVE_TigComb_Plasma_1",
+		"SR_XI_ic_PlasmaGun",
+		"SR_XI_ic_PlasmaGunPurple",
+		"SR_XI_ic_PlasmaGunRed",
+		"SR_XI_ic_PlasmaGunYellow",
+		"SR_XI_ic_PlasmaGunWhite"
 	];
 
 	if ("tiow_dos_ssw" in activatedAddons) then {

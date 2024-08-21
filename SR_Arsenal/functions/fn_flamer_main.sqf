@@ -72,7 +72,8 @@ if (not(isDedicated)) then {
 	
 	/**	
 	_flamer_weapons = [
-		"SR_TIOW_SM_Flamer"
+		"SR_TIOW_SM_Flamer",
+		"SR_XI_Flamer"
 	];
 	*/
 
@@ -97,6 +98,32 @@ if (not(isDedicated)) then {
 		if ((missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Flamer"], -1]) != -1) then {
 			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Flamer"], -1])];
 			missionNamespace setVariable [format ["%1_handler","SR_TIOW_SM_Flamer"], -1];
+		};
+	};
+	
+	
+	
+	if ("SR_XI_Flamer" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_Flamer"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_XI_Flamer"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				if (_weapon == "SR_XI_Flamer") then {
+					_projectile = (_this select 6);
+					
+					deleteVehicle _projectile;
+					
+					player remoteExec["SR_Flamer_Func", 0];
+					
+				};
+				
+			}]];
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_Flamer"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_XI_Flamer"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_XI_Flamer"], -1];
 		};
 	};
 	

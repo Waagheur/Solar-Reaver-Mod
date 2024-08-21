@@ -22,7 +22,8 @@
 if (not(isDedicated)) then {
 
 	_flamer_weapons = [
-		"SR_TIOW_SM_Flamer"
+		"SR_TIOW_SM_Flamer",
+		"SR_XI_Flamer"
 	];
 	
 	{

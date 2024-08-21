@@ -14,7 +14,9 @@ class CfgPatches
 			"A3_Air_F",
 			"A3_Air_F_Beta",
 			"A3_Armor_F_Beta",
-			"A3_Data_F_Decade_Loadorder"
+			"A3_Data_F_Decade_Loadorder",
+			"SR_Arsenal",
+			"TIOW_Spec_Weps"
 		};
 		vehicles[]={};
 		units[]={};
@@ -94,6 +96,65 @@ class CfgPatches
 		};
 	};
 };
+
+
+
+class CfgFunctions
+{
+	class xi_allWeapons
+	{
+		class Hack
+		{
+			file = "xi_allWeapons\functions";
+			class las_overcharge_main {
+				//file = "xi_allWeapons\functions\fn_las_overcharge_main.sqf";
+			};
+			class las_overcharge_init {
+				postInit 	= 1;
+				//file = "xi_allWeapons\functions\fn_las_overcharge_init.sqf";
+			};
+		};
+	};
+};
+
+// Sped up TIOW shotgun anims
+class CfgMovesBasic
+{
+	class Default;
+	class DefaultDie;
+	
+	class ManActions
+	{
+		SR_XI_WH_ShotGun_AfterFire[]=
+		{
+			"SR_XI_WH_ShotGun_AfterFire",
+			"Gesture"
+		};
+	};
+	
+};
+class CfgGesturesMale
+{
+	class Default;
+	skeletonName="OFP2_ManSkeleton";
+	class States
+	{
+		class SR_XI_WH_ShotGun_AfterFire: Default
+		{
+			file="WBK_Improved40KWeapons\anims\WH_ShotGun_AfterFire.rtm";
+			speed=-0.20;
+			looped=0;
+			mask="handsWeapon";
+			headBobStrength=-0.2;
+			headBobMode=1;
+			rightHandIKCurve[]={1};
+			leftHandIKBeg=1;
+			leftHandIKEnd=1;
+			leftHandIKCurve[]={0.072992697,1,0.10218978,0,0.92240876,0,0.99890512,1};
+		};
+	};
+};
+
 class XI_ImpactSmokeWhiteEffect
 {
 	class SmokeEffect
@@ -304,6 +365,21 @@ class CfgCloudlets
 	class XI_ImpactSmokeOrangeEffect2: XI_ImpactSmokeWhiteEffect2
 	{
 		colorCoef[]={0.66970003,0.22750001,0.10053,1};
+	};
+};
+class CfgSounds
+{
+	sounds[]={};
+	class SR_XI_WBK_WH_shotgun_pump
+	{
+		name="SR_XI_WBK_WH_shotgun_pump";
+		sound[]=
+		{
+			"\xi_allWeapons\sounds\shotgun_pump.wav",
+			"db+6",
+			1
+		};
+		titles[]={};
 	};
 };
 class CfgSoundSets
@@ -1089,96 +1165,96 @@ class CfgAmmo
 	{
 		explosionEffects="XI_ImpactSmokeYellowEffect";
 	};
-	class XI_longlas_penetrator_BI: B_762x51_Ball
-	{
-		hit=46;
-		coefGravity=0.0099999998;
-		airFriction=0;
-		caliber=1;
-	};
-	class XI_dmr_highbandrounds_BI: B_762x51_Ball
-	{
-		hit=26;
-		coefGravity=0.0099999998;
-		airFriction=0;
-		caliber=1;
-	};
-	class XI_hellgun_highbandrounds_BI: B_762x51_Ball
-	{
-		hit=20;
-		coefGravity=0.0099999998;
-		airFriction=0;
-		caliber=1;
-	};
-	class IC_lasbolt;
-	class xi_standard_lasbolt_BI: IC_lasbolt
-	{
-		hit=14;
-		coefGravity=0.0099999998;
-		airFriction=0;
-		caliber=1;
-	};
-	class ic_long_825_rnd;
-	class xi_standard_825_BI: ic_long_825_rnd
-	{
-		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
-		hit=17;
-		coefGravity=0.0099999998;
-		caliber=1;
-	};
-	class XI_Melta_Normal_BII: IC_melta_rnd
-	{
-		caliber=90;
-	};
-	class xi_autogun_ammo_br_BII: B_762x51_Ball
-	{
-		hit=36;
-		coefGravity=0.0099999998;
-		caliber=1;
-	};
-	class xi_standard_12mm_BII: ic_long_825_rnd
-	{
-		hit=36;
-		coefGravity=0.0099999998;
-		caliber=1;
-	};
-	class xi_standard_825_BII: ic_long_825_rnd
-	{
-		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
-		hit=20;
-		coefGravity=0.0099999998;
-		caliber=1;
-	};
-	class xi_standard_lasbolt_BII: IC_lasbolt
-	{
-		hit=15.5;
-		coefGravity=0.0099999998;
-		airFriction=0;
-		caliber=1;
-	};
-	class XI_hellgun_highbandrounds_BII: B_762x51_Ball
-	{
-		hit=22;
-		coefGravity=0.0099999998;
-		airFriction=0;
-		caliber=1;
-	};
-	class XI_Melta_Super_BIII: IC_melta_rnd
-	{
-		caliber=90;
-		hit=1200;
-		timeToLive=0.34999999;
-	};
-	class 20mm_AP;
-	class xi_20mm_ap_EW: 20mm_AP
-	{
-		ACE_caliber=70;
-		hit=1200;
-	};
-	class xi_bolter_round_primary_standard_EW: IC_bolter_small_rnd
-	{
-		hit=100;
-	};
+	// class XI_longlas_penetrator_BI: B_762x51_Ball
+	// {
+		// hit=46;
+		// coefGravity=0.0099999998;
+		// airFriction=0;
+		// caliber=1;
+	// };
+	// class XI_dmr_highbandrounds_BI: B_762x51_Ball
+	// {
+		// hit=26;
+		// coefGravity=0.0099999998;
+		// airFriction=0;
+		// caliber=1;
+	// };
+	// class XI_hellgun_highbandrounds_BI: B_762x51_Ball
+	// {
+		// hit=20;
+		// coefGravity=0.0099999998;
+		// airFriction=0;
+		// caliber=1;
+	// };
+	// class IC_lasbolt;
+	// class xi_standard_lasbolt_BI: IC_lasbolt
+	// {
+		// hit=14;
+		// coefGravity=0.0099999998;
+		// airFriction=0;
+		// caliber=1;
+	// };
+	// class ic_long_825_rnd;
+	// class xi_standard_825_BI: ic_long_825_rnd
+	// {
+		// model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+		// hit=17;
+		// coefGravity=0.0099999998;
+		// caliber=1;
+	// };
+	// class XI_Melta_Normal_BII: IC_melta_rnd
+	// {
+		// caliber=90;
+	// };
+	// class xi_autogun_ammo_br_BII: B_762x51_Ball
+	// {
+		// hit=36;
+		// coefGravity=0.0099999998;
+		// caliber=1;
+	// };
+	// class xi_standard_12mm_BII: ic_long_825_rnd
+	// {
+		// hit=36;
+		// coefGravity=0.0099999998;
+		// caliber=1;
+	// };
+	// class xi_standard_825_BII: ic_long_825_rnd
+	// {
+		// model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+		// hit=20;
+		// coefGravity=0.0099999998;
+		// caliber=1;
+	// };
+	// class xi_standard_lasbolt_BII: IC_lasbolt
+	// {
+		// hit=15.5;
+		// coefGravity=0.0099999998;
+		// airFriction=0;
+		// caliber=1;
+	// };
+	// class XI_hellgun_highbandrounds_BII: B_762x51_Ball
+	// {
+		// hit=22;
+		// coefGravity=0.0099999998;
+		// airFriction=0;
+		// caliber=1;
+	// };
+	// class XI_Melta_Super_BIII: IC_melta_rnd
+	// {
+		// caliber=90;
+		// hit=1200;
+		// timeToLive=0.34999999;
+	// };
+	// class 20mm_AP;
+	// class xi_20mm_ap_EW: 20mm_AP
+	// {
+		// ACE_caliber=70;
+		// hit=1200;
+	// };
+	// class xi_bolter_round_primary_standard_EW: IC_bolter_small_rnd
+	// {
+		// hit=100;
+	// };
 	class SatchelCharge_Remote_Ammo;
 	class MTI_SatchelCharge_Ammo: SatchelCharge_Remote_Ammo
 	{
@@ -1205,7 +1281,82 @@ class CfgAmmo
 	class MTI_SatchelCharge_Ammo_Scripted: MTI_SatchelCharge_Ammo
 	{
 	};
+	
+	class IC_lasbolt;
+	class ic_long_825_rnd;
+	
+	class SR_XI_Lasbolt: IC_lasbolt
+	{
+		hit=20;
+		coefGravity=0.0099999998;
+		caliber=1;
+		typicalSpeed = 1150;
+	};
+	
+	class SR_XI_Heavy_Lasbolt: IC_lasbolt
+	{
+		hit=20;
+		coefGravity=0.0099999998;
+		caliber=1;
+		typicalSpeed = 1200;
+	};
+	
+	class SR_XI_Stub_Round: ic_long_825_rnd
+	{
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+		hit=26;
+		caliber=1;
+		typicalSpeed = 950;
+	};
+	class SR_XI_OC_Lasbolt: IC_lasbolt
+	{
+		hit=26;
+		coefGravity=0.0099999998;
+		caliber=1;
+		typicalSpeed = 1200;
+	};
+	
+	class SR_XI_Heavy_Stub_Round: ic_long_825_rnd
+	{
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+		hit=32;
+		caliber=1;
+		typicalSpeed = 1000;
+	};
+	class SR_XI_OC_Heavy_Lasbolt: IC_lasbolt
+	{
+		hit=32;
+		coefGravity=0.0099999998;
+		caliber=1;
+		typicalSpeed = 1250;
+	};
+	
+	class SR_XI_HandCanon_Round: ic_long_825_rnd
+	{
+		hit=36;
+		coefGravity=0.5;
+		caliber=2;
+		typicalSpeed = 1000;
+	};
+
+	class SR_XI_LongLas_Lasbolt: B_762x51_Ball
+	{
+		hit=58;
+		coefGravity=0.0099999998;
+		airFriction=0;
+		caliber=1;
+		typicalSpeed = 1500;
+	};
+	
+	class SR_XI_Melta_Round: IC_melta_rnd
+	{
+		caliber=90;
+		hit=1200;
+		timeToLive=0.34999999;
+	};
+	
 };
+
 class CfgMagazines
 {
 	class Default;
@@ -1219,30 +1370,42 @@ class CfgMagazines
 	{
 	};
 	class ic_melta_canister;
-	class XI_Melta_Mag_Super_BIII: ic_melta_canister
+	class SR_XI_Melta_Mag: ic_melta_canister
 	{
 		author="";
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
-		ammo="XI_Melta_Super_BIII";
-		displayName="(B/III) Meltagun Ammo (Super)";
-		initSpeed=1500;
-		count=5;
-		mass=60;
-	};
-	class XI_Melta_Mag_Normal_BII: ic_melta_canister
-	{
-		author="";
-		scope=2;
-		scopeCurator=2;
-		scopeArsenal=2;
-		ammo="XI_Melta_Normal_BII";
-		displayName="(B/II) Meltagun Ammo";
+		ammo="SR_XI_Melta_Round";
+		displayName="Meltagun Ammo";
 		initSpeed=1500;
 		count=5;
 		mass=30;
 	};
+	// class XI_Melta_Mag_Super_BIII: ic_melta_canister
+	// {
+		// author="";
+		// scope=2;
+		// scopeCurator=2;
+		// scopeArsenal=2;
+		// ammo="XI_Melta_Super_BIII";
+		// displayName="(B/III) Meltagun Ammo (Super)";
+		// initSpeed=1500;
+		// count=5;
+		// mass=60;
+	// };
+	// class XI_Melta_Mag_Normal_BII: ic_melta_canister
+	// {
+		// author="";
+		// scope=2;
+		// scopeCurator=2;
+		// scopeArsenal=2;
+		// ammo="XI_Melta_Normal_BII";
+		// displayName="(B/II) Meltagun Ammo";
+		// initSpeed=1500;
+		// count=5;
+		// mass=30;
+	// };
 	class TIOW_IG_GL_Smoke_mag;
 	class XI_IG_GL_Smoke_White_Mag: TIOW_IG_GL_Smoke_mag
 	{
@@ -1290,218 +1453,221 @@ class CfgMagazines
 		displayName="[TSR] [PXI] 3rnd Purple Smoke Mag";
 		ammo="XI_IG_GL_Smoke_Purple";
 	};
-	class ic_bolt_large_mag;
-	class xi_bolt_large_mag_EW: ic_bolt_large_mag
-	{
-		mass=60;
-		displayName="(EW) Heavy Bolter Magazine";
-		ammo="xi_bolter_round_primary_standard_EW";
-	};
-	class ic_plasma_canister;
-	class XI_PlasmaRifle_Battery_Standard_EW: ic_plasma_canister
-	{
-		displayName="(EW) Plasmaflask";
-		plasmaHeatGeneration=6;
-		minimumPlasmaHeat=26;
-		minimumPlasmaDetonationChance=1;
-		maximumPlasmaDetonationChance=15;
-	};
-	class XI_PlasmaRifle_Battery_Overhcarged_EW: ic_plasma_canister
-	{
-		displayName="Plasma Mag Overcharged (XI)";
-		plasmaHeatGeneration=30;
-		minimumPlasmaHeat=70;
-		minimumPlasmaDetonationChance=5;
-		maximumPlasmaDetonationChance=35;
-	};
-	class ic_30rnd_825_rifleMag;
-	class xi_825_standard_mag_BI: ic_30rnd_825_rifleMag
-	{
-		displayName="(B/I) 30rnd Magazine";
-		ammo="xi_standard_825_BI";
-		initSpeed=1000;
-		magazineGroup[]={};
-		mass="20";
-		count=30;
-		tracersEvery=5;
-		lastRoundsTracer=5;
-	};
-	class xi_825_standard_mag_BII: ic_30rnd_825_rifleMag
-	{
-		displayName="(B/II) 45rnd Magazine";
-		ammo="xi_standard_825_BII";
-		initSpeed=1140;
-		magazineGroup[]={};
-		mass="25";
-		count=45;
-		tracersEvery=5;
-		lastRoundsTracer=5;
-	};
-	class xi_825_standard_mag_lmg_BI: ic_30rnd_825_rifleMag
-	{
-		displayName="(B/I) 50rnd Magazine";
-		ammo="xi_standard_825_BI";
-		initSpeed=1090;
-		magazineGroup[]={};
-		mass="25";
-		count=50;
-		tracersEvery=0;
-		lastRoundsTracer=10;
-	};
-	class xi_825_standard_mag_lmg_BII: ic_30rnd_825_rifleMag
-	{
-		displayName="(B/II) 100rnd Magazine";
-		ammo="xi_standard_825_BII";
-		initSpeed=1140;
-		magazineGroup[]={};
-		mass="35";
-		count=100;
-		tracersEvery=5;
-		lastRoundsTracer=10;
-	};
-	class xi_825_standard_mag_lmg_tracers_BII: ic_30rnd_825_rifleMag
-	{
-		displayName="(B/II) 100rnd Magazine T.";
-		ammo="xi_standard_825_BII";
-		initSpeed=1140;
-		magazineGroup[]={};
-		mass="35";
-		count=100;
-		tracersEvery=1;
-	};
-	class xi_12mm_5rnd_Mag_BII: ic_30rnd_825_rifleMag
-	{
-		displayName="(B/II) 5rnd Mag";
-		displaynameshort="5rnd";
-		ammo="xi_standard_12mm_BII";
-		initSpeed=1140;
-		magazineGroup[]={};
-		mass="5";
-		count=5;
-	};
-	class xi_23rnd_autogun_br_BII: ic_30rnd_825_rifleMag
-	{
-		author="Bones";
-		displayName="(B/II) 23rnd Magazine";
-		displaynameshort="23rnd Mag";
-		ammo="xi_autogun_ammo_br_BII";
-		initSpeed=1200;
-		count=23;
-		magazineGroup[]=
-		{
-			""
-		};
-		mass="30";
-	};
-	class AP_MAG;
-	class XI_AP_EW: AP_MAG
-	{
-		displayName="(E/W) Thunderclap Round";
-		dlc="LAGO";
-		displayNameShort="AP";
-		ammo="xi_20mm_ap_EW";
-		initSpeed=900;
-		count=1;
-		tracersEvery=1;
-		mass=30;
-	};
-	class XI_AP_N_EW: AP_MAG
-	{
-		displayName="(E/W) Penetrator Round";
-		dlc="LAGO";
-		displayNameShort="AP NORMAL";
-	};
-	class 20Rnd_762x51_Mag;
-	class XI_Longlas_Mag_BI: 20Rnd_762x51_Mag
-	{
-		scope=2;
-		scopeArsenal=2;
-		scopeCurator=2;
-		displayName="(B/I) 12chrg Longlas Penetrator Rounds";
-		ammo="XI_longlas_penetrator_BI";
-		count=12;
-		initSpeed=2300;
-		tracersEvery=1;
-		descriptionShort="";
-		mass="15";
-		lastRoundsTracer=10;
-	};
-	class XI_Longlas_Mag_BII: 20Rnd_762x51_Mag
-	{
-		scope=2;
-		scopeArsenal=2;
-		scopeCurator=2;
-		displayName="(B/II) 36chrg Longlas Penetrator Rounds";
-		ammo="XI_longlas_penetrator_BI";
-		count=36;
-		initSpeed=2300;
-		tracersEvery=1;
-		descriptionShort="";
-		mass="30";
-		lastRoundsTracer=10;
-	};
-	class XI_DMR_Mag_BI: 20Rnd_762x51_Mag
-	{
-		displayName="(B/I) 23 chrg High-Brand Lasgun Battery";
-		scope=2;
-		scopeArsenal=2;
-		scopeCurator=2;
-		ammo="XI_dmr_highbandrounds_BI";
-		count=23;
-		initSpeed=2300;
-		tracersEvery=1;
-		descriptionShort="";
-		mass="15";
-		lastRoundsTracer=10;
-	};
-	class XI_DMR_Mag_BII: 20Rnd_762x51_Mag
-	{
-		displayName="(B/II) 46chrg High-Brand Lasgun Battery";
-		scope=2;
-		scopeArsenal=2;
-		scopeCurator=2;
-		ammo="XI_dmr_highbandrounds_BI";
-		count=46;
-		initSpeed=2300;
-		tracersEvery=1;
-		descriptionShort="";
-		mass="30";
-		lastRoundsTracer=10;
-	};
-	class ic_las_powerpack;
-	class xi_laspack_standard_BI: ic_las_powerpack
-	{
-		displayName="(B/I) 40 chrg Lasgun Battery";
-		ammo="xi_standard_lasbolt_BI";
-		initSpeed=900;
-		magazineGroup[]={};
-		count=40;
-		lastRoundsTracer=10;
-	};
-	class xi_laspack_standard_BII: ic_las_powerpack
-	{
-		displayName="(B/II) 80 chrg Lasgun Battery";
-		ammo="xi_standard_lasbolt_BII";
-		initSpeed=950;
-		magazineGroup[]={};
-		count=80;
-		lastRoundsTracer=10;
-	};
-	class ic_hellgun_mag;
-	class xi_hellgun_mag_highband_BI: ic_hellgun_mag
-	{
-		displayName="(B/I) Hellgun Highband rounds";
-		ammo="XI_hellgun_highbandrounds_BI";
-		initSpeed=1300;
-		magazineGroup[]={};
-	};
-	class xi_hellgun_mag_highband_BII: ic_hellgun_mag
-	{
-		displayName="(B/II) Hellgun Highband rounds";
-		ammo="XI_hellgun_highbandrounds_BII";
-		initSpeed=1350;
-		magazineGroup[]={};
-	};
+	
+	// class ic_bolt_large_mag;
+	// class xi_bolt_large_mag_EW: ic_bolt_large_mag
+	// {
+		// mass=60;
+		// displayName="(EW) Heavy Bolter Magazine";
+		// ammo="xi_bolter_round_primary_standard_EW";
+	// };
+	// class ic_plasma_canister;
+	// class XI_PlasmaRifle_Battery_Standard_EW: ic_plasma_canister
+	// {
+		// displayName="(EW) Plasmaflask";
+		// plasmaHeatGeneration=6;
+		// minimumPlasmaHeat=26;
+		// minimumPlasmaDetonationChance=1;
+		// maximumPlasmaDetonationChance=15;
+	// };
+	// class XI_PlasmaRifle_Battery_Overhcarged_EW: ic_plasma_canister
+	// {
+		// displayName="Plasma Mag Overcharged (XI)";
+		// plasmaHeatGeneration=30;
+		// minimumPlasmaHeat=70;
+		// minimumPlasmaDetonationChance=5;
+		// maximumPlasmaDetonationChance=35;
+	// };
+	
+	// class ic_30rnd_825_rifleMag;
+	// class xi_825_standard_mag_BI: ic_30rnd_825_rifleMag
+	// {
+		// displayName="(B/I) 30rnd Magazine";
+		// ammo="xi_standard_825_BI";
+		// initSpeed=1000;
+		// magazineGroup[]={};
+		// mass="20";
+		// count=30;
+		// tracersEvery=5;
+		// lastRoundsTracer=5;
+	// };
+	// class xi_825_standard_mag_BII: ic_30rnd_825_rifleMag
+	// {
+		// displayName="(B/II) 45rnd Magazine";
+		// ammo="xi_standard_825_BII";
+		// initSpeed=1140;
+		// magazineGroup[]={};
+		// mass="25";
+		// count=45;
+		// tracersEvery=5;
+		// lastRoundsTracer=5;
+	// };
+	// class xi_825_standard_mag_lmg_BI: ic_30rnd_825_rifleMag
+	// {
+		// displayName="(B/I) 50rnd Magazine";
+		// ammo="xi_standard_825_BI";
+		// initSpeed=1090;
+		// magazineGroup[]={};
+		// mass="25";
+		// count=50;
+		// tracersEvery=0;
+		// lastRoundsTracer=10;
+	// };
+	// class xi_825_standard_mag_lmg_BII: ic_30rnd_825_rifleMag
+	// {
+		// displayName="(B/II) 100rnd Magazine";
+		// ammo="xi_standard_825_BII";
+		// initSpeed=1140;
+		// magazineGroup[]={};
+		// mass="35";
+		// count=100;
+		// tracersEvery=5;
+		// lastRoundsTracer=10;
+	// };
+	// class xi_825_standard_mag_lmg_tracers_BII: ic_30rnd_825_rifleMag
+	// {
+		// displayName="(B/II) 100rnd Magazine T.";
+		// ammo="xi_standard_825_BII";
+		// initSpeed=1140;
+		// magazineGroup[]={};
+		// mass="35";
+		// count=100;
+		// tracersEvery=1;
+	// };
+	// class xi_12mm_5rnd_Mag_BII: ic_30rnd_825_rifleMag
+	// {
+		// displayName="(B/II) 5rnd Mag";
+		// displaynameshort="5rnd";
+		// ammo="xi_standard_12mm_BII";
+		// initSpeed=1140;
+		// magazineGroup[]={};
+		// mass="5";
+		// count=5;
+	// };
+	// class xi_23rnd_autogun_br_BII: ic_30rnd_825_rifleMag
+	// {
+		// author="Bones";
+		// displayName="(B/II) 23rnd Magazine";
+		// displaynameshort="23rnd Mag";
+		// ammo="xi_autogun_ammo_br_BII";
+		// initSpeed=1200;
+		// count=23;
+		// magazineGroup[]=
+		// {
+			// ""
+		// };
+		// mass="30";
+	// };
+	// class AP_MAG;
+	// class XI_AP_EW: AP_MAG
+	// {
+		// displayName="(E/W) Thunderclap Round";
+		// dlc="LAGO";
+		// displayNameShort="AP";
+		// ammo="xi_20mm_ap_EW";
+		// initSpeed=900;
+		// count=1;
+		// tracersEvery=1;
+		// mass=30;
+	// };
+	// class XI_AP_N_EW: AP_MAG
+	// {
+		// displayName="(E/W) Penetrator Round";
+		// dlc="LAGO";
+		// displayNameShort="AP NORMAL";
+	// };
+	// class 20Rnd_762x51_Mag;
+	// class XI_Longlas_Mag_BI: 20Rnd_762x51_Mag
+	// {
+		// scope=2;
+		// scopeArsenal=2;
+		// scopeCurator=2;
+		// displayName="(B/I) 12chrg Longlas Penetrator Rounds";
+		// ammo="XI_longlas_penetrator_BI";
+		// count=12;
+		// initSpeed=2300;
+		// tracersEvery=1;
+		// descriptionShort="";
+		// mass="15";
+		// lastRoundsTracer=10;
+	// };
+	// class XI_Longlas_Mag_BII: 20Rnd_762x51_Mag
+	// {
+		// scope=2;
+		// scopeArsenal=2;
+		// scopeCurator=2;
+		// displayName="(B/II) 36chrg Longlas Penetrator Rounds";
+		// ammo="XI_longlas_penetrator_BI";
+		// count=36;
+		// initSpeed=2300;
+		// tracersEvery=1;
+		// descriptionShort="";
+		// mass="30";
+		// lastRoundsTracer=10;
+	// };
+	// class XI_DMR_Mag_BI: 20Rnd_762x51_Mag
+	// {
+		// displayName="(B/I) 23 chrg High-Brand Lasgun Battery";
+		// scope=2;
+		// scopeArsenal=2;
+		// scopeCurator=2;
+		// ammo="XI_dmr_highbandrounds_BI";
+		// count=23;
+		// initSpeed=2300;
+		// tracersEvery=1;
+		// descriptionShort="";
+		// mass="15";
+		// lastRoundsTracer=10;
+	// };
+	// class XI_DMR_Mag_BII: 20Rnd_762x51_Mag
+	// {
+		// displayName="(B/II) 46chrg High-Brand Lasgun Battery";
+		// scope=2;
+		// scopeArsenal=2;
+		// scopeCurator=2;
+		// ammo="XI_dmr_highbandrounds_BI";
+		// count=46;
+		// initSpeed=2300;
+		// tracersEvery=1;
+		// descriptionShort="";
+		// mass="30";
+		// lastRoundsTracer=10;
+	// };
+	// class ic_las_powerpack;
+	// class xi_laspack_standard_BI: ic_las_powerpack
+	// {
+		// displayName="(B/I) 40 chrg Lasgun Battery";
+		// ammo="xi_standard_lasbolt_BI";
+		// initSpeed=900;
+		// magazineGroup[]={};
+		// count=40;
+		// lastRoundsTracer=10;
+	// };
+	// class xi_laspack_standard_BII: ic_las_powerpack
+	// {
+		// displayName="(B/II) 80 chrg Lasgun Battery";
+		// ammo="xi_standard_lasbolt_BII";
+		// initSpeed=950;
+		// magazineGroup[]={};
+		// count=80;
+		// lastRoundsTracer=10;
+	// };
+	// class ic_hellgun_mag;
+	// class xi_hellgun_mag_highband_BI: ic_hellgun_mag
+	// {
+		// displayName="(B/I) Hellgun Highband rounds";
+		// ammo="XI_hellgun_highbandrounds_BI";
+		// initSpeed=1300;
+		// magazineGroup[]={};
+	// };
+	// class xi_hellgun_mag_highband_BII: ic_hellgun_mag
+	// {
+		// displayName="(B/II) Hellgun Highband rounds";
+		// ammo="XI_hellgun_highbandrounds_BII";
+		// initSpeed=1350;
+		// magazineGroup[]={};
+	// };
+	
 	class SatchelCharge_Remote_Mag;
 	class MTI_SatchelCharge_Mag: SatchelCharge_Remote_Mag
 	{
@@ -1514,6 +1680,135 @@ class CfgMagazines
 		useAction=0;
 		mass=30;
 	};
+	
+	
+	
+	class ic_plasma_canister;
+	class SR_XI_Plasma_Mag: ic_plasma_canister
+	{
+		scope=2;
+		author="Waagheur";
+		displayName="[TSR] [PXI] Plasma Flask";
+		descriptionShort="PlasmaGun flask";
+		ammo="TIOW_SM_PlasmagunRound";
+		useAction=0;
+		mass=30;
+		count=50;
+		initSpeed=750;
+		lastRoundsTracer = 999;
+	};
+	
+	
+	
+	class ic_30rnd_825_rifleMag;
+	class ic_las_powerpack;
+	class 20Rnd_762x51_Mag;
+	
+	class SR_XI_Lasbolt_Mag: ic_las_powerpack
+	{
+		displayName="100 chrg Lasgun Battery";
+		ammo="SR_XI_Lasbolt";
+		initSpeed=1150;
+		magazineGroup[]={};
+		count=100;
+		mass="20";
+		tracersEvery=1;
+		lastRoundsTracer=999;
+	};
+	
+	class SR_XI_Heavy_Lasbolt_Mag: 20Rnd_762x51_Mag
+	{
+		displayName="60 chrg Heavy Lasgun Battery";
+		descriptionShort="";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+		ammo="SR_XI_Heavy_Lasbolt";
+		count=60;
+		initSpeed=1200;
+		mass="20";
+		tracersEvery=1;
+		lastRoundsTracer=999;
+	};
+	
+	class SR_XI_Stubber_Mag: ic_30rnd_825_rifleMag
+	{
+		displayName="100rnd Magazine";
+		ammo="SR_XI_Stub_Round";
+		initSpeed=950;
+		magazineGroup[]={};
+		mass="40";
+		count=100;
+		tracersEvery=1;
+		lastRoundsTracer=999;
+	};
+	class SR_XI_Autogun_Mag: ic_30rnd_825_rifleMag
+	{
+		displayName="40rnd Magazine";
+		ammo="SR_XI_Stub_Round";
+		initSpeed=950;
+		magazineGroup[]={};
+		mass="20";
+		count=40;
+		tracersEvery=1;
+		lastRoundsTracer=999;
+	};
+	
+	class SR_XI_BattleRifle_Mag: ic_30rnd_825_rifleMag
+	{
+		displayName="25rnd Magazine";
+		ammo="SR_XI_Stub_Round";
+		initSpeed=1000;
+		magazineGroup[]={};
+		mass="20";
+		count=25;
+		tracersEvery=1;
+		lastRoundsTracer=999;
+	};
+
+	class SR_XI_HandCanon_Mag: ic_30rnd_825_rifleMag
+	{
+		displayName="5rnd Clip";
+		displaynameshort="";
+		ammo="SR_XI_HandCanon_Round";
+		initSpeed=1000;
+		magazineGroup[]={};
+		mass="5";
+		count=5;
+		tracersEvery=1;
+		lastRoundsTracer=999;
+	};
+	
+	class SR_XI_Longlag_Lasbolt_Mag: 20Rnd_762x51_Mag
+	{
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+		displayName="12chrg Longlas Penetrator Rounds";
+		ammo="SR_XI_LongLas_Lasbolt";
+		count=12;
+		initSpeed=1500;
+		descriptionShort="";
+		mass="15";
+		tracersEvery=1;
+		lastRoundsTracer=999;
+	};
+	
+	class Lucius22c_Solid;
+	class Lucius22c_Pellet;
+	class SR_XI_Lucius22c_Solid: Lucius22c_Solid
+	{
+		displayName="18rnd Shotgun Slugs";
+		count=18;
+		mass="10";
+	};
+	class SR_XI_Lucius22c_Pellet: Lucius22c_Pellet
+	{
+		displayName="18rnd Shotgun Pellets";
+		count=18;
+		mass="10";
+	};
+	
 };
 class CfgVehicles
 {
@@ -1615,7 +1910,7 @@ class cfgWeapons
 		{
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]={"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
@@ -1709,10 +2004,9 @@ class cfgWeapons
 		reloadAction="GestureReloadMX";
 		magazines[]=
 		{
-			"xi_laspack_standard_BI",
-			"xi_laspack_standard_BII"
+			"SR_XI_Lasbolt_Mag"
 		};
-		magazineReloadSwitchPhase=0.47999999;
+		magazineReloadTime=0.47999999;
 		initSpeed=-1;
 		recoil="xi_recoil_rubicon_lasgun";
 		htMin=11;
@@ -1772,7 +2066,8 @@ class cfgWeapons
 					"optic_Aco",
 					"optic_ACO_grn",
 					"optic_Holosight",
-					"dm_m36holosightNM"
+					"dm_m36holosightNM",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -1798,7 +2093,8 @@ class cfgWeapons
 		modes[]=
 		{
 			"Single",
-			"FullAuto"
+			"FullAuto",
+			"Overcharge"
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -1845,7 +2141,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.19599999;
+			reloadTime=0.12599999;
 			dispersion=0.00034999999;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -1897,6 +2193,61 @@ class cfgWeapons
 			aiRateOfFire=1;
 			aiRateOfFireDistance=250;
 		};
+		class Overcharge: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"MarsPattern_shot_SoundSet"
+				};
+				begin1[]=
+				{
+					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"MarsPattern_shot_SoundSet"
+				};
+				begin1[]=
+				{
+					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			textureType="fastAuto";
+			reloadTime=0.48599999;
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=250;
+			maxRangeProbab=0.2;
+		};
 	};
 	// class XI_Mars_lasgun_Shield: Rifle_Base_F
 	// {
@@ -1931,7 +2282,7 @@ class cfgWeapons
 			// "ic_las_powerpack_ext"
 		// };
 		// selectionFireAnim="muzzleFlash";
-		// magazineReloadSwitchPhase=0.47999999;
+		// magazineReloadTime=0.47999999;
 		// initSpeed=-1;
 		// recoil="xi_recoil_rubicon_lasgun";
 		// htMin=11;
@@ -2147,11 +2498,10 @@ class cfgWeapons
 		reloadAction="GestureReloadMX";
 		magazines[]=
 		{
-			"xi_laspack_standard_BI",
-			"xi_laspack_standard_BII"
+			"SR_XI_Lasbolt_Mag"
 		};
 		magazineWell[]={};
-		magazineReloadSwitchPhase=0.47999999;
+		magazineReloadTime=0.47999999;
 		muzzles[]=
 		{
 			"this",
@@ -2221,7 +2571,8 @@ class cfgWeapons
 					"jmsfall_aog_scope_1",
 					"optic_Holosight",
 					"dm_m36holosightNM",
-					"dm_M362xSightNM"
+					"dm_M362xSightNM",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -2247,7 +2598,8 @@ class cfgWeapons
 		modes[]=
 		{
 			"Single",
-			"FullAuto"
+			"FullAuto",
+			"Overcharge"
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -2294,7 +2646,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.19599999;
+			reloadTime=0.12599999;
 			dispersion=0.00034999999;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -2345,6 +2697,61 @@ class cfgWeapons
 			maxRangeProbab=0.050000001;
 			aiRateOfFire=1;
 			aiRateOfFireDistance=250;
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"MarsPattern_shot_SoundSet"
+				};
+				begin1[]=
+				{
+					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"MarsPattern_shot_SoundSet"
+				};
+				begin1[]=
+				{
+					"\xi_allWeapons\marsLasgun\Sounds\MarsPattern.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			textureType="fastAuto";
+			reloadTime=0.48599999;
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=250;
+			maxRangeProbab=0.2;
 		};
 		class TIOW_Type2_AutogunGL: TIOW_KriegLauncher
 		{
@@ -2416,11 +2823,10 @@ class cfgWeapons
 		reloadAction="GestureReloadTRG";
 		Magazines[]=
 		{
-			"xi_825_standard_mag_BI",
-			"xi_825_standard_mag_BII"
+			"SR_XI_Autogun_Mag"
 		};
 		magazineWell[]={};
-		magazineReloadSwitchPhase=0.47999999;
+		magazineReloadTime=0.47999999;
 		initSpeed=-1;
 		recoil="recoil_dm_autogun";
 		htMin=11;
@@ -2476,7 +2882,8 @@ class cfgWeapons
 					"optic_Aco",
 					"optic_ACO_grn",
 					"optic_Holosight",
-					"dm_m36holosight"
+					"dm_m36holosight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -2623,7 +3030,7 @@ class cfgWeapons
 			// "xi_825_standard_mag_BII"
 		// };
 		// magazineWell[]={};
-		// magazineReloadSwitchPhase=0.47999999;
+		// magazineReloadTime=0.47999999;
 		// initSpeed=-1;
 		// recoil="recoil_dm_autogun";
 		// htMin=11;
@@ -2820,7 +3227,7 @@ class cfgWeapons
 			// "xi_825_standard_mag_BII"
 		// };
 		// magazineWell[]={};
-		// magazineReloadSwitchPhase=0.47999999;
+		// magazineReloadTime=0.47999999;
 		// initSpeed=-1;
 		// recoil="recoil_dm_autogun";
 		// htMin=11;
@@ -3029,11 +3436,10 @@ class cfgWeapons
 		};
 		Magazines[]=
 		{
-			"xi_825_standard_mag_BI",
-			"xi_825_standard_mag_BII"
+			"SR_XI_Autogun_Mag"
 		};
 		magazineWell[]={};
-		magazineReloadSwitchPhase=0.47999999;
+		magazineReloadTime=0.47999999;
 		initSpeed=-1;
 		recoil="recoil_dm_autogun";
 		htMin=11;
@@ -3093,7 +3499,8 @@ class cfgWeapons
 					"optic_HAMR",
 					"jmsfall_aog_scope_1",
 					"dm_m36holosight",
-					"dm_m362xsight"
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -3329,7 +3736,7 @@ class cfgWeapons
 	class xi_boltPistol_base: Pistol_Base_F
 	{
 		reloadAction="GestureReloadPistol";
-		magazineReloadSwitchPhase=0.40000001;
+		magazineReloadTime=0.40000001;
 		discreteDistanceInitIndex=0;
 		maxRecoilSway=0.1;
 		swayDecaySpeed=1.25;
@@ -3355,7 +3762,7 @@ class cfgWeapons
 			{
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				displayName="$STR_A3_CowsSlot0";
-				compatibleItems[]={};
+				compatibleItems[]={"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"};
 				iconPicture="\A3\Weapons_F\Data\UI\attachment_top.paa";
 				iconPinpoint="Bottom";
 			};
@@ -3547,11 +3954,9 @@ class cfgWeapons
 		magazineWell[]={};
 		magazines[]=
 		{
-			"xi_825_standard_mag_lmg_BI",
-			"xi_825_standard_mag_lmg_BII",
-			"xi_825_standard_mag_lmg_tracers_BII"
+			"SR_XI_Stubber_Mag"
 		};
-		magazineReloadSwitchPhase=0.47999999;
+		magazineReloadTime=0.47999999;
 		initSpeed=-1;
 		recoil="recoil_dm_autogun";
 		htMin=11;
@@ -3611,7 +4016,8 @@ class cfgWeapons
 					"optic_Aco",
 					"optic_ACO_grn",
 					"optic_Holosight",
-					"dm_m36holosight"
+					"dm_m36holosight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -3739,7 +4145,7 @@ class cfgWeapons
 	{
 		author="Bones";
 		scope=2;
-		displayName="[TSR] [PXI] [A] Imperious Handcannon [B/II]";
+		displayName="[TSR] [PXI] [A] Imperious Handcannon";
 		descriptionShort="[TSR] [PXI] Revolver";
 		picture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
 		UiPicture="\xi_allWeapons\marsLasgun\UI\MarsPattern.paa";
@@ -3765,9 +4171,9 @@ class cfgWeapons
 		magazineWell[]={};
 		magazines[]=
 		{
-			"xi_12mm_5rnd_Mag_BII"
+			"SR_XI_HandCanon_Mag"
 		};
-		magazineReloadSwitchPhase=0.47999999;
+		magazineReloadTime=0.32;
 		initSpeed=-1;
 		recoil="xi_recoil_rubicon_lasgun";
 		htMin=11;
@@ -3812,7 +4218,7 @@ class cfgWeapons
 		{
 			class CowsSlot: CowsSlot
 			{
-				compatibleItems[]={};
+				compatibleItems[]={"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"};
 			};
 			class MuzzleSlot: MuzzleSlot
 			{
@@ -3856,8 +4262,8 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.19599999;
-			dispersion=0.00034999999;
+			reloadTime=0.08599999;
+			dispersion=0.0000034999999;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=150;
@@ -3877,8 +4283,7 @@ class cfgWeapons
 		scopeArsenal=2;
 		magazines[]=
 		{
-			"XI_DMR_Mag_BI",
-			"XI_DMR_MAG_BII"
+			"SR_XI_Heavy_Lasbolt_Mag"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -3889,10 +4294,52 @@ class cfgWeapons
 				compatibleItems[]=
 				{
 					"optic_hamr",
-					"optic_erco_blk_f"
+					"optic_erco_blk_f",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 				iconScale=0.1;
 			};
+		};
+		modes[]=
+		{
+			"Single",
+			"Overcharge"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_LasgunNew_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\LasgunNew.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			textureType="fastAuto";
+			reloadTime=0.75599999;
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=250;
+			maxRangeProbab=0.2;
 		};
 	};
 	class ICP_Rifle_Kantrael_Base;
@@ -3912,10 +4359,60 @@ class cfgWeapons
 		};
 		magazines[]=
 		{
-			"xi_laspack_standard_BI",
-			"xi_laspack_standard_BII"
+			"SR_XI_Lasbolt_Mag"
 		};
 		magazineWell[]={};
+		class WeaponSlotsInfo
+		{
+			class CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"optic_DMS",
+					"optic_Nightstalker",
+					"optic_tws",
+					"jmsfall_wonyeonts12x_scope",
+					"jmsfall_talon8x_scope",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
+		};
+		modes[] = {
+			"Burst",
+			"Single",
+			"FullAuto_medium", 
+			"Overcharge"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"IC_Kantrael_shot_SoundSet","IC_Kantrael_Tail_SoundSet"};
+				soundBegin[] = {"begin1",1};
+				begin1[] = {"\ic_weapons_base\sounds\Kantrael\Kantrael_closeShot",1,1,1800};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"IC_Kantrael_shot_SoundSet","IC_Kantrael_Tail_SoundSet"};
+				soundBegin[] = {"begin1",1};
+				begin1[] = {"\ic_weapons_base\sounds\Kantrael\Kantrael_closeShot",1,1,1800};
+			};
+			textureType="fastAuto";
+			reloadTime=0.48599999;
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=250;
+			maxRangeProbab=0.2;
+		};
+		
 	};
 	class WRS_Weapon_AR;
 	class pxi_wrsAR_onagerBase: WRS_Weapon_AR
@@ -3927,8 +4424,7 @@ class cfgWeapons
 		displayName="'[PXI] [A] Onager Autogun";
 		Magazines[]=
 		{
-			"xi_825_standard_mag_BI",
-			"xi_825_standard_mag_BII"
+			"SR_XI_Autogun_Mag"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -3942,7 +4438,8 @@ class cfgWeapons
 					"optic_Aco",
 					"optic_ACO_grn",
 					"optic_Holosight",
-					"dm_m36holosight"
+					"dm_m36holosight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 		};
@@ -3957,8 +4454,7 @@ class cfgWeapons
 		displayName="'[PXI] [A] Pugio Autogun";
 		Magazines[]=
 		{
-			"xi_825_standard_mag_BI",
-			"xi_825_standard_mag_BII"
+			"SR_XI_Autogun_Mag"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -3972,7 +4468,8 @@ class cfgWeapons
 					"optic_Aco",
 					"optic_ACO_grn",
 					"optic_Holosight",
-					"dm_m36holosight"
+					"dm_m36holosight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 		};
@@ -3986,8 +4483,7 @@ class cfgWeapons
 		displayName="'[PXI] [A] Malleus Autogun";
 		Magazines[]=
 		{
-			"xi_825_standard_mag_BI",
-			"xi_825_standard_mag_BII"
+			"SR_XI_Autogun_Mag"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -4005,7 +4501,8 @@ class cfgWeapons
 					"optic_HAMR",
 					"jmsfall_aog_scope_1",
 					"dm_m36holosightNM",
-					"dm_m362xsightNM"
+					"dm_m362xsightNM",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 		};
@@ -4019,8 +4516,7 @@ class cfgWeapons
 		displayName="'[PXI] [A] Cultro Autogun";
 		Magazines[]=
 		{
-			"xi_825_standard_mag_BI",
-			"xi_825_standard_mag_BII"
+			"SR_XI_Autogun_Mag"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -4038,7 +4534,8 @@ class cfgWeapons
 					"optic_HAMR",
 					"jmsfall_aog_scope_1",
 					"dm_m36holosight",
-					"dm_m362xsight"
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 		};
@@ -4060,13 +4557,28 @@ class cfgWeapons
 		};
 		Magazines[]=
 		{
-			"xi_23rnd_autogun_br_BII"
+			"SR_XI_BattleRifle_Mag"
 		};
 		magazineWell[]={};
 		modes[]=
 		{
 			"FullAuto",
 			"Single"
+		};
+		class WeaponSlotsInfo
+		{
+			class CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"optic_DMS",
+					"optic_Nightstalker",
+					"optic_tws",
+					"jmsfall_wonyeonts12x_scope",
+					"jmsfall_talon8x_scope",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
 		};
 		class Single: Mode_SemiAuto
 		{
@@ -4167,8 +4679,7 @@ class cfgWeapons
 		displayName="'[PXI] [A] M36 Lasgun";
 		magazines[]=
 		{
-			"xi_laspack_standard_BI",
-			"xi_laspack_standard_BII"
+			"SR_XI_Lasbolt_Mag"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -4182,9 +4693,53 @@ class cfgWeapons
 					"optic_Aco",
 					"optic_ACO_grn",
 					"optic_Holosight",
-					"dm_m36holosight"
+					"dm_m36holosight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
+		};
+		modes[]=
+		{
+			"FullAuto",
+			"Single",
+			"FullAuto_medium",
+			"Overcharge"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_LasgunNew_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\lasgunNew.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			textureType="fastAuto";
+			reloadTime=0.65599999;
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=250;
+			maxRangeProbab=0.2;
 		};
 	};
 	class dm_M36ModularV3;
@@ -4196,8 +4751,7 @@ class cfgWeapons
 		displayName="'[PXI] [A] M36 Carbine";
 		magazines[]=
 		{
-			"xi_laspack_standard_BI",
-			"xi_laspack_standard_BII"
+			"SR_XI_Lasbolt_Mag"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -4211,9 +4765,53 @@ class cfgWeapons
 					"optic_Aco",
 					"optic_ACO_grn",
 					"optic_Holosight",
-					"dm_m36holosight"
+					"dm_m36holosight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
+		};
+		modes[]=
+		{
+			"FullAuto",
+			"Single",
+			"FullAuto_medium",
+			"Overcharge"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_LasgunNew_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\lasgunNew.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			textureType="fastAuto";
+			reloadTime=0.455999998;
+			dispersion=0.00085000001;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=250;
+			maxRangeProbab=0.2;
 		};
 	};
 	class dm_M36ModularV2;
@@ -4225,8 +4823,7 @@ class cfgWeapons
 		displayName="'[PXI] [A] M36 Galaxy";
 		magazines[]=
 		{
-			"xi_laspack_standard_BI",
-			"xi_laspack_standard_BII"
+			"SR_XI_Lasbolt_Mag"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -4240,9 +4837,53 @@ class cfgWeapons
 					"optic_Aco",
 					"optic_ACO_grn",
 					"optic_Holosight",
-					"dm_m36holosight"
+					"dm_m36holosight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
+		};
+		modes[]=
+		{
+			"FullAuto",
+			"Single",
+			"FullAuto_medium",
+			"Overcharge"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_LasgunNew_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\lasgunNew.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			textureType="fastAuto";
+			reloadTime=0.65599999;
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=250;
+			maxRangeProbab=0.2;
 		};
 	};
 	class ICP_Rifle_Voss_Base;
@@ -4262,10 +4903,62 @@ class cfgWeapons
 		};
 		magazines[]=
 		{
-			"xi_laspack_standard_BI",
-			"xi_laspack_standard_BII"
+			"SR_XI_Lasbolt_Mag"
 		};
 		magazineWell[]={};
+		class WeaponSlotsInfo
+		{
+			class CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"optic_DMS",
+					"optic_Nightstalker",
+					"optic_tws",
+					"jmsfall_wonyeonts12x_scope",
+					"jmsfall_talon8x_scope",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
+		};
+		modes[] = {
+			"Single",
+			"FullAuto_medium", 
+			"Overcharge"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType;
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"IC_Voss_shot_SoundSet","IC_Voss_Tail_SoundSet"};
+				soundBegin[] = {"begin1",33,"begin2",33,"begin3",34};
+				begin1[] = {"\ic_weapons_base\sounds\Voss\Voss_closeShot01",1.5,1,1800};
+				begin2[] = {"\ic_weapons_base\sounds\Voss\Voss_closeShot02",1.5,1.5,1800};
+				begin3[] = {"\ic_weapons_base\sounds\Voss\Voss_closeShot03",1.5,2,1800};
+			};
+			class SilencedSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"IC_Voss_shot_SoundSet","IC_Voss_Tail_SoundSet"};
+				soundBegin[] = {"begin1",33,"begin2",33,"begin3",34};
+				begin1[] = {"\ic_weapons_base\sounds\Voss\Voss_closeShot01",1.5,1,1800};
+				begin2[] = {"\ic_weapons_base\sounds\Voss\Voss_closeShot02",1.5,1.5,1800};
+				begin3[] = {"\ic_weapons_base\sounds\Voss\Voss_closeShot03",1.5,2,1800};
+			};
+			textureType="fastAuto";
+			reloadTime=0.48599999;
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=250;
+			maxRangeProbab=0.2;
+		};
 	};
 	class srifle_DMR_02_sniper_F;
 	class XI_longlas_base: srifle_DMR_02_sniper_F
@@ -4297,11 +4990,10 @@ class cfgWeapons
 		magazineWell[]={};
 		magazines[]=
 		{
-			"XI_Longlas_Mag_BI",
-			"xi_longlas_mag_BII"
+			"SR_XI_Longlag_Lasbolt_Mag"
 		};
-		magazineReloadSwitchPhase=0.47999999;
-		initSpeed=2300;
+		magazineReloadTime=0.47999999;
+		initSpeed=1500;
 		recoil="xi_recoil_rubicon_lasgun";
 		htMin=11;
 		htMax=730;
@@ -4361,7 +5053,8 @@ class cfgWeapons
 					"optic_Nightstalker",
 					"optic_tws",
 					"jmsfall_wonyeonts12x_scope",
-					"jmsfall_talon8x_scope"
+					"jmsfall_talon8x_scope",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 			class MuzzleSlot: MuzzleSlot
@@ -4457,22 +5150,235 @@ class cfgWeapons
 		displayName="[TSR] [PXI] Ignis-Variant Meltagun (AT)";
 		magazines[]=
 		{
-			"XI_Melta_Mag_Normal_BII"
+			"SR_XI_Melta_Mag"
 		};
 		magazineWell[]={};
 	};
-	class TIOW_Shotgun;
-	class XI_Shotgun: TIOW_Shotgun
+	
+	
+	
+	class XI_Shotgun: arifle_MX_Base_F
 	{
-		displayName="[TSR] [PXI] Combat Shotgun (AP)";
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+		Author="TIOW_Sokolonko";
+		displayName="[TSR] [PXI] Cerberus Pattern Combat Shotgun";
+		descriptionShort="Shotgun";
+		model="\TIOW_Spec_Weps\Shotgun\IG_shotgun.p3d";
+		picture="\TIOW_Spec_Weps\Shotgun\data\ig_shotgun_icon_ca.paa";
+		reloadMagazineSound[]=
+		{
+			"WBK_Improved40KWeapons\sounds\shotgun_reload_lowShells.wav",
+			2.5118899,
+			1,
+			25
+		};
+		reloadSound[]=
+		{
+			"WBK_Improved40KWeapons\sounds\shotgun_reload_lowShells.wav",
+			2.5118899,
+			1,
+			25
+		};
+		class EventHandlers
+		{
+			fired="[(_this select 0), 0.01, 'SR_XI_WH_ShotGun_AfterFire', 'SR_XI_WBK_WH_shotgun_pump'] spawn Warhammer_FastboltAction;";
+		};
+		class bg_weaponparameters
+		{
+			class onEmpty
+			{
+				Sound="";
+				Sound_Location="RightHandMiddle1";
+			};
+		};
+		maxRecoilSway=0.015;
+		swayDecaySpeed=2.25;
+		opticsZoomMin=0.25;
+		opticsZoomMax=1;
+		opticsZoomInit=0.75;
+		mass=40;
+		recoil="recoil_gm6";
 		magazines[]=
 		{
-			"Lucius22c_Solid",
-			"Lucius22c_Pellet"
+			"SR_XI_Lucius22c_Solid",
+			"SR_XI_Lucius22c_Pellet"
 		};
 		magazineWell[]={};
-		scope=2;
+		ACE_barrelLength=400;
+		dispersion=0.015;
+		fireSpreadAngle=2;
+		class WeaponSlotsInfo
+		{
+			mass=40;
+			allowedSlots[]={901};
+		};
+		cameraDir="eye_look";
+		memoryPointCamera="eye";
+		discreteDistance[]={50};
+		reloadAction="WH_ShotGun_Reload_LowShells";
+		handanim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\TIOW_Spec_Weps\Shotgun\Anims\shotgun_handanim.rtm"
+		};
+		selectionFireAnim="muzzleFlash";
+		modes[]=
+		{
+			"Single"
+		};
+		class Single: Mode_SemiAuto
+		{
+			recoil="recoil_single_gm6";
+			recoilProne="recoil_single_prone_gm6";
+			reloadTime=0.15;
+			minRange=0;
+			minRangeProbab=1;
+			midRange=10;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.30000001;
+			aiRateOfFireDistance=50;
+			aiRateOfFire=1.5;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"\DKoK_Weapons\Sound\KriegShotgun",
+					0.63095701,
+					1,
+					20
+				};
+				closure2[]=
+				{
+					"\DKoK_Weapons\Sound\KriegShotgun",
+					0.63095701,
+					1.2,
+					20
+				};
+				soundClosure[]=
+				{
+					"closure1",
+					0.5,
+					"closure2",
+					0.5
+				};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundsetshot[]=
+				{
+					"WBK_ShotgunLowShells_soundSet",
+					"M320_Tail_SoundSet"
+				};
+				begin1[]=
+				{
+					"\DKoK_Weapons\Sound\KriegShotgun",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\DKoK_Weapons\Sound\KriegShotgun",
+					3.1622801,
+					1.1,
+					1800
+				};
+				begin3[]=
+				{
+					"\DKoK_Weapons\Sound\KriegShotgun",
+					3.1622801,
+					0.89999998,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"\DKoK_Weapons\Sound\KriegShotgun",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"\DKoK_Weapons\Sound\KriegShotgun",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"\DKoK_Weapons\Sound\KriegShotgun",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"\DKoK_Weapons\Sound\KriegShotgun",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"\DKoK_Weapons\Sound\KriegShotgun",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+		aiDispersionCoefY=6;
+		aiDispersionCoefX=6;
 	};
+	
+	
+	
 	class ic_cad_bolter;
 	class XI_Augustus_P: ic_cad_bolter
 	{
@@ -4483,6 +5389,21 @@ class cfgWeapons
 		};
 		magazineWell[]={};
 		scope=2;
+		class WeaponSlotsInfo
+		{
+			class CowsSlot
+			{
+				compatibleItems[]=
+				{
+					"optic_DMS",
+					"optic_Nightstalker",
+					"optic_tws",
+					"jmsfall_wonyeonts12x_scope",
+					"jmsfall_talon8x_scope",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
+		};
 	};
 	class Default;
 	class PutMuzzle;
@@ -4587,7 +5508,8 @@ class cfgWeapons
 					"optic_ACO_grn",
 					"optic_Holosight",
 					"dm_m36holosightNM",
-					"dm_m362xsightNM"
+					"dm_m362xsightNM",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 		};
@@ -4609,7 +5531,8 @@ class cfgWeapons
 					"optic_ACO_grn",
 					"optic_Holosight",
 					"dm_m36holosight",
-					"dm_m362xsight"
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 		};
@@ -4656,7 +5579,618 @@ class cfgWeapons
 					"optic_MRCO",
 					"optic_HAMR",
 					"dm_m36holosight",
-					"dm_m362xsight"
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
+		};
+	};
+	
+	class TIOW_Krieg_Flamer;
+	class SR_XI_Flamer: TIOW_Krieg_Flamer
+	{
+		scope=2;
+		scopeCurator=2;
+		scopeArsenal=2;
+		author="Waagheur";
+		baseWeapon="SR_XI_Flamer";
+		displayName="[TSR] [PXI] Flamer";
+		modes[]=
+		{
+			"Single"
+		};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=1;
+			dispersion=0.00034999999;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1e-006;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]=
+				{
+					"closure1",
+					0.5,
+					"closure2",
+					0.5
+				};
+				soundSet="";
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"TIOW_KriegFlamer_Shot_SoundSet",
+					"TIOW_KriegFlamer_Tail_SoundSet",
+					"TIOW_KriegFlamer_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+							1.58489,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"\a40k_wepbase\Sounds\Flamerv5_40k.ogg",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+
+	class ic_PlasmaGun;
+	class SR_XI_ic_PlasmaGun: ic_PlasmaGun
+	{
+		displayName="[TSR] [PXI] Plasma Gun";
+		magazines[]=
+		{
+			"SR_XI_Plasma_Mag"
+		};
+		modes[]=
+		{
+			"Single",
+			"Overcharge"
+		};
+		plasmaCoolingMult = 1;
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_Melta_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\Melta.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				iconPosition[]={0.5,0.40000001};
+				iconScale=0.15000001;
+				compatibleItems[]=
+				{
+					"optic_Aco",
+					"optic_ACO_grn",
+					"optic_Holosight",
+					"optic_MRCO",
+					"optic_HAMR",
+					"dm_m36holosight",
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
+		};
+	};
+	
+	class ic_PlasmaGunPurple;
+	class SR_XI_ic_PlasmaGunPurple: ic_PlasmaGunPurple
+	{
+		displayName="[TSR] [PXI] Plasma Gun (Purple)";
+		magazines[]=
+		{
+			"SR_XI_Plasma_Mag"
+		};
+		modes[]=
+		{
+			"Single",
+			"Overcharge"
+		};
+		plasmaCoolingMult = 1;
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_Melta_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\Melta.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				iconPosition[]={0.5,0.40000001};
+				iconScale=0.15000001;
+				compatibleItems[]=
+				{
+					"optic_Aco",
+					"optic_ACO_grn",
+					"optic_Holosight",
+					"optic_MRCO",
+					"optic_HAMR",
+					"dm_m36holosight",
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
+		};
+	};
+	
+	class ic_PlasmaGunRed;
+	class SR_XI_ic_PlasmaGunRed: ic_PlasmaGunRed
+	{
+		displayName="[TSR] [PXI] Plasma Gun (Red)";
+		magazines[]=
+		{
+			"SR_XI_Plasma_Mag"
+		};
+		modes[]=
+		{
+			"Single",
+			"Overcharge"
+		};
+		plasmaCoolingMult = 1;
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_Melta_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\Melta.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				iconPosition[]={0.5,0.40000001};
+				iconScale=0.15000001;
+				compatibleItems[]=
+				{
+					"optic_Aco",
+					"optic_ACO_grn",
+					"optic_Holosight",
+					"optic_MRCO",
+					"optic_HAMR",
+					"dm_m36holosight",
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
+		};
+	};
+	
+	class ic_PlasmaGunYellow;
+	class SR_XI_ic_PlasmaGunYellow: ic_PlasmaGunYellow
+	{
+		displayName="[TSR] [PXI] Plasma Gun (Yellow)";
+		magazines[]=
+		{
+			"SR_XI_Plasma_Mag"
+		};
+		modes[]=
+		{
+			"Single",
+			"Overcharge"
+		};
+		plasmaCoolingMult = 1;
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_Melta_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\Melta.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				iconPosition[]={0.5,0.40000001};
+				iconScale=0.15000001;
+				compatibleItems[]=
+				{
+					"optic_Aco",
+					"optic_ACO_grn",
+					"optic_Holosight",
+					"optic_MRCO",
+					"optic_HAMR",
+					"dm_m36holosight",
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
+				};
+			};
+		};
+	};
+	
+	class ic_PlasmaGunWhite;
+	class SR_XI_ic_PlasmaGunWhite: ic_PlasmaGunWhite
+	{
+		displayName="[TSR] [PXI] Plasma Gun (White)";
+		magazines[]=
+		{
+			"SR_XI_Plasma_Mag"
+		};
+		modes[]=
+		{
+			"Single",
+			"Overcharge"
+		};
+		plasmaCoolingMult = 1;
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=1.296;
+			dispersion=0.00034999999;
+			aiRateOfFire=6;
+			minRange=50;
+			minRangeProbab=0.5;
+			midRange=100;
+			midRangeProbab=0.69999999;
+			maxRange=150;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_Melta_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\Melta.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_Melta_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\Melta.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			class CowsSlot: CowsSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				iconPosition[]={0.5,0.40000001};
+				iconScale=0.15000001;
+				compatibleItems[]=
+				{
+					"optic_Aco",
+					"optic_ACO_grn",
+					"optic_Holosight",
+					"optic_MRCO",
+					"optic_HAMR",
+					"dm_m36holosight",
+					"dm_m362xsight",
+					"optic_Nightstalker","optic_tws","optic_tws_mg","optic_NVS","optic_DMS","optic_LRPS","optic_ams","optic_AMS_snd","optic_AMS_khk","optic_KHS_blk","optic_KHS_tan","optic_KHS_hex","optic_KHS_old","optic_SOS","optic_MRCO","optic_Arco","optic_aco","optic_ACO_grn","optic_aco_smg","optic_ACO_grn_smg","optic_hamr","optic_Holosight","optic_Holosight_smg","optic_Hamr_khk_F","optic_SOS_khk_F","optic_Arco_ghex_F","optic_Arco_blk_F","optic_DMS_ghex_F","optic_ERCO_blk_F","optic_ERCO_khk_F","optic_ERCO_snd_F","optic_LRPS_ghex_F","optic_LRPS_tna_F","optic_Holosight_blk_F","optic_Holosight_khk_F","optic_Holosight_smg_blk_F","optic_Holosight_smg_khk_F","optic_Arco_AK_blk_F","optic_Arco_AK_lush_F","optic_Arco_AK_arid_F","optic_DMS_weathered_F","optic_DMS_weathered_Kir_F","optic_Arco_lush_F","optic_Arco_arid_F","optic_Holosight_lush_F","optic_Holosight_arid_F","OPTRE_M7_Sight","OPTRE_HMG38_CarryHandle","OPTRE_M12_Optic","OPTRE_M12_Optic_Red","OPTRE_M12_Optic_Green","OPTRE_M6C_Scope","OPTRE_M6G_Scope","Optre_Recon_Sight","Optre_Recon_Sight_Red","Optre_Recon_Sight_Green","Optre_Recon_Sight_Desert","Optre_Recon_Sight_UNSC","Optre_Recon_Sight_Snow","OPTRE_BR45_Scope","OPTRE_BR55HB_Scope","OPTRE_BR55HB_Scope_Grey","OPTRE_BMR_Scope","OPTRE_M392_Scope","OPTRE_M393_Scope","OPTRE_M393_ACOG","OPTRE_M393_EOTECH","OPTRE_SRM_Sight","OPTRE_SRS99C_Scope","OPTRE_SRS99_Scope","OPTRE_M73_SmartLink","OPTRE_MA5_SmartLink","OPTRE_MA5C_SmartLink","OPTRE_MA5_BUIS","Optre_Evo_Sight","Optre_Evo_Sight_Covie","Optre_Evo_Sight_Spartan","Optre_Evo_Sight_Innie","Optre_Evo_Sight_Yellow","Optre_Evo_Sight_Riser","Optre_Evo_Sight_Riser_Covie","Optre_Evo_Sight_Riser_Spartan","Optre_Evo_Sight_Riser_Innie","Optre_Evo_Sight_Riser_Yellow","ACE_optic_Hamr_2D","ACE_optic_Hamr_PIP","ACE_optic_Arco_2D","ACE_optic_Arco_PIP","ACE_optic_MRCO_2D","ACE_optic_MRCO_PIP","ACE_optic_SOS_2D","ACE_optic_SOS_PIP","ACE_optic_LRPS_2D","ACE_optic_LRPS_PIP"
 				};
 			};
 		};
