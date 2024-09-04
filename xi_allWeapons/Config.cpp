@@ -144,6 +144,11 @@ class CfgMovesBasic
 			"SR_XI_WH_ShotGun_Reload_LowShells",
 			"Gesture"
 		};
+		SR_XI_Handcanon_Reload[]=
+		{
+			"SR_XI_Handcanon_Reload",
+			"Gesture"
+		};
 	};
 	
 };
@@ -178,6 +183,11 @@ class CfgGesturesMale
 			leftHandIKBeg=1;
 			leftHandIKEnd=1;
 			leftHandIKCurve[]={0.0129927,1,0.032189779,0,0.92240876,0,0.99890512,1};
+		};
+		class GestureReloadPistolHeavy02;
+		class SR_XI_Handcanon_Reload: GestureReloadPistolHeavy02
+		{
+			speed = 0.82;
 		};
 	};
 };
@@ -4187,12 +4197,12 @@ class cfgWeapons
 		};
 		handAnim[]={};
 		selectionFireAnim="muzzleFlash";
-		reloadAction="GestureReloadPistolHeavy02";
+		reloadAction="SR_XI_Handcanon_Reload";
 		reloadMagazineSound[]=
 		{
 			"A3\Sounds_F\arsenal\weapons\Pistols\Zubr\reload_Zubr",
 			0.56234133,
-			1,
+			3,
 			10
 		};
 		magazineWell[]={};
