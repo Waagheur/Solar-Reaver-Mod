@@ -1345,7 +1345,7 @@ class CfgAmmo
 		coefGravity=0.0099999998;
 		airFriction=0;
 		caliber=1;
-		typicalSpeed = 1500;
+		typicalSpeed = 800;
 	};
 	
 	class SR_XI_Melta_Round: IC_melta_rnd
@@ -1789,7 +1789,7 @@ class CfgMagazines
 		count=12;
 		initSpeed=1500;
 		descriptionShort="";
-		mass="15";
+		mass="10";
 		tracersEvery=1;
 		lastRoundsTracer=999;
 	};
