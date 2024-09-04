@@ -4922,6 +4922,7 @@ class cfgWeapons
 			};
 		};
 		modes[] = {
+			"FullAuto",
 			"Single",
 			"FullAuto_medium", 
 			"Overcharge"
