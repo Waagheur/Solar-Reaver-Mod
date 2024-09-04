@@ -1,0 +1,21 @@
+SR_XI_Warhammer_FastboltAction = {    
+_actUnit = _this select 0;   
+if (!(local _actUnit) or ((_actUnit ammo currentWeapon _actUnit) < 1)) exitWith {};
+_toSleep = _this select 1;
+_weapon = currentWeapon _actUnit;
+_muzzle = currentMuzzle _actUnit;
+sleep _toSleep; 
+_actUnit setWeaponReloadingTime [_actUnit,_muzzle,0];
+waitUntil {_actUnit setWeaponReloadingTime [_actUnit,_muzzle,1]; (inputAction "DefaultAction" == 0)};
+_actUnit setWeaponReloadingTime [_actUnit,_muzzle,1];
+// sleep _toSleep;     
+if (!(alive _actUnit)) exitWith {};   
+_gesture = _this select 2;  
+_snd = _this select 3;   
+_dumSound = "Land_HelipadEmpty_F" createVehicle position _actUnit;    
+_dumSound attachTo [_actUnit, [0, 0, 0], "LeftHand"];     
+_actUnit playActionNow _gesture;     
+[_dumSound, _snd, 40] call CBA_fnc_globalSay3d;    
+sleep 3.2;    
+deleteVehicle _dumSound;  
+};  

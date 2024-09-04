@@ -117,6 +117,15 @@ class CfgFunctions
 	};
 };
 
+// Shotgun preinit
+class Extended_PreInit_EventHandlers
+{
+	class SR_XI_WH40OverrideInit_WBK
+	{
+		init="call compile preprocessFileLineNumbers '\xi_allWeapons\XEH_preInit.sqf'";
+	};
+};
+
 // Sped up TIOW shotgun anims
 class CfgMovesBasic
 {
@@ -128,6 +137,11 @@ class CfgMovesBasic
 		SR_XI_WH_ShotGun_AfterFire[]=
 		{
 			"SR_XI_WH_ShotGun_AfterFire",
+			"Gesture"
+		};
+		SR_XI_WH_ShotGun_Reload_LowShells[]=
+		{
+			"SR_XI_WH_ShotGun_Reload_LowShells",
 			"Gesture"
 		};
 	};
@@ -151,6 +165,19 @@ class CfgGesturesMale
 			leftHandIKBeg=1;
 			leftHandIKEnd=1;
 			leftHandIKCurve[]={0.072992697,1,0.10218978,0,0.92240876,0,0.99890512,1};
+		};
+		class SR_XI_WH_ShotGun_Reload_LowShells: Default
+		{
+			file="WBK_Improved40KWeapons\anims\WH_ShotGun_Reload_LowShells.rtm";
+			speed=-3.0;
+			looped=0;
+			mask="handsWeapon";
+			headBobStrength=-1;
+			headBobMode=1;
+			rightHandIKCurve[]={1};
+			leftHandIKBeg=1;
+			leftHandIKEnd=1;
+			leftHandIKCurve[]={0.0129927,1,0.032189779,0,0.92240876,0,0.99890512,1};
 		};
 	};
 };
@@ -5170,21 +5197,21 @@ class cfgWeapons
 		picture="\TIOW_Spec_Weps\Shotgun\data\ig_shotgun_icon_ca.paa";
 		reloadMagazineSound[]=
 		{
-			"WBK_Improved40KWeapons\sounds\shotgun_reload_lowShells.wav",
+			"xi_allWeapons\sounds\shotgun_reload_lowShells.wav",
 			2.5118899,
 			1,
 			25
 		};
 		reloadSound[]=
 		{
-			"WBK_Improved40KWeapons\sounds\shotgun_reload_lowShells.wav",
+			"xi_allWeapons\sounds\shotgun_reload_lowShells.wav",
 			2.5118899,
 			1,
 			25
 		};
 		class EventHandlers
 		{
-			fired="[(_this select 0), 0.01, 'SR_XI_WH_ShotGun_AfterFire', 'SR_XI_WBK_WH_shotgun_pump'] spawn Warhammer_FastboltAction;";
+			fired="[(_this select 0), 0.06, 'SR_XI_WH_ShotGun_AfterFire', 'SR_XI_WBK_WH_shotgun_pump'] spawn SR_XI_Warhammer_FastboltAction;";
 		};
 		class bg_weaponparameters
 		{
@@ -5218,7 +5245,7 @@ class cfgWeapons
 		cameraDir="eye_look";
 		memoryPointCamera="eye";
 		discreteDistance[]={50};
-		reloadAction="WH_ShotGun_Reload_LowShells";
+		reloadAction="SR_XI_WH_ShotGun_Reload_LowShells";
 		handanim[]=
 		{
 			"OFP2_ManSkeleton",
@@ -5231,9 +5258,10 @@ class cfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
+			burst=3;
 			recoil="recoil_single_gm6";
 			recoilProne="recoil_single_prone_gm6";
-			reloadTime=0.15;
+			reloadTime=0.03;
 			minRange=0;
 			minRangeProbab=1;
 			midRange=10;
