@@ -27,7 +27,7 @@ SR_Flamer_Func = {
 
 	[getPosASL _p, _p weaponDirection currentWeapon _p] spawn {
 
-		_pos = (_this select 0) vectorAdd ((_this select 1) vectorMultiply 5) vectorAdd [0.0, 0.0, 0.5];
+		_pos = (_this select 0) vectorAdd ((_this select 1) vectorMultiply 7) vectorAdd [0.0, 0.0, 0.5];
 		
 		private _ps1 = "#particlesource" createVehicleLocal _pos; 
 		_ps1 setPosASL _pos;
@@ -37,8 +37,8 @@ SR_Flamer_Func = {
 		 [[1,1,1,0.4], [1,1,1,0.2], [1,1,1,0]], 
 		 [0.25,1], 1, 1, "", "", _ps1]; 
 		
-		_ps1 setDropInterval 0.5;
-		_ps1 setParticleFire [1, 3, 1];
+		_ps1 setDropInterval (0.30 + (random 0.30));
+		_ps1 setParticleFire [1, 2.5, 1];
 		
 		sleep 0.1;
 		
@@ -49,14 +49,14 @@ SR_Flamer_Func = {
 				_ps1 setPosASL _pos;
 			};
 			
-			_units = allUnits inAreaArray [(getPos _ps1) vectorAdd [0,0,-1], 3, 3, 0, false, 3];
+			_units = allUnits inAreaArray [(getPos _ps1) vectorAdd [0,0,-1], 2.5, 2.5, 0, false, 2.5];
 			{
-				for "_j" from 0 to 2 do {
+				// for "_j" from 0 to 3 do {
 					_bodyPart = ["head","body","hand_r","hand_l","leg_r","leg_l"] selectRandomWeighted [0.5,1,1,1,1,1];
 					[_x, 0.5, _bodyPart, "burn"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-				};
+				// };
 			} forEach _units;
-			sleep 0.2;
+			sleep 0.10;
 		};
 		
 		deleteVehicle _ps1;
@@ -64,6 +64,58 @@ SR_Flamer_Func = {
 	};
 
 };
+
+/** Prototypes
+// Function for firing
+SR_Flamer_Fire_Loop = {
+	_p = _this;
+	
+	_dumSound = "Land_HelipadEmpty_F" createVehicle position _p;
+	_dumSound attachTo [_p, [0, 0, 0], "LeftHand"];
+	
+	// Fire
+	
+	
+	[_p, _dumSound] spawn {
+	
+		waitUntil {
+			sleep 0.30;
+			
+			if ( // If we're no longer firing or we're out of ammo
+				(inputAction "DefaultAction" == 0) or (((_this select 0) ammo primaryWeapon (_this select 0)) == 0)
+			) then { // Exit the loop
+				true;
+			}
+			else { // Play sound, fire, and keep going
+				[(_this select 1), "\a40k_wepbase\Sounds\Flamerv5_40k.ogg", 40] call CBA_fnc_globalSay3d;
+				false;
+			};
+		};
+	
+	};
+	
+};
+
+// Function for ammo
+SR_Flamer_Ammo_Loop = {
+	_p = _this;
+	
+	waitUntil {
+		sleep 1;
+		
+		if ( // If we're no longer firing or we're out of ammo
+			(inputAction "DefaultAction" == 0) or ((_p ammo primaryWeapon _p) == 0)
+		) then { // Exit the loop
+			true;
+		}
+		else { // Reduce ammo and keep going
+			_p setAmmo [weaponOrMuzzle, 
+				(_p ammo primaryWeapon _p) - 1];
+			false;
+		};
+	};
+};
+*/
 
 
 params [];

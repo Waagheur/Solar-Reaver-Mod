@@ -5633,14 +5633,14 @@ class cfgWeapons
 		scopeArsenal=2;
 		author="Waagheur";
 		baseWeapon="SR_XI_Flamer";
-		displayName="[TSR] [PXI] Flamer";
+		displayName="[TSR] [PXI] Incinerator Pattern Flamer";
 		modes[]=
 		{
-			"Single"
+			"FullAuto"
 		};
-		class Single: Mode_SemiAuto
+		class FullAuto: Mode_FullAuto
 		{
-			reloadTime=1;
+			reloadTime=0.30;
 			dispersion=0.00034999999;
 			recoil="recoil_pistol_light";
 			recoilProne="recoil_prone_pistol_light";
