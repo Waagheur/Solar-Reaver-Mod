@@ -799,6 +799,11 @@ class CfgVehicles{
 				magazine = "Steve_30k_Meltagun_Mag";
 				count = 20;
 			};
+			class xx_Steve_30k_Meltagun_Mag_New // Primus Meltagun
+			{
+				magazine = "Steve_30k_Meltagun_Mag_New";
+				count = 20;
+			};
 			class xx_TIOW_SM_Storm_Box_Mag // Storm Bolter Box
 			{
 				magazine = "TIOW_SM_Storm_Box_Mag";
