@@ -18,7 +18,9 @@ class CfgPatches
 		requiredVersion=0.1;
 		units[]=
 		{
-			"SR_SL"
+			"SR_SL",
+			"SR_SM_Psyker",
+			"SR_HumanPsyker"
 		};
 		weapons[]=
 		{
@@ -60,6 +62,13 @@ class CfgFunctions
 			};
 			class sl_buffs_fire {
 				//file = "SR_Specialists\functions\fn_sl_buffs_fire.sqf";
+			};
+		};
+		class PSY
+		{
+			file = "SR_Specialists\functions";
+			class psy_init {
+				//file = "SR_Specialists\functions\fn_psy_init.sqf";
 			};
 		};
 	};

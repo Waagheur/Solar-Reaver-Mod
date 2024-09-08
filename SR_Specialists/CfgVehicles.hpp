@@ -409,64 +409,255 @@ class CfgVehicles
             "TIOW_sm_smoke_grenade_mag"};
   };
 
-  class Primaris_SM_SR_Tech : Primaris_SM_SR_1
-  {
-    displayName = "Primaris Techmarine (Mk.10)";
-    hiddenSelectionsTextures[] =
-        {
-            "SR_Specialists\Textures\Tech_PrimArmour.paa",
-            "SR_Firstborn\Textures\SR_Armour1.paa"};
-  } class Primaris_SM_SR_Apoth : Primaris_SM_SR_1
-  {
-    displayName = "Primaris Apothecary (Mk.10)";
-    hiddenSelectionsTextures[] =
+	class Primaris_SM_SR_Tech : Primaris_SM_SR_1
+	{
+		displayName = "Primaris Techmarine (Mk.10)";
+		hiddenSelectionsTextures[] =
+		{
+			"SR_Specialists\Textures\Tech_PrimArmour.paa",
+			"SR_Firstborn\Textures\SR_Armour1.paa"
+		};
+	}; 
+	class Primaris_SM_SR_Apoth : Primaris_SM_SR_1
+	{
+		displayName = "Primaris Apothecary (Mk.10)";
+		hiddenSelectionsTextures[] =
         {
             "SR_Specialists\Textures\Apoth_PrimArmour.paa",
-            "SR_Firstborn\Textures\SR_Armour1.paa"};
-  } class Primaris_SM_SR_Recon : Primaris_SM_SAL_6
-  {
-    model = "Project_Primaris_D_Main\Models\Phobos_Reiver.p3d";
-    displayName = "Primaris Reiver (Mk.10)";
-    hiddenSelectionsTextures[] =
+            "SR_Firstborn\Textures\SR_Armour1.paa"
+		};
+	}; 
+	class Primaris_SM_SR_Recon : Primaris_SM_SAL_6
+	{
+		model = "Project_Primaris_D_Main\Models\Phobos_Reiver.p3d";
+		displayName = "Primaris Reiver (Mk.10)";
+		hiddenSelectionsTextures[] =
         {
             "SR_Specialists\Textures\Recon_PrimArmour.paa",
-            "SR_Firstborn\Textures\SR_Armour1.paa"};
+            "SR_Firstborn\Textures\SR_Armour1.paa"
+		};
+	};
 
     // Specialist Powerpack Alternatives
     class Dos_AP_PP_2;
     class TSR_AP_PP_2 : Dos_AP_PP_2
     {
-      author = "Sepshal";
-      scope = 2;
-      displayName = "[TSR] Grand Apothecary Powerpack";
-      hiddenSelections[] =
-          {
-              "BackpackCamo",
-              "BackpackCamo_ApLight"};
-      hiddenSelectionsTextures[] =
-          {
-              "SR_Specialists\Textures\Ap_PowerPack_1_GA_CO_BLK.paa",
-              "SR_Specialists\Textures\Ap_PowerPack_1_2_GA_CO_BLK.paa"};
+		author = "Sepshal";
+		scope = 2;
+		displayName = "[TSR] Grand Apothecary Powerpack";
+		hiddenSelections[] =
+        {
+            "BackpackCamo",
+            "BackpackCamo_ApLight"
+		};
+		hiddenSelectionsTextures[] =
+        {
+            "SR_Specialists\Textures\Ap_PowerPack_1_GA_CO_BLK.paa",
+            "SR_Specialists\Textures\Ap_PowerPack_1_2_GA_CO_BLK.paa"
+		};
     };
+
+
+
+
 
     // SL UNIT
     class TIOW_Tactical_IF_1;
     class SR_SL : TIOW_Tactical_IF_1
     {
-      displayName = "[TSR] Squad Leader";
-      editorCategory = "EdCategory_TheAdeptusAstartes";
-      editorSubcategory = "EdSubCat_SR";
-      scope = 2;
-      Items[] = {};
-      RespawnItems[] = {};
-      linkedItems[] = {};
-      RespawnlinkedItems[] = {};
-
-      class EventHandlers
-      {
-        postInit = "params ['_entity']; [_entity] call SR_fnc_sl_buffs_init; _entity addEventHandler ['Respawn',{(_this select 0) call SR_fnc_sl_buffs_init;}];";
-      };
+		displayName = "[TSR] Squad Leader";
+		editorCategory = "EdCategory_TheAdeptusAstartes";
+		editorSubcategory = "EdSubCat_SR";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		Items[] = {};
+		RespawnItems[] = {};
+		linkedItems[] = {};
+		RespawnlinkedItems[] = {};
+	
+		class EventHandlers
+		{
+			postInit = "params ['_entity']; [_entity] call SR_fnc_sl_buffs_init; _entity addEventHandler ['Respawn',{(_this select 0) call SR_fnc_sl_buffs_init;}];";
+		};
     };
+	
+	
+	
+	
+	
+	class TIOW_Tactical_TS_6;
+	class SR_SM_Psyker : TIOW_Tactical_TS_6
+	{
+		displayName = "[TSR] Space Marine Librarian";
+		editorCategory = "EdCategory_TheAdeptusAstartes";
+		editorSubcategory = "EdSubCat_SR";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		side = 1;
+		
+		class Attributes
+		{
+			class SR_PSY_PowerPool_Attribute
+			{
+				displayName = "Power pool";
+				tooltip = "Psyker powers' power pool";
+				property = "SR_PSY_PowerPool";
+				control = "Edit";
 
-  }; // End of CfgVechicle
-};
+				expression = "_this setVariable['SR_PSY_power_pool', _value, true]; _this setVariable['SR_PSY_power', _value, true];";
+				
+				defaultValue = "1800";
+
+				unique = 0;
+				validate = "number";
+				condition = "object";
+				typeName = "NUMBER";
+			};
+			class SR_PSY_Blink_Attribute
+			{
+				displayName = "Blink";
+				tooltip = "Psyker Blink power";
+				property = "SR_PSY_Blink";
+				control = "Checkbox";
+
+				expression = "_this setVariable['SR_PSY_Blink', _value, true];";
+				
+				defaultValue = "true";
+
+				unique = 0;
+				validate = "none";
+				condition = "object";
+				typeName = "BOOL";
+			};
+			class SR_PSY_RipNTear_Attribute
+			{
+				displayName = "Rip And Tear";
+				tooltip = "Psyker Rip And Tear power";
+				property = "SR_PSY_RipNTear";
+				control = "Checkbox";
+
+				expression = "_this setVariable['SR_PSY_RipNTear', _value, true];";
+				
+				defaultValue = "true";
+
+				unique = 0;
+				validate = "none";
+				condition = "object";
+				typeName = "BOOL";
+			};
+			class SR_PSY_Rift_Attribute
+			{
+				displayName = "Rift";
+				tooltip = "Psyker Rift power";
+				property = "SR_PSY_Rift";
+				control = "Checkbox";
+
+				expression = "_this setVariable['SR_PSY_rift', _value, true];";
+				
+				defaultValue = "true";
+
+				unique = 0;
+				validate = "none";
+				condition = "object";
+				typeName = "BOOL";
+			};
+		};
+		
+		class EventHandlers
+		{
+			postInit = "params ['_entity']; [_entity] call SR_fnc_psy_init; _entity addEventHandler ['Respawn',{(_this select 0) call SR_fnc_psy_init;}];";
+		};
+		
+	};
+	class TIOW_Priest;
+	class SR_HumanPsyker : TIOW_Priest
+	{
+		displayName = "[TSR] Human Psyker";
+		editorCategory = "EdCategory_TheAdeptusAstartes";
+		editorSubcategory = "EdSubCat_SR";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		
+		class Attributes
+		{
+			class SR_PSY_PowerPool_Attribute
+			{
+				displayName = "Power pool";
+				tooltip = "Psyker powers' power pool";
+				property = "SR_PSY_PowerPool";
+				control = "Edit";
+
+				expression = "_this setVariable['SR_PSY_power_pool', _value, true]; _this setVariable['SR_PSY_power', _value, true];";
+				
+				defaultValue = "1800";
+
+				unique = 0;
+				validate = "number";
+				condition = "object";
+				typeName = "NUMBER";
+			};
+			class SR_PSY_Blink_Attribute
+			{
+				displayName = "Blink";
+				tooltip = "Psyker Blink power";
+				property = "SR_PSY_Blink";
+				control = "Checkbox";
+
+				expression = "_this setVariable['SR_PSY_blink', _value, true];";
+				
+				defaultValue = "true";
+
+				unique = 0;
+				validate = "none";
+				condition = "object";
+				typeName = "BOOL";
+			};
+			class SR_PSY_RipNTear_Attribute
+			{
+				displayName = "Rip And Tear";
+				tooltip = "Psyker Rip And Tear power";
+				property = "SR_PSY_RipNTear";
+				control = "Checkbox";
+
+				expression = "_this setVariable['SR_PSY_rip_and_tear', _value, true];";
+				
+				defaultValue = "true";
+
+				unique = 0;
+				validate = "none";
+				condition = "object";
+				typeName = "BOOL";
+			};
+			class SR_PSY_Rift_Attribute
+			{
+				displayName = "Rift";
+				tooltip = "Psyker Rift power";
+				property = "SR_PSY_Rift";
+				control = "Checkbox";
+
+				expression = "_this setVariable['SR_PSY_rift', _value, true];";
+				
+				defaultValue = "true";
+
+				unique = 0;
+				validate = "none";
+				condition = "object";
+				typeName = "BOOL";
+			};
+		};
+		
+		class EventHandlers
+		{
+			postInit = "params ['_entity']; [_entity] call SR_fnc_psy_init; _entity addEventHandler ['Respawn',{(_this select 0) call SR_fnc_psy_init;}];";
+		};
+		
+	};
+	
+	
+	
+	
+
+}; // End of CfgVechicle

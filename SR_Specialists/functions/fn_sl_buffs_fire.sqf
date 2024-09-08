@@ -5,7 +5,7 @@
 		
 
 	Parameter(s):
-		None
+		params ['_entity'];
 
 
 
