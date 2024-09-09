@@ -642,6 +642,93 @@ class cfgWeapons
 			};
 		};
 	};
+	class xi_cadianArmour_LIGHT_enhanced: dm_CadianArmour
+	{
+		author="Bones";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[TSR] [PXI] Cadian Armour (V1)";
+		class ItemInfo: ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 90;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 90;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				// class Hands {
+					// hitpointName = "HitHands";
+					// armor = 35;
+					// passThrough = 0.1;
+				// };
+				class LeftArm {
+					hitpointName = "HitLeftArm";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class RightArm {
+					hitpointName = "HitRightArm";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class LeftLeg {
+					hitpointName = "HitLeftLeg";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class RightLeg {
+					hitpointName = "HitRightLeg";
+					armor = 10;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
 	class IC_CAD_FlakArmor_Green: Vest_Camo_Base
 	{
 		class ItemInfo;
@@ -703,6 +790,116 @@ class cfgWeapons
 					hitpointName="HitLegs";
 					armor=1;
 					passThrough=0.30000001;
+				};
+			};
+		};
+	};
+	class xi_cadianArmourV2_LIGHT_enhanced: IC_CAD_FlakArmor_Green
+	{
+		author="Bones";
+		scope=2;
+		scopecurator=2;
+		scopearsenal=2;
+		displayName="[TSR] [PXI] Cadian Armour (V2)";
+		class ItemInfo: ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Neck
+				{
+					hitpointName = "HitNeck";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				class Arms
+				{
+					hitpointName = "HitArms";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				class Chest
+				{
+					hitpointName = "HitChest";
+					armor = 90;
+					passThrough = 0.1;
+				};
+				class Diaphragm
+				{
+					hitpointName = "HitDiaphragm";
+					armor = 90;
+					passThrough = 0.1;
+				};
+				class Abdomen
+				{
+					hitpointName = "HitAbdomen";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Pelvis
+				{
+					hitpointName = "HitPelvis";
+					armor = 60;
+					passThrough = 0.1;
+				};
+				class Body
+				{
+					hitpointName = "HitBody";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				class Legs
+				{
+					hitpointName = "HitLegs";
+					armor = 35;
+					passThrough = 0.1;
+				};
+				// class Hands {
+					// hitpointName = "HitHands";
+					// armor = 35;
+					// passThrough = 0.1;
+				// };
+				class LeftArm {
+					hitpointName = "HitLeftArm";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class RightArm {
+					hitpointName = "HitRightArm";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class LeftLeg {
+					hitpointName = "HitLeftLeg";
+					armor = 10;
+					passThrough = 0.1;
+				};
+				class RightLeg {
+					hitpointName = "HitRightLeg";
+					armor = 10;
+					passThrough = 0.1;
+				};
+			};
+		};
+	};
+	class TIOW_Comissar_Cap;
+	class SR_TIOW_Comissar_Cap: TIOW_Comissar_Cap
+	{
+		displayName="[TSR] [PXI] Commissar Cap";
+		class ItemInfo: ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 30;
+					passThrough = 0.1;
+				};
+				class Face
+				{
+					hitpointName="HitFace";
+					armor = 25;
+					passThrough=0.1;
 				};
 			};
 		};
