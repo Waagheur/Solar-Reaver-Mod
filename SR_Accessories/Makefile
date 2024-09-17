@@ -7,7 +7,7 @@ main:
 	mkdir "$(pbo_build_dir)/$(addon_name)"
 	
 # Build addon without models (with binarise)
-	XCOPY /I /E /Y "$(CURDIR)" "$(pbo_build_dir)/$(addon_name)"
+	XCOPY /I /E /Y "$(subst /,\,$(CURDIR))" "$(subst /,\,$(pbo_build_dir)/$(addon_name))"
 	rmdir /S /Q "$(pbo_build_dir)/$(addon_name)/models"
 	
 	$(addon_builder) "$(pbo_build_dir)/$(addon_name)" "$(pbo_build_dir)" -clear -include=$(include_file) -exclude=$(exclude_file)
@@ -18,7 +18,7 @@ main:
 	$(pbov) unpackFolder -p="$(pbo_build_dir)/$(addon_name).pbo"
 	del "$(pbo_build_dir)\$(addon_name).pbo"
 	del "$(pbo_build_dir)\$(addon_name)\$$PREFIX$$"
-	XCOPY /I /E /Y "$(CURDIR)/models" "$(pbo_build_dir)/$(addon_name)/models"
+	XCOPY /I /E /Y "$(subst /,\,$(CURDIR)/models)" "$(subst /,\,$(pbo_build_dir)/$(addon_name)/models)"
 	
 # Restore config.cpp, we need it for the addon_builder to pack the whole thing
 	del "$(pbo_build_dir)\$(addon_name)\config.bin"
