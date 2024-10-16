@@ -92,8 +92,8 @@ if ((_entity getVariable ["SR_PSY_power", -1]) < 0) then {
 			
 			(_entity getVariable "SR_PSY_rayend") hideObject false;
 			(_entity getVariable "SR_PSY_raymarker") hideObject false;
-			[(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]), clientOwner] remoteExec ["setOwner", 2];
-			[(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]), clientOwner] remoteExec ["setOwner", 2];
+			[(_entity getVariable ["SR_PSY_rayend", objNull]), clientOwner] remoteExec ["setOwner", 2];
+			[(_entity getVariable ["SR_PSY_raymarker", objNull]), clientOwner] remoteExec ["setOwner", 2];
 			
 			_SR_PSY_Power_bar_Back = findDisplay 46 ctrlCreate ["RscStructuredText", -1]; 
 			_SR_PSY_Power_bar_Back ctrlSetPosition [-0.51,1.09,0.62,0.03];  
