@@ -19,13 +19,11 @@
 		
 */
 
-SR_Flamer_Func = {
-	
-	_p = _this;
+SR_Flamer_Graphics_Func = {
 
 
 
-	[getPosASL _p, _p weaponDirection currentWeapon _p] spawn {
+	[_this select 0, _this select 1] spawn {
 
 		_pos = (_this select 0) vectorAdd ((_this select 1) vectorMultiply 7) vectorAdd [0.0, 0.0, 0.5];
 		
@@ -48,14 +46,7 @@ SR_Flamer_Func = {
 				_pos = _pos vectorAdd ((_this select 1) vectorMultiply 2);
 				_ps1 setPosASL _pos;
 			};
-			
-			_units = allUnits inAreaArray [(getPos _ps1) vectorAdd [0,0,-1], 2.5, 2.5, 0, false, 2.5];
-			{
-				// for "_j" from 0 to 3 do {
-					_bodyPart = ["head","body","hand_r","hand_l","leg_r","leg_l"] selectRandomWeighted [0.5,1,1,1,1,1];
-					[_x, 0.5, _bodyPart, "burn"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-				// };
-			} forEach _units;
+
 			sleep 0.10;
 		};
 		
@@ -139,7 +130,33 @@ if (not(isDedicated)) then {
 					
 					deleteVehicle _projectile;
 					
-					player remoteExec["SR_Flamer_Func", 0];
+					// Spawn Flamer particles for everyone
+					[getPosASL player, player weaponDirection currentWeapon player] remoteExec["SR_Flamer_Graphics_Func", 0];
+					
+					// Spawn Flamer damage hitbox
+					[getPosASL player, player weaponDirection currentWeapon player] spawn {
+
+						_pos = (_this select 0) vectorAdd ((_this select 1) vectorMultiply 7) vectorAdd [0.0, 0.0, 0.5];
+						
+						sleep 0.1;
+						
+						for "_i" from 0 to 19 do {
+							if (!(lineIntersects [_pos, _pos vectorAdd ((_this select 1) vectorMultiply 2)])
+								&& !(terrainIntersect [_pos, _pos vectorAdd ((_this select 1) vectorMultiply 2)])) then {
+								_pos = _pos vectorAdd ((_this select 1) vectorMultiply 2);
+							};
+							
+							_units = allUnits inAreaArray [(getPos _pos) vectorAdd [0,0,-1], 2.5, 2.5, 0, false, 2.5];
+							{
+								for "_j" from 0 to 3 do {
+									_bodyPart = ["head","body","hand_r","hand_l","leg_r","leg_l"] selectRandomWeighted [0.5,1,1,1,1,1];
+									[_x, 0.5, _bodyPart, "burn"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+								};
+							} forEach _units;
+							sleep 0.10;
+						};
+						
+					};
 					
 				};
 				
