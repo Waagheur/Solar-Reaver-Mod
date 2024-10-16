@@ -146,7 +146,7 @@ if (not(isDedicated)) then {
 								_pos = _pos vectorAdd ((_this select 1) vectorMultiply 2);
 							};
 							
-							_units = allUnits inAreaArray [(getPos _pos) vectorAdd [0,0,-1], 2.5, 2.5, 0, false, 2.5];
+							_units = allUnits inAreaArray [(ASLToAGL _pos) vectorAdd [0,0,-1], 2.5, 2.5, 0, false, 2.5];
 							{
 								for "_j" from 0 to 3 do {
 									_bodyPart = ["head","body","hand_r","hand_l","leg_r","leg_l"] selectRandomWeighted [0.5,1,1,1,1,1];
