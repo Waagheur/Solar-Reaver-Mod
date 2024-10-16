@@ -945,9 +945,9 @@ class CfgVehicles{
 				magazine = "TIOW_SM_PlasmaCannon_Mag";
 				count = 70;
 			};
-			class xx_Steve_Autocannon12RndHEMag
+			class xx_STEVE_AutocannonMag_New
 			{
-				magazine = "Steve_Autocannon12RndHEMag";
+				magazine = "STEVE_AutocannonMag_New";
 				count = 70;
 			};
 			class xx_Steve_SM_Lascannon_Mag
