@@ -24,8 +24,6 @@ _entity addAction ["Teleport", {
 	SR_PSY_entity = _this select 3;
 	
 	if ((SR_PSY_entity getVariable ["SR_PSY_power", -1]) > 59) then {
-		(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject false;
-		[(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]), clientOwner] remoteExec ["setOwner", 2];
 		(SR_PSY_entity setVariable ["SR_PSY_casting", 
 			true, 
 			true]);
@@ -84,7 +82,6 @@ _entity addAction ["Teleport", {
 				(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press]; 
 				(findDisplay 46) displayRemoveEventHandler ["MouseZChanged",SR_PSY_roll];
 				(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
-				(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject true;
 				(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0];
 				(SR_PSY_entity setVariable ["SR_PSY_casting", 
 					false, 
@@ -96,7 +93,6 @@ _entity addAction ["Teleport", {
 					(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press]; 
 					(findDisplay 46) displayRemoveEventHandler ["MouseZChanged",SR_PSY_roll];
 					(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
-					(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject true;
 					(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0]; 
 					(SR_PSY_entity setVariable ["SR_PSY_casting", 
 						false, 
@@ -116,7 +112,6 @@ _entity addAction ["Teleport", {
 					(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press]; 
 					(findDisplay 46) displayRemoveEventHandler ["MouseZChanged",SR_PSY_roll]; 
 					(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click]; 
-					(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject true;
 					(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0]; 
 					(SR_PSY_entity setVariable ["SR_PSY_casting", 
 						false, 
@@ -132,7 +127,6 @@ _entity addAction ["Teleport", {
 				(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press]; 
 				(findDisplay 46) displayRemoveEventHandler ["MouseZChanged",SR_PSY_roll];
 				(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
-				(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject true;
 				(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0];
 				(SR_PSY_entity setVariable ["SR_PSY_casting", 
 					false, 

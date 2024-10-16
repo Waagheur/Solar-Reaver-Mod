@@ -24,13 +24,9 @@ _entity addAction ["Rip And Tear", {
 	SR_PSY_entity = _this select 3;
 	
 	if ((SR_PSY_entity getVariable ["SR_PSY_power", -1]) > 59) then {
-		(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject false;
-		[(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]), clientOwner] remoteExec ["setOwner", 2];
 		(SR_PSY_entity setVariable ["SR_PSY_casting", 
 			true, 
 			true]);
-		(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) hideObject false;
-		[(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]), clientOwner] remoteExec ["setOwner", 2];
 			
 		SR_PSY_L = 3;
 		SR_PSY_ray = 0; 
@@ -55,12 +51,10 @@ _entity addAction ["Rip And Tear", {
 				removeMissionEventHandler ["eachFrame", SR_PSY_ray]; 
 				(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press];
 				(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
-				(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject true;
 				(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0]; 
 				(SR_PSY_entity setVariable ["SR_PSY_casting", 
 					false, 
 					true]); 
-				(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) hideObject true;
 				(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) setPos [0,0,0]; 
 			}; 
 			if ((_this select 1) == 157) then { 
@@ -70,12 +64,10 @@ _entity addAction ["Rip And Tear", {
 						removeMissionEventHandler ["eachFrame", SR_PSY_ray]; 
 						(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press];
 						(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
-						(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject true;
 						(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0]; 
 						(SR_PSY_entity setVariable ["SR_PSY_casting", 
 							false, 
 							true]); 
-						(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) hideObject true;
 						(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) setPos [0,0,0];
 					}; 
 					SR_PSY_entity setVariable ["SR_PSY_power",
@@ -127,12 +119,10 @@ _entity addAction ["Rip And Tear", {
 						removeMissionEventHandler ["eachFrame", SR_PSY_ray]; 
 						(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press];
 						(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
-						(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject true;
 						(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0]; 
 						(SR_PSY_entity setVariable ["SR_PSY_casting", 
 							false, 
 							true]); 
-						(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) hideObject true;
 						(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) setPos [0,0,0];
 					}; 
 					SR_PSY_entity setVariable ["SR_PSY_power",
@@ -178,12 +168,10 @@ _entity addAction ["Rip And Tear", {
 				removeMissionEventHandler ["eachFrame", SR_PSY_ray]; 
 				(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press];
 				(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
-				(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) hideObject true;
 				(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0]; 
 				(SR_PSY_entity setVariable ["SR_PSY_casting", 
 					false, 
 					true]); 
-				(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) hideObject true;
 				(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) setPos [0,0,0];
 			};  
 		}];

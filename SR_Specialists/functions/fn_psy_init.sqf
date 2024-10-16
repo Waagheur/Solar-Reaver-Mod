@@ -31,6 +31,8 @@ params ['_entity'];
 
 if (isNull (_entity getVariable ["SR_PSY_rayend", objNull])) then {
 	_rayend = "Sign_Sphere100cm_F" createVehicle [0,0,0];
+	// Wait for object init to finish
+	waitUntil {not(isNull _rayend)};
 	
 	(_entity setVariable ["SR_PSY_rayend", 
 		_rayend, 
@@ -40,6 +42,8 @@ if (isNull (_entity getVariable ["SR_PSY_rayend", objNull])) then {
 
 if (isNull (_entity getVariable ["SR_PSY_raymarker", objNull])) then {
 	_raymarker = "VR_3DSelector_01_exit_F" createVehicle [0,0,0];
+	// Wait for object init to finish
+	waitUntil {not(isNull _raymarker)};
 	
 	(_entity setVariable ["SR_PSY_raymarker", 
 		_raymarker, 
@@ -86,6 +90,11 @@ if ((_entity getVariable ["SR_PSY_power", -1]) < 0) then {
 	while {not(isNull _entity)} do {
 		if ((_entity == cameraOn) and (!isnull (findDisplay 46))) then {
 			
+			(_entity getVariable "SR_PSY_rayend") hideObject false;
+			(_entity getVariable "SR_PSY_raymarker") hideObject false;
+			[(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]), clientOwner] remoteExec ["setOwner", 2];
+			[(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]), clientOwner] remoteExec ["setOwner", 2];
+			
 			_SR_PSY_Power_bar_Back = findDisplay 46 ctrlCreate ["RscStructuredText", -1]; 
 			_SR_PSY_Power_bar_Back ctrlSetPosition [-0.51,1.09,0.62,0.03];  
 			_SR_PSY_Power_bar_Back ctrlCommit 0;
@@ -100,6 +109,9 @@ if ((_entity getVariable ["SR_PSY_power", -1]) < 0) then {
 				_SR_PSY_Power_bar progressSetPosition ((_entity getVariable ["SR_PSY_power", 0]) / (_entity getVariable ["SR_PSY_power_pool", 100]));
 				sleep 1;
 			};
+			
+			(_entity getVariable "SR_PSY_rayend") hideObject true;
+			(_entity getVariable "SR_PSY_raymarker") hideObject true;
 			
 			ctrlDelete _SR_PSY_Power_bar_Back;
 			ctrlDelete _SR_PSY_Power_bar;
