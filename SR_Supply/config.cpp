@@ -27,6 +27,7 @@ class CfgPatches
 			"SR_SupplyPod_Devastator",
 			"SR_SupplyPod_Assault",
 			"SR_SupplyPod_Medical",
+			"SR_SupplyPod_Centuria",
             "SR_ATMine",
             "SR_UBERMine",
             "SR_Zeus_ATMine",
@@ -500,17 +501,13 @@ class CfgVehicles{
 				name = "ACE_bloodIV_500";
 				count = 8;
 			};
-			class xx_ACE_adenosine{
-				name = "ACE_adenosine";
-				count = 8;
-			};
 			class xx_ACE_morphine{
 				name = "ACE_morphine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_epinephrine{
 				name = "ACE_epinephrine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_splint{
 				name = "ACE_splint";
@@ -656,17 +653,13 @@ class CfgVehicles{
 				name = "ACE_bloodIV_500";
 				count = 8;
 			};
-			class xx_ACE_adenosine{
-				name = "ACE_adenosine";
-				count = 8;
-			};
 			class xx_ACE_morphine{
 				name = "ACE_morphine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_epinephrine{
 				name = "ACE_epinephrine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_splint{
 				name = "ACE_splint";
@@ -888,17 +881,13 @@ class CfgVehicles{
 				name = "ACE_bloodIV_500";
 				count = 8;
 			};
-			class xx_ACE_adenosine{
-				name = "ACE_adenosine";
-				count = 8;
-			};
 			class xx_ACE_morphine{
 				name = "ACE_morphine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_epinephrine{
 				name = "ACE_epinephrine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_splint{
 				name = "ACE_splint";
@@ -1014,17 +1003,13 @@ class CfgVehicles{
 				name = "ACE_bloodIV_500";
 				count = 8;
 			};
-			class xx_ACE_adenosine{
-				name = "ACE_adenosine";
-				count = 8;
-			};
 			class xx_ACE_morphine{
 				name = "ACE_morphine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_epinephrine{
 				name = "ACE_epinephrine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_splint{
 				name = "ACE_splint";
@@ -1126,17 +1111,13 @@ class CfgVehicles{
 				name = "ACE_bloodIV_500";
 				count = 8;
 			};
-			class xx_ACE_adenosine{
-				name = "ACE_adenosine";
-				count = 8;
-			};
 			class xx_ACE_morphine{
 				name = "ACE_morphine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_epinephrine{
 				name = "ACE_epinephrine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_splint{
 				name = "ACE_splint";
@@ -1235,17 +1216,13 @@ class CfgVehicles{
 				name = "ACE_bloodIV_500";
 				count = 8;
 			};
-			class xx_ACE_adenosine{
-				name = "ACE_adenosine";
-				count = 8;
-			};
 			class xx_ACE_morphine{
 				name = "ACE_morphine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_epinephrine{
 				name = "ACE_epinephrine";
-				count = 8;
+				count = 16;
 			};
 			class xx_ACE_splint{
 				name = "ACE_splint";
@@ -1328,17 +1305,13 @@ class CfgVehicles{
 				name = "WBK_NarthBlood";
 				count = 9;
 			};
-			class xx_ACE_adenosine{
-				name = "ACE_adenosine";
-				count = 20;
-			};
 			class xx_ACE_morphine{
 				name = "ACE_morphine";
-				count = 20;
+				count = 40;
 			};
 			class xx_ACE_epinephrine{
 				name = "ACE_epinephrine";
-				count = 20;
+				count = 40;
 			};
 			class xx_ACE_splint{
 				name = "ACE_splint";
@@ -1362,7 +1335,487 @@ class CfgVehicles{
 			};
 		};
 	};
-    
+	
+	class SR_SupplyPod_Centuria: SR_SupplyPod_Empty
+    {
+		displayName = "[TSR][PXI] Centuria Resupply";
+		hiddenSelections[] = {"camo"};
+		hiddenSelectionsTextures[] = {"SR_Supply\Textures\SupplyPod_Tactical_CO.paa"};
+		class TransportMagazines
+		{
+
+			/**
+				SR_XI_Melta_Mag
+				XI_IG_GL_Smoke_White_Mag
+
+				XI_IG_UBGL_Smoke_White_Mag_3rnd
+				XI_IG_UBGL_Smoke_Red_Mag_3rnd
+				XI_IG_UBGL_Smoke_Orange_Mag_3rnd
+				XI_IG_UBGL_Smoke_Blue_Mag_3rnd
+				XI_IG_UBGL_Smoke_Yellow_Mag_3rnd
+				XI_IG_UBGL_Smoke_Green_Mag_3rnd
+				XI_IG_UBGL_Smoke_Purple_Mag_3rnd
+
+				1Rnd_HE_Grenade_shell
+				1Rnd_Smoke_Grenade_shell
+				TIOW_1Rnd_HE_Grenade_shell
+
+				TIOW_IG_GL_Buck_mag
+				TIOW_IG_GL_Flame_mag
+				TIOW_IG_GL_Flare_mag
+				TIOW_IG_GL_Frag_mag
+				TIOW_IG_GL_Krak_mag
+				TIOW_IG_GL_Smoke_mag
+
+				TIOW_Krieg_GL_Buck_mag
+				TIOW_Krieg_GL_Flame_mag
+				TIOW_Krieg_GL_Flare_mag
+				TIOW_Krieg_GL_Frag_mag
+				TIOW_Krieg_GL_Krak_mag
+				TIOW_Krieg_GL_Smoke_mag
+
+				SR_XI_Plasma_Mag
+				SR_XI_Lasbolt_Mag
+				SR_XI_Heavy_Lasbolt_Mag
+				SR_XI_Stubber_Mag
+				SR_XI_Autogun_Mag
+				SR_XI_BattleRifle_Mag
+				SR_XI_HandCanon_Mag
+				SR_XI_Longlag_Lasbolt_Mag
+				SR_XI_Lucius22c_Solid
+				SR_XI_Lucius22c_Pellet
+
+				TIOW_IGPlasmaPistol_OC_Mag
+				TIOW_IGPlasmaPistol_Mag
+
+				TIOW_Guard_BoltMag
+				ic_bolt_small_mag
+
+				LuciusLaspistol_mag
+				ic_laspistol_powerpack
+
+				TIOW_pulse_mag
+				VNG_pulse_rifle_mag
+				VNG_100rnd_pulse_mag
+				TIOW_railrifle_mag
+				TIOW_ionrifle_shot_mag
+				TIOW_ionrifle_overcharge_mag
+				VNG_ionrifle_at_mag
+
+				Shuriken_Mag
+
+				IC_Flak_Missile_mag
+				IC_krakk_Missile_mag
+				IC_frag_Missile_mag
+
+				MLHE_Mag
+				MLAT_Mag
+				VNG_MLMelta_Mag
+
+				OPTRE_SpLaser_Battery_Launcher
+				VNG_MLSmoke_Mag
+
+				ic_hellgun_mag
+
+				ML700_Laspistol_B_Battery
+				ML700_BoltPistol_Stanag
+				ML700_StormBolter_Stanag
+			*/
+
+			class xx_SR_XI_Melta_Mag // SR_XI Meltagun
+			{
+				magazine = "SR_XI_Melta_Mag";
+				count = 20;
+			};
+			class xx_XI_IG_GL_Smoke_White_Mag
+			{
+				magazine = "XI_IG_GL_Smoke_White_Mag";
+				count = 10;
+			};
+			class xx_XI_IG_UBGL_Smoke_White_Mag_3rnd
+			{
+				magazine = "XI_IG_UBGL_Smoke_White_Mag_3rnd";
+				count = 10;
+			};
+			class xx_XI_IG_UBGL_Smoke_Red_Mag_3rnd
+			{
+				magazine = "XI_IG_UBGL_Smoke_Red_Mag_3rnd";
+				count = 10;
+			};
+			class xx_XI_IG_UBGL_Smoke_Orange_Mag_3rnd
+			{
+				magazine = "XI_IG_UBGL_Smoke_Orange_Mag_3rnd";
+				count = 10;
+			};
+			class xx_XI_IG_UBGL_Smoke_Blue_Mag_3rnd
+			{
+				magazine = "XI_IG_UBGL_Smoke_Blue_Mag_3rnd";
+				count = 10;
+			};
+			class xx_XI_IG_UBGL_Smoke_Yellow_Mag_3rnd
+			{
+				magazine = "XI_IG_UBGL_Smoke_Yellow_Mag_3rnd";
+				count = 10;
+			};
+			class xx_XI_IG_UBGL_Smoke_Green_Mag_3rnd
+			{
+				magazine = "XI_IG_UBGL_Smoke_Green_Mag_3rnd";
+				count = 10;
+			};
+			class xx_XI_IG_UBGL_Smoke_Purple_Mag_3rnd
+			{
+				magazine = "XI_IG_UBGL_Smoke_Purple_Mag_3rnd";
+				count = 10;
+			};
+			class xx_1Rnd_HE_Grenade_shell
+			{
+				magazine = "1Rnd_HE_Grenade_shell";
+				count = 20;
+			};
+			class xx_1Rnd_Smoke_Grenade_shell
+			{
+				magazine = "1Rnd_Smoke_Grenade_shell";
+				count = 20;
+			};
+			class xx_TIOW_1Rnd_HE_Grenade_shell
+			{
+				magazine = "TIOW_1Rnd_HE_Grenade_shell";
+				count = 20;
+			};
+			// IG grenade launcher
+			class xx_TIOW_IG_GL_Buck_mag
+			{
+				magazine = "TIOW_IG_GL_Buck_mag";
+				count = 10;
+			};
+			class xx_TIOW_IG_GL_Flame_mag
+			{
+				magazine = "TIOW_IG_GL_Flame_mag";
+				count = 10;
+			};
+			class xx_TIOW_IG_GL_Flare_mag
+			{
+				magazine = "TIOW_IG_GL_Flare_mag";
+				count = 10;
+			};
+			class xx_TIOW_IG_GL_Frag_mag
+			{
+				magazine = "TIOW_IG_GL_Frag_mag";
+				count = 10;
+			};
+			class xx_TIOW_IG_GL_Krak_mag
+			{
+				magazine = "TIOW_IG_GL_Krak_mag";
+				count = 10;
+			};
+			class xx_TIOW_IG_GL_Smoke_mag
+			{
+				magazine = "TIOW_IG_GL_Smoke_mag";
+				count = 10;
+			};
+			// Krieg grenade launcher
+			class xx_TIOW_Krieg_GL_Buck_mag
+			{
+				magazine = "TIOW_Krieg_GL_Buck_mag";
+				count = 40;
+			};
+			class xx_TIOW_Krieg_GL_Flame_mag
+			{
+				magazine = "TIOW_Krieg_GL_Flame_mag";
+				count = 40;
+			};
+			class xx_TIOW_Krieg_GL_Flare_mag
+			{
+				magazine = "TIOW_Krieg_GL_Flare_mag";
+				count = 40;
+			};
+			class xx_TIOW_Krieg_GL_Frag_mag
+			{
+				magazine = "TIOW_Krieg_GL_Frag_mag";
+				count = 40;
+			};
+			class xx_TIOW_Krieg_GL_Krak_mag
+			{
+				magazine = "TIOW_Krieg_GL_Krak_mag";
+				count = 40;
+			};
+			class xx_TIOW_Krieg_GL_Smoke_mag
+			{
+				magazine = "TIOW_Krieg_GL_Smoke_mag";
+				count = 40;
+			};
+			// SR_XI Weapons
+			class xx_SR_XI_Plasma_Mag
+			{
+				magazine = "SR_XI_Plasma_Mag";
+				count = 30;
+			};
+			class xx_SR_XI_Lasbolt_Mag
+			{
+				magazine = "SR_XI_Lasbolt_Mag";
+				count = 100;
+			};
+			class xx_SR_XI_Heavy_Lasbolt_Mag
+			{
+				magazine = "SR_XI_Heavy_Lasbolt_Mag";
+				count = 80;
+			};
+			class xx_SR_XI_Stubber_Mag
+			{
+				magazine = "SR_XI_Stubber_Mag";
+				count = 100;
+			};
+			class xx_SR_XI_Autogun_Mag
+			{
+				magazine = "SR_XI_Autogun_Mag";
+				count = 100;
+			};
+			class xx_SR_XI_BattleRifle_Mag
+			{
+				magazine = "SR_XI_BattleRifle_Mag";
+				count = 80;
+			};
+			class xx_SR_XI_HandCanon_Mag
+			{
+				magazine = "SR_XI_HandCanon_Mag";
+				count = 50;
+			};
+			class xx_SR_XI_Longlag_Lasbolt_Mag
+			{
+				magazine = "SR_XI_Longlag_Lasbolt_Mag";
+				count = 50;
+			};
+			class xx_SR_XI_Lucius22c_Solid
+			{
+				magazine = "SR_XI_Lucius22c_Solid";
+				count = 30;
+			};
+            class xx_SR_XI_Lucius22c_Pellet
+            {
+                magazine = "SR_XI_Lucius22c_Pellet";
+                count = 30;
+            };
+			// TIOW IG Plasma Pistol
+			class xx_TIOW_IGPlasmaPistol_OC_Mag
+			{
+				magazine = "TIOW_IGPlasmaPistol_OC_Mag";
+				count = 10;
+			};
+			class xx_TIOW_IGPlasmaPistol_Mag
+			{
+				magazine = "TIOW_IGPlasmaPistol_Mag";
+				count = 20;
+			};
+			class xx_TIOW_Guard_BoltMag // TIOW IG Boltgun
+			{
+				magazine = "TIOW_Guard_BoltMag";
+				count = 50;
+			};
+			class xx_ic_bolt_small_mag // IC IG Boltgun
+			{
+				magazine = "ic_bolt_small_mag";
+				count = 50;
+			};
+			// Laspistols
+			class xx_LuciusLaspistol_mag
+			{
+				magazine = "LuciusLaspistol_mag";
+				count = 50;
+			};
+			class xx_ic_laspistol_powerpack
+			{
+				magazine = "ic_laspistol_powerpack";
+				count = 50;
+			};
+			// Tau weapons
+			class xx_TIOW_pulse_mag
+			{
+				magazine = "TIOW_pulse_mag";
+				count = 100;
+			};
+			class xx_VNG_pulse_rifle_mag
+			{
+				magazine = "VNG_pulse_rifle_mag";
+				count = 100;
+			};
+			class xx_VNG_100rnd_pulse_mag
+			{
+				magazine = "VNG_100rnd_pulse_mag";
+				count = 100;
+			};
+			class xx_TIOW_railrifle_mag
+			{
+				magazine = "TIOW_railrifle_mag";
+				count = 50;
+			};
+			class xx_TIOW_ionrifle_shot_mag
+			{
+				magazine = "TIOW_ionrifle_shot_mag";
+				count = 50;
+			};
+			class xx_TIOW_ionrifle_overcharge_mag
+			{
+				magazine = "TIOW_ionrifle_overcharge_mag";
+				count = 50;
+			};
+			class xx_VNG_ionrifle_at_mag
+			{
+				magazine = "VNG_ionrifle_at_mag";
+				count = 50;
+			};
+			
+			// Eldar Weapons
+			class xx_Shuriken_Mag
+			{
+				magazine = "Shuriken_Mag";
+				count = 100;
+			};
+			
+			// Missiles
+			class xx_IC_Flak_Missile_mag
+			{
+				magazine = "IC_Flak_Missile_mag";
+				count = 30;
+			};
+			class xx_IC_krakk_Missile_mag
+			{
+				magazine = "IC_krakk_Missile_mag";
+				count = 30;
+			};
+			class xx_IC_frag_Missile_mag
+			{
+				magazine = "IC_frag_Missile_mag";
+				count = 30;
+			};
+			class xx_MLHE_Mag
+			{
+				magazine = "MLHE_Mag";
+				count = 30;
+			};
+			class xx_MLAT_Mag
+			{
+				magazine = "MLAT_Mag";
+				count = 30;
+			};
+			class xx_VNG_MLMelta_Mag
+			{
+				magazine = "VNG_MLMelta_Mag";
+				count = 30;
+			};
+			class xx_OPTRE_SpLaser_Battery_Launcher
+			{
+				magazine = "OPTRE_SpLaser_Battery_Launcher";
+				count = 30;
+			};
+			class xx_VNG_MLSmoke_Mag
+			{
+				magazine = "VNG_MLSmoke_Mag";
+				count = 30;
+			};
+			
+			class xx_ic_hellgun_mag // Ryza hellgun
+			{
+				magazine = "ic_hellgun_mag";
+				count = 50;
+			};
+			
+			// Grimdark Weapons
+			class xx_ML700_Laspistol_B_Battery
+			{
+				magazine = "ML700_Laspistol_B_Battery";
+				count = 50;
+			};
+			class xx_ML700_BoltPistol_Stanag
+			{
+				magazine = "ML700_BoltPistol_Stanag";
+				count = 50;
+			};
+			class xx_ML700_StormBolter_Stanag
+			{
+				magazine = "ML700_StormBolter_Stanag";
+				count = 50;
+			};
+			
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 16;
+			};
+		};
+		class TransportWeapons
+		{
+			class xx_pxi_m36Lasgun_T1
+			{
+				weapon = "pxi_m36Lasgun_T1";
+				count = 4;
+			};
+			class xx_LuciusLaspistolBlack
+			{
+				weapon = "LuciusLaspistolBlack";
+				count = 4;
+			};
+			class xx_XI_RevolverA_base
+			{
+				weapon = "XI_RevolverA_base";
+				count = 4;
+			};
+		};
+		class TransportItems
+		{
+			class xx_TIOW_sm_frag_grenade_mag{
+				name = "TIOW_sm_frag_grenade_mag";
+				count = 8;
+			};
+			class xx_TIOW_sm_krak_grenade_mag{
+				name = "TIOW_sm_krak_grenade_mag";
+				count = 8;
+			};
+			class xx_TIOW_sm_smoke_grenade_mag{
+				name = "TIOW_sm_smoke_grenade_mag";
+				count = 8;
+			};
+			class xx_SmokeShellPurple{
+				name = "SmokeShellPurple";
+				count = 2;
+			};
+			class xx_ACE_elasticBandage{
+				name = "ACE_elasticBandage";
+				count = 40;
+			};
+			class xx_ACE_bloodIV_500{
+				name = "ACE_bloodIV_500";
+				count = 8;
+			};
+			class xx_ACE_morphine{
+				name = "ACE_morphine";
+				count = 16;
+			};
+			class xx_ACE_epinephrine{
+				name = "ACE_epinephrine";
+				count = 16;
+			};
+			class xx_ACE_splint{
+				name = "ACE_splint";
+				count = 16;
+			};
+			class xx_ACE_tourniquet{
+				name = "ACE_tourniquet";
+				count = 16;
+			};
+			class xx_SR_AdrenalStims{
+				name = "SR_AdrenalStims";
+				count = 16;
+			};
+			class xx_SR_TraumaClearer{
+				name = "SR_Item_TraumaClearer";
+				count = 4;
+			};
+			class xx_ACE_painkillers {
+				name = "ACE_painkillers";
+				count = 16;
+			};
+		};
+	};
+	
     class ATMine;
     class SR_ATMine: ATMine {
         displayName = "[TSR] ATMine";
