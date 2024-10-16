@@ -1324,7 +1324,7 @@ class CfgAmmo
 	
 	class SR_XI_Lasbolt: IC_lasbolt
 	{
-		hit=20;
+		hit=14;
 		coefGravity=0.0099999998;
 		caliber=1;
 		typicalSpeed = 1150;
