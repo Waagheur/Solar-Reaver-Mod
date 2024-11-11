@@ -18,11 +18,12 @@ class CfgPatches
 
 class CfgVehicles
 {
-	class Primaris_SM_SR_1;
-	class Primaris_SR_Rhys: Primaris_SM_SR_1
+	class Primaris_SM_SAL_6;
+	class Primaris_SR_Rhys: Primaris_SM_SAL_6
 	{
 		author="Waagheur, Rhys";
 		displayName="Primaris Rhys (Mk.10)";
+		model = "Project_Primaris_D_Main\Models\Phobos_Reiver.p3d";
 		uniformClass="Primaris_SM_Rhys_W";
 		hiddenSelectionsTextures[]=
 		{
@@ -57,15 +58,15 @@ class CfgWeapons
 			// "SR_Primaris\Textures\WS_PrimHelmet.paa"
 		// };
 	// };
-	class DOS_Primaris_40k_Vest_Base;
-	class Primaris_Vest_40K_SR_Rhys: DOS_Primaris_40k_Vest_Base 
+	class Primaris_Vest_40k_SW_1;
+	class Primaris_Vest_40K_SR_Rhys: Primaris_Vest_40k_SW_1 
 	{
 		author="Waagheur, Rhys";
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
 		displayName="[TSR] Primaris Mk.10 (Rhys)";
-		model="Project_Primaris_D_Main\Models\Shoulder_Main.p3d";
+		model="Project_Primaris_D_Main\Models\Shoulder_Phobos.p3d";
 		hiddenSelectionsTextures[]=
 		{
 			"SR_Primaris\Textures\Phobos_Shoulder_Rhys.paa"
