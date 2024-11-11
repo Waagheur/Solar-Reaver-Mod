@@ -1640,6 +1640,12 @@ class CfgVehicles
 		};
 		XI_isgravpack=1;
 		XI_gravslowrate=1.25;
+		tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
+		tf_hasLRradio=1;
+		tf_encryptionCode="tf_west_radio_code";
+		tf_dialog="rt1523g_radio_dialog";
+		tf_subtype="digital_lr";
+		tf_range=90000;
 	};
 	class IC_CarryAll;
 	class XI_Rocket_Trooper_Backpack: IC_CarryAll
