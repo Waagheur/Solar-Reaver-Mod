@@ -2198,15 +2198,15 @@ class CfgVehicles
 			// };
 		// };
 	// };
-	class TIOW_Object;
-	class TIOW_Oberon: TIOW_Object
-	{
-		scope=2;
-		scopeCurator=1;
-		displayName="Battleship (Oberon class no scripts)";
-		author="Battlestad";
-		mapSize=450;
-	};
+	// class TIOW_Object;
+	// class TIOW_Oberon: TIOW_Object
+	// {
+		// scope=2;
+		// scopeCurator=1;
+		// displayName="Battleship (Oberon class no scripts)";
+		// author="Battlestad";
+		// mapSize=450;
+	// };
 };
 class CfgGlasses
 {
