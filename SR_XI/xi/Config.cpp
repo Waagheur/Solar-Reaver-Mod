@@ -1202,8 +1202,10 @@ class cfgWeapons
 		visionMode[]=
 		{
 			"Normal",
-			"NVG"
+			"NVG",
+			"TI"
 		};
+		thermalMode[]={1,7};
 	};
 	// class XI_drone_packed_base: ACE_ItemCore
 	// {
