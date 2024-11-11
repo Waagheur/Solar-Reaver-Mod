@@ -1340,7 +1340,7 @@ class CfgVehicles{
     {
 		displayName = "[TSR][PXI] Centuria Resupply";
 		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"SR_Supply\Textures\SupplyPod_Tactical_CO.paa"};
+		hiddenSelectionsTextures[] = {"SR_Supply\Textures\SupplyPod_Guard_CO.paa"};
 		class TransportMagazines
 		{
 
@@ -1425,135 +1425,135 @@ class CfgVehicles{
 			class xx_SR_XI_Melta_Mag // SR_XI Meltagun
 			{
 				magazine = "SR_XI_Melta_Mag";
-				count = 20;
+				count = 50;
 			};
 			class xx_XI_IG_GL_Smoke_White_Mag
 			{
 				magazine = "XI_IG_GL_Smoke_White_Mag";
-				count = 10;
+				count = 50;
 			};
 			class xx_XI_IG_UBGL_Smoke_White_Mag_3rnd
 			{
 				magazine = "XI_IG_UBGL_Smoke_White_Mag_3rnd";
-				count = 10;
+				count = 20;
 			};
 			class xx_XI_IG_UBGL_Smoke_Red_Mag_3rnd
 			{
 				magazine = "XI_IG_UBGL_Smoke_Red_Mag_3rnd";
-				count = 10;
+				count = 20;
 			};
 			class xx_XI_IG_UBGL_Smoke_Orange_Mag_3rnd
 			{
 				magazine = "XI_IG_UBGL_Smoke_Orange_Mag_3rnd";
-				count = 10;
+				count = 20;
 			};
 			class xx_XI_IG_UBGL_Smoke_Blue_Mag_3rnd
 			{
 				magazine = "XI_IG_UBGL_Smoke_Blue_Mag_3rnd";
-				count = 10;
+				count = 20;
 			};
 			class xx_XI_IG_UBGL_Smoke_Yellow_Mag_3rnd
 			{
 				magazine = "XI_IG_UBGL_Smoke_Yellow_Mag_3rnd";
-				count = 10;
+				count = 20;
 			};
 			class xx_XI_IG_UBGL_Smoke_Green_Mag_3rnd
 			{
 				magazine = "XI_IG_UBGL_Smoke_Green_Mag_3rnd";
-				count = 10;
+				count = 20;
 			};
 			class xx_XI_IG_UBGL_Smoke_Purple_Mag_3rnd
 			{
 				magazine = "XI_IG_UBGL_Smoke_Purple_Mag_3rnd";
-				count = 10;
+				count = 20;
 			};
 			class xx_1Rnd_HE_Grenade_shell
 			{
 				magazine = "1Rnd_HE_Grenade_shell";
-				count = 20;
+				count = 200;
 			};
 			class xx_1Rnd_Smoke_Grenade_shell
 			{
 				magazine = "1Rnd_Smoke_Grenade_shell";
-				count = 20;
+				count = 200;
 			};
 			class xx_TIOW_1Rnd_HE_Grenade_shell
 			{
 				magazine = "TIOW_1Rnd_HE_Grenade_shell";
-				count = 20;
+				count = 200;
 			};
 			// IG grenade launcher
 			class xx_TIOW_IG_GL_Buck_mag
 			{
 				magazine = "TIOW_IG_GL_Buck_mag";
-				count = 10;
+				count = 50;
 			};
 			class xx_TIOW_IG_GL_Flame_mag
 			{
 				magazine = "TIOW_IG_GL_Flame_mag";
-				count = 10;
+				count = 50;
 			};
 			class xx_TIOW_IG_GL_Flare_mag
 			{
 				magazine = "TIOW_IG_GL_Flare_mag";
-				count = 10;
+				count = 50;
 			};
 			class xx_TIOW_IG_GL_Frag_mag
 			{
 				magazine = "TIOW_IG_GL_Frag_mag";
-				count = 10;
+				count = 50;
 			};
 			class xx_TIOW_IG_GL_Krak_mag
 			{
 				magazine = "TIOW_IG_GL_Krak_mag";
-				count = 10;
+				count = 50;
 			};
 			class xx_TIOW_IG_GL_Smoke_mag
 			{
 				magazine = "TIOW_IG_GL_Smoke_mag";
-				count = 10;
+				count = 50;
 			};
 			// Krieg grenade launcher
 			class xx_TIOW_Krieg_GL_Buck_mag
 			{
 				magazine = "TIOW_Krieg_GL_Buck_mag";
-				count = 40;
+				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Flame_mag
 			{
 				magazine = "TIOW_Krieg_GL_Flame_mag";
-				count = 40;
+				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Flare_mag
 			{
 				magazine = "TIOW_Krieg_GL_Flare_mag";
-				count = 40;
+				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Frag_mag
 			{
 				magazine = "TIOW_Krieg_GL_Frag_mag";
-				count = 40;
+				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Krak_mag
 			{
 				magazine = "TIOW_Krieg_GL_Krak_mag";
-				count = 40;
+				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Smoke_mag
 			{
 				magazine = "TIOW_Krieg_GL_Smoke_mag";
-				count = 40;
+				count = 200;
 			};
 			// SR_XI Weapons
 			class xx_SR_XI_Plasma_Mag
 			{
 				magazine = "SR_XI_Plasma_Mag";
-				count = 30;
+				count = 50;
 			};
 			class xx_SR_XI_Lasbolt_Mag
 			{
 				magazine = "SR_XI_Lasbolt_Mag";
-				count = 100;
+				count = 120;
 			};
 			class xx_SR_XI_Heavy_Lasbolt_Mag
 			{
@@ -1563,12 +1563,12 @@ class CfgVehicles{
 			class xx_SR_XI_Stubber_Mag
 			{
 				magazine = "SR_XI_Stubber_Mag";
-				count = 100;
+				count = 120;
 			};
 			class xx_SR_XI_Autogun_Mag
 			{
 				magazine = "SR_XI_Autogun_Mag";
-				count = 100;
+				count = 120;
 			};
 			class xx_SR_XI_BattleRifle_Mag
 			{
@@ -1588,33 +1588,33 @@ class CfgVehicles{
 			class xx_SR_XI_Lucius22c_Solid
 			{
 				magazine = "SR_XI_Lucius22c_Solid";
-				count = 30;
+				count = 50;
 			};
             class xx_SR_XI_Lucius22c_Pellet
             {
                 magazine = "SR_XI_Lucius22c_Pellet";
-                count = 30;
+                count = 50;
             };
 			// TIOW IG Plasma Pistol
 			class xx_TIOW_IGPlasmaPistol_OC_Mag
 			{
 				magazine = "TIOW_IGPlasmaPistol_OC_Mag";
-				count = 10;
+				count = 20;
 			};
 			class xx_TIOW_IGPlasmaPistol_Mag
 			{
 				magazine = "TIOW_IGPlasmaPistol_Mag";
-				count = 20;
+				count = 30;
 			};
 			class xx_TIOW_Guard_BoltMag // TIOW IG Boltgun
 			{
 				magazine = "TIOW_Guard_BoltMag";
-				count = 50;
+				count = 100;
 			};
 			class xx_ic_bolt_small_mag // IC IG Boltgun
 			{
 				magazine = "ic_bolt_small_mag";
-				count = 50;
+				count = 100;
 			};
 			// Laspistols
 			class xx_LuciusLaspistol_mag
@@ -1733,7 +1733,7 @@ class CfgVehicles{
 			class xx_ML700_StormBolter_Stanag
 			{
 				magazine = "ML700_StormBolter_Stanag";
-				count = 50;
+				count = 80;
 			};
 			
 			class xx_ACE_painkillers {
