@@ -22,7 +22,7 @@ class CfgVehicles
 	class Primaris_SR_Rhys: Primaris_SM_SAL_6
 	{
 		author="Waagheur, Rhys";
-		displayName="Primaris Rhys (Mk.10)";
+		displayName="Primaris Rhys (Reiver)";
 		model = "Project_Primaris_D_Main\Models\Phobos_Reiver.p3d";
 		uniformClass="Primaris_SM_Rhys_W";
 		hiddenSelectionsTextures[]=
@@ -38,7 +38,7 @@ class CfgWeapons
 	class SR_MK10_Armor_Blackshield;
 	class Primaris_SM_Rhys_W: SR_MK10_Armor_Blackshield
 	{
-		displayName="[TSR] Primaris MK.10 (Rhys)";
+		displayName="[TSR] Primaris Reiver (Rhys)";
 		class ItemInfo: ItemInfo
 		{
 			uniformClass="Primaris_SR_Rhys";
@@ -65,7 +65,7 @@ class CfgWeapons
 		scope=2;
 		scopeArsenal=2;
 		scopeCurator=2;
-		displayName="[TSR] Primaris Mk.10 (Rhys)";
+		displayName="[TSR] Primaris Phobos (Rhys)";
 		model="Project_Primaris_D_Main\Models\Shoulder_Phobos.p3d";
 		hiddenSelectionsTextures[]=
 		{
@@ -73,7 +73,7 @@ class CfgWeapons
 		};
 		class ItemInfo: ItemInfo
 		{
-			uniformModel="Project_Primaris_D_Main\Models\Shoulder_Main.p3d";
+			uniformModel="Project_Primaris_D_Main\Models\Shoulder_Phobos.p3d";
 			hiddenSelections[]=
 			{
 				"Camo1"
