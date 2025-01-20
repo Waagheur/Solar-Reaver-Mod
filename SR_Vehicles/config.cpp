@@ -1235,10 +1235,12 @@ class CfgVehicles
 			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
 			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhinotracks_co.paa"
 		};
-		class EventHandlers
-		{
-			postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
-		};
+		// TIOW Predators already come (at least from some place) with smoke launchers
+		// Trying to script add them breaks them
+		// class EventHandlers
+		// {
+			// postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
+		// };
 	};
 	class TIOW_SM_Vindicator_UM;
 	class TSR_Vindicator: TIOW_SM_Vindicator_UM
