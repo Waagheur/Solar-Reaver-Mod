@@ -450,10 +450,6 @@ class CfgVehicles{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 50;
 			};
-			class xx_ACE_painkillers {
-				name = "ACE_painkillers";
-				count = 16;
-			};
 		};
 		class TransportWeapons
 		{
@@ -613,10 +609,6 @@ class CfgVehicles{
 			{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 50;
-			};
-			class xx_ACE_painkillers {
-				name = "ACE_painkillers";
-				count = 16;
 			};
 		};
 		class TransportWeapons
@@ -842,10 +834,6 @@ class CfgVehicles{
 				magazine = "Steve_SM_PlasmaPistol_Mag";
 				count = 20;
 			};
-			class xx_ACE_painkillers {
-				name = "ACE_painkillers";
-				count = 16;
-			};
 		};
 		class TransportWeapons
 		{
@@ -964,10 +952,6 @@ class CfgVehicles{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 50;
 			};
-			class xx_ACE_painkillers {
-				name = "ACE_painkillers";
-				count = 16;
-			};
 		};
 		class TransportWeapons
 		{
@@ -1072,10 +1056,6 @@ class CfgVehicles{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 50;
 			};
-			class xx_ACE_painkillers {
-				name = "ACE_painkillers";
-				count = 16;
-			};
 		};
 		class TransportWeapons
 		{
@@ -1169,10 +1149,6 @@ class CfgVehicles{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 30;
 			};
-			class xx_ACE_painkillers {
-				name = "ACE_painkillers";
-				count = 16;
-			};
 		};
 		class TransportWeapons
 		{
@@ -1257,10 +1233,6 @@ class CfgVehicles{
 			{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 50;
-			};
-			class xx_ACE_painkillers {
-				name = "ACE_painkillers";
-				count = 32;
 			};
 		};
 		class TransportWeapons
@@ -1550,6 +1522,11 @@ class CfgVehicles{
 				magazine = "SR_XI_Plasma_Mag";
 				count = 50;
 			};
+			class xx_SR_XI_PlasmaPistol_Mag
+			{
+				magazine = "SR_XI_PlasmaPistol_Mag";
+				count = 100;
+			};
 			class xx_SR_XI_Lasbolt_Mag
 			{
 				magazine = "SR_XI_Lasbolt_Mag";
@@ -1596,16 +1573,16 @@ class CfgVehicles{
                 count = 50;
             };
 			// TIOW IG Plasma Pistol
-			class xx_TIOW_IGPlasmaPistol_OC_Mag
-			{
-				magazine = "TIOW_IGPlasmaPistol_OC_Mag";
-				count = 20;
-			};
-			class xx_TIOW_IGPlasmaPistol_Mag
-			{
-				magazine = "TIOW_IGPlasmaPistol_Mag";
-				count = 30;
-			};
+			// class xx_TIOW_IGPlasmaPistol_OC_Mag
+			// {
+				// magazine = "TIOW_IGPlasmaPistol_OC_Mag";
+				// count = 20;
+			// };
+			// class xx_TIOW_IGPlasmaPistol_Mag
+			// {
+				// magazine = "TIOW_IGPlasmaPistol_Mag";
+				// count = 30;
+			// };
 			class xx_TIOW_Guard_BoltMag // TIOW IG Boltgun
 			{
 				magazine = "TIOW_Guard_BoltMag";
@@ -1735,11 +1712,6 @@ class CfgVehicles{
 				magazine = "ML700_StormBolter_Stanag";
 				count = 80;
 			};
-			
-			class xx_ACE_painkillers {
-				name = "ACE_painkillers";
-				count = 16;
-			};
 		};
 		class TransportWeapons
 		{
@@ -1757,6 +1729,16 @@ class CfgVehicles{
 			{
 				weapon = "XI_RevolverA_base";
 				count = 4;
+			};
+			class xx_ML700_Launcher_Weapon_CadianLauncher_Loaded
+			{
+				weapon = "ML700_Launcher_Weapon_CadianLauncher_Loaded";
+				count = 10;
+			};
+			class xx_xi_legionnaire1Conscript_dt
+			{
+				weapon = "xi_legionnaire1Conscript_dt";
+				count = 10;
 			};
 		};
 		class TransportItems
