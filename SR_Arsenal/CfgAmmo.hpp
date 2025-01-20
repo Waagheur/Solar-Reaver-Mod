@@ -41,14 +41,16 @@ class CfgAmmo
 		indirectHitRange = 0.4;
 		caliber = 3;
 	};
+	class TIOW_SM_PlasmagunRound;
 	class Sh_120mm_HE;
-	class SR_PlasmagunRound: Sh_120mm_HE // B_20mm
+	// Currently unused
+	class SR_PlasmagunRound: TIOW_SM_PlasmagunRound // B_20mm
 	{
 		hit = 80;
 		typicalSpeed = 1050;
 		indirectHit = 25;
 		indirectHitRange = 2;
-		warheadName = "HE";
+		warheadName = "AP";
 		caliber = 1.4;
 		explosive = 0.65;
 		ACE_caliber = 20;
@@ -62,7 +64,7 @@ class CfgAmmo
 		ACE_muzzleVelocities[] = {1050};
 		ACE_barrelLengths[] = {728.98};
 	};
-	class SR_Overcharge_PlasmagunRound: SR_PlasmagunRound // B_40mm_APFSDS
+	class SR_Overcharge_PlasmagunRound: TIOW_SM_PlasmagunRound // B_40mm_APFSDS
 	{
 		// Origin : 350
 		hit = 240; // hit - indirectHit = actual hit
@@ -71,7 +73,7 @@ class CfgAmmo
 		// Origin : 2.5
 		indirectHitRange = 5;
 		typicalSpeed = 1140;
-		warheadName = "AP";
+		warheadName = "HE";
 		caliber = 8;
 		explosive = 0.65;
 		ACE_caliber = 40;
@@ -86,7 +88,27 @@ class CfgAmmo
 		ACE_muzzleVelocities[] = {1140};
 		ACE_barrelLengths[] = {728.98};
 	};
-	class SR_Overcharge_PlasmapistolRound: SR_PlasmagunRound // B_40mm_APFSDS
+	class SR_PlasmaPistolRound: TIOW_SM_PlasmagunRound
+	{
+		hit = 70;
+		typicalSpeed = 1050;
+		indirectHit = 20;
+		indirectHitRange = 1.5;
+		warheadName = "AP";
+		caliber = 1.4;
+		explosive = 0.65;
+		ACE_caliber = 20;
+		ACE_bulletLength = 102;
+		ACE_bulletMass = 102.4;
+		ACE_ammoTempMuzzleVelocityShifts[] = {-26.55, -25.47, -22.85, -20.12, -16.98, -12.8, -7.64, -1.53, 5.96, 15.17, 26.19};
+		ACE_ballisticCoefficients[] = {0.63};
+		ACE_velocityBoundaries[] = {};
+		ACE_standardAtmosphere = "ASM";
+		ACE_dragModel = 1;
+		ACE_muzzleVelocities[] = {1050};
+		ACE_barrelLengths[] = {728.98};
+	};
+	class SR_Overcharge_PlasmapistolRound: TIOW_SM_PlasmagunRound // B_40mm_APFSDS
 	{
 		// Origin : 350
 		hit = 200; // hit - indirectHit = actual hit
@@ -95,7 +117,7 @@ class CfgAmmo
 		// Origin : 2.5
 		indirectHitRange = 3;
 		typicalSpeed = 1140;
-		warheadName = "AP";
+		warheadName = "HE";
 		caliber = 8;
 		explosive = 0.65;
 		ACE_caliber = 40;

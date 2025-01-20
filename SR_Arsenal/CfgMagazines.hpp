@@ -3,6 +3,7 @@ class Steve_Trig_BoltPistolMag;
 class Steve_Phob_BoltPistolMag;
 class Steve_30k_lascutter_Mag;
 class TIOW_30rnd_GodwynBoltgunMag;
+class Steve_SM_PlasmaPistol_Mag;
 
 class TIOW_SM_Rocket_Frag_Mag;
 
@@ -80,6 +81,17 @@ class CfgMagazines
 		initSpeed = 1000;
 		maxLeadSpeed = 150;
 		tracersEvery = 1;
+	};
+	
+	class SR_PlasmaPistol_Mag: Steve_SM_PlasmaPistol_Mag
+	{
+		scope = 2;
+		author="Waagheur";
+		displayName="[TSR] Plasma Pistol Flask";
+		descriptionShort="Plasma Pistol flask";
+		ammo="SR_PlasmaPistolRound";
+		mass = 12;
+		count = 20;
 	};
 	
 	

@@ -62,13 +62,15 @@ if (not(isDedicated)) then {
 		"SR_Ragefire_Plasma_Gun", 
 		"SR_Ryza_Plasma_Gun", 
 		"SR_Ryza_Plasma_Pistol",
+		"TIOW_Guard_Plasma_Pistol",
 		"TIOW_SM_Under_Plas_1",
 		"Steve_30k_Under_Plasma"
 	];
 
 	_plasma_pistol_weapons = [
 		"SR_Ryza_Plasma_Pistol",
-        "SR_Ryza_Plasma_Pistol_Banner"
+        "SR_Ryza_Plasma_Pistol_Banner",
+		"SR_XI_TIOW_Guard_Plasma_Pistol"
 	];
 	
 	{

@@ -1878,7 +1878,7 @@ class Cfgweapons
 		plasmaCoolingMult = 1;
 		magazines[]=
 		{
-			"Steve_SM_PlasmaPistol_Mag"
+			"SR_PlasmaPistol_Mag"
 		};
 		modes[]=
 		{
@@ -2036,7 +2036,7 @@ class Cfgweapons
 		plasmaCoolingMult = 1;
 		magazines[]=
 		{
-			"Steve_SM_PlasmaPistol_Mag"
+			"SR_PlasmaPistol_Mag"
 		};
 		modes[]=
 		{

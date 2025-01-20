@@ -1765,9 +1765,9 @@ if (not(isDedicated)) then {
 					_mode = (_this select 3);
 					if (_mode == "Overcharge") then {
 						
-						//Overcharge consummes 7 shots
-						if (_ammo > 5) then {
-							player setAmmo [_weapon, _ammo - 6];
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
 							
 							_position = getPosWorld _projectile;
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
@@ -1864,9 +1864,9 @@ if (not(isDedicated)) then {
 					_mode = (_this select 3);
 					if (_mode == "Overcharge") then {
 						
-						//Overcharge consummes 7 shots
-						if (_ammo > 5) then {
-							player setAmmo [_weapon, _ammo - 6];
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
 							
 							_position = getPosWorld _projectile;
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
@@ -2452,6 +2452,105 @@ if (not(isDedicated)) then {
 		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], -1]) != -1) then {
 			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], -1])];
 			missionNamespace setVariable [format ["%1_handler","SR_XI_ic_PlasmaGunWhite"], -1];
+		};
+	};
+	
+	if ("SR_XI_TIOW_Guard_Plasma_Pistol" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_TIOW_Guard_Plasma_Pistol"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_XI_TIOW_Guard_Plasma_Pistol"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				
+				if (_weapon == "SR_XI_TIOW_Guard_Plasma_Pistol") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]) 
+								+ ([40, 60] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]) 
+								+ ([4, 8] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]) 
+							+ ([4, 8] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_XI_TIOW_Guard_Plasma_Pistol' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_XI_TIOW_Guard_Plasma_Pistol"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_Ryza_Plasma_Pistol_Banner" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_XI_TIOW_Guard_Plasma_Pistol" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_XI_TIOW_Guard_Plasma_Pistol" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]) > 0) then {
+							_text =
+								"[TSR] [PXI] Plasma Pistol" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_XI_TIOW_Guard_Plasma_Pistol"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_XI_TIOW_Guard_Plasma_Pistol"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_XI_TIOW_Guard_Plasma_Pistol"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_XI_TIOW_Guard_Plasma_Pistol"], -1];
 		};
 	};
 	
