@@ -481,6 +481,25 @@ class CfgVehicles
 			postInit = "params ['_entity']; [_entity] call SR_fnc_sl_buffs_init; _entity addEventHandler ['Respawn',{(_this select 0) call SR_fnc_sl_buffs_init;}];";
 		};
     };
+	class TIOW_Strike_TA_Officer_B;
+	class SR_XI_SL : TIOW_Strike_TA_Officer_B
+	{
+		displayName = "[TSR] [PXI] Squad Leader";
+		editorCategory = "EdCategory_TheAdeptusAstartes";
+		editorSubcategory = "EdSubCat_SR";
+		scope = 2;
+		scopeArsenal = 2;
+		scopeCurator = 2;
+		Items[] = {};
+		RespawnItems[] = {};
+		linkedItems[] = {};
+		RespawnlinkedItems[] = {};
+	
+		class EventHandlers
+		{
+			postInit = "params ['_entity']; [_entity] call SR_fnc_sl_buffs_init; _entity addEventHandler ['Respawn',{(_this select 0) call SR_fnc_sl_buffs_init;}];";
+		};
+	};
 	
 	
 	
