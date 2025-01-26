@@ -194,7 +194,7 @@ class Cfgweapons
 				};
 			};
 		};
-		subItems[] = {"Integrated_NVG_TI_1_F"};
+		subItems[] = {""};
 	};
 	
 	class SR_SkullHelmet_Black: TIOW_MK7Helmet_UM
