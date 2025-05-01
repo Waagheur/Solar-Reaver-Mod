@@ -87,6 +87,8 @@ class CfgAmmo
 		ACE_dragModel = 1;
 		ACE_muzzleVelocities[] = {1140};
 		ACE_barrelLengths[] = {728.98};
+		
+		SoundSetExplosion[] = {"Shell105mm130mm_Exp_SoundSet","Shell105mm130mm_Tail_SoundSet","Explosion_Debris_SoundSet"};
 	};
 	class SR_PlasmaPistolRound: TIOW_SM_PlasmagunRound
 	{
@@ -131,6 +133,8 @@ class CfgAmmo
 		ACE_dragModel = 1;
 		ACE_muzzleVelocities[] = {1140};
 		ACE_barrelLengths[] = {728.98};
+		
+		SoundSetExplosion[] = {"Shell105mm130mm_Exp_SoundSet","Shell105mm130mm_Tail_SoundSet","Explosion_Debris_SoundSet"};
 	};
 	
 	
