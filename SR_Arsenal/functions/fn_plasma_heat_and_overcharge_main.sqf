@@ -109,7 +109,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -207,7 +207,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -311,7 +311,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -409,7 +409,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -507,7 +507,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -605,7 +605,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -703,7 +703,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -809,7 +809,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -907,7 +907,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1009,7 +1009,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1107,7 +1107,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1205,7 +1205,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1303,7 +1303,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1401,7 +1401,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1499,7 +1499,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1597,7 +1597,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1695,7 +1695,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1794,7 +1794,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1893,7 +1893,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -1997,7 +1997,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -2097,7 +2097,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -2197,7 +2197,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -2297,7 +2297,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -2397,7 +2397,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -2496,7 +2496,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -2874,7 +2874,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -2972,7 +2972,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -3070,7 +3070,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -3168,7 +3168,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -3269,7 +3269,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -3367,7 +3367,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -3465,7 +3465,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
@@ -3563,7 +3563,7 @@ if (not(isDedicated)) then {
 							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
 							_velocity = velocity _projectile;
 							
-							deleteVehicle _projectile;
+							// deleteVehicle _projectile;
 							
 							_projectile = "SR_Overcharge_PlasmagunRound" createVehicle [0,0,0];
 							_projectile setPosWorld _position;
