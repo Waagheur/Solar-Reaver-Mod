@@ -3691,14 +3691,29 @@ class Cfgweapons
 
 
 
-	class SR_Steve_30K_Rocket_1 : Steve_30K_Rocket_1
+	class SR_Steve_SM_MissL_01_New : Steve_SM_MissL_01_New
 	{
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
 		author="Waagheur";
 		baseWeapon="SR_Steve_30K_Rocket_1";
-		displayName="[TSR] [AoD] Proteus-II Pattern Missile Launcher";
+		displayName="[TSR] [AoD] Proteus-II Missile Launcher (Shoulder)";
+		magazines[] += {
+			"SR_Light_Frag_Missile"
+		};
+	};
+	class SR_Steve_SM_MissL_02_New : Steve_SM_MissL_02_New
+	{
+		scope=2;
+		scopeCurator=2;
+		scopeArsenal=2;
+		author="Waagheur";
+		baseWeapon="SR_Steve_30K_Rocket_1";
+		displayName="[TSR] [AoD] Proteus-II Missile Launcher (Hip)";
+		magazines[] += {
+			"SR_Light_Frag_Missile"
+		};
 	};
 	
 	class SR_Steve_SM_LasCan_01_New : Steve_SM_LasCan_01_New

@@ -1022,14 +1022,14 @@ class CfgVehicles{
 				magazine = "Steve_SM_Lascannon_Mag";
 				count = 70;
 			};
-			class xx_Steve_30k_Rocket_Krak_Mag
+			class xx_STEVE_30k_Rocket_Krak_Mag_NEW
 			{
-				magazine = "Steve_30k_Rocket_Krak_Mag";
+				magazine = "STEVE_30k_Rocket_Krak_Mag_NEW";
 				count = 70;
 			};
-			class xx_Steve_30k_Rocket_Frag_Mag
+			class xx_STEVE_30k_Rocket_Frag_Mag_NEW
 			{
-				magazine = "Steve_30k_Rocket_Frag_Mag";
+				magazine = "STEVE_30k_Rocket_Frag_Mag_NEW";
 				count = 70;
 			};
 			class xx_SR_Light_Frag_Missile
