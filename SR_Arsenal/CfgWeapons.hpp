@@ -147,7 +147,8 @@ class TIOW_CSM_LasCan_03;
 class TIOW_CSM_LasCan_04;
 class TIOW_CSM_LasCan_05;
 
-class Steve_30K_Rocket_1;
+class Steve_SM_MissL_01_New;
+class Steve_SM_MissL_02_New;
 class Steve_SM_LasCan_01_New;
 class Steve_SM_LasCan_02_New;
 
