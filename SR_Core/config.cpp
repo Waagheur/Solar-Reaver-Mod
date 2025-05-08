@@ -7,9 +7,9 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.88;
-		version = "25.05.01.0";
-		versionStr = "25.05.01.0";
-		versionAr[] = {25,05,01,0};
+		version = "25.05.08.0";
+		versionStr = "25.05.08.0";
+		versionAr[] = {25,05,08,0};
 		requiredAddons[] = {"Extended_EventHandlers","cba_main","A3_UI_F"};
 		author = "Tengu";
 		fileName = "SR_Core.pbo";
