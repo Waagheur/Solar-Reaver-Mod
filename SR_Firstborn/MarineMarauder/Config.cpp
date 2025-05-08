@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class TIOW_Inf_SR_Ultramarines
+	class TIOW_Inf_SR_Marauder
 	{
 		requiredAddons[] =
 			{

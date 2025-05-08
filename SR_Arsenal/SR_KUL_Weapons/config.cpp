@@ -1,8 +1,8 @@
 class CfgPatches
 {
-	class SR_PP_Weapons
+	class SR_KUL_Weapons
 	{
-		name="SR PP Arsenal Mod";
+		name="SR KUL Arsenal Mod";
 		author="Waagheur";
 		requiredVersion=0.0020000001;
 		requiredAddons[]=
