@@ -162,6 +162,21 @@ class CfgMagazines
 		initSpeed=25;
 		mass=10;
 	};
+	class SR_Mag_Earthshaker_Grenade: HandGrenade_Stone
+	{
+		author = "Waagheur";
+		scope = 2;        
+		scopeArsenal = 2;       
+		displayName = "[SR] Earthshaker Grenade";
+		displayNameShort = "[SR] Earthshaker Grenade";
+		value = 0.1;
+		ammo = "SR_Ammo_Earthshaker_Grenade";
+		model="TIOW_IG_Explosives\TIOW_ig_frag_grenade\sm_frag_grenade_mag.p3d";
+		picture="\TIOW_IG_Explosives\TIOW_ig_frag_grenade\data\frag_icon.paa";
+		UIpicture="\TIOW_IG_Explosives\TIOW_ig_frag_grenade\data\frag_icon.paa";
+		initSpeed=25;
+		mass=10;
+	};
 	class SR_Mag_Stasis_Grenade: HandGrenade_Stone
 	{
 		author = "Waagheur";

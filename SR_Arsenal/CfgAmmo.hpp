@@ -220,6 +220,16 @@ class CfgAmmo
 		deflectionSlowDown=0.001;
 		soundHit[] = {"",1,1};
 	};
+	class SR_Ammo_Earthshaker_Grenade: Grenade
+	{
+		hit=1;
+		indirectHit=0.5;
+		indirectHitRange=16;
+		model="TIOW_IG_Explosives\TIOW_ig_frag_grenade\sm_frag_grenade_throw.p3d";
+		deflectionSlowDown=0.001;
+		
+		SoundSetExplosion[] = {"Shell105mm130mm_Exp_SoundSet","Shell105mm130mm_Tail_SoundSet","Explosion_Debris_SoundSet"};
+	};
 	class SR_Ammo_Stasis_Grenade: Grenade
 	{
 		hit=0;

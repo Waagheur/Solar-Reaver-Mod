@@ -32,6 +32,7 @@ if (not(isDedicated)) then {
 	_grenades = [
 		"SR_Mag_Rad_Grenade",
 		"SR_Mag_Stasis_Grenade",
+		"SR_Mag_Earthshaker_Grenade",
 		"SR_Mag_Tanglefoot_Grenade",
 		"SR_Mag_Antigrav_Grenade",
 		"SR_Mag_Vortex_Grenade"
@@ -84,6 +85,118 @@ if (not(isDedicated)) then {
 				missionNamespace setVariable [format ["%1_handler","SR_Mag_Rad_Grenade"], -1];
 			};
 		};
+		
+		if ("SR_Mag_Earthshaker_Grenade" in (magazines player)) then {
+			if ((missionNamespace getVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], -1]) == -1) then {
+				missionNamespace setVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], ["ace_firedPlayer", {
+					// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+					
+					_weapon = (_this select 1);
+					if (_weapon == "Throw") then {
+						_projectile = (_this select 6);
+						if ((_this select 4) == "SR_Ammo_Earthshaker_Grenade") then {
+						
+							// Damage buildings in hit targets
+							_projectile addEventHandler ["Explode", {
+								// params ["_projectile", "_pos", "_velocity"];
+								
+								_buildings = (_this select 1) nearObjects ["Building", 50];
+								
+								// Check if the buildings' can be damaged realistically
+								{
+									
+									if (not(isDamageAllowed _x)) then {
+										_buildings deleteAt _forEachIndex;
+									}
+									else {
+										// Check if armor is low enough for it to matter
+										if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> "armor")) > 10000) then {
+											_buildings deleteAt _forEachIndex;
+										};
+									};
+									
+								} forEachReversed _buildings;
+								
+								// Check for the buildings' roof
+								{
+									
+									_roofs = lineIntersectsSurfaces [(_this select 1), (_this select 1) vectorAdd [0,0,3], (_this select 0), objNull, true, -1];
+									_index = _forEachIndex;
+									_target = _x;
+									
+									{
+										if (((_x select 2) == _target) or ((_x select 3) == _target)) then {
+											_damage = 16
+												/ (1 max (((getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "armor")) - 500) / 120));
+											
+											_target setDamage ((damage _target) + _damage);
+											_buildings deleteAt _index;
+											break;
+										};
+									} forEach _roofs;
+									
+								} forEachReversed _buildings;
+								
+								// Check for the buildings' floor
+								{
+									
+									_floors = lineIntersectsSurfaces [(_this select 1), (_this select 1) vectorAdd [0,0,-3], (_this select 0), objNull, true, -1];
+									_index = _forEachIndex;
+									_target = _x;
+									
+									{
+										if (((_x select 2) == _target) or ((_x select 3) == _target)) then {
+											_damage = 16
+												/ (1 max (((getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "armor")) - 500) / 120));
+											
+											_target setDamage ((damage _target) + _damage);
+											_buildings deleteAt _index;
+											break;
+										};
+									} forEach _floors;
+									
+								} forEachReversed _buildings;
+								
+								// Check towards the buildings' center
+								{
+									
+									_straights = lineIntersectsSurfaces [(_this select 1), (getPosASL _x), (_this select 0), objNull, true, -1];
+									_target = _x;
+									
+									{
+										if (((_x select 2) == _target) or ((_x select 3) == _target)) then {
+											if (((_x select 0) distanceSqr (_this select 1)) < 400) then {
+												_damage = 16
+													/ (1 max (((getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "armor")) - 500) / 120))
+													/ (1 max (((_this select 1) distance (_x select 0)) - 3));
+												
+												_target setDamage ((damage _target) + _damage);
+												break;
+											}
+											else {
+												break;
+											};
+										};
+									} forEach _straights;
+									
+								} forEachReversed _buildings;
+								
+							}];
+							
+						};
+					};
+					
+				}] call CBA_fnc_addEventHandler];
+			};
+		}
+		else {
+			if ((missionNamespace getVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], -1]) != -1) then {
+				["ace_firedPlayer", (missionNamespace getVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], -1])] call CBA_fnc_removeEventHandler;
+				missionNamespace setVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], -1];
+			};
+		};
+		
+		
 		
 		if ("SR_Mag_Stasis_Grenade" in (magazines player)) then {
 			if ((missionNamespace getVariable [format ["%1_handler","SR_Mag_Stasis_Grenade"], -1]) == -1) then {
@@ -375,6 +488,116 @@ if (not(isDedicated)) then {
 			if ((missionNamespace getVariable [format ["%1_handler","SR_Mag_Rad_Grenade"], -1]) != -1) then {
 				player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_Mag_Rad_Grenade"], -1])];
 				missionNamespace setVariable [format ["%1_handler","SR_Mag_Rad_Grenade"], -1];
+			};
+		};
+		
+		if ("SR_Mag_Earthshaker_Grenade" in (magazines player)) then {
+			if ((missionNamespace getVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], -1]) == -1) then {
+				missionNamespace setVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], player addEventHandler ["FiredMan", {
+					// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+					
+					_weapon = (_this select 1);
+					if (_weapon == "Throw") then {
+						_projectile = (_this select 6);
+						if ((_this select 4) == "SR_Ammo_Earthshaker_Grenade") then {
+						
+							// Damage buildings in hit targets
+							_projectile addEventHandler ["Explode", {
+								// params ["_projectile", "_pos", "_velocity"];
+								
+								_buildings = (_this select 1) nearObjects ["Building", 50];
+								
+								// Check if the buildings' can be damaged realistically
+								{
+									
+									if (not(isDamageAllowed _x)) then {
+										_buildings deleteAt _forEachIndex;
+									}
+									else {
+										// Check if armor is low enough for it to matter
+										if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> "armor")) > 10000) then {
+											_buildings deleteAt _forEachIndex;
+										};
+									};
+									
+								} forEachReversed _buildings;
+								
+								// Check for the buildings' roof
+								{
+									
+									_roofs = lineIntersectsSurfaces [(_this select 1), (_this select 1) vectorAdd [0,0,3], (_this select 0), objNull, true, -1];
+									_index = _forEachIndex;
+									_target = _x;
+									
+									{
+										if (((_x select 2) == _target) or ((_x select 3) == _target)) then {
+											_damage = 16
+												/ (1 max (((getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "armor")) - 500) / 120));
+											
+											_target setDamage ((damage _target) + _damage);
+											_buildings deleteAt _index;
+											break;
+										};
+									} forEach _roofs;
+									
+								} forEachReversed _buildings;
+								
+								// Check for the buildings' floor
+								{
+									
+									_floors = lineIntersectsSurfaces [(_this select 1), (_this select 1) vectorAdd [0,0,-3], (_this select 0), objNull, true, -1];
+									_index = _forEachIndex;
+									_target = _x;
+									
+									{
+										if (((_x select 2) == _target) or ((_x select 3) == _target)) then {
+											_damage = 16
+												/ (1 max (((getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "armor")) - 500) / 120));
+											
+											_target setDamage ((damage _target) + _damage);
+											_buildings deleteAt _index;
+											break;
+										};
+									} forEach _floors;
+									
+								} forEachReversed _buildings;
+								
+								// Check towards the buildings' center
+								{
+									
+									_straights = lineIntersectsSurfaces [(_this select 1), (getPosASL _x), (_this select 0), objNull, true, -1];
+									_target = _x;
+									
+									{
+										if (((_x select 2) == _target) or ((_x select 3) == _target)) then {
+											if (((_x select 0) distanceSqr (_this select 1)) < 400) then {
+												_damage = 16
+													/ (1 max (((getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "armor")) - 500) / 120))
+													/ (1 max (((_this select 1) distance (_x select 0)) - 3));
+												
+												_target setDamage ((damage _target) + _damage);
+												break;
+											}
+											else {
+												break;
+											};
+										};
+									} forEach _straights;
+									
+								} forEachReversed _buildings;
+								
+							}];
+							
+						};
+					};
+					
+				}]];
+			};
+		}
+		else {
+			if ((missionNamespace getVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], -1]) != -1) then {
+				player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], -1])];
+				missionNamespace setVariable [format ["%1_handler","SR_Mag_Earthshaker_Grenade"], -1];
 			};
 		};
 		

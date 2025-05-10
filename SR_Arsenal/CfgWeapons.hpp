@@ -4015,6 +4015,7 @@ class Cfgweapons
 		muzzles[]+=
 		{
 			"SR_Rad_Grenade_Muzzle",
+			"SR_Earthshaker_Grenade_Muzzle",
 			"SR_Stasis_Grenade_Muzzle",
 			"SR_Tanglefoot_Grenade_Muzzle",
 			"SR_Antigrav_Grenade_Muzzle",
@@ -4026,6 +4027,13 @@ class Cfgweapons
 			magazines[]=
 			{
 				"SR_Mag_Rad_Grenade"
+			};
+		};
+		class SR_Earthshaker_Grenade_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				"SR_Mag_Earthshaker_Grenade"
 			};
 		};
 		class SR_Stasis_Grenade_Muzzle: ThrowMuzzle

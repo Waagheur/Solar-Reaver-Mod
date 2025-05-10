@@ -23,6 +23,7 @@ if (not(isDedicated)) then {
 
 	_grenades = [
 		"SR_Mag_Rad_Grenade",
+		"SR_Mag_Earthshaker_Grenade",
 		"SR_Mag_Stasis_Grenade",
 		"SR_Mag_Tanglefoot_Grenade",
 		"SR_Mag_Antigrav_Grenade",
