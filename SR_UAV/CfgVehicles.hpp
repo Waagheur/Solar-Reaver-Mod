@@ -97,15 +97,21 @@ class CfgVehicles {
                     turretInfoType = "ITC_Land_RscOptics_UAV_gunner";
             };
         };
-		model="Dos_Cosmetics\Models\Servo_UAV_1.p3d";
-		hiddenSelections[]=
+		
+		// New Skull probe setup
+		class EventHandlers
 		{
-			"Camo"
+			postinit = "params ['_entity']; [_entity] call SR_UAV_fnc_skull_handler;";
 		};
-		hiddenSelectionsTextures[]=
-		{
-			"Dos_Cosmetics\Textures\Servo_UAV_1_CO.paa"
-		};
+		// model="Dos_Cosmetics\Models\Servo_UAV_1.p3d";
+		// hiddenSelections[]=
+		// {
+			// "Camo"
+		// };
+		// hiddenSelectionsTextures[]=
+		// {
+			// "Dos_Cosmetics\Textures\Servo_UAV_1_CO.paa"
+		// };
     };
 	class SR_B_UAV_AR2i: SR_UAV_AR2i_base {
 		author = "Toadball";
@@ -351,4 +357,19 @@ class CfgVehicles {
             };
         };
     };
+	
+	class Item_ItemWatch;
+	class SR_Skull_Prop: Item_ItemWatch
+	{
+		model="Dos_Cosmetics\Models\Servo_UAV_1.p3d";
+		armor=100;
+		scope=2;
+		scopeArsenal=2;
+		scopeCurator=2;
+		displayName="[TSR] [PXI] Skull Probe";
+		faction="Empty";
+		vehicleClass="Objects";
+		editorCategory="XI_Props";
+		editorSubcategory="XI_OtherObjects";
+	};
 };

@@ -14,6 +14,9 @@ class CfgFunctions {
 			class canunpack {
 				file = "SR_UAV\functions\fnc_canunpack.sqf";
 			};
+			class skull_handler {
+				file = "SR_UAV\functions\fnc_skull_handler.sqf";
+			};
 		};
 	};
 };
