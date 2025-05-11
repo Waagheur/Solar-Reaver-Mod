@@ -48,7 +48,8 @@ class CfgPatches
 			"pxi_aquiliferAutogun_T3",
 			"pxi_malleusAutogun_T3",
 			"pxi_cultroAutogun_T3",
-			"xi_Autogun_Kyrent"
+			"xi_Autogun_Kyrent",
+			"SR_XI_SMG"
 		};
 		magazines[]=
 		{
@@ -66,7 +67,8 @@ class CfgPatches
 			"XI_Longlas_Mag_BII",
 			"XI_DMR_Mag_BI",
 			"XI_DMR_Mag_BII",
-			"MTI_SatchelCharge_Mag"
+			"MTI_SatchelCharge_Mag",
+			"SR_XI_SMG_Mag"
 		};
 		ammo[]=
 		{
@@ -92,7 +94,8 @@ class CfgPatches
 			"xi_20mm_ap_EW",
 			"xi_bolter_round_primary_standard_EW",
 			"MTI_SatchelCharge_Ammo",
-			"MTI_SatchelCharge_Ammo_Scripted"
+			"MTI_SatchelCharge_Ammo_Scripted",
+			"SR_XI_SMG_Round"
 		};
 	};
 };
@@ -1330,6 +1333,14 @@ class CfgAmmo
 		typicalSpeed = 1150;
 	};
 	
+	class IC_Thracian_rnd;
+	class SR_XI_SMG_Round: IC_Thracian_rnd
+	{
+		hit=20;
+		caliber=1;
+		typicalSpeed = 950;
+	};
+	
 	class SR_XI_Heavy_Lasbolt: IC_lasbolt
 	{
 		hit=20;
@@ -1777,6 +1788,16 @@ class CfgMagazines
 		mass="20";
 		tracersEvery=1;
 		lastRoundsTracer=999;
+	};
+	
+	class ic_Thracian_mag;
+	class SR_XI_SMG_Mag: ic_Thracian_mag
+	{
+		displayName="60rnd SMG Magazine";
+		ammo="SR_XI_SMG_Round";
+		initSpeed=950;
+		count=60;
+		mass="20";
 	};
 	
 	class SR_XI_Stubber_Mag: ic_30rnd_825_rifleMag
@@ -6573,6 +6594,64 @@ class cfgWeapons
 					};
 				};
 			};
+		};
+	};
+	
+	
+	
+	class ic_cad_autogunDM;
+	class SR_XI_SMG: ic_cad_autogunDM
+	{
+		displayName="[TSR] [PXI] Stub SMG";
+		magazines[]=
+		{
+			"SR_XI_SMG_Mag"
+		};
+		modes[] = {"FullAuto","FullerAuto","fullauto_medium","single_medium_optics1","single_far_optics2","ACE_Burst_far"};
+		
+		class FullerAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"WBK_DM_Smg_SoundSet"
+				};
+				begin1[]=
+				{
+					"\IC_Departmento_Munitorum\IC_Departmento_Weapons\Sounds\Autogun.ogg",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			textureType="fastAuto";
+			soundBurst=0;
+			reloadTime=0.033;
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=50;
+			midRangeProbab=0.69999999;
+			maxRange=200;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=250;
 		};
 	};
 };

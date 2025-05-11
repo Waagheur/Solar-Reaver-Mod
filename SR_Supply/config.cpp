@@ -1652,6 +1652,11 @@ class CfgVehicles{
 				magazine = "SR_XI_Heavy_Lasbolt_Mag";
 				count = 80;
 			};
+			class xx_SR_XI_SMG_Mag
+			{
+				magazine = "SR_XI_SMG_Mag";
+				count = 120;
+			};
 			class xx_SR_XI_Stubber_Mag
 			{
 				magazine = "SR_XI_Stubber_Mag";
