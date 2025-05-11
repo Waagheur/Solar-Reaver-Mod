@@ -13,6 +13,11 @@ class Steve_Volkite_Cav_Rnd;
 class Steve_Volkite_Charger_Rnd;
 class Steve_Volkite_Culv_Rnd;
 
+class IC_Frag_Missile;
+class IC_Krakk_Missile;
+class TIOW_SM_Rocket_Frag_Round_LSLOT;
+class TIOW_SM_Rocket_Krak_Round_LSLOT;
+
 class Grenade;
 
 class CfgAmmo
@@ -207,6 +212,52 @@ class CfgAmmo
 		indirectHit = 25;
 		indirectHitRange = 0.4;
 		typicalSpeed = 1000;
+	};
+	
+	
+	
+	// Visibomb missiles
+	
+	class SR_IC_Frag_Missile: IC_Frag_Missile
+	{
+		airLock = 0;
+		manualControl = 0;
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+		
+		hit = 250;
+		indirectHit = 80;
+		indirectHitRange = 25;
+	};
+	class SR_IC_Krakk_Missile: IC_Krakk_Missile
+	{
+		airLock = 0;
+		manualControl = 0;
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+		
+		hit = 1800;
+		indirectHit = 50;
+		indirectHitRange = 0.3;
+		submunitionAmmo = "";
+	};
+	class SR_TIOW_SM_Rocket_Frag_Round_LSLOT: TIOW_SM_Rocket_Frag_Round_LSLOT
+	{
+		airLock = 0;
+		manualControl = 0;
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+	};
+	class SR_TIOW_SM_Rocket_Krak_Round_LSLOT: TIOW_SM_Rocket_Krak_Round_LSLOT
+	{
+		airLock = 0;
+		manualControl = 0;
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
 	};
 	
 	

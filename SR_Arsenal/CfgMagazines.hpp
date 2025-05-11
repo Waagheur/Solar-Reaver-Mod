@@ -23,6 +23,11 @@ class Steve_Phob_BoltPistolMag_DF;
 class Steve_Phob_CombiBoltgunMag_DF;
 class Steve_Phob_Atrox_BoltgunMag_DF;
 
+class IC_frag_Missile_mag;
+class IC_krakk_Missile_mag;
+class TIOW_SM_Rocket_Frag_Mag_LSLOT;
+class TIOW_SM_Rocket_Krak_Mag_LSLOT;
+
 class CfgMagazines
 {
 	class SR_Master_Crafted_Phobos_BoltPistol_Mag: Steve_Phob_BoltPistolMag
@@ -276,4 +281,40 @@ class CfgMagazines
 	{
 		
 	};
+	
+	
+	
+	// Visibomb mags
+	
+	class SR_IC_frag_Missile_mag: IC_frag_Missile_mag
+	{
+		displayName="[TSR] [PXI] Visibomb Frag Missile";
+		ammo = "SR_IC_Frag_Missile";
+		
+		mass = 60;
+	};
+	class SR_IC_krakk_Missile_mag: IC_krakk_Missile_mag
+	{
+		displayName="[TSR] [PXI] Visibomb Krak Missile";
+		ammo = "SR_IC_Krakk_Missile";
+		
+		mass = 60;
+	};
+	class SR_TIOW_SM_Rocket_Frag_Mag_LSLOT: TIOW_SM_Rocket_Frag_Mag_LSLOT
+	{
+		displayName="[TSR] [Astartes] Visibomb Frag Missile";
+		ammo = "SR_TIOW_SM_Rocket_Frag_Round_LSLOT";
+		
+		mass = 60;
+		initSpeed = 50;
+	};
+	class SR_TIOW_SM_Rocket_Krak_Mag_LSLOT: TIOW_SM_Rocket_Krak_Mag_LSLOT
+	{
+		displayName="[TSR] [Astartes] Visibomb Krak Missile";
+		ammo = "SR_TIOW_SM_Rocket_Krak_Round_LSLOT";
+		
+		mass = 60;
+		initSpeed = 50;
+	};
+	
 };

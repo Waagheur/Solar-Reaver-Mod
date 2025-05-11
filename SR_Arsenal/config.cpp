@@ -13,6 +13,7 @@ class CfgPatches
 			"Steve_30K_weps2",
 			"Steve_30k_weps3",
 			"TIOW_Dos_Weps",
+			"TIOW_Launchers",
 			"A3_Data_F",
 			"A3_Characters_F",
 			"A3_Anims_F"
@@ -40,7 +41,10 @@ class CfgPatches
 			"SR_Combi_Bolter_2",
 			"SR_Combi_Bolter_3",
 			
-			"Throw"
+			"Throw",
+			
+			"SR_IC_Launcher_AT_grey",
+			"SR_TIOW_SM_Rocket_1_LSLOT"
 		};
 		magazines[]=
 		{
@@ -66,7 +70,12 @@ class CfgPatches
 			"SR_Phob_BoltgunMag_DF",
 			"SR_Phob_BoltPistolMag_DF",
 			"SR_Phob_CombiBoltgunMag_DF",
-			"SR_Phob_Atrox_BoltgunMag_DF"
+			"SR_Phob_Atrox_BoltgunMag_DF",
+			
+			"SR_IC_frag_Missile_mag",
+			"SR_IC_krakk_Missile_mag",
+			"SR_TIOW_SM_Rocket_Frag_Mag_LSLOT",
+			"SR_TIOW_SM_Rocket_Krak_Mag_LSLOT"
 		};
 		ammo[]=
 		{
@@ -86,7 +95,12 @@ class CfgPatches
 			"SR_Ammo_Stasis_Grenade",
 			"SR_Ammo_Tanglefoot_Grenade",
 			"SR_Ammo_Antigrav_Grenade",
-			"SR_Ammo_Vortex_Grenade"
+			"SR_Ammo_Vortex_Grenade",
+			
+			"SR_IC_Frag_Missile",
+			"SR_IC_Krakk_Missile",
+			"SR_TIOW_SM_Rocket_Frag_Round_LSLOT",
+			"SR_TIOW_SM_Rocket_Krak_Round_LSLOT"
 		};
 		units[]={};
 	};
@@ -626,6 +640,13 @@ class CfgFunctions
 			class flamer_init {
 				postInit 	= 1;
 				//file = "SR_Arsenal\functions\fn_flamer_init.sqf";
+			};
+			class visibomb_main {
+				// file = "SR_Arsenal\functions\fn_visibomb_main.sqf";
+			};
+			class visibomb_init {
+				postInit	= 1;
+				// file = "SR_Arsenal\functions\fn_visibomb_init.sqf";
 			};
 			class grav_slow_main {
 				//file = "SR_Arsenal\functions\fn_grav_slow_main.sqf";

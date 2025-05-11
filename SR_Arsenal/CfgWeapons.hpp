@@ -154,6 +154,12 @@ class Steve_SM_LasCan_02_New;
 
 
 
+// Visibomb bases
+class IC_Launcher_AT_grey;
+class TIOW_SM_Rocket_1_LSLOT;
+
+
+
 class Cfgweapons
 {
 	
@@ -4065,4 +4071,35 @@ class Cfgweapons
 			};
 		};
 	};
+	
+	
+	
+	
+	
+	// Visibomb launchers
+	class SR_IC_Launcher_AT_grey: IC_Launcher_AT_grey
+	{
+		displayName="[TSR] [PXI] Visibomb Accatran Launcher";
+		manualControl = 0;
+		canLock = 0;
+		baseWeapon="SR_IC_Launcher_AT_grey";
+		magazines[]=
+		{
+			"SR_IC_krakk_Missile_mag",
+			"SR_IC_frag_Missile_mag"
+		};
+	};
+	class SR_TIOW_SM_Rocket_1_LSLOT: TIOW_SM_Rocket_1_LSLOT
+	{
+		displayName="[TSR] [Astartes] Visibomb Missile Launcher";
+		manualControl = 0;
+		canLock = 0;
+		baseWeapon="SR_TIOW_SM_Rocket_1_LSLOT";
+		magazines[]=
+		{
+			"SR_TIOW_SM_Rocket_Krak_Mag_LSLOT",
+			"SR_TIOW_SM_Rocket_Frag_Mag_LSLOT"
+		};
+	};
+	
 };
