@@ -1037,6 +1037,16 @@ class CfgVehicles{
 				magazine = "SR_Light_Frag_Missile";
 				count = 120;
 			};
+			class xx_SR_TIOW_SM_Rocket_Frag_Mag_LSLOT
+			{
+				magazine = "SR_TIOW_SM_Rocket_Frag_Mag_LSLOT";
+				count = 30;
+			};
+			class xx_SR_TIOW_SM_Rocket_Krak_Mag_LSLOT
+			{
+				magazine = "SR_TIOW_SM_Rocket_Krak_Mag_LSLOT";
+				count = 30;
+			};
 			class xx_TIOW_30rnd_GodwynBoltgunMag
 			{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
@@ -1807,6 +1817,17 @@ class CfgVehicles{
 			class xx_VNG_MLSmoke_Mag
 			{
 				magazine = "VNG_MLSmoke_Mag";
+				count = 30;
+			};
+			//Visibombs
+			class xx_SR_IC_frag_Missile_mag
+			{
+				magazine = "SR_IC_frag_Missile_mag";
+				count = 30;
+			};
+			class xx_SR_IC_krakk_Missile_mag
+			{
+				magazine = "SR_IC_krakk_Missile_mag";
 				count = 30;
 			};
 			
