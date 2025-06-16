@@ -31,6 +31,8 @@ class CfgPatches
 			"TSR_TyphoonSpeeder",
 			"TSR_TornadoSpeeder",
 			"TSR_Rhino",
+			"TSR_Rhino_Marauder",
+			"TSR_Rhino_Reaver",
 			"TSR_Razorback_HB",
 			"TSR_Razorback_LC",
 			"TSR_Razorback_AC",
@@ -59,6 +61,12 @@ class CfgFunctions {
 			};
 			class addSmokeScreen {
 				file = "SR_Vehicles\functions\addSmokeScreen.sqf";
+			};
+			class checkLoadableVic {
+				file = "SR_Vehicles\functions\fn_checkLoadableVic.sqf";
+			};
+			class loadVictoCin {
+				file = "SR_Vehicles\functions\fn_loadVictoCin.sqf";
 			};
 		};
 	};
@@ -921,6 +929,19 @@ class CfgVehicles
 				parachuteHeightLimitDefault = 50;
 			};
 		};
+		class UserActions
+		{
+			class loadVehicle
+			{
+				displayName = "Load vehicle";
+				position = "pilotcontrol";
+				priority = 9;
+				radius = 5;
+				onlyForPlayer = 0;
+				condition = "this call Valkyrie_fnc_checkLoadableVic";
+				statement = "this call Valkyrie_fnc_loadVictoCin";
+			};
+		};
 	};
 
 	class Thunderhawk_1_UM_TIOW;
@@ -1122,6 +1143,112 @@ class CfgVehicles
 			postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
 		};
 	};
+	class TSR_Rhino_Marauder: TSR_Rhino
+	{
+		displayName="[TSR] Marauder Rhino";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Marauder_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	class Components;
+	class SensorTemplateMan;
+	class SensorTemplateActiveRadar;
+	class SensorTemplateDataLink;
+	class TSR_Rhino_Reaver: TSR_Rhino
+	{
+		displayName="[TSR] Reaver Rhino";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Reaver_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+		
+		class Components : Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class ManSensorComponent : SensorTemplateMan
+					{
+						class GroundTarget
+						{
+							minRange = 0;
+							maxRange = 2500;
+							typeRecognitionDistance = 2000;
+						};
+	
+						class AirTarget
+						{
+							minRange = 0;
+							maxRange = 3000;
+							typeRecognitionDistance = 2000;
+						};
+	
+						angleRangeHorizontal = 360;
+						angleRangeVertical = 360;
+						maxFogSeeThrough = -1;
+					};
+	
+					class ActiveRadarSensorComponent : SensorTemplateActiveRadar
+					{
+						class GroundTarget
+						{
+							minRange = 50;
+							maxRange = 2000;
+							typeRecognitionDistance = 1500;
+						};
+	
+						class AirTarget
+						{
+							minRange = 50;
+							maxRange = 3000;
+							typeRecognitionDistance = 2000;
+						};
+	
+						animDirection = "MainTurret";
+					};
+	
+					class DataLinkSensorComponent : SensorTemplateDataLink
+					{
+					};
+				};
+			};
+		};
+	};
+	class TSR_Rhino_Withered: TSR_Rhino
+	{
+		displayName="[TSR] Withered Rhino";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Withered_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	
 	class TIOW_SM_Razorback_UM;
 	class TSR_Razorback_HB: TIOW_SM_Razorback_UM
 	{
@@ -1150,6 +1277,23 @@ class CfgVehicles
 			postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
 		};
 	};
+	class TSR_Razorback_HB_Withered: TSR_Razorback_HB
+	{
+		displayName="[TSR] Withered Razorback (HB)";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Withered_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	
 	class TIOW_SM_Razorback_LC_UM;
 	class TSR_Razorback_LC: TIOW_SM_Razorback_LC_UM
 	{
@@ -1180,6 +1324,23 @@ class CfgVehicles
 			postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
 		};
 	};
+	class TSR_Razorback_LC_Withered: TSR_Razorback_LC
+	{
+		displayName="[TSR] Withered Razorback (LC)";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Withered_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	
 	class TIOW_SM_Razorback_AC_UM;
 	class TSR_Razorback_AC: TIOW_SM_Razorback_AC_UM
 	{
@@ -1212,6 +1373,23 @@ class CfgVehicles
 			postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
 		};
 	};
+	class TSR_Razorback_AC_Withered: TSR_Razorback_AC
+	{
+		displayName="[TSR] Withered Razorback (AC)";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Withered_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	
 	class TIOW_SM_Predator_UM;
 	class TSR_Predator: TIOW_SM_Predator_UM
 	{
@@ -1242,6 +1420,23 @@ class CfgVehicles
 			// postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
 		// };
 	};
+	class TSR_Predator_Withered: TSR_Predator
+	{
+		displayName="[TSR] Withered Predator Destructor";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Withered_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	
 	class TIOW_SM_Vindicator_UM;
 	class TSR_Vindicator: TIOW_SM_Vindicator_UM
 	{
@@ -1270,6 +1465,23 @@ class CfgVehicles
 			postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
 		};
 	};
+	class TSR_Vindicator_Withered: TSR_Vindicator
+	{
+		displayName="[TSR] Withered Vindicator";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Withered_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	
 	class TIOW_SM_Whirlwind_Arty_UM;
 	class Turrets;
 	class MainTurret;
@@ -1302,6 +1514,23 @@ class CfgVehicles
 			postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
 		};
 	};
+	class TSR_Whirlwind_Arty_Withered: TSR_Whirlwind_Arty
+	{
+		displayName="[TSR] Withered Whirlwind (Arty)";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Withered_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	
 	class TIOW_SM_Whirlwind_AA_UM;
 	class TSR_Whirlwind_AA: TIOW_SM_Whirlwind_AA_UM
 	{
@@ -1327,6 +1556,23 @@ class CfgVehicles
 			postInit = "params ['_entity']; [_entity] call SR_Vehicles_fnc_addSmokeScreen;";
 		};
 	};
+	class TSR_Whirlwind_AA_Withered: TSR_Whirlwind_AA
+	{
+		displayName="[TSR] Withered Whirlwind (AA)";
+		hiddenSelections[]=
+		{
+			"CamoColor",
+			"CamoParts",
+			"CamoTracks"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"SR_Vehicles\textures\SR_Rhino_Withered_CO.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_Rhino_Int_co.paa",
+			"\TIOW_SM_Vehs\Data\Textures\TIOW_rhinotracks_co.paa"
+		};
+	};
+	
 	class TIOW_Bike_Base;
 	class TSR_Ass_Bike_Bolter: TIOW_Bike_Base
 	{
