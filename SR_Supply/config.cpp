@@ -65,7 +65,7 @@ class CfgPatches
 //Missile Launcher 					TIOW_SM_Rocket_Frag_Mag TIOW_SM_Rocket_Krak_Mag
 //Lascannon							Steve_SM_Lascannon_Mag
 //Mediant Multi-melta				Steve_30k_MultiMelta_Mag
-//Rotor Cannon						Steve_Rotor_Cannon_Mag
+//Rotor Cannon						Steve_Rotor_Cannon_New_01_Mag
 //Ragefire Plasma Cannon 			TIOW_SM_PlasmaCannon_Mag
 //Kalibrax Autocannon 				TBD
 //Master Crafted Heavy Bolter 		Same as Heavy Bolter
@@ -547,7 +547,7 @@ class CfgVehicles{
 			};
 			class xx_Steve_Rotor_Cannon_Mag
 			{
-				magazine = "Steve_Rotor_Cannon_Mag";
+				magazine = "Steve_Rotor_Cannon_New_01_Mag";
 				count = 20;
 			};
 			class xx_TIOW_SM_Storm_Box_Mag
@@ -736,7 +736,7 @@ class CfgVehicles{
 			};
 			class xx_Steve_Rotor_Cannon_Mag // Rotor Cannon
 			{
-				magazine = "Steve_Rotor_Cannon_Mag";
+				magazine = "Steve_Rotor_Cannon_New_01_Mag";
 				count = 20;
 			};
 			class xx_SR_Meltagun_Mag // Meltagun

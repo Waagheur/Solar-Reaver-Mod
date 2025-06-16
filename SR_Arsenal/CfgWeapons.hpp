@@ -108,7 +108,7 @@ class TIOW_Mars_HeavyBolter;
 
 class Steve_30k_SM_GL_1;
 class Steve_Auto_Cannon_1_New;
-class Steve_Rotor_Cannon_New_1;
+class Steve_Rotor_Cannon_New_01;
 
 class TIOW_SM_PlasCan_01;
 class TIOW_SM_PlasCan_02;
@@ -3356,7 +3356,7 @@ class Cfgweapons
 		displayName="[TSR] [AOD] Kalibrax Pattern Autocannon";
 	};
 	
-	class SR_Steve_Rotor_Cannon_New_1 : Steve_Rotor_Cannon_New_1
+	class SR_Steve_Rotor_Cannon_New_01 : Steve_Rotor_Cannon_New_01
 	{
 		scope=2;
 		scopeCurator=2;
