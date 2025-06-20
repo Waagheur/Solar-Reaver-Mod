@@ -6,6 +6,12 @@
 
 class CfgVehicles
 {
+	class SoldierWB;
+	class TIOWSpaceMarine_Base : SoldierWB 
+	{
+		armor = 15;
+	};
+	
 	//				# Powerpacks/Backpacks #
 
 	class TIOW_MK2Powerpack_WS;

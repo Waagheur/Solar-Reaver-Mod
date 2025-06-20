@@ -356,49 +356,49 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 35;
+					armor = 25;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 35;
+					armor = 25;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 90;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 90;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 60;
+					armor = 30;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 60;
+					armor = 30;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 35;
+					armor = 30;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 35;
+					armor = 25;
 					passThrough = 0.1;
 				};
 				// class Hands {
@@ -467,49 +467,49 @@ class CfgWeapons
 				class Neck
 				{
 					hitpointName = "HitNeck";
-					armor = 35;
+					armor = 25;
 					passThrough = 0.1;
 				};
 				class Arms
 				{
 					hitpointName = "HitArms";
-					armor = 35;
+					armor = 25;
 					passThrough = 0.1;
 				};
 				class Chest
 				{
 					hitpointName = "HitChest";
-					armor = 90;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Diaphragm
 				{
 					hitpointName = "HitDiaphragm";
-					armor = 90;
+					armor = 50;
 					passThrough = 0.1;
 				};
 				class Abdomen
 				{
 					hitpointName = "HitAbdomen";
-					armor = 60;
+					armor = 30;
 					passThrough = 0.1;
 				};
 				class Pelvis
 				{
 					hitpointName = "HitPelvis";
-					armor = 60;
+					armor = 30;
 					passThrough = 0.1;
 				};
 				class Body
 				{
 					hitpointName = "HitBody";
-					armor = 35;
+					armor = 30;
 					passThrough = 0.1;
 				};
 				class Legs
 				{
 					hitpointName = "HitLegs";
-					armor = 35;
+					armor = 25;
 					passThrough = 0.1;
 				};
 				// class Hands {

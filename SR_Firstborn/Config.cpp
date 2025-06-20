@@ -16,7 +16,8 @@ class CfgPatches
 			"A3_Characters_F",
 			"A3_Anims_F",
 			"TIOWSpaceMarines",
-			"SR_Core"
+			"SR_Core",
+			"vng_tiow_vanilla_compat"
 		};
 		requiredVersion=0.1;
 		units[]=
