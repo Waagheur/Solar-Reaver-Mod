@@ -1723,6 +1723,11 @@ class CfgVehicles{
 				magazine = "ic_bolt_small_mag";
 				count = 100;
 			};
+			class xx_SR_XI_HEAVY_BOLTER_BELTX250
+			{
+				magazine = "SR_XI_HEAVY_BOLTER_BELTX250";
+				count = 30;
+			}
 			// Laspistols
 			class xx_LuciusLaspistol_mag
 			{
