@@ -27,7 +27,7 @@ _bruisesWounds = _bruisesWounds select {(((_x select 0)) == 20) or (((_x select 
 if (count (_bruisesWounds) == 0) exitWith {	false; };
 
 // Not enough time has elapsed to stitch a wound
-if (_totalTime - _elapsedTime > (count _bruisesWounds - 1) * 2.5) exitWith { true; };
+if (_totalTime - _elapsedTime > (count _bruisesWounds - 1) * ace_medical_treatment_woundStitchTime) exitWith { true; };
 
 private _openWounds = (_patient getVariable "ace_medical_OpenWounds");
 

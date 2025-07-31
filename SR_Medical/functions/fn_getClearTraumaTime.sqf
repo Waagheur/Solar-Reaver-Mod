@@ -19,4 +19,4 @@ private _bruisesWounds = [];
 forEach ((toArray (_patient getVariable "ace_medical_OpenWounds")) select 1);
 _bruisesWounds = _bruisesWounds select {(((_x select 0)) == 20) or (((_x select 0)) == 21) or (((_x select 0)) == 22)};
 
-count (_bruisesWounds) * 2.5;
+count (_bruisesWounds) * ace_medical_treatment_woundStitchTime;
