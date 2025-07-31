@@ -1863,6 +1863,18 @@ class CfgVehicles{
 				magazine = "ML700_StormBolter_Stanag";
 				count = 80;
 			};
+			
+			// Admech weapons
+			class xx_TIOW_galvanic_mag
+			{
+				magazine = "TIOW_galvanic_mag";
+				count = 30;
+			};
+			class xx_galvanic_mag
+			{
+				magazine = "galvanic_mag";
+				count = 30;
+			};
 		};
 		class TransportWeapons
 		{
