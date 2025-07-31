@@ -1646,6 +1646,32 @@ class CfgVehicles{
 				magazine = "TIOW_Krieg_GL_Smoke_mag";
 				count = 200;
 			};
+			// Old grenade launcher
+			class xx_smoll_buck_round
+			{
+				magazine = "smoll_buck_round";
+				count = 25;
+			};
+			class xx_smoll_flare1_round
+			{
+				magazine = "smoll_flare1_round";
+				count 25;
+			}
+			class xx_frag_round_smol
+			{
+				magazine = "frag_round_smol";
+				count = 25;
+			};
+			class xx_Krak_round_smol
+			{
+				magazine = "Krak_round_smol";
+				count = 25;
+			};
+			class xx_smoll_smoke_round
+			{
+				magazine = "smoll_smoke_round";
+				count = 25;
+			};
 			// SR_XI Weapons
 			class xx_SR_XI_Plasma_Mag
 			{
