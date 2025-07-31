@@ -605,9 +605,9 @@ class CfgVehicles{
 				magazine = "SR_Light_Frag_Missile";
 				count = 30;
 			};
-			class xx_CTR_Magazine_Box_6_Vengeance // CTR Combi melta regular
+			class xx_SR_CTR_Magazine_Box_6_Vengeance // CTR Combi melta regular
 			{
-				magazine = "CTR_Magazine_Box_6_Vengeance";
+				magazine = "SR_CTR_Magazine_Box_6_Vengeance";
 				count = 50;
 			};
 			class xx_CTR_Flask_Melta_1 // CTR melta
@@ -854,14 +854,14 @@ class CfgVehicles{
 				magazine = "CTR_GL_Krak";
 				count = 50;
 			};
-			class xx_CTR_Magazine_Sickle // CTR Boltgun 30rnd
+			class xx_SR_CTR_Magazine_Sickle // CTR Boltgun 30rnd
 			{
-				magazine = "CTR_Magazine_Sickle";
+				magazine = "SR_CTR_Magazine_Sickle";
 				count = 100;
 			};
-			class xx_CTR_Magazine_Sickle_2 // CTR Bolt carbines
+			class xx_SR_CTR_Magazine_Sickle_2 // CTR Bolt carbines
 			{
-				magazine = "CTR_Magazine_Sickle_2";
+				magazine = "SR_CTR_Magazine_Sickle_2";
 				count = 100;
 			};
 			class xx_SR_CTR_Flask_Plasma_1 // CTR assault plasma
@@ -879,9 +879,9 @@ class CfgVehicles{
 				magazine = "SR_CTR_Combi_Flask_Plasma_1";
 				count = 20;
 			};
-			class xx_CTR_Magazine_Box_5_Vengeance // CTR Combi plasma regular
+			class xx_SR_CTR_Magazine_Box_5_Vengeance // CTR Combi plasma regular
 			{
-				magazine = "CTR_Magazine_Box_5_Vengeance";
+				magazine = "SR_CTR_Magazine_Box_5_Vengeance";
 				count = 50;
 			};
 			class xx_CTR_Flask_Melta_1 // CTR melta
@@ -889,39 +889,44 @@ class CfgVehicles{
 				magazine = "CTR_Flask_Melta_1";
 				count = 50;
 			};
-			class xx_CTR_Magazine_Box // CTR Auto/Sternguard bolt
+			class xx_SR_CTR_Magazine_Box // CTR Auto bolt
 			{
-				magazine = "CTR_Magazine_Box";
+				magazine = "SR_CTR_Magazine_Box";
 				count = 100;
 			};
-			class xx_CTR_Magazine_Box_2 // CTR assault boltgun 100 rnd
+			class xx_SR_CTR_Magazine_Box_Vengeance // CTR Sternguard bolt
 			{
-				magazine = "CTR_Magazine_Box_2";
+				magazine = "SR_CTR_Magazine_Box_Vengeance";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_2 // CTR assault boltgun 100 rnd
+			{
+				magazine = "SR_CTR_Magazine_Box_2";
 				count = 30;
 			};
-			class xx_CTR_Magazine_Box_3 // CTR assault boltgun 60 rnd
+			class xx_SR_CTR_Magazine_Box_3 // CTR assault boltgun 60 rnd
 			{
-				magazine = "CTR_Magazine_Box_3";
+				magazine = "SR_CTR_Magazine_Box_3";
 				count = 30;
 			};
-			class xx_CTR_Magazine_Box_4 // CTR heavy bolt
+			class xx_SR_CTR_Magazine_Box_4 // CTR heavy bolt
 			{
-				magazine = "CTR_Magazine_Box_4";
+				magazine = "SR_CTR_Magazine_Box_4";
 				count = 100;
 			};
-			class xx_CTR_Magazine_Shrike // CTR shrike sniper
+			class xx_SR_CTR_Magazine_Shrike // CTR shrike sniper
 			{
-				magazine = "CTR_Magazine_Shrike";
+				magazine = "SR_CTR_Magazine_Shrike";
 				count = 70;
 			};
-			class xx_CTR_Magazine_Straight // CTR stalker
+			class xx_SR_CTR_Magazine_Straight // CTR stalker
 			{
-				magazine = "CTR_Magazine_Straight";
+				magazine = "SR_CTR_Magazine_Straight";
 				count = 70;
 			};
-			class xx_CTR_Magazine_Straight_2 // CTR marksman carbine
+			class xx_SR_CTR_Magazine_Straight_2 // CTR marksman carbine
 			{
-				magazine = "CTR_Magazine_Straight_2";
+				magazine = "SR_CTR_Magazine_Straight_2";
 				count = 70;
 			};
 		};
@@ -1057,9 +1062,9 @@ class CfgVehicles{
 				magazine = "SR_PrimarisBoltRifleMag";
 				count = 50;
 			};
-			class xx_CTR_Magazine_Sickle // CTR Boltgun 30rnd
+			class xx_SR_CTR_Magazine_Sickle // CTR Boltgun 30rnd
 			{
-				magazine = "CTR_Magazine_Sickle";
+				magazine = "SR_CTR_Magazine_Sickle";
 				count = 50;
 			};
 			class xx_CTR_Flask_Heavy_Plasma_1
