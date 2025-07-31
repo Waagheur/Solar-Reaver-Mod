@@ -941,6 +941,51 @@ class CfgVehicles
 				condition = "this call Valkyrie_fnc_checkLoadableVic";
 				statement = "this call Valkyrie_fnc_loadVictoCin";
 			};
+			class ThrusterDisengage
+			{
+				animPeriod = 5;
+				condition = "(this getvariable [""Speeder_Thruster_Status"",false]) AND (player == driver this) AND (alive this)";
+				displayName = "<t color='#FCE205'>Disengage Forward Thrusters";
+				displayNameDefault = "<t color='#FCE205'>Disengage Forward Thrusters";
+				onlyForPlayer = 0;
+				position = "";
+				priority = 10;
+				radius = 100000;
+				showWindow = 0;
+				statement = "0 = this spawn TIOW_LandSpeeder_fnc_ThrustersDisengage";
+				textToolTip = "<t color='#FCE205'>Disengage Forward Thrusters";
+				userActionID = 53;
+			};
+			class ThrusterEngage
+			{
+				animPeriod = 5;
+				condition = "(!(this getvariable [""Speeder_Thruster_Status"",false])) AND (player == driver this) AND (alive this) AND (isEngineOn this) AND  ((getPosATL this) select 2) > 1";
+				displayName = "<t color='#04B45F'>Engage Forward Thrusters";
+				displayNameDefault = "<t color='#04B45F'>Engage Forward Thrusters";
+				onlyForPlayer = 0;
+				position = "";
+				priority = 10;
+				radius = 100000;
+				showWindow = 0;
+				statement = "0 = this spawn TIOW_LandSpeeder_fnc_ThrustersEngage";
+				textToolTip = "<t color='#04B45F'>Engage Forward Thrusters";
+				userActionID = 52;
+			};
+			class ThrusterGravBrakes
+			{
+				animPeriod = 5;
+				condition = "(player == driver this) AND (alive this) AND ((speed this) > 80)";
+				displayName = "<t color='#FE2E2E'>Engage Airbrakes";
+				displayNameDefault = "<t color='#FE2E2E'>Engage Airbrakes";
+				onlyForPlayer = 0;
+				position = "";
+				priority = 10;
+				radius = 100000;
+				showWindow = 0;
+				statement = "0 = this spawn TIOW_LandSpeeder_fnc_ThrustersGravBrakes";
+				textToolTip = "<t color='#FE2E2E'>Engage Airbrakes";
+				userActionID = 57;
+			};
 		};
 	};
 
