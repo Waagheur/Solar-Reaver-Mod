@@ -475,19 +475,19 @@ class CfgVehicles{
 			};
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_krak_grenade_mag{
 				name = "TIOW_sm_krak_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_smoke_grenade_mag{
 				name = "TIOW_sm_smoke_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_SmokeShellPurple{
 				name = "SmokeShellPurple";
-				count = 2;
+				count = 4;
 			};
 			class xx_ACE_elasticBandage{
 				name = "ACE_elasticBandage";
@@ -633,19 +633,19 @@ class CfgVehicles{
 		{
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_krak_grenade_mag{
 				name = "TIOW_sm_krak_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_smoke_grenade_mag{
 				name = "TIOW_sm_smoke_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_SmokeShellPurple{
 				name = "SmokeShellPurple";
-				count = 2;
+				count = 4;
 			};
 			class xx_ACE_elasticBandage{
 				name = "ACE_elasticBandage";
@@ -942,19 +942,19 @@ class CfgVehicles{
 		{
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_krak_grenade_mag{
 				name = "TIOW_sm_krak_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_smoke_grenade_mag{
 				name = "TIOW_sm_smoke_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_SmokeShellPurple{
 				name = "SmokeShellPurple";
-				count = 2;
+				count = 4;
 			};
 			class xx_ACE_elasticBandage{
 				name = "ACE_elasticBandage";
@@ -1095,19 +1095,19 @@ class CfgVehicles{
 		{
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_krak_grenade_mag{
 				name = "TIOW_sm_krak_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_smoke_grenade_mag{
 				name = "TIOW_sm_smoke_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_SmokeShellPurple{
 				name = "SmokeShellPurple";
-				count = 2;
+				count = 4;
 			};
 			class xx_ACE_elasticBandage{
 				name = "ACE_elasticBandage";
@@ -1199,19 +1199,19 @@ class CfgVehicles{
 		{
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_krak_grenade_mag{
 				name = "TIOW_sm_krak_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_smoke_grenade_mag{
 				name = "TIOW_sm_smoke_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_SmokeShellPurple{
 				name = "SmokeShellPurple";
-				count = 2;
+				count = 4;
 			};
 			class xx_ACE_elasticBandage{
 				name = "ACE_elasticBandage";
@@ -1300,19 +1300,19 @@ class CfgVehicles{
 			};
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_krak_grenade_mag{
 				name = "TIOW_sm_krak_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_smoke_grenade_mag{
 				name = "TIOW_sm_smoke_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_SmokeShellPurple{
 				name = "SmokeShellPurple";
-				count = 2;
+				count = 4;
 			};
 			class xx_ACE_elasticBandage{
 				name = "ACE_elasticBandage";
@@ -1377,15 +1377,15 @@ class CfgVehicles{
 		{
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_krak_grenade_mag{
 				name = "TIOW_sm_krak_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_smoke_grenade_mag{
 				name = "TIOW_sm_smoke_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_SmokeShellPurple{
 				name = "SmokeShellPurple";
@@ -1908,19 +1908,19 @@ class CfgVehicles{
 		{
 			class xx_TIOW_sm_frag_grenade_mag{
 				name = "TIOW_sm_frag_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_krak_grenade_mag{
 				name = "TIOW_sm_krak_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_TIOW_sm_smoke_grenade_mag{
 				name = "TIOW_sm_smoke_grenade_mag";
-				count = 8;
+				count = 20;
 			};
 			class xx_SmokeShellPurple{
 				name = "SmokeShellPurple";
-				count = 2;
+				count = 4;
 			};
 			class xx_ACE_elasticBandage{
 				name = "ACE_elasticBandage";
