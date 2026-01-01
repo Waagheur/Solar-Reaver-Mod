@@ -6,6 +6,8 @@ class TIOW_Melta_Ammo;
 class Steve_30k_Lascutter_Round;
 class TIOW_LemanRuss_Lascannon_Rnd;
 
+class Steve_Phob_Atrox_SmBoltRound;
+
 class TIOW_SM_Rocket_Frag_Round;
 
 class Steve_SM_Grav_Mag_Rnd;
@@ -140,6 +142,16 @@ class CfgAmmo
 		ACE_barrelLengths[] = {728.98};
 		
 		SoundSetExplosion[] = {"Shell105mm130mm_Exp_SoundSet","Shell105mm130mm_Tail_SoundSet","Explosion_Debris_SoundSet"};
+	};
+	
+	
+	
+	class SR_Steve_Phob_Atrox_SmBoltRound: Steve_Phob_Atrox_SmBoltRound
+	{
+		hit=70;
+		caliber=4;
+		coefGravity = 0.25;
+		typicalSpeed=1200;
 	};
 	
 	

@@ -5,6 +5,8 @@ class Steve_30k_lascutter_Mag;
 class TIOW_30rnd_GodwynBoltgunMag;
 class Steve_SM_PlasmaPistol_Mag;
 
+class Steve_Phob_Atrox_BoltgunMag;
+
 class TIOW_SM_Rocket_Frag_Mag;
 
 class Steve_SM_Grav_Mag;
@@ -97,6 +99,16 @@ class CfgMagazines
 		ammo="SR_PlasmaPistolRound";
 		mass = 12;
 		count = 20;
+	};
+	
+	
+	
+	// Standardised phobos atrox
+	class SR_Steve_Phob_Atrox_BoltgunMag: Steve_Phob_Atrox_BoltgunMag
+	{
+		displayName = "[TSR] [AOD] Phobos Boltgun Magazine 10 Rnd.";
+		ammo="SR_Steve_Phob_Atrox_SmBoltRound";
+		initSpeed=1500;
 	};
 	
 	

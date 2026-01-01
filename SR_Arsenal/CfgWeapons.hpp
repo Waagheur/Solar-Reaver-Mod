@@ -1061,6 +1061,7 @@ class Cfgweapons
 		baseWeapon="SR_STEVE_New_Phobos_Atrox_1";
 		displayName="[TSR] [AOD] Phobos Atrox Boltgun";
 		magazines[] += {
+			"SR_Steve_Phob_Atrox_BoltgunMag",
 			"SR_Phob_Atrox_BoltgunMag_DF"
 		};
 	};
