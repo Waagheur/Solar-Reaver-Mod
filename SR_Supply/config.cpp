@@ -405,9 +405,9 @@ class CfgVehicles{
                 magazine = "SR_PrimarisStalkerBolterMag";
                 count = 70;
             };
-			class xx_Steve_Phob_Atrox_BoltgunMag
+			class xx_SR_Steve_Phob_Atrox_BoltgunMag
 			{
-				magazine = "Steve_Phob_Atrox_BoltgunMag";
+				magazine = "SR_Steve_Phob_Atrox_BoltgunMag";
 				count = 30;
 			};
 			class xx_Steve_Phob_CombiBoltgunMag // Tigrus Seeker Ammo.
@@ -535,89 +535,149 @@ class CfgVehicles{
 		hiddenSelectionsTextures[] = {"SR_Supply\Textures\SupplyPod_Marauder_CO.paa"};
 		class TransportMagazines
 		{
-			class xx_SR_Lascutter_Mag
+			class xx_Steve_Sm_Solid
 			{
-				magazine = "SR_Lascutter_Mag";
-				count = 70;
-			};
-			class xx_SR_PrimarisHeavyBoltRifleMag
-			{
-				magazine = "SR_PrimarisHeavyBoltRifleMag";
-				count = 20;
-			};
-			class xx_Steve_Rotor_Cannon_Mag
-			{
-				magazine = "Steve_Rotor_Cannon_New_01_Mag";
-				count = 20;
-			};
-			class xx_TIOW_SM_Storm_Box_Mag
-			{
-				magazine = "TIOW_SM_Storm_Box_Mag";
-				count = 20;
-			};
-			class xx_TIOW_SM_Storm_Clip_Mag
-			{
-				magazine = "TIOW_SM_Storm_Clip_Mag";
-				count = 20;
+				magazine = "Steve_Sm_Solid";
+				count = 50;
 			};
 			class xx_Steve_Trig_BoltgunMag
 			{
 				magazine = "Steve_Trig_BoltgunMag";
-				count = 60;
+				count = 100;
 			};
-			class xx_Steve_Phob_CombiBoltgunMag // Tigrus Seeker Ammo.
+			class xx_Steve_Trig_Exitus_BoltgunMag
 			{
-				magazine = "Steve_Phob_CombiBoltgunMag";
+				magazine = "Steve_Trig_Exitus_BoltgunMag";
 				count = 50;
 			};
-			class xx_Steve_30k_combi_seek_Mag // Tigrus Seeker Ammo.
+			class xx_TIOW_Mars_HeavyBolterMag_85rnd
 			{
-				magazine = "Steve_30k_combi_seek_Mag";
+				magazine = "TIOW_Mars_HeavyBolterMag_85rnd";
 				count = 50;
 			};
-			class xx_Steve_30k_Tig_Combi_Mag // Tigrus Combi Boltgun
+			class xx_SR_Lascutter_Mag
 			{
-				magazine = "Steve_30k_Tig_Combi_Mag";
-				count = 50;
-			};
-			class xx_Steve_30k_CombiMelta_Mag
-			{
-				magazine = "Steve_30k_CombiMelta_Mag";
-				count = 40;
-			};
-			class xx_Steve_30k_CombiPlas_Mag
-			{
-				magazine = "Steve_30k_CombiPlas_Mag";
-				count = 40;
-			};
-			class xx_TIOW_SM_Rocket_Frag_Mag
-			{
-				magazine = "TIOW_SM_Rocket_Frag_Mag";
-				count = 15;
-			};
-			class xx_TIOW_SM_Rocket_Krak_Mag
-			{
-				magazine = "TIOW_SM_Rocket_Krak_Mag";
-				count = 10;
-			};
-			class xx_SR_Light_Frag_Missile
-			{
-				magazine = "SR_Light_Frag_Missile";
-				count = 30;
-			};
-			class xx_SR_CTR_Magazine_Box_6_Vengeance // CTR Combi melta regular
-			{
-				magazine = "SR_CTR_Magazine_Box_6_Vengeance";
-				count = 50;
-			};
-			class xx_CTR_Flask_Melta_1 // CTR melta
-			{
-				magazine = "CTR_Flask_Melta_1";
+				magazine = "SR_Lascutter_Mag";
 				count = 50;
 			};
 			class xx_TIOW_30rnd_GodwynBoltgunMag
 			{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
+				count = 100;
+			};
+			class xx_TIOW_SM_Storm_Box_Mag
+			{
+				magazine = "TIOW_SM_Storm_Box_Mag";
+				count = 50;
+			};
+			class xx_Steve_Sm_Pellet
+			{
+				magazine = "Steve_Sm_Pellet";
+				count = 50;
+			};
+			class xx_TIOW_CombiPlas_Mag
+			{
+				magazine = "TIOW_CombiPlas_Mag";
+				count = 50;
+			};
+			class xx_SR_CTR_Combi_Flask_Plasma_1
+			{
+				magazine = "SR_CTR_Combi_Flask_Plasma_1";
+				count = 50;
+			};
+			class xx_Steve_30k_CombiMelta_Mag_COMBITEST
+			{
+				magazine = "Steve_30k_CombiMelta_Mag_COMBITEST";
+				count = 50;
+			};
+			class xx_Steve_Phob_BoltgunMag
+			{
+				magazine = "Steve_Phob_BoltgunMag";
+				count = 100;
+			};
+			class xx_SR_Steve_Phob_Atrox_BoltgunMag
+			{
+				magazine = "SR_Steve_Phob_Atrox_BoltgunMag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Straight_2
+			{
+				magazine = "SR_CTR_Magazine_Straight_2";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Sickle_2
+			{
+				magazine = "SR_CTR_Magazine_Sickle_2";
+				count = 50;
+			};
+			class xx_SR_CTR_Flask_Plasma_1
+			{
+				magazine = "SR_CTR_Flask_Plasma_1";
+				count = 50;
+			};
+			class xx_Steve_Trig_NewCombiBoltgunMag
+			{
+				magazine = "Steve_Trig_NewCombiBoltgunMag";
+				count = 50;
+			};
+			class xx_Steve_Umbra_BoltgunMag
+			{
+				magazine = "Steve_Umbra_BoltgunMag";
+				count = 100;
+			};
+			class xx_Steve_Phob_CombiBoltgunMag
+			{
+				magazine = "Steve_Phob_CombiBoltgunMag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_4
+			{
+				magazine = "SR_CTR_Magazine_Box_4";
+				count = 50;
+			};
+			class xx_SR_CTR_Flask_Plasma_2
+			{
+				magazine = "SR_CTR_Flask_Plasma_2";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Shrike
+			{
+				magazine = "SR_CTR_Magazine_Shrike";
+				count = 50;
+			};
+			class xx_Steve_30k_Tig_Combi_Mag
+			{
+				magazine = "Steve_30k_Tig_Combi_Mag";
+				count = 50;
+			};
+			class xx_SR_Volkite_Cav_Mag
+			{
+				magazine = "SR_Volkite_Cav_Mag";
+				count = 50;
+			};
+			class xx_SR_Volkite_Charger_Mag
+			{
+				magazine = "SR_Volkite_Charger_Mag";
+				count = 50;
+			};
+			class xx_SR_Volkite_Can_Mag_1
+			{
+				magazine = "SR_Volkite_Can_Mag_1";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_5_Vengeance
+			{
+				magazine = "SR_CTR_Magazine_Box_5_Vengeance";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_Vengeance
+			{
+				magazine = "SR_CTR_Magazine_Box_Vengeance";
+				count = 50;
+			};
+			class xx_TIOW_SM_Plasmagun_Mag
+			{
+				magazine = "TIOW_SM_Plasmagun_Mag";
 				count = 50;
 			};
 		};
@@ -699,235 +759,115 @@ class CfgVehicles{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 100;
 			};
-			class xx_Steve_Phob_BoltgunMag // Phobos Boltgun
-			{
-				magazine = "Steve_Phob_BoltgunMag";
-				count = 40;
-			};
-			class xx_Steve_Trig_BoltgunMag // Tigrus Boltgun
-			{
-				magazine = "Steve_Trig_BoltgunMag";
-				count = 70;
-			};
-			class xx_Steve_Phob_CombiBoltgunMag // Tigrus Seeker Ammo.
-			{
-				magazine = "Steve_Phob_CombiBoltgunMag";
-				count = 30;
-			};
-			class xx_Steve_30k_combi_seek_Mag // Tigrus Seeker Ammo.
-			{
-				magazine = "Steve_30k_combi_seek_Mag";
-				count = 30;
-			};
-			class xx_Steve_30k_Tig_Combi_Mag // Tigrus Combi Boltgun
-			{
-				magazine = "Steve_30k_Tig_Combi_Mag";
-				count = 30;
-			};
-			class xx_Steve_Trig_Exitus_BoltgunMag // Tigrus Exitus Boltgun
-			{
-				magazine = "Steve_Trig_Exitus_BoltgunMag";
-				count = 70;
-			};
-			class xx_TIOW_Mars_HeavyBolterMag_85rnd // Heavy Bolter
-			{
-				magazine = "TIOW_Mars_HeavyBolterMag_85rnd";
-				count = 20;
-			};
-			class xx_Steve_Rotor_Cannon_Mag // Rotor Cannon
-			{
-				magazine = "Steve_Rotor_Cannon_New_01_Mag";
-				count = 20;
-			};
-			class xx_SR_Meltagun_Mag // Meltagun
-			{
-				magazine = "SR_Meltagun_Mag";
-				count = 20;
-			};
-			class xx_SR_Lascutter_Mag // Lascutter
-			{
-				magazine = "SR_Lascutter_Mag";
-				count = 70;
-			};
-			class xx_TIOW_SM_Plasmagun_Mag // Ragefire Plasma Gun
-			{
-				magazine = "TIOW_SM_Plasmagun_Mag";
-				count = 60;
-			};
-			class xx_TIOW_CombiPlas_Mag // Ragefire Plasma Gun
-			{
-				magazine = "TIOW_CombiPlas_Mag";
-				count = 60;
-			};
-			class xx_Steve_SM_Plasmagun_Mag // Ryza Thunderbolt Plasma Gun
-			{
-				magazine = "Steve_SM_Plasmagun_Mag";
-				count = 60;
-			};
-			class xx_Steve_Sm_Pellet // Shotgun Buckshot
-			{
-				magazine = "Steve_Sm_Pellet";
-				count = 40;
-			};
-			class xx_Steve_Sm_Solid // Shotgun Slugs
-			{
-				magazine = "Steve_Sm_Solid";
-				count = 40;
-			};
-			class xx_TIOW_SM_Rocket_Frag_Mag // Missile Frag
-			{
-				magazine = "TIOW_SM_Rocket_Frag_Mag";
-				count = 15;
-			};
-			class xx_TIOW_SM_Rocket_Krak_Mag // Missile Krak
-			{
-				magazine = "TIOW_SM_Rocket_Krak_Mag";
-				count = 10;
-			};
-			class xx_SR_Light_Frag_Missile
-			{
-				magazine = "SR_Light_Frag_Missile";
-				count = 30;
-			};
-			class xx_Steve_30k_Meltagun_Mag // Primus Meltagun
-			{
-				magazine = "Steve_30k_Meltagun_Mag";
-				count = 20;
-			};
-			class xx_Steve_30k_Meltagun_Mag_New // Primus Meltagun
-			{
-				magazine = "Steve_30k_Meltagun_Mag_New";
-				count = 20;
-			};
-			class xx_TIOW_SM_Storm_Box_Mag // Storm Bolter Box
-			{
-				magazine = "TIOW_SM_Storm_Box_Mag";
-				count = 20;
-			};
-			class xx_TIOW_SM_Storm_Clip_Mag // Storm Bolter Clip
-			{
-				magazine = "TIOW_SM_Storm_Clip_Mag";
-				count = 20;
-			};
-			class xx_SR_PrimarisBoltRifleMag // BoltRifle
-			{
-				magazine = "SR_PrimarisBoltRifleMag";
-				count = 100;
-			};
-			class xx_SR_PrimarisHeavyBoltRifleMag // Auto BoltRifle
-			{
-				magazine = "SR_PrimarisHeavyBoltRifleMag";
-				count = 100;
-			};
-			class xx_SR_PrimarisBoltCarbineMag // Carbine BoltRifle
-			{
-				magazine = "SR_PrimarisBoltCarbineMag";
-				count = 100;
-			};
-            class xx_SR_PrimarisStalkerBolterMag // Stalker BoltRifle
-            {
-                magazine = "SR_PrimarisStalkerBolterMag";
-                count = 70;
-            };
-			class xx_Steve_Phob_BoltPistolMag // Phobos Pistol
-			{
-				magazine = "Steve_Phob_BoltPistolMag";
-				count = 50;
-			};
-			class xx_Steve_Trig_BoltPistolMag // Tigrus Pistol
-			{
-				magazine = "Steve_Trig_BoltPistolMag";
-				count = 50;
-			};
-			class xx_Steve_SM_PlasmaPistol_Mag // Plasma Pistol
-			{
-				magazine = "Steve_SM_PlasmaPistol_Mag";
-				count = 20;
-			};
-			class xx_CTR_GL_Frag // CTR GL
-			{
-				magazine = "CTR_GL_Frag";
-				count = 50;
-			};
-			class xx_CTR_GL_Krak // CTR GL
-			{
-				magazine = "CTR_GL_Krak";
-				count = 50;
-			};
-			class xx_SR_CTR_Magazine_Sickle // CTR Boltgun 30rnd
+			class xx_SR_CTR_Magazine_Sickle
 			{
 				magazine = "SR_CTR_Magazine_Sickle";
-				count = 100;
-			};
-			class xx_SR_CTR_Magazine_Sickle_2 // CTR Bolt carbines
-			{
-				magazine = "SR_CTR_Magazine_Sickle_2";
-				count = 100;
-			};
-			class xx_SR_CTR_Flask_Plasma_1 // CTR assault plasma
-			{
-				magazine = "SR_CTR_Flask_Plasma_1";
 				count = 50;
 			};
-			class xx_SR_CTR_Flask_Plasma_2 // CTR plasma exterminator
+			class xx_TIOW_Mars_HeavyBolterMag_85rnd
+			{
+				magazine = "TIOW_Mars_HeavyBolterMag_85rnd";
+				count = 50;
+			};
+			class xx_Steve_Sm_Solid
+			{
+				magazine = "Steve_Sm_Solid";
+				count = 50;
+			};
+			class xx_Steve_Sm_Pellet
+			{
+				magazine = "Steve_Sm_Pellet";
+				count = 50;
+			};
+			class xx_Steve_Rotor_Cannon_New_01_Mag
+			{
+				magazine = "Steve_Rotor_Cannon_New_01_Mag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_2
+			{
+				magazine = "SR_CTR_Magazine_Box_2";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Sickle_2
+			{
+				magazine = "SR_CTR_Magazine_Sickle_2";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Straight_2
+			{
+				magazine = "SR_CTR_Magazine_Straight_2";
+				count = 50;
+			};
+			class xx_Steve_Trig_BoltgunMag
+			{
+				magazine = "Steve_Trig_BoltgunMag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box
+			{
+				magazine = "SR_CTR_Magazine_Box";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Straight
+			{
+				magazine = "SR_CTR_Magazine_Straight";
+				count = 50;
+			};
+			class xx_TIOW_SM_Plasmagun_Mag
+			{
+				magazine = "TIOW_SM_Plasmagun_Mag";
+				count = 50;
+			};
+			class xx_SR_CTR_Flask_Plasma_2
 			{
 				magazine = "SR_CTR_Flask_Plasma_2";
 				count = 50;
 			};
-			class xx_SR_CTR_Combi_Flask_Plasma_1 // CTR combi plasma
+			class xx_SR_CTR_Flask_Plasma_1
 			{
-				magazine = "SR_CTR_Combi_Flask_Plasma_1";
-				count = 20;
-			};
-			class xx_SR_CTR_Magazine_Box_5_Vengeance // CTR Combi plasma regular
-			{
-				magazine = "SR_CTR_Magazine_Box_5_Vengeance";
+				magazine = "SR_CTR_Flask_Plasma_1";
 				count = 50;
 			};
-			class xx_CTR_Flask_Melta_1 // CTR melta
+			class xx_Steve_Phob_BoltgunMag
+			{
+				magazine = "Steve_Phob_BoltgunMag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_4
+			{
+				magazine = "SR_CTR_Magazine_Box_4";
+				count = 50;
+			};
+			class xx_Steve_Trig_Exitus_BoltgunMag
+			{
+				magazine = "Steve_Trig_Exitus_BoltgunMag";
+				count = 50;
+			};
+			class xx_CTR_Flask_Melta_1
 			{
 				magazine = "CTR_Flask_Melta_1";
 				count = 50;
 			};
-			class xx_SR_CTR_Magazine_Box // CTR Auto bolt
+			class xx_DOS_Meltagun_Mag
 			{
-				magazine = "SR_CTR_Magazine_Box";
-				count = 100;
+				magazine = "DOS_Meltagun_Mag";
+				count = 50;
 			};
-			class xx_SR_CTR_Magazine_Box_Vengeance // CTR Sternguard bolt
+			class xx_Steve_30k_combi_seek_Mag
+			{
+				magazine = "Steve_30k_combi_seek_Mag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_Vengeance
 			{
 				magazine = "SR_CTR_Magazine_Box_Vengeance";
 				count = 50;
 			};
-			class xx_SR_CTR_Magazine_Box_2 // CTR assault boltgun 100 rnd
+			class xx_Steve_30k_Tig_Combi_Mag
 			{
-				magazine = "SR_CTR_Magazine_Box_2";
-				count = 30;
-			};
-			class xx_SR_CTR_Magazine_Box_3 // CTR assault boltgun 60 rnd
-			{
-				magazine = "SR_CTR_Magazine_Box_3";
-				count = 30;
-			};
-			class xx_SR_CTR_Magazine_Box_4 // CTR heavy bolt
-			{
-				magazine = "SR_CTR_Magazine_Box_4";
-				count = 100;
-			};
-			class xx_SR_CTR_Magazine_Shrike // CTR shrike sniper
-			{
-				magazine = "SR_CTR_Magazine_Shrike";
-				count = 70;
-			};
-			class xx_SR_CTR_Magazine_Straight // CTR stalker
-			{
-				magazine = "SR_CTR_Magazine_Straight";
-				count = 70;
-			};
-			class xx_SR_CTR_Magazine_Straight_2 // CTR marksman carbine
-			{
-				magazine = "SR_CTR_Magazine_Straight_2";
-				count = 70;
+				magazine = "Steve_30k_Tig_Combi_Mag";
+				count = 50;
 			};
 		};
 		class TransportWeapons
@@ -1002,85 +942,180 @@ class CfgVehicles{
 		hiddenSelectionsTextures[] = {"SR_Supply\Textures\SupplyPod_Devastator_CO.paa"};
 		class TransportMagazines
 		{
-			class xx_Steve_30k_MultiMelta_Mag
+			class xx_TIOW_SM_Rocket_Frag_Mag_LSLOT
 			{
-				magazine = "Steve_30k_MultiMelta_Mag";
-				count = 70;
+				magazine = "TIOW_SM_Rocket_Frag_Mag_LSLOT";
+				count = 50;
 			};
-			class xx_Steve_30k_PlasmaCannon_Mag
+			class xx_TIOW_SM_Rocket_Krak_Mag_LSLOT
 			{
-				magazine = "Steve_30k_PlasmaCannon_Mag";
-				count = 70;
-			};
-			class xx_TIOW_SM_PlasmaCannon_Mag
-			{
-				magazine = "TIOW_SM_PlasmaCannon_Mag";
-				count = 70;
-			};
-			class xx_STEVE_AutocannonMag_New
-			{
-				magazine = "STEVE_AutocannonMag_New";
-				count = 70;
-			};
-			class xx_Steve_SM_Lascannon_Mag
-			{
-				magazine = "Steve_SM_Lascannon_Mag";
-				count = 70;
-			};
-			class xx_STEVE_30k_Rocket_Krak_Mag_NEW
-			{
-				magazine = "STEVE_30k_Rocket_Krak_Mag_NEW";
-				count = 70;
-			};
-			class xx_STEVE_30k_Rocket_Frag_Mag_NEW
-			{
-				magazine = "STEVE_30k_Rocket_Frag_Mag_NEW";
-				count = 70;
-			};
-			class xx_SR_Light_Frag_Missile
-			{
-				magazine = "SR_Light_Frag_Missile";
-				count = 120;
+				magazine = "TIOW_SM_Rocket_Krak_Mag_LSLOT";
+				count = 50;
 			};
 			class xx_SR_TIOW_SM_Rocket_Frag_Mag_LSLOT
 			{
 				magazine = "SR_TIOW_SM_Rocket_Frag_Mag_LSLOT";
-				count = 30;
+				count = 50;
 			};
 			class xx_SR_TIOW_SM_Rocket_Krak_Mag_LSLOT
 			{
 				magazine = "SR_TIOW_SM_Rocket_Krak_Mag_LSLOT";
-				count = 30;
+				count = 50;
+			};
+			class xx_STEVE_AutocannonMag_New
+			{
+				magazine = "STEVE_AutocannonMag_New";
+				count = 50;
+			};
+			class xx_TIOW_SM_Rocket_Krak_Mag
+			{
+				magazine = "TIOW_SM_Rocket_Krak_Mag";
+				count = 50;
 			};
 			class xx_TIOW_30rnd_GodwynBoltgunMag
 			{
 				magazine = "TIOW_30rnd_GodwynBoltgunMag";
 				count = 50;
 			};
-			class xx_SR_PrimarisBoltRifleMag // BoltRifle
-			{
-				magazine = "SR_PrimarisBoltRifleMag";
-				count = 50;
-			};
-			class xx_SR_CTR_Magazine_Sickle // CTR Boltgun 30rnd
+			class xx_SR_CTR_Magazine_Sickle
 			{
 				magazine = "SR_CTR_Magazine_Sickle";
+				count = 50;
+			};
+			class xx_TIOW_Mars_HeavyBolterMag_85rnd
+			{
+				magazine = "TIOW_Mars_HeavyBolterMag_85rnd";
+				count = 50;
+			};
+			class xx_Steve_30K_MultiMelta_Mag
+			{
+				magazine = "Steve_30K_MultiMelta_Mag";
+				count = 50;
+			};
+			class xx_SR_Lascutter_Mag
+			{
+				magazine = "SR_Lascutter_Mag";
+				count = 50;
+			};
+			class xx_Steve_30k_Tig_Combi_Mag
+			{
+				magazine = "Steve_30k_Tig_Combi_Mag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_5_Vengeance
+			{
+				magazine = "SR_CTR_Magazine_Box_5_Vengeance";
+				count = 50;
+			};
+			class xx_Steve_Rotor_Cannon_New_01_Mag
+			{
+				magazine = "Steve_Rotor_Cannon_New_01_Mag";
+				count = 50;
+			};
+			class xx_TIOW_SM_Plasmagun_Mag
+			{
+				magazine = "TIOW_SM_Plasmagun_Mag";
+				count = 50;
+			};
+			class xx_STEVE_30K_PlasmaCannon_Mag
+			{
+				magazine = "STEVE_30K_PlasmaCannon_Mag";
+				count = 50;
+			};
+			class xx_TIOW_SM_PlasmaCannon_Mag
+			{
+				magazine = "TIOW_SM_PlasmaCannon_Mag";
 				count = 50;
 			};
 			class xx_CTR_Flask_Heavy_Plasma_1
 			{
 				magazine = "CTR_Flask_Heavy_Plasma_1";
-				count = 70;
+				count = 50;
 			};
-			class xx_CTR_Flask_Heavy_Plasma_Overcharge_1
+			class xx_CTR_Flask_Melta_1
 			{
-				magazine = "CTR_Flask_Heavy_Plasma_Overcharge_1";
-				count = 70;
+				magazine = "CTR_Flask_Melta_1";
+				count = 50;
+			};
+			class xx_Steve_Trig_BoltgunMag
+			{
+				magazine = "Steve_Trig_BoltgunMag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box
+			{
+				magazine = "SR_CTR_Magazine_Box";
+				count = 50;
+			};
+			class xx_DOS_Meltagun_Mag
+			{
+				magazine = "DOS_Meltagun_Mag";
+				count = 50;
+			};
+			class xx_STEVE_30k_Rocket_Krak_Mag_NEW
+			{
+				magazine = "STEVE_30k_Rocket_Krak_Mag_NEW";
+				count = 50;
+			};
+			class xx_Steve_SM_Lascannon_Mag
+			{
+				magazine = "Steve_SM_Lascannon_Mag";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_Vengeance
+			{
+				magazine = "SR_CTR_Magazine_Box_Vengeance";
+				count = 50;
 			};
 			class xx_CTR_Las_Fusil_Flask_1
 			{
 				magazine = "CTR_Las_Fusil_Flask_1";
-				count = 70;
+				count = 50;
+			};
+			class xx_TIOW_SM_Rocket_Frag_Mag
+			{
+				magazine = "TIOW_SM_Rocket_Frag_Mag";
+				count = 50;
+			};
+			class xx_SR_Light_Frag_Missile
+			{
+				magazine = "SR_Light_Frag_Missile";
+				count = 50;
+			};
+			class xx_TIOW_CombiPlas_Mag
+			{
+				magazine = "TIOW_CombiPlas_Mag";
+				count = 50;
+			};
+			class xx_SR_CTR_Combi_Flask_Plasma_1
+			{
+				magazine = "SR_CTR_Combi_Flask_Plasma_1";
+				count = 50;
+			};
+			class xx_STEVE_30K_PlasmaCannon_OC_Mag
+			{
+				magazine = "STEVE_30K_PlasmaCannon_OC_Mag";
+				count = 50;
+			};
+			class xx_TIOW_SM_PlasmaCannon_Mag_OC
+			{
+				magazine = "TIOW_SM_PlasmaCannon_Mag_OC";
+				count = 50;
+			};
+			class xx_SR_CTR_Magazine_Box_6_Vengeance
+			{
+				magazine = "SR_CTR_Magazine_Box_6_Vengeance";
+				count = 50;
+			};
+			class xx_STEVE_30k_Rocket_Frag_Mag_NEW
+			{
+				magazine = "STEVE_30k_Rocket_Frag_Mag_NEW";
+				count = 50;
+			};
+			class xx_Steve_30k_CombiMelta_Mag_COMBITEST
+			{
+				magazine = "Steve_30k_CombiMelta_Mag_COMBITEST";
+				count = 50;
 			};
 		};
 		class TransportWeapons
@@ -1259,20 +1294,25 @@ class CfgVehicles{
 		hiddenSelectionsTextures[] = {"SR_Supply\Textures\SupplyPod_Assault_CO.paa"};
 		class TransportMagazines
 		{
-			class xx_Steve_Phob_BoltPistolMag
-			{
-				magazine = "Steve_Phob_BoltPistolMag";
-				count = 50;
-			};
 			class xx_Steve_Trig_BoltPistolMag
 			{
 				magazine = "Steve_Trig_BoltPistolMag";
-				count = 50;
+				count = 100;
 			};
-			class xx_Steve_SM_PlasmaPistol_Mag
+			class xx_Steve_Phob_BoltPistolMag
 			{
-				magazine = "Steve_SM_PlasmaPistol_Mag";
-				count = 20;
+				magazine = "Steve_Phob_BoltPistolMag";
+				count = 100;
+			};
+			class xx_SR_PlasmaPistol_Mag
+			{
+				magazine = "SR_PlasmaPistol_Mag";
+				count = 100;
+			};
+			class xx_SR_Volkite_PistolMag
+			{
+				magazine = "SR_Volkite_PistolMag";
+				count = 100;
 			};
 			class xx_TIOW_30rnd_GodwynBoltgunMag
 			{
@@ -1655,8 +1695,8 @@ class CfgVehicles{
 			class xx_smoll_flare1_round
 			{
 				magazine = "smoll_flare1_round";
-				count 25;
-			}
+				count = 25;
+			};
 			class xx_frag_round_smol
 			{
 				magazine = "frag_round_smol";
