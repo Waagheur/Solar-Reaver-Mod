@@ -7,6 +7,8 @@ class Steve_SM_PlasmaPistol_Mag;
 
 class Steve_Phob_Atrox_BoltgunMag;
 
+class MRAWS_HE_F;
+
 class TIOW_SM_Rocket_Frag_Mag;
 
 class Steve_SM_Grav_Mag;
@@ -112,6 +114,17 @@ class CfgMagazines
 	};
 	
 	
+	
+	// Disposable rocket.
+	class SR_Disposable_Rocket_Mag: MRAWS_HE_F
+	{
+		ammo="SR_Disposable_Rocket_Ammo";
+		descriptionShort="[TSR] Disposable Rocket";
+		displayName="[TSR] Disposable Rocket";
+		displayNameShort="HEAT";
+		initSpeed=350;
+		mass=40;
+	};
 	
 	class SR_Light_Frag_Missile: TIOW_SM_Rocket_Frag_Mag
 	{

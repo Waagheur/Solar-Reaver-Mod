@@ -8,6 +8,8 @@ class TIOW_LemanRuss_Lascannon_Rnd;
 
 class Steve_Phob_Atrox_SmBoltRound;
 
+class R_MRAAWS_HEAT_F;
+
 class TIOW_SM_Rocket_Frag_Round;
 
 class Steve_SM_Grav_Mag_Rnd;
@@ -155,6 +157,32 @@ class CfgAmmo
 	};
 	
 	
+	
+	// Disposable rocket. This is a krak round.
+	class SR_Disposable_Rocket_Ammo: R_MRAAWS_HEAT_F
+	{
+		aiAmmoUsageFlags="64 + 128 + 256 + 512";
+		airLock=1;
+		effectsMissile="missile3";
+		allowAgainstInfantry=1;
+		cost=1;
+		class CamShakeExplode
+		{
+		};
+		class CamShakeFire
+		{
+		};
+		class CamShakeHit
+		{
+		};
+		class CamShakePlayerFire
+		{
+		};
+		hit = 1800;
+		indirectHit = 50;
+		indirectHitRange = 0.3;
+		submunitionAmmo = "";
+	};
 	
 	class SR_Light_Frag_Missile_Round: TIOW_SM_Rocket_Frag_Round
 	{

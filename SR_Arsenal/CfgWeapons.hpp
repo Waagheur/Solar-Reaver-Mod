@@ -154,6 +154,8 @@ class Steve_SM_LasCan_02_New;
 
 
 
+class IC_CAD_Rocketlauncher_base;
+
 // Visibomb bases
 class IC_Launcher_AT_grey;
 class TIOW_SM_Rocket_1_LSLOT;
@@ -4076,6 +4078,148 @@ class Cfgweapons
 	
 	
 	
+	
+	// SM Disposable launcher
+	class SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Base: TIOW_SM_Rocket_1_LSLOT
+	{
+		baseWeapon="SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Base";
+		scope=1;
+		scopeArsenal=1;
+		scopeCurator=1;
+		displayName="[TSR] Space Marine STDL";
+		descriptionShort="Medium Single Use Anti-Tank Launcher";
+		magazines[]=
+		{
+			"SR_Disposable_Rocket_Mag"
+		};
+		magazineWell[]=
+		{
+			"SR_Disposable_Rocket_Magwell"
+		};
+		magazineReloadTime=0.1;
+		maxZeroing=500;
+		weaponInfoType="RscWeaponZeroing";
+		modes[]=
+		{
+			"Single"
+		};
+		aiDispersionCoefX=35;
+		aiDispersionCoefY=35;
+		canLock=0;
+		weaponLockDelay=3;
+		lockAcquire=0;
+		inertia=0.80000001;
+		aimTransitionSpeed=0.5;
+		dexterity=1.2;
+		class WeaponSlotsInfo
+		{
+			mass=108;
+		};
+		class EventHandlers
+		{
+			fired="_this call CBA_fnc_firedDisposable";
+		};
+	};
+	class SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded: SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Base
+	{
+		scope=2;
+		scopeArsenal=2;
+		baseWeapon="SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded";
+		magazines[]=
+		{
+			"CBA_FakeLauncherMagazine"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass="80+ 40";
+		};
+	};
+	class SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Used: SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Base
+	{
+		displayName="[TSR] Space Marine STDL(Empty)";
+		scope=1;
+		scopeArsenal=1;
+		baseWeapon="SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Used";
+		magazines[]=
+		{
+			"CBA_FakeLauncherMagazine"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=80;
+		};
+	};
+	
+	// PXI Disposable launchers
+	class SR_XI_Disposable_Rocket_1_LSLOT_Base: IC_CAD_Rocketlauncher_base
+	{
+		baseWeapon="SR_XI_Disposable_Rocket_1_LSLOT_Base";
+		scope=1;
+		scopeArsenal=1;
+		scopeCurator=1;
+		displayName="[TSR] [PXI] STDL";
+		descriptionShort="Medium Single Use Anti-Tank Launcher";
+		magazines[]=
+		{
+			"SR_Disposable_Rocket_Mag"
+		};
+		magazineWell[]=
+		{
+			"SR_Disposable_Rocket_Magwell"
+		};
+		magazineReloadTime=0.1;
+		maxZeroing=500;
+		weaponInfoType="RscWeaponZeroing";
+		modes[]=
+		{
+			"Single"
+		};
+		aiDispersionCoefX=35;
+		aiDispersionCoefY=35;
+		canLock=0;
+		weaponLockDelay=3;
+		lockAcquire=0;
+		inertia=0.80000001;
+		aimTransitionSpeed=0.5;
+		dexterity=1.2;
+		class WeaponSlotsInfo
+		{
+			mass=108;
+		};
+		class EventHandlers
+		{
+			fired="_this call CBA_fnc_firedDisposable";
+		};
+	};
+	class SR_XI_Disposable_Rocket_1_LSLOT_Loaded: SR_XI_Disposable_Rocket_1_LSLOT_Base
+	{
+		scope=2;
+		scopeArsenal=2;
+		baseWeapon="SR_XI_Disposable_Rocket_1_LSLOT_Loaded";
+		magazines[]=
+		{
+			"CBA_FakeLauncherMagazine"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass="80+ 40";
+		};
+	};
+	class SR_XI_Disposable_Rocket_1_LSLOT_Used: SR_XI_Disposable_Rocket_1_LSLOT_Base
+	{
+		displayName="[TSR] [PXI] STDL(Empty)";
+		scope=1;
+		scopeArsenal=1;
+		baseWeapon="SR_XI_Disposable_Rocket_1_LSLOT_Used";
+		magazines[]=
+		{
+			"CBA_FakeLauncherMagazine"
+		};
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=80;
+		};
+	};
 	
 	// Visibomb launchers
 	class SR_IC_Launcher_AT_grey: IC_Launcher_AT_grey

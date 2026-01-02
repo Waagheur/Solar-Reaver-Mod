@@ -43,6 +43,8 @@ class CfgPatches
 			
 			"Throw",
 			
+			"SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded",
+			"SR_PXI_Disposable_Rocket_1_LSLOT_Loaded",
 			"SR_IC_Launcher_AT_grey",
 			"SR_TIOW_SM_Rocket_1_LSLOT"
 		};
@@ -72,6 +74,7 @@ class CfgPatches
 			"SR_Phob_CombiBoltgunMag_DF",
 			"SR_Phob_Atrox_BoltgunMag_DF",
 			
+			"SR_Disposable_Rocket_Mag",
 			"SR_IC_frag_Missile_mag",
 			"SR_IC_krakk_Missile_mag",
 			"SR_TIOW_SM_Rocket_Frag_Mag_LSLOT",
@@ -97,6 +100,7 @@ class CfgPatches
 			"SR_Ammo_Antigrav_Grenade",
 			"SR_Ammo_Vortex_Grenade",
 			
+			"SR_Disposable_Rocket_Ammo",
 			"SR_IC_Frag_Missile",
 			"SR_IC_Krakk_Missile",
 			"SR_TIOW_SM_Rocket_Frag_Round_LSLOT",
@@ -692,7 +696,30 @@ class Extended_PreInit_EventHandlers {
 	};
 };
 
+class CBA_DisposableLaunchers
+{
+	SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Base[]=
+	{
+		"SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded",
+		"SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Used"
+	};
+	SR_XI_Disposable_Rocket_1_LSLOT_Base[]=
+	{
+		"SR_XI_Disposable_Rocket_1_LSLOT_Loaded",
+		"SR_XI_Disposable_Rocket_1_LSLOT_Used"
+	};
+};
 
+class CfgMagazineWells
+{
+	class SR_Disposable_Rocket_Magwell
+	{
+		SR_Disposable_Rocket_Magazines[]=
+		{
+			"SR_Disposable_Rocket_Mag"
+		};
+	};
+};
 
 #include "CfgWeapons.hpp"
 #include "CfgAmmo.hpp"
