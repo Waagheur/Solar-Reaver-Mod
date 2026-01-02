@@ -49,6 +49,7 @@ class STEVE_New_UmbraBoltgun_1; // That looks like a regular boltgun, but it wor
 // Long Range Boltguns
 class STEVE_New_Phobos_Atrox_1;
 class STEVE_TigrusExitusBoltgun_1;
+class Steve_NewExitus_1;
 
 // Plasma
 class TIOW_SM_Ragefire_PlasmaGun;
@@ -1068,7 +1069,7 @@ class Cfgweapons
 		};
 	};
 	
-	class SR_STEVE_TigrusExitusBoltgun_1 : STEVE_TigrusExitusBoltgun_1
+	class SR_STEVE_TigrusExitusBoltgun_1 : Steve_NewExitus_1
 	{
 		scope=2;
 		scopeCurator=2;
