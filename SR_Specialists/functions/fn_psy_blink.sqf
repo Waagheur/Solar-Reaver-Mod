@@ -39,6 +39,9 @@ _entity addAction ["Teleport", {
 			SR_PSY_endE = ASLtoAGL ((AGLtoASL (SR_PSY_beg vectorAdd [0,0,0.1])) vectorAdd ((getCameraViewDirection SR_PSY_entity) vectorMultiply SR_PSY_L)); 
 			while {0 != count(lineIntersectsSurfaces[AGLtoASL SR_PSY_beg,AGLtoASL SR_PSY_endE,SR_PSY_entity])} do { 
 				SR_PSY_L = SR_PSY_L - 1; 
+				if (SR_PSY_L < 0) then {
+					SR_PSY_L = 0;
+				};
 				SR_PSY_beg =  ASLtoAGL ((eyePos SR_PSY_entity) vectorAdd [0,0,-0.1]);  
 				SR_PSY_endE = ASLtoAGL ((AGLtoASL (SR_PSY_beg vectorAdd [0,0,0.1])) vectorAdd ((getCameraViewDirection SR_PSY_entity) vectorMultiply SR_PSY_L)); 
 			}; 
@@ -132,6 +135,17 @@ _entity addAction ["Teleport", {
 					false, 
 					true]);
 			};  
+		}];
+		
+		SR_PSY_entity addEventHandler ["Killed", {
+			removeMissionEventHandler ["eachFrame", SR_PSY_ray]; 
+			(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press]; 
+			(findDisplay 46) displayRemoveEventHandler ["MouseZChanged",SR_PSY_roll];
+			(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
+			(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0];
+			(SR_PSY_entity setVariable ["SR_PSY_casting", 
+				false, 
+				true]);
 		}];
 		
 	} 

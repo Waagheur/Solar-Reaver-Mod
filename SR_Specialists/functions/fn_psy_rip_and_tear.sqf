@@ -17,6 +17,55 @@
 		
 */
 
+fn_psy_rip_and_tear_rip_and_tear = {
+	_targ = (_this select 0);
+	
+	if (isDamageAllowed _targ) then {
+		[_targ] spawn { 
+			if (_this select 0 isKindOf "Man") then {
+				if ("ace_medical_engine" in activatedAddons) then {
+					[_this select 0, 1, "Body", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 1, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 1, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "Head", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 1, "Head", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					sleep 0.1; 
+					[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					sleep 0.1; 
+					[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					sleep 0.1; 
+					[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					sleep 0.1; 
+					[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					sleep 0.1; 
+					[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					sleep 0.1; 
+					[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					sleep 0.1; 
+					[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					sleep 0.1; 
+					[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+					[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
+				}
+				else {
+					_this select 0 setDamage 1;
+				};
+			};
+			
+			sleep 0.1; 
+			[(_this select 0),[[random(1)*800,random(1)*800,random(1)*1000 + 1000], [0,0,0]]] remoteExec ["addForce",0]; 
+		};
+	};
+};
+
 params ['_entity'];
 
 _entity addAction ["Rip And Tear", { 
@@ -73,40 +122,9 @@ _entity addAction ["Rip And Tear", {
 					SR_PSY_entity setVariable ["SR_PSY_power",
 						(SR_PSY_entity getVariable ["SR_PSY_power", 60]) - 60,
 						true]; 
-					[_targ] spawn { 
-						[_this select 0, 1, "Body", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 1, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 1, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "Head", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 1, "Head", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[(_this select 0),[[random(1)*800,random(1)*800,random(1)*1000 + 1000], [0,0,0]]] remoteExec ["addForce",0]; 
-					}; 
+					
+					[_targ] remoteExec ["fn_psy_rip_and_tear_rip_and_tear", _targ];
+					
 				}; 
 			}; 
 		}];
@@ -128,40 +146,9 @@ _entity addAction ["Rip And Tear", {
 					SR_PSY_entity setVariable ["SR_PSY_power",
 						(SR_PSY_entity getVariable ["SR_PSY_power", 60]) - 60,
 						true]; 
-					[_targ]spawn{ 
-						[_this select 0, 1, "Body", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 1, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 1, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "Body", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "Head", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 1, "Head", "crush"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "leg_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "leg_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[_this select 0, 0.5, "hand_l", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						[_this select 0, 0.5, "hand_r", "stab"] remoteExec ["ace_medical_fnc_addDamageToUnit",0]; 
-						sleep 0.1; 
-						[(_this select 0),[[random(1)*800,random(1)*800,random(1)*1000 + 1000], [0,0,0]]] remoteExec ["addForce",0]; 
-					}; 
+						
+					[_targ] remoteExec ["fn_psy_rip_and_tear_rip_and_tear", _targ];
+					
 				}; 
 			}; 
 			if ((_this select 1) == 1) then { 
@@ -174,6 +161,17 @@ _entity addAction ["Rip And Tear", {
 					true]); 
 				(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) setPos [0,0,0];
 			};  
+		}];
+		
+		SR_PSY_entity addEventHandler ["Killed", {
+			removeMissionEventHandler ["eachFrame", SR_PSY_ray]; 
+			(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press];
+			(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
+			(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0]; 
+			(SR_PSY_entity setVariable ["SR_PSY_casting", 
+				false, 
+				true]); 
+			(SR_PSY_entity getVariable ["SR_PSY_raymarker", objNull]) setPos [0,0,0];
 		}];
 	} 
 	else{ 

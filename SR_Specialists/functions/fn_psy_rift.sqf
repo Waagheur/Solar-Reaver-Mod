@@ -17,6 +17,35 @@
 		
 */
 
+fn_psy_rift_rift_throw = {
+	_x = (_this select 0);
+	_vectdir = (_this select 1);
+	
+	if (isDamageAllowed _x) then {
+		if ((getMass _x) == 0) then {
+			[_x,[_vectdir vectorMultiply 100000*(1), [0,0,0]]] remoteExec ["addForce",0];
+		}
+		else{
+			[_x,[_vectdir vectorMultiply 100000*(getMass _x)/250, [0,0,0]]] remoteExec ["addForce",0];
+		};
+		if (_x isKindOf "Man") then {
+			if ("ace_medical_engine" in activatedAddons) then {
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+			}
+			else {
+				_x setDamage 1;
+			};
+		};
+	};
+};
+
 params ['_entity'];
 
 _entity addAction ["Rift", { 
@@ -39,6 +68,9 @@ _entity addAction ["Rift", {
 			SR_PSY_endE = ASLtoAGL ((AGLtoASL (SR_PSY_beg vectorAdd [0,0,0.1])) vectorAdd ((getCameraViewDirection SR_PSY_entity) vectorMultiply SR_PSY_L)); 
 			while {0 != count(lineIntersectsSurfaces[AGLtoASL SR_PSY_beg,AGLtoASL SR_PSY_endE,SR_PSY_entity])} do { 
 				SR_PSY_L = SR_PSY_L - 1; 
+				if (SR_PSY_L < 0) then {
+					SR_PSY_L = 0;
+				};
 				SR_PSY_beg =  ASLtoAGL ((eyePos SR_PSY_entity) vectorAdd [0,0,-0.1]);  
 				SR_PSY_endE = ASLtoAGL ((AGLtoASL (SR_PSY_beg vectorAdd [0,0,0.1])) vectorAdd ((getCameraViewDirection SR_PSY_entity) vectorMultiply SR_PSY_L)); 
 			}; 
@@ -114,27 +146,9 @@ _entity addAction ["Rift", {
 						_targs = (_targ nearObjects ["AllVehicles", 12]); 
 						{
 							_vectdir = (AGLtoASL _targ) vectorFromTo (getPosASL _x);
-							if ((getMass _x) == 0) then {
-								[_x,[_vectdir vectorMultiply 100000*(1), [0,0,0]]] remoteExec ["addForce",0];
-							}
-							else{
-								[_x,[_vectdir vectorMultiply 100000*(getMass _x)/250, [0,0,0]]] remoteExec ["addForce",0];
-							};
-							if (_x isKindOf "Man") then {
-								if ("ace_medical_engine" in activatedAddons) then {
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-								}
-								else {
-									_x setDamage 1;
-								};
-							};
+							
+							[_x, _vectdir] remoteExec ["fn_psy_rift_rift_throw", _x];
+							
 							sleep 0.1;
 						}forEach _targs;
 					};
@@ -182,27 +196,9 @@ _entity addAction ["Rift", {
 						_targs = (_targ nearObjects ["AllVehicles", 12]); 
 						{
 							_vectdir = (AGLtoASL _targ) vectorFromTo (getPosASL _x);
-							if ((getMass _x) == 0) then {
-								[_x,[_vectdir vectorMultiply 100000*(1), [0,0,0]]] remoteExec ["addForce",0];
-							}
-							else{
-								[_x,[_vectdir vectorMultiply 100000*(getMass _x)/250, [0,0,0]]] remoteExec ["addForce",0];
-							};
-							if (_x isKindOf "Man") then {
-								if ("ace_medical_engine" in activatedAddons) then {
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-									[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-								}
-								else {
-									_x setDamage 1;
-								};
-							};
+							
+							[_x, _vectdir] remoteExec ["fn_psy_rift_rift_throw", _x];
+							
 							sleep 0.1;
 						}forEach _targs;
 					};
@@ -230,6 +226,17 @@ _entity addAction ["Rift", {
 					false, 
 					true]);
 			};  
+		}];
+		
+		SR_PSY_entity addEventHandler ["Killed", {
+			removeMissionEventHandler ["eachFrame", SR_PSY_ray]; 
+			(findDisplay 46) displayRemoveEventHandler ["KeyDown",SR_PSY_press]; 
+			(findDisplay 46) displayRemoveEventHandler ["MouseZChanged",SR_PSY_roll];
+			(findDisplay 46) displayRemoveEventHandler ["MouseButtonDown",SR_PSY_click];
+			(SR_PSY_entity getVariable ["SR_PSY_rayend", objNull]) setPos [0,0,0];
+			(SR_PSY_entity setVariable ["SR_PSY_casting", 
+				false, 
+				true]);
 		}];
 	} 
 	else{ 
