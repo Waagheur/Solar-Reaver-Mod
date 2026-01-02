@@ -24,6 +24,67 @@
 		
 */
 
+fn_grenades_main_rad_damage = {
+	_targ = (_this select 0);
+	
+	if (isDamageAllowed _targ) then {
+		[_targ] spawn {
+			// RAD DAMAGE FOR ACE AND VANILLA
+			_i = 24;
+			while {_i > 0} do {
+				if ("ace_medical_engine" in activatedAddons) then {
+					[(_this select 0), 0.5, "Body", "unknown"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				}
+				else {
+					(_this select 0) setDamage ((damage (_this select 0)) + 0.1);
+				};
+				sleep 5;
+				_i = _i - 1;
+			};
+			
+		};
+	};
+};
+
+fn_grenades_main_earthshaker_damage = {
+	if (isDamageAllowed (_this select 0)) then {
+		(_this select 0) setDamage ((damage (_this select 0)) + (_this select 1));
+	};
+};
+
+fn_grenades_main_rift_throw = {
+	_x = (_this select 0);
+	_vectdir = (_this select 1);
+	
+	if (isDamageAllowed _x) then {
+		if ((getMass _x) == 0) then {
+			[_x,[_vectdir vectorMultiply 100000*(1), [0,0,0]]] remoteExec ["addForce",0];
+		}
+		else{
+			[_x,[_vectdir vectorMultiply 100000*(getMass _x)/250, [0,0,0]]] remoteExec ["addForce",0];
+		};
+		if (_x isKindOf "Man") then {
+			if ("ace_medical_engine" in activatedAddons) then {
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+				[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
+			}
+			else {
+				_x setDamage 1;
+			};
+		};
+	};
+};
+
+
+
+
+
 params [];
 
 if (not(isDedicated)) then {
@@ -55,21 +116,7 @@ if (not(isDedicated)) then {
 							_projectile addEventHandler ["HitExplosion", {
 								// params ["_projectile", "_hitEntity", "_projectileOwner", "_hitSelections"];
 								
-								[_this select 1] spawn {
-									// RAD DAMAGE FOR ACE AND VANILLA
-									_i = 24;
-									while {_i > 0} do {
-										if ("ace_medical_engine" in activatedAddons) then {
-											[(_this select 0), 0.5, "Body", "unknown"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-										}
-										else {
-											(_this select 0) setDamage ((damage (_this select 0)) + 0.1);
-										};
-										sleep 5;
-										_i = _i - 1;
-									};
-									
-								};
+								[_this select 1] remoteExec ["fn_grenades_main_rad_damage", _this select 1];
 								
 							}];
 							
@@ -101,21 +148,6 @@ if (not(isDedicated)) then {
 								// params ["_projectile", "_pos", "_velocity"];
 								
 								_buildings = (_this select 1) nearObjects ["Building", 50];
-								
-								// Check if the buildings' can be damaged realistically
-								{
-									
-									if (not(isDamageAllowed _x)) then {
-										_buildings deleteAt _forEachIndex;
-									}
-									else {
-										// Check if armor is low enough for it to matter
-										if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> "armor")) > 10000) then {
-											_buildings deleteAt _forEachIndex;
-										};
-									};
-									
-								} forEachReversed _buildings;
 								
 								// Check for the buildings' roof
 								{
@@ -170,7 +202,7 @@ if (not(isDedicated)) then {
 													/ (1 max (((getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "armor")) - 500) / 120))
 													/ (1 max (((_this select 1) distance (_x select 0)) - 3));
 												
-												_target setDamage ((damage _target) + _damage);
+												[_target, _damage] remoteExec ["fn_grenades_main_earthshaker_damage", _target];
 												break;
 											}
 											else {
@@ -276,13 +308,16 @@ if (not(isDedicated)) then {
 											if (!((_this select 0) iskindof "Man")) then {
 												vel = (velocityModelSpace (_this select 0));
 												(_this select 0) setVelocityModelSpace [(vel select 0) * 0.33, (vel select 1) * 0.33, (vel select 2) * 0.33];
+											}
+											else {
+												_slow_speed = ((getAnimSpeedCoef (_this select 0)) * 0.5);
+												[(_this select 0), _slow_speed] remoteExec ["setAnimSpeedCoef", 0];
+												
+												sleep 10;
+												
+												_normal_speed = ((getAnimSpeedCoef (_this select 0)) * 2);
+												[(_this select 0), _normal_speed] remoteExec ["setAnimSpeedCoef", 0];
 											};
-											
-											[(_this select 0), ((getAnimSpeedCoef (_this select 0)) * 0.5)] remoteExec ["setAnimSpeedCoef", 0];
-											
-											sleep 10;
-											
-											[(_this select 0), ((getAnimSpeedCoef (_this select 0)) * 2)] remoteExec ["setAnimSpeedCoef", 0];
 										};
 									}forEach _targs;
 									sleep 2;
@@ -402,27 +437,9 @@ if (not(isDedicated)) then {
 									_targs = (nearestObjects [_targ, ["AllVehicles"], 20]); 
 									{
 										_vectdir = (AGLtoASL _targ) vectorFromTo (getPosASL _x);
-										if ((getMass _x) == 0) then {
-											[_x,[_vectdir vectorMultiply 100000*(1), [0,0,0]]] remoteExec ["addForce",0];
-										}
-										else{
-											[_x,[_vectdir vectorMultiply 100000*(getMass _x)/250, [0,0,0]]] remoteExec ["addForce",0];
-										};
-										if (_x isKindOf "Man") then {
-											if ("ace_medical_engine" in activatedAddons) then {
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-											}
-											else {
-												_x setDamage 1;
-											};
-										};
+										
+										[_x, _vectdir] remoteExec ["fn_grenades_main_rift_throw", _x];
+										
 										sleep 0.1;
 									}forEach _targs;
 								};
@@ -460,21 +477,7 @@ if (not(isDedicated)) then {
 							_projectile addEventHandler ["HitExplosion", {
 								// params ["_projectile", "_hitEntity", "_projectileOwner", "_hitSelections"];
 								
-								[_this select 1] spawn {
-									// RAD DAMAGE FOR ACE AND VANILLA
-									_i = 24;
-									while {_i > 0} do {
-										if ("ace_medical_engine" in activatedAddons) then {
-											[(_this select 0), 0.5, "Body", "unknown"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-										}
-										else {
-											(_this select 0) setDamage ((damage (_this select 0)) + 0.1);
-										};
-										sleep 5;
-										_i = _i - 1;
-									};
-									
-								};
+								[_this select 1] remoteExec ["fn_grenades_main_rad_damage", _this select 1];
 								
 							}];
 							
@@ -506,21 +509,6 @@ if (not(isDedicated)) then {
 								// params ["_projectile", "_pos", "_velocity"];
 								
 								_buildings = (_this select 1) nearObjects ["Building", 50];
-								
-								// Check if the buildings' can be damaged realistically
-								{
-									
-									if (not(isDamageAllowed _x)) then {
-										_buildings deleteAt _forEachIndex;
-									}
-									else {
-										// Check if armor is low enough for it to matter
-										if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _x) >> "armor")) > 10000) then {
-											_buildings deleteAt _forEachIndex;
-										};
-									};
-									
-								} forEachReversed _buildings;
 								
 								// Check for the buildings' roof
 								{
@@ -575,7 +563,7 @@ if (not(isDedicated)) then {
 													/ (1 max (((getNumber (configFile >> "CfgVehicles" >> (typeOf _target) >> "armor")) - 500) / 120))
 													/ (1 max (((_this select 1) distance (_x select 0)) - 3));
 												
-												_target setDamage ((damage _target) + _damage);
+												[_target, _damage] remoteExec ["fn_grenades_main_earthshaker_damage", _target];
 												break;
 											}
 											else {
@@ -805,27 +793,9 @@ if (not(isDedicated)) then {
 									_targs = (_targ nearObjects ["AllVehicles", 20]); 
 									{
 										_vectdir = (AGLtoASL _targ) vectorFromTo (getPosASL _x);
-										if ((getMass _x) == 0) then {
-											[_x,[_vectdir vectorMultiply 100000*(1), [0,0,0]]] remoteExec ["addForce",0];
-										}
-										else{
-											[_x,[_vectdir vectorMultiply 100000*(getMass _x)/250, [0,0,0]]] remoteExec ["addForce",0];
-										};
-										if (_x isKindOf "Man") then {
-											if ("ace_medical_engine" in activatedAddons) then {
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-												[_x, 3, "Body", "punch"] remoteExec ["ace_medical_fnc_addDamageToUnit",0];
-											}
-											else {
-												_x setDamage 1;
-											};
-										};
+										
+										[_x, _vectdir] remoteExec ["fn_grenades_main_rift_throw", _x];
+										
 										sleep 0.1;
 									}forEach _targs;
 								};
