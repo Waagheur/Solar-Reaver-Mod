@@ -39,20 +39,24 @@ class CfgRecoils
 class CfgMagazines
 {
 	class HEAVY_BOLTER_BELTX100;
+	class HEAVY_BOLTER_BELTX250;
+	class HEAVY_BOLTER_BELTX500;
 	class SR_XI_HEAVY_BOLTER_BELTX100: HEAVY_BOLTER_BELTX100
 	{
 		displayName = "[TSR] [PXI] [SOB] 100RND Heavy Bolter Belt";
 		ammo = "SR_XI_ProtoBoltRound";
 		descriptionShort = "[TSR] [PXI] [SOB] 100 Rounds Heavy Bolter Belt";
 	};
-	class SR_XI_HEAVY_BOLTER_BELTX250: SR_XI_HEAVY_BOLTER_BELTX100
+	class SR_XI_HEAVY_BOLTER_BELTX250: HEAVY_BOLTER_BELTX250
 	{
 		displayName = "[TSR] [PXI] [SOB] 250RND Heavy Bolter Belt";
+		ammo = "SR_XI_ProtoBoltRound";
 		descriptionShort = "[TSR] [PXI] [SOB] 250 Rounds Heavy Bolter Belt";
 	};
-	class SR_XI_HEAVY_BOLTER_BELTX500: SR_XI_HEAVY_BOLTER_BELTX100
+	class SR_XI_HEAVY_BOLTER_BELTX500: HEAVY_BOLTER_BELTX500
 	{
 		displayName = "[TSR] [PXI] [SOB] 500RND Heavy Bolter Belt";
+		ammo = "SR_XI_ProtoBoltRound";
 		descriptionShort = "[TSR] [PXI] [SOB] 500 Rounds Heavy Bolter Belt";
 	};
 };
