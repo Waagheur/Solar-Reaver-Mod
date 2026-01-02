@@ -31,6 +31,7 @@ class CfgPatches
 			"TSR_TyphoonSpeeder",
 			"TSR_TornadoSpeeder",
 			"TSR_Rhino",
+			"TSR_Rhino_Withered",
 			"TSR_Rhino_Marauder",
 			"TSR_Rhino_Reaver",
 			"TSR_Razorback_HB",
