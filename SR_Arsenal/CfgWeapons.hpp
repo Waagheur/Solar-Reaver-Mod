@@ -3177,7 +3177,7 @@ class Cfgweapons
 		scopeArsenal=2;
 		author="Waagheur";
 		baseWeapon="SR_Steve_Volkite_Can_1";
-		displayName="[TSR] [AOD] Volkite Culevrin";
+		displayName="[TSR] [AOD] Volkite Culverin";
 		magazines[] = {"SR_Volkite_Can_Mag_1"};
 	};
 
