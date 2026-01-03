@@ -1,3 +1,28 @@
+/*
+	Author: Waagheur
+
+	Description:
+		Inits a limited arsenal
+
+	Parameter(s):
+		params ['_entity'];
+
+
+
+
+	Returns:
+		Nothing
+
+	Examples:
+		
+*/
+
+
+
+if (is3DEN) exitWith {};
+
+
+
 params ["_entity"];
 
 

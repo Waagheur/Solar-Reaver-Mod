@@ -13,7 +13,8 @@ class CfgPatches
 			"TIOW_SM_Fast_attack",
 			"TIOW_Thunderhawk",
 			"WHturret",
-			"SR_UAV"
+			"SR_UAV",
+			"ML700_Avengers"
 		};
 		weapons[]={};
 		magazines[]={};
@@ -24,7 +25,9 @@ class CfgPatches
 			"TSR_DropPod",
 			"TSR_Xiphon",
 			"TSR_Ass_Ram",
+			"SR_Steve_ColumHeli_1",
 			"TSR_Cinerous",
+			"SR_ML700_Avenger_BLU",
 			"TSR_Thunderhawk",
 			"TSR_StormSpeeder",
 			"TSR_TempSpeeder",
@@ -990,6 +993,18 @@ class CfgVehicles
 		};
 	};
 
+	class ML700_Avenger_776th;
+	class SR_ML700_Avenger_BLU: ML700_Avenger_776th
+	{
+		side = 1;
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		displayName = "[TSR] Avenger";
+		faction="SR_Faction";
+		editorSubcategory="EdSubcat_Planes";
+	};
+
 	class Thunderhawk_1_UM_TIOW;
 	class TSR_Thunderhawk: Thunderhawk_1_UM_TIOW
 	{
@@ -1004,6 +1019,14 @@ class CfgVehicles
 		crew = "TIOW_Tactical_SW_1";
 		hiddenSelections[] = {"Hull_Camo"};
 		hiddenSelectionsTextures[] = {"SR_Vehicles\textures\SR_Thunderhawk_CO.paa"};
+	};
+
+	class Steve_ColumHeli_DA_1;
+	class SR_Steve_ColumHeli_1: Steve_ColumHeli_DA_1
+	{
+		displayName = "[TSR] Columba Drop Ship";
+		faction="SR_Faction";
+		editorSubcategory="EdSubcat_Helicopters";
 	};
 
 	class TIOW_UM_Storm;

@@ -18,6 +18,7 @@ class CfgPatches
 		units[] = 
 		{
 			"SR_Limited_Arsenal",
+			"SR_Supply_Receptor",
 			"SR_Vehicle_Service",
 			"SR_SupplyPod_Empty",
 			"SR_SupplyPod_Seeker",
@@ -321,7 +322,6 @@ class CfgVehicles{
 
 
 
-
 	class Box_NATO_Wps_F;
 	class SR_Vehicle_Service: Box_NATO_Wps_F
 	{
@@ -334,6 +334,67 @@ class CfgVehicles{
 		class TransportItems{};
 		class TransportMagazines{};
 		class TransportWeapons{};
+	};
+
+
+
+
+
+	class land_optre_bootcamp_m_floor;
+	class SR_Supply_Receptor: land_optre_bootcamp_m_floor
+	{
+		author = "Waagheur";
+		displayName = "[TSR] Supply Receptor";
+		editorCategory = "EdCat_Supplies";
+		editorSubcategory = "SR_EdSubcat_Supply";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		armor = 10000;
+		
+		class Attributes
+		{
+			class SR_Supply_Receptor_Vehicles_Attribute
+			{
+				displayName = "Vehicles";
+				tooltip = "SR Vehicles";
+				property = "SR_Supply_Receptor_Vehicles";
+				control = "Checkbox";
+
+				expression = "_this setVariable['SR_Supply_Receptor_Vehicles', _value, true];";
+				
+				defaultValue = "true";
+
+				unique = 0;
+				validate = "none";
+				condition = "object";
+				typeName = "BOOL";
+			};
+			class SR_Supply_Receptor_Supplies_Attribute
+			{
+				displayName = "Supplies";
+				tooltip = "SR Supply objects";
+				property = "SR_Supply_Receptor_Supplies";
+				control = "Checkbox";
+
+				expression = "_this setVariable['SR_Supply_Receptor_Supplies', _value, true];";
+				
+				defaultValue = "true";
+
+				unique = 0;
+				validate = "none";
+				condition = "object";
+				typeName = "BOOL";
+			};
+		};
+		
+		class EventHandlers
+		{
+			class limited_arsenal_init
+			{
+				postInit = "(_this select 0) execVM 'SR_Supply\functions\fn_supply_receptor_init.sqf'";
+			};
+		};
 	};
 
 
