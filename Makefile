@@ -73,3 +73,8 @@ xi_allWeapons:
 	
 SR_Arsenal:
 	$(MAKE) -C SR_Arsenal
+	
+.PHONY: SR_Vehicles
+	
+SR_Vehicles:
+	$(MAKE) -C SR_Vehicles
