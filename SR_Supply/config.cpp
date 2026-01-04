@@ -1719,58 +1719,53 @@ class CfgVehicles{
 			// Krieg grenade launcher
 			class xx_TIOW_Krieg_GL_Buck_mag
 			{
-				magazine = "TIOW_Krieg_GL_Buck_mag";
-				count = 200;
-			};
-			class xx_TIOW_Krieg_GL_Flame_mag
-			{
-				magazine = "TIOW_Krieg_GL_Flame_mag";
+				magazine = "SR_XI_Heavy_Single_Buck_GL_Mag";
 				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Flare_mag
 			{
-				magazine = "TIOW_Krieg_GL_Flare_mag";
+				magazine = "SR_XI_Heavy_Single_Flare_GL_Mag";
 				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Frag_mag
 			{
-				magazine = "TIOW_Krieg_GL_Frag_mag";
+				magazine = "SR_XI_Heavy_Single_Frag_GL_Mag";
 				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Krak_mag
 			{
-				magazine = "TIOW_Krieg_GL_Krak_mag";
+				magazine = "SR_XI_Heavy_Single_Krak_GL_Mag";
 				count = 200;
 			};
 			class xx_TIOW_Krieg_GL_Smoke_mag
 			{
-				magazine = "TIOW_Krieg_GL_Smoke_mag";
+				magazine = "SR_XI_Heavy_Single_Smoke_GL_Mag";
 				count = 200;
 			};
 			// Old grenade launcher
 			class xx_smoll_buck_round
 			{
-				magazine = "smoll_buck_round";
+				magazine = "SR_XI_Buck_GL_Mag";
 				count = 25;
 			};
 			class xx_smoll_flare1_round
 			{
-				magazine = "smoll_flare1_round";
+				magazine = "SR_XI_Flare_GL_Mag";
 				count = 25;
 			};
 			class xx_frag_round_smol
 			{
-				magazine = "frag_round_smol";
+				magazine = "SR_XI_Frag_GL_Mag";
 				count = 25;
 			};
 			class xx_Krak_round_smol
 			{
-				magazine = "Krak_round_smol";
+				magazine = "SR_XI_Krak_GL_Mag";
 				count = 25;
 			};
 			class xx_smoll_smoke_round
 			{
-				magazine = "smoll_smoke_round";
+				magazine = "SR_XI_Smoke_GL_Mag";
 				count = 25;
 			};
 			// SR_XI Weapons
