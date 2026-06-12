@@ -53,6 +53,7 @@ class CfgPatches
 			"SR_Meltagun_Mag",
 			"Steve_30k_lascutter_Mag",
 			"SR_LasFusil_Mag",
+			"SR_Steve_Umbra_BoltgunMag",
 			
 			"SR_SM_Grav_Mag",
 			"SR_Volkite_Cav_Mag",

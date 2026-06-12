@@ -1039,16 +1039,58 @@ class Cfgweapons
 		displayName="[TSR] [AOD] Tigrus Combi-Bolter";
 	};
 	
-	class SR_STEVE_New_UmbraBoltgun_1 : STEVE_New_UmbraBoltgun_1 // That looks like a regular boltgun, but it works like a combi boltgun (80 rounds full auto)
+	class SR_STEVE_New_UmbraBoltgun_1: STEVE_New_UmbraBoltgun_1 // Adjusted Steve Umbra, 60 rounds, variable zoom for CQC.
 	{
-		scope=2;
-		scopeCurator=2;
-		scopeArsenal=2;
-		author="Waagheur";
-		baseWeapon="SR_STEVE_New_UmbraBoltgun_1";
-		displayName="[TSR] [AOD] Umbra Boltgun";
+		scope = 2;
+		scopeCurator = 2;
+		scopeArsenal = 2;
+		author = "Waagheur";
+		baseWeapon = "SR_STEVE_New_UmbraBoltgun_1";
+		displayName = "[TSR] [AOD] Umbra Boltgun";
+		magazines[] = {"SR_Steve_Umbra_BoltgunMag"};
+		class OpticsModes
+		{
+			class Snip
+			{
+				opticsID = 1;
+				useModelOptics = 1;
+				opticsPPEffects[] = {"OpticsCHAbera1","OpticsBlur1"};
+				opticsZoomMin = 0.02;
+				opticsZoomMax = 0.08;
+				opticsZoomInit = 0.08;
+				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600};
+				discreteDistanceInitIndex = 2;
+				distanceZoomMin = 100;
+				distanceZoomMax = 1600;
+				discretefov[] = {0.08, 0.0625, 0.04, 0.02};
+				discreteInitIndex = 0;
+				modelOptics[] = {"\A3\Weapons_f\acc\reticle_tws_mg","\A3\Weapons_f\acc\reticle_tws_mg_NFOW"};
+				memoryPointCamera = "opticView";
+				visionMode[] = {"Normal","TI","NVG"};
+				opticsFlare = 1;
+				opticsDisablePeripherialVision = 1;
+				cameraDir = "";
+			};
+			class Iron: Snip
+			{
+				opticsID = 2;
+				useModelOptics = 0;
+				opticsPPEffects[] = {"",""};
+				opticsFlare = 0;
+				opticsDisablePeripherialVision = 0;
+				opticsZoomMin = 0.15;
+				opticsZoomMax = 0.4;
+				opticsZoomInit = 0.5;
+				memoryPointCamera = "eye";
+				visionMode[] = {};
+				discretefov[] = {};
+				distanceZoomMin = 200;
+				distanceZoomMax = 200;
+				discreteDistance[] = {200};
+				discreteDistanceInitIndex = 0;
+			};
+		};
 	};
-	
 	
 	
 	// Long Range Boltguns

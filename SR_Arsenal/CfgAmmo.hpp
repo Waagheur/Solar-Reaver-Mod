@@ -1,5 +1,4 @@
 class TIOW_SM_Plasmagun_Mag;
-class Steve_SM_PlasmaPistol_Mag;
 class TIOW_CombiPlas_Mag;
 class Steve_30k_CombiPlas_Mag;
 class TIOW_Melta_Ammo;

@@ -26,8 +26,19 @@ class CfgVehicles
 		uniformClass = "SR_MK3_Armor_Blackshield"; // This will be the classname of the PowerArmor, as seen in Weapons.HPP
 		hiddenSelectionsTextures[] =
 			{
-				"SR_FirstBorn\MarineTengu\SR_Tengu_2.paa",
-				"SR_FirstBorn\MarineTengu\SR_Tengu_Sal_2.paa"};
+				"SR_FirstBorn\Textures\SR_Tengu_2.paa",
+				"SR_FirstBorn\Textures\SR_Tengu_Sal_2.paa"};
+	};
+	class TIOW_Mk5Powerpack_SAL;
+	class SR_TIOW_Mk5Powerpack_SAL_Tengu : TIOW_Mk5Powerpack_SAL
+	{
+		displayName = "Mk 5 Powerpack (Tengu)";
+		picture = "\TIOW_SM\Icon\MK5Powerpack_ca.paa";
+		model = "\TIOW_Sm\Marine\Model\MK5_Powerpack.p3d";
+		hiddenSelections[] = {"Camo1","Camo2"};
+		hiddenSelectionsTextures[] = {"DOS_TCH\Textures\BP_SAL_1_Co.paa"};
+		maximumLoad = 640;
+		tf_range = 90000;
 	};
 };
 class CfgWeapons
@@ -40,8 +51,8 @@ class CfgWeapons
 		displayName="[TSR] MK 3 Power Armor (Tengu)";
 		hiddenSelectionsTextures[]=
 		{
-			"SR_FirstBorn\MarineTengu\SR_Tengu_2.paa",
-			"SR_FirstBorn\MarineTengu\SR_Tengu_Sal_2.paa"
+			"SR_FirstBorn\Textures\SR_Tengu_2.paa",
+			"SR_FirstBorn\Textures\SR_Tengu_Sal_2.paa"
 		};
 		class ItemInfo: ItemInfo
 		{
@@ -56,7 +67,7 @@ class CfgWeapons
 		displayName="[TSR] MK 2 Pauldrons (Tengu)";
 		hiddenSelectionsTextures[] =
 		{
-			"SR_FirstBorn\MarineTengu\SR_Tengu_2.paa",
+			"SR_FirstBorn\Textures\SR_Tengu_2.paa",
 			"SR_FirstBorn\Textures\SR_Armour2.paa"
 		};
 	};
@@ -68,7 +79,7 @@ class CfgWeapons
 
 		hiddenSelectionsTextures[]=
 		{
-			"SR_FirstBorn\MarineTengu\Tengu-Helmet.paa"
+			"SR_FirstBorn\Textures\Tengu_Helmet.paa"
 		};
 	};
 };

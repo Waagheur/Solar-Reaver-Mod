@@ -4,6 +4,7 @@ class Steve_Phob_BoltPistolMag;
 class Steve_30k_lascutter_Mag;
 class TIOW_30rnd_GodwynBoltgunMag;
 class Steve_SM_PlasmaPistol_Mag;
+class Steve_Umbra_BoltgunMag;
 
 class Steve_Phob_Atrox_BoltgunMag;
 
@@ -101,6 +102,16 @@ class CfgMagazines
 		ammo="SR_PlasmaPistolRound";
 		mass = 12;
 		count = 20;
+	};
+
+	class SR_Steve_Umbra_BoltgunMag: Steve_Umbra_BoltgunMag
+	{
+		mass = 25;
+		picture = "\TIOW_SMWep\Icon\GodwynBolter30Mag_ca.paa";
+		displayName = "[AOD] Umbra Boltgun Magazine 60 Rnd.";
+		ammo = "Steve_Umbra_SmBoltRound";
+		count = 60;
+		descriptionShort = "[AOD] Tigrus Boltgun Magazine 60 Rnd.";
 	};
 	
 	
