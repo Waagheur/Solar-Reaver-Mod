@@ -172,9 +172,10 @@ class cfgWeapons {
 	};
 };
 
-class OPTRE_Static_FG75_CMA;
+class OPTRE_Static_FG75;
 class Turrets;
 class MainTurret;
+class ViewOptics;
 class cfgVehicles
 {
 	class SR_Opposition_OPTRE_Static_FG75: OPTRE_Static_FG75
