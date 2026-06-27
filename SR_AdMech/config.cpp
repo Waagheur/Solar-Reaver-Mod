@@ -1,6 +1,6 @@
 class CfgPatches
 {
-	class TSR_AdMechUnits
+	class SR_AdMech
 	{
 		author = "Tengu";
 		requiredAddons[] = {};
