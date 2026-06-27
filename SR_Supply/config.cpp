@@ -491,20 +491,20 @@ class CfgVehicles{
 				magazine = "SR_LasFusil_Mag";
 				count = 40;
 			};
-			class xx_TIOW_SM_Rocket_Frag_Mag
+			class xx_SR_TIOW_SM_Rocket_Frag_Mag
 			{
-				magazine = "TIOW_SM_Rocket_Frag_Mag";
+				magazine = "SR_TIOW_SM_Rocket_Frag_Mag";
 				count = 15;
 			};
-			class xx_TIOW_SM_Rocket_Krak_Mag
+			class xx_SR_TIOW_SM_Rocket_Krak_Mag
 			{
-				magazine = "TIOW_SM_Rocket_Krak_Mag";
-				count = 10;
+				magazine = "SR_TIOW_SM_Rocket_Krak_Mag";
+				count = 15;
 			};
 			class xx_SR_Light_Frag_Missile
 			{
 				magazine = "SR_Light_Frag_Missile";
-				count = 30;
+				count = 15;
 			};
 			class xx_TIOW_30rnd_GodwynBoltgunMag
 			{
@@ -749,6 +749,11 @@ class CfgVehicles{
 				weapon = "SR_TIOW_GodwynBoltgun_1";
 				count = 4;
 			};
+			class xx_SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded
+			{
+				weapon = "SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded";
+				count = 10;
+			};
 		};
 		class TransportItems
 		{
@@ -938,6 +943,11 @@ class CfgVehicles{
 				weapon = "SR_TIOW_GodwynBoltgun_1";
 				count = 4;
 			};
+			class xx_SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded
+			{
+				weapon = "SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded";
+				count = 10;
+			};
 		};
 		class TransportItems
 		{
@@ -1003,22 +1013,22 @@ class CfgVehicles{
 		hiddenSelectionsTextures[] = {"SR_Supply\Textures\SupplyPod_Devastator_CO.paa"};
 		class TransportMagazines
 		{
-			class xx_TIOW_SM_Rocket_Frag_Mag_LSLOT
-			{
-				magazine = "TIOW_SM_Rocket_Frag_Mag_LSLOT";
-				count = 50;
-			};
-			class xx_TIOW_SM_Rocket_Krak_Mag_LSLOT
-			{
-				magazine = "TIOW_SM_Rocket_Krak_Mag_LSLOT";
-				count = 50;
-			};
 			class xx_SR_TIOW_SM_Rocket_Frag_Mag_LSLOT
 			{
 				magazine = "SR_TIOW_SM_Rocket_Frag_Mag_LSLOT";
 				count = 50;
 			};
 			class xx_SR_TIOW_SM_Rocket_Krak_Mag_LSLOT
+			{
+				magazine = "SR_TIOW_SM_Rocket_Krak_Mag_LSLOT";
+				count = 50;
+			};
+			class xx_SR_VB_TIOW_SM_Rocket_Frag_Mag_LSLOT
+			{
+				magazine = "SR_TIOW_SM_Rocket_Frag_Mag_LSLOT";
+				count = 50;
+			};
+			class xx_SR_VB_TIOW_SM_Rocket_Krak_Mag_LSLOT
 			{
 				magazine = "SR_TIOW_SM_Rocket_Krak_Mag_LSLOT";
 				count = 50;
@@ -1141,6 +1151,11 @@ class CfgVehicles{
 			class xx_SR_Light_Frag_Missile
 			{
 				magazine = "SR_Light_Frag_Missile";
+				count = 50;
+			};
+			class xx_SR_Light_Frag_Missile_LSLOT
+			{
+				magazine = "SR_Light_Frag_Missile_LSLOT";
 				count = 50;
 			};
 			class xx_TIOW_CombiPlas_Mag
@@ -1916,14 +1931,19 @@ class CfgVehicles{
 				magazine = "IC_Flak_Missile_mag";
 				count = 30;
 			};
-			class xx_IC_krakk_Missile_mag
+			class xx_SR_IC_frag_Missile_mag
 			{
-				magazine = "IC_krakk_Missile_mag";
+				magazine = "SR_IC_frag_Missile_mag";
 				count = 30;
 			};
-			class xx_IC_frag_Missile_mag
+			class xx_SR_IC_krakk_Missile_mag
 			{
-				magazine = "IC_frag_Missile_mag";
+				magazine = "SR_IC_krakk_Missile_mag";
+				count = 30;
+			};
+			class xx_SR_Light_Frag_Missile_LSLOT
+			{
+				magazine = "SR_Light_Frag_Missile_LSLOT";
 				count = 30;
 			};
 			class xx_MLHE_Mag
@@ -1952,12 +1972,12 @@ class CfgVehicles{
 				count = 30;
 			};
 			//Visibombs
-			class xx_SR_IC_frag_Missile_mag
+			class xx_SR_VB_IC_frag_Missile_mag
 			{
 				magazine = "SR_IC_frag_Missile_mag";
 				count = 30;
 			};
-			class xx_SR_IC_krakk_Missile_mag
+			class xx_SR_VB_IC_krakk_Missile_mag
 			{
 				magazine = "SR_IC_krakk_Missile_mag";
 				count = 30;
@@ -2015,9 +2035,9 @@ class CfgVehicles{
 				weapon = "XI_RevolverA_base";
 				count = 4;
 			};
-			class xx_ML700_Launcher_Weapon_CadianLauncher_Loaded
+			class xx_SR_XI_Disposable_Rocket_1_LSLOT_Loaded
 			{
-				weapon = "ML700_Launcher_Weapon_CadianLauncher_Loaded";
+				weapon = "SR_XI_Disposable_Rocket_1_LSLOT_Loaded";
 				count = 10;
 			};
 			class xx_xi_legionnaire1Conscript_dt
