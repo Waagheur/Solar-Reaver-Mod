@@ -265,7 +265,7 @@ class ace_medical_treatment
 	{
 		class SR_NartheciumInject
         {
-            painReduce=1.0;
+            painReduce=1000.0;
 			hrIncreaseLow[]={5,10};
 			hrIncreaseNormal[]={-15,-20};
 			hrIncreaseHigh[]={-15,-20};
@@ -279,7 +279,7 @@ class ace_medical_treatment
 		
 		class SR_AdrenalStims
         {
-            painReduce=1.0;
+            painReduce=1000.0;
 			hrIncreaseLow[]={5,10};
 			hrIncreaseNormal[]={-15,-20};
 			hrIncreaseHigh[]={-15,-20};
