@@ -92,6 +92,15 @@ if (not(isDedicated)) then {
 		_plasma_muzzles = _plasma_muzzles + [
 			"CTR_Combi_Plasma_Rifle_Under"
 		];
+		
+		_plasma_pistol_weapons = _plasma_pistol_weapons + [
+			"SR_CTR_Heavy_Plasma_Pistol_S",
+			"SR_CTR_Heavy_Plasma_Pistol_S_Red",
+			"SR_CTR_Heavy_Plasma_Pistol_S_White",
+			"SR_CTR_Heavy_Plasma_Pistol_B",
+			"SR_CTR_Heavy_Plasma_Pistol_B_Red",
+			"SR_CTR_Heavy_Plasma_Pistol_B_White"
+		];
 	};
 	
 	{

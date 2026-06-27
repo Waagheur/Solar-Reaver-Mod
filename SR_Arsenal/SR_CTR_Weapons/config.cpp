@@ -12,6 +12,57 @@ class CfgPatches
 		};
 		weapons[]=
 		{
+			"SR_CTR_Bolt_Pistol_S",
+			"SR_CTR_Bolt_Pistol_S_Red",
+			"SR_CTR_Bolt_Pistol_S_White",
+			"SR_CTR_Bolt_Pistol_B",
+			"SR_CTR_Bolt_Pistol_B_Red",
+			"SR_CTR_Bolt_Pistol_B_White",
+			
+			"SR_CTR_Heavy_Bolt_Pistol_S",
+			"SR_CTR_Heavy_Bolt_Pistol_S_Red",
+			"SR_CTR_Heavy_Bolt_Pistol_S_White",
+			"SR_CTR_Heavy_Bolt_Pistol_B",
+			"SR_CTR_Heavy_Bolt_Pistol_B_Red",
+			"SR_CTR_Heavy_Bolt_Pistol_B_White",
+			
+			"SR_CTR_Reiver_Pistol_S",
+			"SR_CTR_Reiver_Pistol_S_Red",
+			"SR_CTR_Reiver_Pistol_S_White",
+			"SR_CTR_Reiver_Pistol_B",
+			"SR_CTR_Reiver_Pistol_B_Red",
+			"SR_CTR_Reiver_Pistol_B_White",
+			
+			"SR_CTR_Absolver_Pistol_S",
+			"SR_CTR_Absolver_Pistol_S_Red",
+			"SR_CTR_Absolver_Pistol_S_White",
+			"SR_CTR_Absolver_Pistol_B",
+			"SR_CTR_Absolver_Pistol_B_Red",
+			"SR_CTR_Absolver_Pistol_B_White",
+			
+			"SR_CTR_Eliminator_Pistol_S",
+			"SR_CTR_Eliminator_Pistol_S_Red",
+			"SR_CTR_Eliminator_Pistol_S_White",
+			"SR_CTR_Eliminator_Pistol_B",
+			"SR_CTR_Eliminator_Pistol_B_Red",
+			"SR_CTR_Eliminator_Pistol_B_White",
+			
+			"SR_CTR_Neo_Volkite_Pistol_S",
+			"SR_CTR_Neo_Volkite_Pistol_S_Red",
+			"SR_CTR_Neo_Volkite_Pistol_S_White",
+			"SR_CTR_Neo_Volkite_Pistol_B",
+			"SR_CTR_Neo_Volkite_Pistol_B_Red",
+			"SR_CTR_Neo_Volkite_Pistol_B_White",
+			
+			"SR_CTR_Heavy_Plasma_Pistol_S",
+			"SR_CTR_Heavy_Plasma_Pistol_S_Red",
+			"SR_CTR_Heavy_Plasma_Pistol_S_White",
+			"SR_CTR_Heavy_Plasma_Pistol_B",
+			"SR_CTR_Heavy_Plasma_Pistol_B_Red",
+			"SR_CTR_Heavy_Plasma_Pistol_B_White",
+			
+			
+			
 			"SR_CTR_Bolt_Rifle",
 			"SR_CTR_Bolt_Rifle_Red",
 			"SR_CTR_Bolt_Rifle_Red_Alt",
@@ -115,6 +166,9 @@ class CfgPatches
 		};
 		magazines[]=
 		{
+			"SR_CTR_Magazine_Pistol_Light",
+			"SR_CTR_Magazine_Pistol_Heavy",
+			
 			"SR_CTR_Magazine_Sickle",
 			"SR_CTR_Magazine_Sickle_2",
 			"SR_CTR_Magazine_Box",
@@ -130,7 +184,10 @@ class CfgPatches
 			
 			"SR_CTR_Flask_Plasma_1",
 			"SR_CTR_Flask_Plasma_2",
-			"SR_CTR_Combi_Flask_Plasma_1"
+			"SR_CTR_Combi_Flask_Plasma_1",
+			"SR_CTR_Flask_Heavy_Plasma_Pistol",
+			
+			"SR_CTR_Magazine_Neo_Volkite"
 		};
 		ammo[]=
 		{
@@ -145,6 +202,8 @@ class CfgPatches
 
 
 class TIOW_SmBoltRound;
+
+class SR_Volkite_Cav_Rnd;
 
 class CfgAmmo
 {
@@ -193,14 +252,35 @@ class CfgAmmo
 
 
 
+class CTR_Magazine_Pistol_Light;
+
 class CTR_Magazine_Sickle;
 class CTR_Magazine_Shrike;
 
 class CTR_Flask_Plasma_1;
 class CTR_Flask_Plasma_2;
 
+class CTR_Magazine_Neo_Volkite;
+
 class CfgMagazines
 {
+	
+	class SR_CTR_Magazine_Pistol_Light: CTR_Magazine_Pistol_Light
+	{
+		displayName="[TSR] [CTR] Light Magazine 12 Rnd";
+		ammo="SR_CTR_Bolt_Round";
+		count=12;
+		mass=12;
+	};
+	class SR_CTR_Magazine_Pistol_Heavy: SR_CTR_Magazine_Pistol_Light
+	{
+		displayName="[TSR] [CTR] Heavy Magazine 12 Rnd";
+		ammo="SR_CTR_Bolt_Round_2";
+		count=8;
+		mass=12;
+	};
+	
+	
 	
 	class SR_CTR_Magazine_Sickle: CTR_Magazine_Sickle
 	{
@@ -416,6 +496,23 @@ class CfgMagazines
 		ammo = "TIOW_SM_PlasmagunRound"
 	};
 	
+	class SR_CTR_Flask_Heavy_Plasma_Pistol: SR_CTR_Flask_Plasma_1
+	{
+		displayName="[TSR] [CTR] Heavy Plasma Pistol Flask";
+		ammo="SR_PlasmaPistolRound";
+		count=20;
+		mass=12;
+	};
+	
+	
+	
+	class SR_CTR_Magazine_Neo_Volkite: CTR_Magazine_Neo_Volkite
+	{
+		displayName="[TSR] [CTR] Volkite Magazine 20 Rnd";
+		ammo="SR_Volkite_Charger_Rnd";
+		initSpeed = 1050;
+	};
+	
 };
 
 
@@ -423,6 +520,58 @@ class CfgMagazines
 
 
 class Mode_SemiAuto;
+
+// Pistols
+class CTR_Bolt_Pistol_S;
+class CTR_Bolt_Pistol_S_Red;
+class CTR_Bolt_Pistol_S_White;
+class CTR_Bolt_Pistol_B;
+class CTR_Bolt_Pistol_B_Red;
+class CTR_Bolt_Pistol_B_White;
+
+class CTR_Heavy_Bolt_Pistol_S;
+class CTR_Heavy_Bolt_Pistol_S_Red;
+class CTR_Heavy_Bolt_Pistol_S_White;
+class CTR_Heavy_Bolt_Pistol_B;
+class CTR_Heavy_Bolt_Pistol_B_Red;
+class CTR_Heavy_Bolt_Pistol_B_White;
+
+class CTR_Reiver_Pistol_S;
+class CTR_Reiver_Pistol_S_Red;
+class CTR_Reiver_Pistol_S_White;
+class CTR_Reiver_Pistol_B;
+class CTR_Reiver_Pistol_B_Red;
+class CTR_Reiver_Pistol_B_White;
+
+class CTR_Absolver_Pistol_S;
+class CTR_Absolver_Pistol_S_Red;
+class CTR_Absolver_Pistol_S_White;
+class CTR_Absolver_Pistol_B;
+class CTR_Absolver_Pistol_B_Red;
+class CTR_Absolver_Pistol_B_White;
+
+class CTR_Eliminator_Pistol_S;
+class CTR_Eliminator_Pistol_S_Red;
+class CTR_Eliminator_Pistol_S_White;
+class CTR_Eliminator_Pistol_B;
+class CTR_Eliminator_Pistol_B_Red;
+class CTR_Eliminator_Pistol_B_White;
+
+class CTR_Neo_Volkite_Pistol_S;
+class CTR_Neo_Volkite_Pistol_S_Red;
+class CTR_Neo_Volkite_Pistol_S_White;
+class CTR_Neo_Volkite_Pistol_B;
+class CTR_Neo_Volkite_Pistol_B_Red;
+class CTR_Neo_Volkite_Pistol_B_White;
+
+class CTR_Heavy_Plasma_Pistol_S;
+class CTR_Heavy_Plasma_Pistol_S_Red;
+class CTR_Heavy_Plasma_Pistol_S_White;
+class CTR_Heavy_Plasma_Pistol_B;
+class CTR_Heavy_Plasma_Pistol_B_Red;
+class CTR_Heavy_Plasma_Pistol_B_White;
+
+
 
 // Boltguns
 class CTR_Bolt_Rifle;
@@ -534,6 +683,2155 @@ class CTR_Melta_Combi_Bolter_White;
 
 class Cfgweapons
 {
+	// Pistols
+	class SR_CTR_Bolt_Pistol_S: CTR_Bolt_Pistol_S
+	{
+		displayName="[TSR] [CTR] Bolt Pistol - S";
+		baseWeapon="SR_CTR_Bolt_Pistol_S";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Bolt_Pistol_S_Red: CTR_Bolt_Pistol_S_Red
+	{
+		displayName="[TSR] [CTR] Bolt Pistol - S (Red)";
+		baseWeapon="SR_CTR_Bolt_Pistol_S_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Bolt_Pistol_S_White: CTR_Bolt_Pistol_S_White
+	{
+		displayName="[TSR] [CTR] Bolt Pistol - S (White)";
+		baseWeapon="SR_CTR_Bolt_Pistol_S_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Bolt_Pistol_B: CTR_Bolt_Pistol_B
+	{
+		displayName="[TSR] [CTR] Bolt Pistol - B";
+		baseWeapon="SR_CTR_Bolt_Pistol_B";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Bolt_Pistol_B_Red: CTR_Bolt_Pistol_B_Red
+	{
+		displayName="[TSR] [CTR] Bolt Pistol - B (Red)";
+		baseWeapon="SR_CTR_Bolt_Pistol_B_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Bolt_Pistol_B_White: CTR_Bolt_Pistol_B_White
+	{
+		displayName="[TSR] [CTR] Bolt Pistol - B (White)";
+		baseWeapon="SR_CTR_Bolt_Pistol_B_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Heavy_Bolt_Pistol_S: CTR_Heavy_Bolt_Pistol_S
+	{
+		displayName="[TSR] [CTR] Heavy Bolt Pistol - S";
+		baseWeapon="SR_CTR_Heavy_Bolt_Pistol_S";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Heavy_Bolt_Pistol_S_Red: CTR_Heavy_Bolt_Pistol_S_Red
+	{
+		displayName="[TSR] [CTR] Heavy Bolt Pistol - S (Red)";
+		baseWeapon="SR_CTR_Heavy_Bolt_Pistol_S_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Heavy_Bolt_Pistol_S_White: CTR_Heavy_Bolt_Pistol_S_White
+	{
+		displayName="[TSR] [CTR] Heavy Bolt Pistol - S (White)";
+		baseWeapon="SR_CTR_Heavy_Bolt_Pistol_S_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Heavy_Bolt_Pistol_B: CTR_Heavy_Bolt_Pistol_B
+	{
+		displayName="[TSR] [CTR] Heavy Bolt Pistol - B";
+		baseWeapon="SR_CTR_Heavy_Bolt_Pistol_B";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Heavy_Bolt_Pistol_B_Red: CTR_Heavy_Bolt_Pistol_B_Red
+	{
+		displayName="[TSR] [CTR] Heavy Bolt Pistol - B (Red)";
+		baseWeapon="SR_CTR_Heavy_Bolt_Pistol_B_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Heavy_Bolt_Pistol_B_White: CTR_Heavy_Bolt_Pistol_B_White
+	{
+		displayName="[TSR] [CTR] Heavy Bolt Pistol - B (White)";
+		baseWeapon="SR_CTR_Heavy_Bolt_Pistol_B_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Reiver_Pistol_S: CTR_Reiver_Pistol_S
+	{
+		displayName="[TSR] [CTR] Reiver Pistol - S";
+		baseWeapon="SR_CTR_Reiver_Pistol_S";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Reiver_Pistol_S_Red: CTR_Reiver_Pistol_S_Red
+	{
+		displayName="[TSR] [CTR] Reiver Pistol - S (Red)";
+		baseWeapon="SR_CTR_Reiver_Pistol_S_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Reiver_Pistol_S_White: CTR_Reiver_Pistol_S_White
+	{
+		displayName="[CTR] Reiver Pistol - S (White)";
+		baseWeapon="SR_CTR_Reiver_Pistol_S_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Reiver_Pistol_B: CTR_Reiver_Pistol_B
+	{
+		displayName="[TSR] [CTR] Reiver Pistol - B";
+		baseWeapon="SR_CTR_Reiver_Pistol_B";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Reiver_Pistol_B_Red: CTR_Reiver_Pistol_B_Red
+	{
+		displayName="[TSR] [CTR] Reiver Pistol - B (Red)";
+		baseWeapon="SR_CTR_Reiver_Pistol_B_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Reiver_Pistol_B_White: CTR_Reiver_Pistol_B_White
+	{
+		displayName="[TSR] [CTR] Reiver Pistol - B (White)";
+		baseWeapon="SR_CTR_Reiver_Pistol_B_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Absolver_Pistol_S: CTR_Absolver_Pistol_S
+	{
+		displayName="[TSR] [CTR] Absolver Pistol - S";
+		baseWeapon="SR_CTR_Absolver_Pistol_S";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Absolver_Pistol_S_Red: CTR_Absolver_Pistol_S_Red
+	{
+		displayName="[TSR] [CTR] Absolver Pistol - S (Red)";
+		baseWeapon="SR_CTR_Absolver_Pistol_S_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Absolver_Pistol_S_White: CTR_Absolver_Pistol_S_White
+	{
+		displayName="[TSR] [CTR] Absolver Pistol - S (White)";
+		baseWeapon="SR_CTR_Absolver_Pistol_S_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Absolver_Pistol_B: CTR_Absolver_Pistol_B
+	{
+		displayName="[TSR] [CTR] Absolver Pistol - B";
+		baseWeapon="SR_CTR_Absolver_Pistol_B";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Absolver_Pistol_B_Red: CTR_Absolver_Pistol_B_Red
+	{
+		displayName="[TSR] [CTR] Absolver Pistol - B (Red)";
+		baseWeapon="SR_CTR_Absolver_Pistol_B_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Absolver_Pistol_B_White: CTR_Absolver_Pistol_B_White
+	{
+		displayName="[TSR] [CTR] Absolver Pistol - B (White)";
+		baseWeapon="SR_CTR_Absolver_Pistol_B_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Heavy"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Eliminator_Pistol_S: CTR_Eliminator_Pistol_S
+	{
+		displayName="[TSR] [CTR] Eliminator Pistol - S";
+		baseWeapon="SR_CTR_Eliminator_Pistol_S";
+		picture="\CTR_Weapons\data\icons\weapons\Eliminator_Pistol_ca.paa";
+		UiPicture="\CTR_Weapons\data\icons\weapons\Eliminator_Pistol_ca.paa";
+		model="CTR_Weapons\models\Eliminator_Pistol.p3d";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Eliminator_Pistol_S_Red: CTR_Eliminator_Pistol_S_Red
+	{
+		displayName="[TSR] [CTR] Eliminator Pistol - S (Red)";
+		baseWeapon="SR_CTR_Eliminator_Pistol_S_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Eliminator_Pistol_S_White: CTR_Eliminator_Pistol_S_White
+	{
+		displayName="[TSR] [CTR] Eliminator Pistol - S (White)";
+		baseWeapon="SR_CTR_Eliminator_Pistol_S_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Eliminator_Pistol_B: CTR_Eliminator_Pistol_B
+	{
+		displayName="[TSR] [CTR] Eliminator Pistol - B";
+		baseWeapon="SR_CTR_Eliminator_Pistol_B";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Eliminator_Pistol_B_Red: CTR_Eliminator_Pistol_B_Red
+	{
+		displayName="[TSR] [CTR] Eliminator Pistol - B (Red)";
+		baseWeapon="SR_CTR_Eliminator_Pistol_B_Red";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Eliminator_Pistol_B_White: CTR_Eliminator_Pistol_B_White
+	{
+		displayName="[TSR] [CTR] Eliminator Pistol - B (White)";
+		baseWeapon="SR_CTR_Eliminator_Pistol_B_White";
+		magazines[]=
+		{
+			"SR_CTR_Magazine_Pistol_Light"
+		};
+		magazineWell[]={};
+	};
+	class SR_CTR_Neo_Volkite_Pistol_S: CTR_Neo_Volkite_Pistol_S
+	{
+		displayName="[TSR] [CTR] Neo-Volkite Pistol - S";
+		baseWeapon="SR_CTR_Neo_Volkite_Pistol_S";
+		magazines[]=
+		{
+			"SR_Volkite_PistolMag"
+		};
+		magazineWell[]={};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.5;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			dispersion=0.00034999999;
+			minRange=200;
+			minRangeProbab=0.5;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=750;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Steve_Volkite_Shot_SoundSet",
+					"Steve_Volkite_Tail_SoundSet",
+					"Steve_Volkite_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Neo_Volkite_Pistol_S_Red: CTR_Neo_Volkite_Pistol_S_Red
+	{
+		displayName="[TSR] [CTR] Neo-Volkite Pistol - S (Red)";
+		baseWeapon="SR_CTR_Neo_Volkite_Pistol_S_Red";
+		magazines[]=
+		{
+			"SR_Volkite_PistolMag"
+		};
+		magazineWell[]={};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.5;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			dispersion=0.00034999999;
+			minRange=200;
+			minRangeProbab=0.5;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=750;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Steve_Volkite_Shot_SoundSet",
+					"Steve_Volkite_Tail_SoundSet",
+					"Steve_Volkite_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Neo_Volkite_Pistol_S_White: CTR_Neo_Volkite_Pistol_S_White
+	{
+		displayName="[TSR] [CTR] Neo-Volkite Pistol - S (White)";
+		baseWeapon="SR_CTR_Neo_Volkite_Pistol_S_White";
+		magazines[]=
+		{
+			"SR_Volkite_PistolMag"
+		};
+		magazineWell[]={};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.5;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			dispersion=0.00034999999;
+			minRange=200;
+			minRangeProbab=0.5;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=750;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Steve_Volkite_Shot_SoundSet",
+					"Steve_Volkite_Tail_SoundSet",
+					"Steve_Volkite_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Neo_Volkite_Pistol_B: CTR_Neo_Volkite_Pistol_B
+	{
+		displayName="[TSR] [CTR] Neo-Volkite Pistol - B";
+		baseWeapon="SR_CTR_Neo_Volkite_Pistol_B";
+		magazines[]=
+		{
+			"SR_Volkite_PistolMag"
+		};
+		magazineWell[]={};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.5;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			dispersion=0.00034999999;
+			minRange=200;
+			minRangeProbab=0.5;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=750;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Steve_Volkite_Shot_SoundSet",
+					"Steve_Volkite_Tail_SoundSet",
+					"Steve_Volkite_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Neo_Volkite_Pistol_B_Red: CTR_Neo_Volkite_Pistol_B_Red
+	{
+		displayName="[TSR] [CTR] Neo-Volkite Pistol - B (Red)";
+		baseWeapon="SR_CTR_Neo_Volkite_Pistol_B_Red";
+		magazines[]=
+		{
+			"SR_Volkite_PistolMag"
+		};
+		magazineWell[]={};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.5;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			dispersion=0.00034999999;
+			minRange=200;
+			minRangeProbab=0.5;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=750;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Steve_Volkite_Shot_SoundSet",
+					"Steve_Volkite_Tail_SoundSet",
+					"Steve_Volkite_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Neo_Volkite_Pistol_B_White: CTR_Neo_Volkite_Pistol_B_White
+	{
+		displayName="[TSR] [CTR] Neo-Volkite Pistol - B (White)";
+		baseWeapon="SR_CTR_Neo_Volkite_Pistol_B_White";
+		magazines[]=
+		{
+			"SR_Volkite_PistolMag"
+		};
+		magazineWell[]={};
+		class Single: Mode_SemiAuto
+		{
+			reloadTime=0.5;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			dispersion=0.00034999999;
+			minRange=200;
+			minRangeProbab=0.5;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=750;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Steve_Volkite_Shot_SoundSet",
+					"Steve_Volkite_Tail_SoundSet",
+					"Steve_Volkite_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"\Steve_30K_weps\Volkite\Materials\Volkite_Sound.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Heavy_Plasma_Pistol_S: CTR_Heavy_Plasma_Pistol_S
+	{
+		displayName="[TSR] [CTR] Heavy Plasma Pistol - S";
+		baseWeapon="SR_CTR_Heavy_Plasma_Pistol_S";
+		plasmaCoolingMult = 1;
+		magazines[]=
+		{
+			"SR_CTR_Flask_Heavy_Plasma_Pistol"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single",
+			"Overcharge",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Plasmagun_Shot_SoundSet",
+					"Plasmagun_Tail_SoundSet",
+					"Plasmagun_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Heavy_Plasma_Pistol_S_Red: CTR_Heavy_Plasma_Pistol_S_Red
+	{
+		displayName="[TSR] [CTR] Heavy Plasma Pistol - S (Red)";
+		baseWeapon="SR_CTR_Heavy_Plasma_Pistol_S_Red";
+		plasmaCoolingMult = 1;
+		magazines[]=
+		{
+			"SR_CTR_Flask_Heavy_Plasma_Pistol"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single",
+			"Overcharge",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Plasmagun_Shot_SoundSet",
+					"Plasmagun_Tail_SoundSet",
+					"Plasmagun_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Heavy_Plasma_Pistol_S_White: CTR_Heavy_Plasma_Pistol_S_White
+	{
+		displayName="[TSR] [CTR] Heavy Plasma Pistol - S (White)";
+		baseWeapon="SR_CTR_Heavy_Plasma_Pistol_S_White";
+		plasmaCoolingMult = 1;
+		magazines[]=
+		{
+			"SR_CTR_Flask_Heavy_Plasma_Pistol"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single",
+			"Overcharge",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Plasmagun_Shot_SoundSet",
+					"Plasmagun_Tail_SoundSet",
+					"Plasmagun_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Heavy_Plasma_Pistol_B: CTR_Heavy_Plasma_Pistol_B
+	{
+		displayName="[TSR] [CTR] Heavy Plasma Pistol - B";
+		baseWeapon="SR_CTR_Heavy_Plasma_Pistol_B";
+		plasmaCoolingMult = 1;
+		magazines[]=
+		{
+			"SR_CTR_Flask_Heavy_Plasma_Pistol"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single",
+			"Overcharge",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Plasmagun_Shot_SoundSet",
+					"Plasmagun_Tail_SoundSet",
+					"Plasmagun_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Heavy_Plasma_Pistol_B_Red: CTR_Heavy_Plasma_Pistol_B_Red
+	{
+		displayName="[TSR] [CTR] Heavy Plasma Pistol - B (Red)";
+		baseWeapon="SR_CTR_Heavy_Plasma_Pistol_B_Red";
+		plasmaCoolingMult = 1;
+		magazines[]=
+		{
+			"SR_CTR_Flask_Heavy_Plasma_Pistol"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single",
+			"Overcharge",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Plasmagun_Shot_SoundSet",
+					"Plasmagun_Tail_SoundSet",
+					"Plasmagun_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	class SR_CTR_Heavy_Plasma_Pistol_B_White: CTR_Heavy_Plasma_Pistol_B_White
+	{
+		displayName="[TSR] [CTR] Heavy Plasma Pistol - B (White)";
+		baseWeapon="SR_CTR_Heavy_Plasma_Pistol_B_White";
+		plasmaCoolingMult = 1;
+		magazines[]=
+		{
+			"SR_CTR_Flask_Heavy_Plasma_Pistol"
+		};
+		magazineWell[]={};
+		modes[]=
+		{
+			"Single",
+			"Overcharge",
+			"single_medium_optics1",
+			"single_far_optics2"
+		};
+		class Overcharge: Mode_SemiAuto
+		{
+			reloadTime=2;
+			recoil="recoil_pistol_light";
+			recoilProne="recoil_prone_pistol_light";
+			textureType="fastAuto";
+			dispersion=0.00034999999;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+			soundContinuous=0;
+			soundBurst=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				closure1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1,
+					10
+				};
+				closure2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					0.316228,
+					1.1,
+					10
+				};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[]=
+				{
+					"Plasmagun_Shot_SoundSet",
+					"Plasmagun_Tail_SoundSet",
+					"Plasmagun_InteriorTail_SoundSet"
+				};
+				begin1[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"SR_Arsenal\sound\Overcharge.wss",
+					3.1622801,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin1",
+					0.34
+				};
+				class SoundTails
+				{
+					class TailInterior
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							2.2387199,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="interior";
+					};
+					class TailTrees
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*trees";
+					};
+					class TailForest
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*forest";
+					};
+					class TailMeadows
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailHouses
+					{
+						sound[]=
+						{
+							"SR_Arsenal\sound\Overcharge.wss",
+							1,
+							1,
+							1800
+						};
+						frequency=1;
+						volume="(1-interior/1.4)*houses";
+					};
+				};
+			};
+		};
+	};
+	
+	
+	
 	// Boltguns
 	class SR_CTR_Bolt_Rifle : CTR_Bolt_Rifle
 	{

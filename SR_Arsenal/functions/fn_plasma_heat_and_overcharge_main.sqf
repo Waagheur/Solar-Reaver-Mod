@@ -87,6 +87,15 @@ if (not(isDedicated)) then {
 		_plasma_muzzles = _plasma_muzzles + [
 			"CTR_Combi_Plasma_Rifle_Under"
 		];
+		
+		_plasma_pistol_weapons = _plasma_pistol_weapons + [
+			"SR_CTR_Heavy_Plasma_Pistol_S",
+			"SR_CTR_Heavy_Plasma_Pistol_S_Red",
+			"SR_CTR_Heavy_Plasma_Pistol_S_White",
+			"SR_CTR_Heavy_Plasma_Pistol_B",
+			"SR_CTR_Heavy_Plasma_Pistol_B_Red",
+			"SR_CTR_Heavy_Plasma_Pistol_B_White"
+		];
 	};
 	*/
 
@@ -3639,6 +3648,602 @@ if (not(isDedicated)) then {
 		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Combi_Plasma_Rifle_White"], -1]) != -1) then {
 			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_CTR_Combi_Plasma_Rifle_White"], -1])];
 			missionNamespace setVariable [format ["%1_handler","SR_CTR_Combi_Plasma_Rifle_White"], -1];
+		};
+	};
+	
+	
+	
+	if ("SR_CTR_Heavy_Plasma_Pistol_S" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				
+				if (_weapon == "SR_CTR_Heavy_Plasma_Pistol_S") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							// deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]) 
+								+ ([40, 60] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]) 
+								+ ([4, 8] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]) 
+							+ ([4, 8] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_CTR_Heavy_Plasma_Pistol_S' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_S" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_S" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_CTR_Heavy_Plasma_Pistol_S" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]) > 0) then {
+							_text =
+								"[TSR] Ryza Plasma Pistol (Shield)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S"], -1];
+		};
+	};
+	
+	if ("SR_CTR_Heavy_Plasma_Pistol_S_Red" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_Red"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_Red"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				
+				if (_weapon == "SR_CTR_Heavy_Plasma_Pistol_S_Red") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							// deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]) 
+								+ ([40, 60] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]) 
+								+ ([4, 8] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]) 
+							+ ([4, 8] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_CTR_Heavy_Plasma_Pistol_S_Red' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_Red"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_S_Red" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_S_Red" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_CTR_Heavy_Plasma_Pistol_S_Red" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]) > 0) then {
+							_text =
+								"[TSR] Ryza Plasma Pistol (Shield)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_Red"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_Red"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_Red"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_Red"], -1];
+		};
+	};
+	
+	if ("SR_CTR_Heavy_Plasma_Pistol_S_White" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_White"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_White"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				
+				if (_weapon == "SR_CTR_Heavy_Plasma_Pistol_S_White") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							// deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]) 
+								+ ([40, 60] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]) 
+								+ ([4, 8] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]) 
+							+ ([4, 8] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_CTR_Heavy_Plasma_Pistol_S_White' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_White"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_S_White" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_S_White" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_CTR_Heavy_Plasma_Pistol_S_White" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]) > 0) then {
+							_text =
+								"[TSR] Ryza Plasma Pistol (Shield)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_S_White"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_White"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_White"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_S_White"], -1];
+		};
+	};
+	
+	if ("SR_CTR_Heavy_Plasma_Pistol_B" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				
+				if (_weapon == "SR_CTR_Heavy_Plasma_Pistol_B") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							// deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]) 
+								+ ([40, 60] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]) 
+								+ ([4, 8] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]) 
+							+ ([4, 8] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_CTR_Heavy_Plasma_Pistol_B' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_B" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_B" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_CTR_Heavy_Plasma_Pistol_B" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]) > 0) then {
+							_text =
+								"[TSR] Ryza Plasma Pistol (Shield)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B"], -1];
+		};
+	};
+	
+	if ("SR_CTR_Heavy_Plasma_Pistol_B_Red" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_Red"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_Red"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				
+				if (_weapon == "SR_CTR_Heavy_Plasma_Pistol_B_Red") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							// deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]) 
+								+ ([40, 60] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]) 
+								+ ([4, 8] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]) 
+							+ ([4, 8] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_CTR_Heavy_Plasma_Pistol_B_Red' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_Red"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_B_Red" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_B_Red" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_CTR_Heavy_Plasma_Pistol_B_Red" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]) > 0) then {
+							_text =
+								"[TSR] Ryza Plasma Pistol (Shield)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_Red"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_Red"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_Red"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_Red"], -1];
+		};
+	};
+	
+	if ("SR_CTR_Heavy_Plasma_Pistol_B_White" in (weapons player)) then {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_White"], -1]) == -1) then {
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_White"], player addEventHandler ["FiredMan", {
+				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
+				_weapon = (_this select 1);
+				
+				if (_weapon == "SR_CTR_Heavy_Plasma_Pistol_B_White") then {
+					_ammo = player ammo _weapon;
+					_projectile = (_this select 6);
+					_mode = (_this select 3);
+					if (_mode == "Overcharge") then {
+						
+						//Overcharge consummes 10 shots
+						if (_ammo > 8) then {
+							player setAmmo [_weapon, _ammo - 9];
+							
+							_position = getPosWorld _projectile;
+							_dirAndUp = [vectorDir _projectile, vectorUp _projectile];
+							_velocity = velocity _projectile;
+							
+							// deleteVehicle _projectile;
+							
+							_projectile = "SR_Overcharge_PlasmapistolRound" createVehicle [0,0,0];
+							_projectile setPosWorld _position;
+							_projectile setVectorDirAndUp _dirAndUp;
+							_projectile setVelocityModelSpace [0, 1140, 0];
+							
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]) 
+								+ ([40, 60] call BIS_fnc_randomInt)];
+							
+						}
+						else { // Not enough ammo for overcharge, fire normally
+							// Regular shot, increase heat
+							missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"], 
+								(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]) 
+								+ ([4, 8] call BIS_fnc_randomInt)];
+						};
+					}
+					else {
+						// Regular shot, increase heat
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]) 
+							+ ([4, 8] call BIS_fnc_randomInt)];
+					};
+					
+					// Check for overheat
+					if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]) > 100) then {
+						[] spawn {
+							overheat = player addAction ["Weapon lock on", 
+								{hintSilent "Weapon overheating";}, [], 0, false, false, "DefaultAction", 
+								"'SR_CTR_Heavy_Plasma_Pistol_B_White' == (currentMuzzle player)"];
+							while {(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]) > 0} do {
+								sleep 1;
+							};
+							player removeAction overheat;
+						};
+					};
+				};
+				
+			}]];
+			
+			// Spawn cooler
+			[] spawn {
+				while {(missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_White"], -1]) != -1} do {
+					// Reduce heat if possible
+					if (((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]) - 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_B_White" >> "plasmaCoolingMult")) > 0) then {
+						missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"], 
+							(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]) 
+							- 2 * getNumber (configFile >> "CfgWeapons" >> "SR_CTR_Heavy_Plasma_Pistol_B_White" >> "plasmaCoolingMult")];
+					}
+					else {
+						(missionNamespace setVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0])
+					};
+					
+					// Display new heat if weapon is the current weapon
+					if ("SR_CTR_Heavy_Plasma_Pistol_B_White" == (currentWeapon player)) then {
+						if ((missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]) > 0) then {
+							_text =
+								"[TSR] Ryza Plasma Pistol (Shield)" 
+								+ "<br/>"
+								+ "Current heat : " + str(missionNamespace getVariable [format ["%1_heat","SR_CTR_Heavy_Plasma_Pistol_B_White"],0]);
+							24 cutText [
+								format["<t align='right'>%1</t>",_text], 
+							"PLAIN", 0, false, true];
+						};
+					};
+					sleep 2;
+				};
+			};
+		};
+	}
+	else {
+		if ((missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_White"], -1]) != -1) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_White"], -1])];
+			missionNamespace setVariable [format ["%1_handler","SR_CTR_Heavy_Plasma_Pistol_B_White"], -1];
 		};
 	};
 		
