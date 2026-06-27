@@ -22,8 +22,8 @@
 if (not(isDedicated)) then {
 
 	_visibomb_weapons = [
-		"SR_IC_Launcher_AT_grey",
-		"SR_TIOW_SM_Rocket_1_LSLOT"
+		"SR_VB_IC_Launcher_AT_grey",
+		"SR_VB_TIOW_SM_Rocket_1_LSLOT"
 	];
 	
 	{

@@ -25,20 +25,20 @@ if (not(isDedicated)) then {
 	
 	/**	
 	_visibomb_weapons = [
-		"SR_IC_Launcher_AT_grey",
-		"SR_TIOW_SM_Rocket_1_LSLOT"
+		"SR_VB_IC_Launcher_AT_grey",
+		"SR_VB_TIOW_SM_Rocket_1_LSLOT"
 	];
 	*/
 
-	if ("SR_IC_Launcher_AT_grey" in (weapons player)) then {
-		if (count (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]) == 0) then {
-			missionNamespace setVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], [player addEventHandler ["FiredMan", {
+	if ("SR_VB_IC_Launcher_AT_grey" in (weapons player)) then {
+		if (count (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]) == 0) then {
+			missionNamespace setVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], [player addEventHandler ["FiredMan", {
 				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
 				_weapon = (_this select 1);
-				if (_weapon == "SR_IC_Launcher_AT_grey") then {
+				if (_weapon == "SR_VB_IC_Launcher_AT_grey") then {
 					_projectile = (_this select 6);
 					
-					_arr = (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]);
+					_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]);
 					_arr set [6, _projectile];
 					
 					// Make visibomb cam
@@ -61,7 +61,7 @@ if (not(isDedicated)) then {
 					
 					// Setup mouse control
 					_arr set [1, (findDisplay 46) displayAddEventHandler["MouseMoving", { 
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]);
 						
 						if ((_arr select 12) == 0) then {
 							_arr set [7, (_arr select 7) + (_this select 1)/6];
@@ -73,7 +73,7 @@ if (not(isDedicated)) then {
 					
 					// Setup keyboard control
 					_arr set [2, (findDisplay 46) displayAddEventHandler["KeyDown", { 
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]);
 						
 						if ((_this select 1) == 17) then {_arr set [11, 0.5];}; 
 						if ((_this select 1) == 31) then {_arr set [11, -0.5];}; 
@@ -83,7 +83,7 @@ if (not(isDedicated)) then {
 						if ((_this select 1) == 47) then {_arr set [10, (_arr select 10) + 1];}; 
 					}]]; 
 					_arr set [3, (findDisplay 46) displayAddEventHandler["KeyUp", {
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]);
 						
 						if ((_this select 1) == 17) then {_arr set [11, 0];}; 
 						if ((_this select 1) == 31) then {_arr set [11, 0];}; 
@@ -95,7 +95,7 @@ if (not(isDedicated)) then {
 					
 					// Setup fly loop
 					_arr set [4, addMissionEventHandler ["EachFrame",{ 
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]);
 						
 						// This is here because keydown events speed up with time
 						_arr set [7, (_arr select 7) + (_arr select 12)];
@@ -122,7 +122,7 @@ if (not(isDedicated)) then {
 					
 					// Setup exit detection loop
 					[] spawn {
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]);
 						
 						// Wait until the projectile has detonated or the player has pressed exit for a while or the missile is very far from the player
 						waitUntil {((!alive (_arr select 6)) or ((_arr select 10) > 5) or ((player distance (_arr select 6)) > 2000))};
@@ -169,21 +169,21 @@ if (not(isDedicated)) then {
 		};
 	}
 	else {
-		if (count (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]) != 0) then {
-			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []]) select 0];
-			missionNamespace setVariable [format ["%1_handler","SR_IC_Launcher_AT_grey"], []];
+		if (count (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]) != 0) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []]) select 0];
+			missionNamespace setVariable [format ["%1_handler","SR_VB_IC_Launcher_AT_grey"], []];
 		};
 	};
 	
-	if ("SR_TIOW_SM_Rocket_1_LSLOT" in (weapons player)) then {
-		if (count (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]) == 0) then {
-			missionNamespace setVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], [player addEventHandler ["FiredMan", {
+	if ("SR_VB_TIOW_SM_Rocket_1_LSLOT" in (weapons player)) then {
+		if (count (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]) == 0) then {
+			missionNamespace setVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], [player addEventHandler ["FiredMan", {
 				// params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle"];
 				_weapon = (_this select 1);
-				if (_weapon == "SR_TIOW_SM_Rocket_1_LSLOT") then {
+				if (_weapon == "SR_VB_TIOW_SM_Rocket_1_LSLOT") then {
 					_projectile = (_this select 6);
 					
-					_arr = (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]);
+					_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]);
 					_arr set [6, _projectile];
 					
 					// Make visibomb cam
@@ -206,7 +206,7 @@ if (not(isDedicated)) then {
 					
 					// Setup mouse control
 					_arr set [1, (findDisplay 46) displayAddEventHandler["MouseMoving", { 
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]);
 						
 						if ((_arr select 12) == 0) then {
 							_arr set [7, (_arr select 7) + (_this select 1)/6];
@@ -218,7 +218,7 @@ if (not(isDedicated)) then {
 					
 					// Setup keyboard control
 					_arr set [2, (findDisplay 46) displayAddEventHandler["KeyDown", { 
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]);
 						
 						if ((_this select 1) == 17) then {_arr set [11, 0.5];}; 
 						if ((_this select 1) == 31) then {_arr set [11, -0.5];}; 
@@ -228,7 +228,7 @@ if (not(isDedicated)) then {
 						if ((_this select 1) == 47) then {_arr set [10, (_arr select 10) + 1];}; 
 					}]]; 
 					_arr set [3, (findDisplay 46) displayAddEventHandler["KeyUp", {
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]);
 						
 						if ((_this select 1) == 17) then {_arr set [11, 0];}; 
 						if ((_this select 1) == 31) then {_arr set [11, 0];}; 
@@ -240,7 +240,7 @@ if (not(isDedicated)) then {
 					
 					// Setup fly loop
 					_arr set [4, addMissionEventHandler ["EachFrame",{ 
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]);
 						
 						// This is here because keydown events speed up with time
 						_arr set [7, (_arr select 7) + (_arr select 12)];
@@ -267,7 +267,7 @@ if (not(isDedicated)) then {
 					
 					// Setup exit detection loop
 					[] spawn {
-						_arr = (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]);
+						_arr = (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]);
 						
 						// Wait until the projectile has detonated or the player has pressed exit for a while or the missile is very far from the player
 						waitUntil {((!alive (_arr select 6)) or ((_arr select 10) > 5) or ((player distance (_arr select 6)) > 2000))};
@@ -314,9 +314,9 @@ if (not(isDedicated)) then {
 		};
 	}
 	else {
-		if (count (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]) != 0) then {
-			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []]) select 0];
-			missionNamespace setVariable [format ["%1_handler","SR_TIOW_SM_Rocket_1_LSLOT"], []];
+		if (count (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]) != 0) then {
+			player removeEventHandler ["FiredMan", (missionNamespace getVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []]) select 0];
+			missionNamespace setVariable [format ["%1_handler","SR_VB_TIOW_SM_Rocket_1_LSLOT"], []];
 		};
 	};
 	

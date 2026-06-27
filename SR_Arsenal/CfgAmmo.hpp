@@ -9,8 +9,6 @@ class Steve_Phob_Atrox_SmBoltRound;
 
 class R_MRAAWS_HEAT_F;
 
-class TIOW_SM_Rocket_Frag_Round;
-
 class Steve_SM_Grav_Mag_Rnd;
 class Steve_Volkite_Cav_Rnd;
 class Steve_Volkite_Charger_Rnd;
@@ -18,6 +16,8 @@ class Steve_Volkite_Culv_Rnd;
 
 class IC_Frag_Missile;
 class IC_Krakk_Missile;
+class TIOW_SM_Rocket_Frag_Round;
+class TIOW_SM_Rocket_Krak_Round;
 class TIOW_SM_Rocket_Frag_Round_LSLOT;
 class TIOW_SM_Rocket_Krak_Round_LSLOT;
 
@@ -177,10 +177,20 @@ class CfgAmmo
 		class CamShakePlayerFire
 		{
 		};
-		hit = 1800;
+		hit = 800;
 		indirectHit = 50;
 		indirectHitRange = 0.3;
 		submunitionAmmo = "";
+	};
+	
+	class SR_Light_Frag_Missile_Round_LSLOT: TIOW_SM_Rocket_Frag_Round_LSLOT
+	{
+		airLock = 0;
+		manualControl = 1;
+		
+		hit = 120;
+		indirectHit = 60;
+		indirectHitRange = 40;
 	};
 	
 	class SR_Light_Frag_Missile_Round: TIOW_SM_Rocket_Frag_Round
@@ -256,12 +266,12 @@ class CfgAmmo
 	
 	
 	
-	// Visibomb missiles
+	// SR missiles
 	
 	class SR_IC_Frag_Missile: IC_Frag_Missile
 	{
 		airLock = 0;
-		manualControl = 0;
+		manualControl = 1;
 		thrust = 45;
 		thrustTime = 0.5;
 		timeToLive = 60;
@@ -273,12 +283,12 @@ class CfgAmmo
 	class SR_IC_Krakk_Missile: IC_Krakk_Missile
 	{
 		airLock = 0;
-		manualControl = 0;
+		manualControl = 1;
 		thrust = 45;
 		thrustTime = 0.5;
 		timeToLive = 60;
 		
-		hit = 1800;
+		hit = 800;
 		indirectHit = 50;
 		indirectHitRange = 0.3;
 		submunitionAmmo = "";
@@ -286,18 +296,104 @@ class CfgAmmo
 	class SR_TIOW_SM_Rocket_Frag_Round_LSLOT: TIOW_SM_Rocket_Frag_Round_LSLOT
 	{
 		airLock = 0;
-		manualControl = 0;
+		manualControl = 1;
 		thrust = 45;
 		thrustTime = 0.5;
 		timeToLive = 60;
+		
+		hit = 250;
+		indirectHit = 80;
+		indirectHitRange = 25;
 	};
 	class SR_TIOW_SM_Rocket_Krak_Round_LSLOT: TIOW_SM_Rocket_Krak_Round_LSLOT
+	{
+		airLock = 0;
+		manualControl = 1;
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+		
+		hit = 800;
+		indirectHit = 50;
+		indirectHitRange = 0.3;
+		submunitionAmmo = "";
+	};
+	
+	// SM Rockets
+	
+	class SR_TIOW_SM_Rocket_Frag_Round: TIOW_SM_Rocket_Frag_Round
+	{
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+		
+		hit = 250;
+		indirectHit = 80;
+		indirectHitRange = 25;
+	};
+	class SR_TIOW_SM_Rocket_Krak_Round: TIOW_SM_Rocket_Krak_Round
+	{
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+		
+		hit = 800;
+		indirectHit = 50;
+		indirectHitRange = 0.3;
+		submunitionAmmo = "";
+	};
+	
+	// Visibomb missiles
+	
+	class SR_VB_IC_Frag_Missile: IC_Frag_Missile
 	{
 		airLock = 0;
 		manualControl = 0;
 		thrust = 45;
 		thrustTime = 0.5;
 		timeToLive = 60;
+		
+		hit = 250;
+		indirectHit = 80;
+		indirectHitRange = 25;
+	};
+	class SR_VB_IC_Krakk_Missile: IC_Krakk_Missile
+	{
+		airLock = 0;
+		manualControl = 0;
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+		
+		hit = 800;
+		indirectHit = 50;
+		indirectHitRange = 0.3;
+		submunitionAmmo = "";
+	};
+	class SR_VB_TIOW_SM_Rocket_Frag_Round_LSLOT: TIOW_SM_Rocket_Frag_Round_LSLOT
+	{
+		airLock = 0;
+		manualControl = 0;
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+		
+		hit = 250;
+		indirectHit = 80;
+		indirectHitRange = 25;
+	};
+	class SR_VB_TIOW_SM_Rocket_Krak_Round_LSLOT: TIOW_SM_Rocket_Krak_Round_LSLOT
+	{
+		airLock = 0;
+		manualControl = 0;
+		thrust = 45;
+		thrustTime = 0.5;
+		timeToLive = 60;
+		
+		hit = 800;
+		indirectHit = 50;
+		indirectHitRange = 0.3;
+		submunitionAmmo = "";
 	};
 	
 	

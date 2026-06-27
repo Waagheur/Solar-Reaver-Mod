@@ -3637,7 +3637,9 @@ class Cfgweapons
 		author="Waagheur";
 		baseWeapon="SR_TIOW_SM_Rocket_1";
 		displayName="[TSR] [Astartes] Missile Launcher";
-		magazines[] += {
+		magazines[] = {
+			"SR_TIOW_SM_Rocket_Frag_Mag",
+			"SR_TIOW_SM_Rocket_Krak_Mag",
 			"SR_Light_Frag_Missile"
 		};
 	};
@@ -4125,7 +4127,7 @@ class Cfgweapons
 	// SM Disposable launcher
 	class SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Base: TIOW_SM_Rocket_1_LSLOT
 	{
-		baseWeapon="SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Base";
+		baseWeapon="SR_TIOW_SM_Disposable_Rocket_1_LSLOT_Loaded";
 		scope=1;
 		scopeArsenal=1;
 		scopeCurator=1;
@@ -4196,7 +4198,7 @@ class Cfgweapons
 	// PXI Disposable launchers
 	class SR_XI_Disposable_Rocket_1_LSLOT_Base: IC_CAD_Rocketlauncher_base
 	{
-		baseWeapon="SR_XI_Disposable_Rocket_1_LSLOT_Base";
+		baseWeapon="SR_XI_Disposable_Rocket_1_LSLOT_Loaded";
 		scope=1;
 		scopeArsenal=1;
 		scopeCurator=1;
@@ -4264,29 +4266,57 @@ class Cfgweapons
 		};
 	};
 	
-	// Visibomb launchers
+	// TOW launchers
 	class SR_IC_Launcher_AT_grey: IC_Launcher_AT_grey
 	{
-		displayName="[TSR] [PXI] Visibomb Accatran Launcher";
-		manualControl = 0;
+		displayName="[TSR] [PXI] Accatran Launcher";
+		manualControl = 1;
 		canLock = 0;
 		baseWeapon="SR_IC_Launcher_AT_grey";
 		magazines[]=
 		{
 			"SR_IC_krakk_Missile_mag",
-			"SR_IC_frag_Missile_mag"
+			"SR_IC_frag_Missile_mag",
+			"SR_Light_Frag_Missile_LSLOT"
 		};
 	};
 	class SR_TIOW_SM_Rocket_1_LSLOT: TIOW_SM_Rocket_1_LSLOT
 	{
-		displayName="[TSR] [Astartes] Visibomb Missile Launcher";
-		manualControl = 0;
+		displayName="[TSR] [Astartes] Missile Launcher";
+		manualControl = 1;
 		canLock = 0;
 		baseWeapon="SR_TIOW_SM_Rocket_1_LSLOT";
 		magazines[]=
 		{
 			"SR_TIOW_SM_Rocket_Krak_Mag_LSLOT",
-			"SR_TIOW_SM_Rocket_Frag_Mag_LSLOT"
+			"SR_TIOW_SM_Rocket_Frag_Mag_LSLOT",
+			"SR_Light_Frag_Missile_LSLOT"
+		};
+	};
+	
+	// Visibomb launchers
+	class SR_VB_IC_Launcher_AT_grey: IC_Launcher_AT_grey
+	{
+		displayName="[TSR] [PXI] Visibomb Accatran Launcher";
+		manualControl = 0;
+		canLock = 0;
+		baseWeapon="SR_VB_IC_Launcher_AT_grey";
+		magazines[]=
+		{
+			"SR_VB_IC_krakk_Missile_mag",
+			"SR_VB_IC_frag_Missile_mag"
+		};
+	};
+	class SR_VB_TIOW_SM_Rocket_1_LSLOT: TIOW_SM_Rocket_1_LSLOT
+	{
+		displayName="[TSR] [Astartes] Visibomb Missile Launcher";
+		manualControl = 0;
+		canLock = 0;
+		baseWeapon="SR_VB_TIOW_SM_Rocket_1_LSLOT";
+		magazines[]=
+		{
+			"SR_VB_TIOW_SM_Rocket_Krak_Mag_LSLOT",
+			"SR_VB_TIOW_SM_Rocket_Frag_Mag_LSLOT"
 		};
 	};
 	

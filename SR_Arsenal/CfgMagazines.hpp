@@ -11,6 +11,7 @@ class Steve_Phob_Atrox_BoltgunMag;
 class MRAWS_HE_F;
 
 class TIOW_SM_Rocket_Frag_Mag;
+class TIOW_SM_Rocket_Krak_Mag;
 
 class Steve_SM_Grav_Mag;
 class Steve_Volkite_Cav_Mag;
@@ -137,10 +138,20 @@ class CfgMagazines
 		mass=40;
 	};
 	
-	class SR_Light_Frag_Missile: TIOW_SM_Rocket_Frag_Mag
+	class SR_Light_Frag_Missile_LSLOT: TIOW_SM_Rocket_Frag_Mag_LSLOT
 	{
 		displayName = "[TSR] Light Frag Missile";
 		descriptionShort = "[TSR] Light Frag Missile";
+		initSpeed = 100;
+		mass = 30;
+		ammo = "SR_Light_Frag_Missile_Round_LSLOT";
+	};
+	
+	class SR_Light_Frag_Missile: TIOW_SM_Rocket_Frag_Mag
+	{
+		displayName = "[TSR] Light Frag Rocket";
+		descriptionShort = "[TSR] Light Frag Rocket";
+		initSpeed = 50;
 		mass = 20;
 		ammo = "SR_Light_Frag_Missile_Round";
 	};
@@ -320,34 +331,90 @@ class CfgMagazines
 	
 	
 	
-	// Visibomb mags
+	// SR missile mags
 	
 	class SR_IC_frag_Missile_mag: IC_frag_Missile_mag
 	{
-		displayName="[TSR] [PXI] Visibomb Frag Missile";
+		displayName="[TSR] [PXI] Frag Missile";
 		ammo = "SR_IC_Frag_Missile";
 		
-		mass = 60;
+		mass = 40;
+		initSpeed = 50;
 	};
 	class SR_IC_krakk_Missile_mag: IC_krakk_Missile_mag
 	{
-		displayName="[TSR] [PXI] Visibomb Krak Missile";
+		displayName="[TSR] [PXI] Krak Missile";
 		ammo = "SR_IC_Krakk_Missile";
 		
-		mass = 60;
+		mass = 40;
+		initSpeed = 50;
 	};
 	class SR_TIOW_SM_Rocket_Frag_Mag_LSLOT: TIOW_SM_Rocket_Frag_Mag_LSLOT
 	{
-		displayName="[TSR] [Astartes] Visibomb Frag Missile";
+		displayName="[TSR] [Astartes] Frag Missile";
 		ammo = "SR_TIOW_SM_Rocket_Frag_Round_LSLOT";
 		
-		mass = 60;
+		mass = 40;
 		initSpeed = 50;
 	};
 	class SR_TIOW_SM_Rocket_Krak_Mag_LSLOT: TIOW_SM_Rocket_Krak_Mag_LSLOT
 	{
-		displayName="[TSR] [Astartes] Visibomb Krak Missile";
+		displayName="[TSR] [Astartes] Krak Missile";
 		ammo = "SR_TIOW_SM_Rocket_Krak_Round_LSLOT";
+		
+		mass = 40;
+		initSpeed = 50;
+	};
+	
+	// SM rockets mag
+	
+	class SR_TIOW_SM_Rocket_Frag_Mag: TIOW_SM_Rocket_Frag_Mag
+	{
+		displayName="[TSR] [Astartes] Frag Rocket";
+		ammo = "SR_TIOW_SM_Rocket_Frag_Round_LSLOT";
+		
+		mass = 30;
+		initSpeed = 50;
+	};
+	class SR_TIOW_SM_Rocket_Krak_Mag: TIOW_SM_Rocket_Krak_Mag
+	{
+		displayName="[TSR] [Astartes] Krak Rocket";
+		ammo = "SR_TIOW_SM_Rocket_Krak_Round_LSLOT";
+		
+		mass = 30;
+		initSpeed = 50;
+	};
+	
+	// Visibomb missile mags
+	
+	class SR_VB_IC_frag_Missile_mag: IC_frag_Missile_mag
+	{
+		displayName="[TSR] [PXI] Visibomb Frag Missile";
+		ammo = "SR_VB_IC_Frag_Missile";
+		
+		mass = 60;
+		initSpeed = 50;
+	};
+	class SR_VB_IC_krakk_Missile_mag: IC_krakk_Missile_mag
+	{
+		displayName="[TSR] [PXI] Visibomb Krak Missile";
+		ammo = "SR_VB_IC_Krakk_Missile";
+		
+		mass = 60;
+		initSpeed = 50;
+	};
+	class SR_VB_TIOW_SM_Rocket_Frag_Mag_LSLOT: TIOW_SM_Rocket_Frag_Mag_LSLOT
+	{
+		displayName="[TSR] [Astartes] Visibomb Frag Missile";
+		ammo = "SR_VB_TIOW_SM_Rocket_Frag_Round_LSLOT";
+		
+		mass = 60;
+		initSpeed = 50;
+	};
+	class SR_VB_TIOW_SM_Rocket_Krak_Mag_LSLOT: TIOW_SM_Rocket_Krak_Mag_LSLOT
+	{
+		displayName="[TSR] [Astartes] Visibomb Krak Missile";
+		ammo = "SR_VB_TIOW_SM_Rocket_Krak_Round_LSLOT";
 		
 		mass = 60;
 		initSpeed = 50;
