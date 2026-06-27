@@ -1385,9 +1385,19 @@ class CfgVehicles{
 				magazine = "SR_PlasmaPistol_Mag";
 				count = 100;
 			};
+			class xx_SR_CTR_Flask_Heavy_Plasma_Pistol
+			{
+				magazine = "SR_CTR_Flask_Heavy_Plasma_Pistol";
+				count = 100;
+			};
 			class xx_SR_Volkite_PistolMag
 			{
 				magazine = "SR_Volkite_PistolMag";
+				count = 100;
+			};
+			class xx_SR_CTR_Magazine_Neo_Volkite
+			{
+				magazine = "SR_CTR_Magazine_Neo_Volkite";
 				count = 100;
 			};
 			class xx_TIOW_30rnd_GodwynBoltgunMag
