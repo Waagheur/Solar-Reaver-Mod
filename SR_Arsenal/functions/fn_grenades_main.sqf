@@ -667,13 +667,16 @@ if (not(isDedicated)) then {
 											if (!((_this select 0) iskindof "Man")) then {
 												vel = (velocityModelSpace (_this select 0));
 												(_this select 0) setVelocityModelSpace [(vel select 0) * 0.33, (vel select 1) * 0.33, (vel select 2) * 0.33];
+											}
+											else {
+												_slow_speed = ((getAnimSpeedCoef (_this select 0)) * 0.5);
+												[(_this select 0), _slow_speed] remoteExec ["setAnimSpeedCoef", 0];
+												
+												sleep 10;
+												
+												_normal_speed = ((getAnimSpeedCoef (_this select 0)) * 2);
+												[(_this select 0), _normal_speed] remoteExec ["setAnimSpeedCoef", 0];
 											};
-											
-											[(_this select 0), ((getAnimSpeedCoef (_this select 0)) * 0.5)] remoteExec ["setAnimSpeedCoef", 0];
-											
-											sleep 10;
-											
-											[(_this select 0), ((getAnimSpeedCoef (_this select 0)) * 2)] remoteExec ["setAnimSpeedCoef", 0];
 										};
 									}forEach _targs;
 									sleep 2;
